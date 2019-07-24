@@ -9,6 +9,7 @@ const AvatarWrapper = styled.div`
   border: 5px solid ${props => props.theme.primaryWhite};
   overflow: hidden;
   margin: 0;
+  background-color: ${props => props.theme.primaryWhite};
 `
 const Avatar = ({ src }) => {
   return (

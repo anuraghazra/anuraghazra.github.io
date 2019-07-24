@@ -1,5 +1,4 @@
 import React from "react";
-import styled from 'styled-components';
 
 import svgRect from 'src/static/home_rect.svg'
 
@@ -11,58 +10,16 @@ import PageHeader from 'src/components/common/PageHeader';
 import Flex from "src/components/common/Flex";
 import Button from "src/components/common/Button";
 
-
-const Card = styled.div`
-  flex: 0 1 24%;
-  height: 300px;
-  padding: 20px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center; 
-  flex-direction: column;
-  text-align: center;
-  background-color: ${props => props.theme.primaryWhite};
-  box-shadow: ${props => props.theme.shadowSmall}; 
-  border-radius: 10px;
-
-  @media ${props => props.theme.media.tablet} {
-    flex: 0 1 100%;
-    margin: 20px 0;
-  }
-`
-
-const CardIcon = styled.div`
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background: ${props => props.theme.gradient};
-  color: ${props => props.theme.primaryWhite};
-
-  i {
-    height: 100px;
-    line-height: 100px;
-    font-size: 2.2rem;
-  }
-`
-
-const CardTitle = styled.h3`
-  font-weight: normal;
-  color: ${props => props.theme.primaryColor};
-`
-
-const CardText = styled.p`
-  font-size: 14px;
-  color: ${props => props.theme.primaryBlack};
-`
+import { Card, CardIcon, CardText, CardTitle } from "src/components/common/Card";
 
 const ThingsILove = () => (
-  <Flex as="section" justify="space-between" align-items="center">
+  <Flex justify="space-between" align="center">
     <Card>
       <CardIcon><i className="fas fa-code" /></CardIcon>
       <CardTitle>FrontEnd</CardTitle>
       <CardText>
         i'm more front end focused and love to work with React as well as pure HTML, CSS
-      </CardText>
+        </CardText>
     </Card>
 
     <Card>
@@ -70,7 +27,7 @@ const ThingsILove = () => (
       <CardTitle>Javascirpt</CardTitle>
       <CardText>
         I just extreamly love javascirpt, i can’t even express how much i love javascirpt with just a few lines.
-      </CardText>
+        </CardText>
     </Card>
 
     <Card>
@@ -78,7 +35,7 @@ const ThingsILove = () => (
       <CardTitle>Creative Coding</CardTitle>
       <CardText>
         I love creative coding because i do both coding & designing. making beautifull art with code is very satisfying to me
-      </CardText>
+        </CardText>
     </Card>
   </Flex>
 );

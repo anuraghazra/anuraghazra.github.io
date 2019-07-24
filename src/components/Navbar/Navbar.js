@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <NavWrapper>
       <NavContent>
-        <img class="logo" src={logo} alt="logo" />
+        <img className="logo" src={logo} alt="logo" />
 
         <Burger onClick={handleSidebar} className={isSidebarOpen ? 'open' : ''}>
           <span></span>
@@ -23,7 +23,7 @@ const Navbar = () => {
         </Burger>
 
         <NavItems isSidebarOpen={isSidebarOpen}>
-          <NavItem><Link smooth offset={-100} hashSpy={true} to="home">home</Link></NavItem>
+          <NavItem><Link smooth offset={-200} hashSpy={true} to="home">home</Link></NavItem>
           <NavItem><Link smooth offset={-100} hashSpy={true} to="about">about me</Link></NavItem>
           <NavItem><Link smooth offset={-100} hashSpy={true} to="projects">projects</Link></NavItem>
           <NavItem><Link smooth offset={-100} hashSpy={true} to="creative-coding">creative coding</Link></NavItem>

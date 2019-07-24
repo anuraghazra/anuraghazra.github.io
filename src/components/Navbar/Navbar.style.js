@@ -12,7 +12,7 @@ export const NavWrapper = styled.nav`
   width: 100%;
   
   background-color: ${props => props.theme.primaryWhite};
-  box-shadow: ${props => props.theme.shadow};
+  box-shadow: ${props => props.theme.shadowSmall};
   z-index: 1000;
 
   .logo {

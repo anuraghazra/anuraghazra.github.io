@@ -22,10 +22,14 @@
     "react-dom": "^16.8.6",
     "react-grid-system": "^4.4.10",
     "react-helmet": "^5.2.1",
+    "react-intersection-observer": "^8.24.1",
     "react-scroll": "^1.7.12",
+    "react-slick": "^0.24.0",
+    "slick-carousel": "^1.8.1",
     "styled-components": "^4.3.2"
   },
   "devDependencies": {
+    "axios": "^0.19.0",
     "gatsby-plugin-root-import": "^2.0.5",
     "prettier": "^1.18.2"
   },

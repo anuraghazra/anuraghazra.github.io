@@ -11,6 +11,10 @@ export const Intro = styled.div`
   .home__text {
     color: ${props => props.theme.primaryBlack};
     z-index: 1;
+
+    button {
+      margin: 30px 0;
+    }
     
     @media ${props => props.theme.media.tablet} {
       text-align: center;
@@ -27,6 +31,9 @@ export const Intro = styled.div`
     text-shadow: 0 0 2px 2px white;
   }
 
+  p {
+    font-family: ${props => props.theme.fontFamily};
+  }
   .adjust {
     font-size: 1.06rem;
   }
