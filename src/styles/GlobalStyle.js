@@ -15,6 +15,33 @@ const GlobalStyle = createGlobalStyle`
     /* overflow hidden for SmallProject's 100vw width div */
     overflow-x: hidden;
     background-color: ${props => props.theme.primaryWhite};
+    color: ${props => props.theme.primaryBlack};
+  }
+
+  body::-webkit-scrollbar-track {
+    background-color: white;
+  }
+
+  body::-webkit-scrollbar {
+    width: 10px;
+    background-color: white;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: ${props => props.theme.primaryColor};
+  }
+
+  body::-moz-scrollbartrack-vertical {
+    background-color: white;
+  }
+
+  body::-moz-scrollbar {
+    width: 10px;
+    background-color: white;
+  }
+
+  body::-moz-scrollbarbutton-up {
+    background-color: ${props => props.theme.primaryColor};
   }
 
   a {

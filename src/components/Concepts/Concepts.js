@@ -51,7 +51,7 @@ const Concepts = () => {
   const concepts = useStaticQuery(
     graphql`
       query {
-        allConceptsJson {
+        allConceptsJson(sort: {fields: links___image}) {
           edges {
             node {
               id
@@ -65,13 +65,13 @@ const Concepts = () => {
             }
           }
         }
-        allFile(filter: {name: {regex: "/concept_/"}}) {
+        allFile(filter: {name: {regex: "/concept_/"}}, sort: {fields: name}) {
           edges {
             node {
               relativePath
               childImageSharp {
                 fluid(quality: 90) {
-                  ...GatsbyImageSharpFluid
+                  src
                 }
               }
             }
@@ -82,10 +82,13 @@ const Concepts = () => {
   );
 
   // find images by sequence
-  let imgs = concepts.allConceptsJson.edges.map(({ node: json }) => {
-    let match = concepts.allFile.edges.find(({ node }) => node.relativePath.match(json.links.image))
-    return match.node.childImageSharp.fluid.src;
-  });
+  // let imgs = concepts.allConceptsJson.edges.map(({ node: json }) => {
+  //   let match = concepts.allFile.edges.find(({ node }) => node.relativePath.match(json.links.image))
+  //   return match.node.childImageSharp.fluid.src;
+  // });
+  // console.log(concepts.allFile.edges)
+  // let img = concepts.allFile.edges.find(({ node }) => node.relativePath.match(json.links.image))
+  let imgs = concepts.allFile.edges.map(({ node }) => node.childImageSharp.fluid.src);
 
   const {
     hide,
@@ -94,7 +97,7 @@ const Concepts = () => {
     isOpen,
     current,
     handleImageClick,
-  } = useLightbox(imgs);
+  } = useLightbox(imgs.length);
 
   return (
     <ConceptsWrapper id="concepts">

@@ -30,7 +30,7 @@ const Projects = () => {
               links {
                 demo,
                 src,
-                video
+                iframe
               }
             }
           }
@@ -51,14 +51,14 @@ const Projects = () => {
             desc={node.description}
             links={
               <ProjectLinks>
-                <Button as="a" href="/">Case Study</Button>
-                <Button as="a" href={node.links.demo}>Live Demo</Button>
+                <Button target="__blank" as="a" href="/">Case Study</Button>
+                <Button target="__blank" as="a" href={node.links.demo}>Live Demo</Button>
                 <IconButton label="github" icon={["fab", "github"]} href={node.links.src} />
               </ProjectLinks>
             }
             preview={
               <ProjectPreview>
-                <IFrame src={node.links.video} />
+                <IFrame livedemo={!!node.links.iframe.match('codepen')} src={node.links.iframe} />
                 <Tags>
                   <FontAwesomeIcon icon={["fab", "js"]} />
                   <FontAwesomeIcon icon={["fab", "html5"]} />

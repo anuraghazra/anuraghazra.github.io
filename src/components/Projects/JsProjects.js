@@ -1,5 +1,5 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 
 import PageHeader from 'src/components/common/PageHeader';
@@ -10,14 +10,10 @@ import Button, { IconButton } from 'src/components/common/Button';
 import { ProjectLinks, ProjectPreview } from './ProjectTemplate.style'
 import ProjectTemplate from './ProjectTemplate';
 
+
+
 const JsProjectsWrapper = styled.section`
   ${props => props.theme.spacing.sectionBottom};
-
-  @media ${props => props.theme.media.tablet} {
-    .iframe-wrapper {
-      min-height: 400px;
-    }
-  }
 `
 
 const JsProjects = () => {
@@ -54,13 +50,13 @@ const JsProjects = () => {
             desc={node.description}
             links={
               <ProjectLinks>
-                <Button as="a" href={node.links.download}>Download</Button>
+                <Button target="__blank" as="a" href={node.links.download}>Download</Button>
                 <IconButton label="github" href={node.links.github} icon={["fab", "github"]} />
               </ProjectLinks>
             }
             preview={
               <ProjectPreview>
-                <IFrame src={node.links.codepen} />
+                <IFrame livedemo src={node.links.codepen} />
               </ProjectPreview>
             }
           />

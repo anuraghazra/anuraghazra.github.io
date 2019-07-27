@@ -5,14 +5,17 @@ import {
   faTwitter,
   faJs,
   faHtml5,
-  faCss3
+  faCss3,
+  faCodepen
 } from '@fortawesome/free-brands-svg-icons'
 import {
   faPaintBrush,
   faCode,
   faWindowMaximize,
   faHandshake,
-  faPaperPlane
+  faPaperPlane,
+  faChevronRight,
+  faChevronLeft
 } from '@fortawesome/free-solid-svg-icons'
 
 library.add(
@@ -26,5 +29,8 @@ library.add(
   faHandshake,
   faPaperPlane,
   faHtml5,
-  faCss3
+  faCss3,
+  faCodepen,
+  faChevronRight,
+  faChevronLeft
 );

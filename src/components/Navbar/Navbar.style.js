@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Wrapper from 'src/components/common/Wrapper';
 
-export const NavWrapper = styled.nav`
+export const NavWrapper = styled.header`
   position: fixed;
   top: 0;
   

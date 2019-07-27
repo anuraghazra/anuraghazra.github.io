@@ -31,7 +31,7 @@ const CreativeCoding = () => {
 
       <Grid>
         {
-          ccprojects.allCreativeCoding.edges.map(({ node }) => <CCProject node={node} />)
+          ccprojects.allCreativeCoding.edges.map(({ node }) => <CCProject key={node.id} node={node} />)
         }
       </Grid>
 

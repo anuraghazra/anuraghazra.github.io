@@ -69,12 +69,12 @@ const Home = () => {
           <p className="adjust">CREATIVE FRONT-END WEB DEVELOPER</p>
 
           <div className="home__CTA">
-            <Button>Download Resume</Button>
+            <Button className="cta" as="a" href="#">Download Resume</Button>
 
             <div className="home__social">
-              <IconLink label="github" icon={["fab", "github"]} href="#" />
-              <IconLink label="dribbble" icon={["fab", "dribbble"]} href="#" />
-              <IconLink label="twitter" icon={["fab", "twitter"]} href="#" />
+              <IconLink label="github" icon={["fab", "github"]} href="//github.com/anuraghazra" />
+              <IconLink label="twitter" icon={["fab", "twitter"]} href="//twitter.com/anuraghazra" />
+              <IconLink label="codepen" icon={["fab", "codepen"]} href="//codepen.io/anuraghazra" />
             </div>
           </div>
         </div>

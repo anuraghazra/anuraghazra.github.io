@@ -1,12 +1,16 @@
 import React, { useState, useRef, useEffect } from 'react';
 
-import styled from 'styled-components';
 import { useSpring, animated } from 'react-spring';
 import { Spring } from 'react-spring/renderprops';
+
+import styled from 'styled-components';
+
 import LightboxWrapper from './Lightbox.style';
 import PinchZoomPan from "react-responsive-pinch-zoom-pan";
+import { IconButton } from "src/components/common/Button";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-function useLightbox(images) {
+function useLightbox(totalImg) {
   const [isOpen, setIsOpen] = useState(false);
   const [current, setCurrentIndex] = useState(-1);
 
@@ -21,10 +25,10 @@ function useLightbox(images) {
     setIsOpen(true);
   }
   const next = () => {
-    setCurrentIndex((current + 1) % images.length);
+    setCurrentIndex((current + 1) % totalImg);
   }
   const prev = () => {
-    setCurrentIndex((current - 1 + images.length) % images.length);
+    setCurrentIndex((current - 1 + totalImg) % totalImg);
   }
 
   return { isOpen, hide, handleImageClick, next, prev, current }
@@ -59,9 +63,14 @@ function Lightbox({ isOpen, current, hide, next, prev }) {
         </Pinch>
       </div>
 
-      <button className="next" onClick={next}><i className="fas fa-chevron-right" /></button>
-      <button className="prev" onClick={prev}><i className="fas fa-chevron-left" /></button>
+
+      <IconButton name="next" title="next" as="button" className="next" onClick={next} >
+        <FontAwesomeIcon icon="chevron-right" />
+      </IconButton>
+      <IconButton name="previous" title="previous" as="button" className="prev" onClick={prev} >
+        <FontAwesomeIcon icon="chevron-left" />
+      </IconButton>
     </LightboxWrapper>
   );
 }
-export { Lightbox, useLightbox };
+export { Lightbox, useLightbox };    

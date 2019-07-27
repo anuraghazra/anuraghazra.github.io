@@ -1,55 +1,64 @@
 [
   {
+    "title": "Verly Range Slider",
+    "links": {
+      "iframe": "//codepen.io/anuraghazra/embed/agKJEd/?default-tab=result&theme-id=light",
+      "demo": "//anuraghazra.github.io/VerlyRangeSlider",
+      "src": "//github.com/anuraghazra/VerlyRangeSlider"
+    },
+    "description": "Verly Range Slider is one of my fun projects which uses my Verly.js physics engine, it was also mentioned in CodepenSpark. \n verly range slider got viral on th net and got over 15K views on codepen.io. \nit uses Verlet physics to simulate those delighful dangly sliders."
+  },
+  {
     "title": "EvolutionAquerium",
     "links": {
-      "video": "https://www.youtube.com/embed/GKIhVrOsQCI/?modestbranding=1&showinfo=0&autohide=1&rel=0",
-      "demo": "https://anuraghazra.github.io/EvolutionAquerium",
-      "src": "https://github.com/anuraghazra/EvolutionAquerium"
+      "iframe": "//www.youtube.com/embed/GKIhVrOsQCI/?modestbranding=1&showinfo=0&autohide=1&rel=0",
+      "demo": "//anuraghazra.github.io/EvolutionAquerium",
+      "src": "//github.com/anuraghazra/EvolutionAquerium"
     },
     "description": "Evolution Aquerium is based on Craig Reynold's Steering Behaviors and Flocking System. It's also implements Genetic Algorithm and mutations. My Mentor Daniel Shiffman showcased this on his Youtube Channel at TheCodingTrain. And i was very happy about the humble feedback sir Daniel Shiffman gave to me. it just boosted my confidence more and more. and motivated me to make this project better."
   },
   {
     "title": "ShaderExpo",
     "links": {
-      "video": "https://www.youtube.com/embed/rtPhA041U4U/?modestbranding=1&showinfo=0&autohide=1&rel=0",
-      "demo": "https://anuraghazra.github.io/ShaderExpo",
-      "src": "https://github.com/anuraghazra/ShaderExpo"
+      "iframe": "//www.youtube.com/embed/rtPhA041U4U/?modestbranding=1&showinfo=0&autohide=1&rel=0",
+      "demo": "//anuraghazra.github.io/ShaderExpo",
+      "src": "//github.com/anuraghazra/ShaderExpo"
     },
     "description": "ShaderExpo is purely dependency free shader editor made in Raw WebGL API. Experiment with basic webgl shaders on the fly. ShaderExpo Includes rich features like Inline Error Logs, AutoCompletion, Live Editing, Example Shaders etc. ShaderExpo is also mentioned in Awesome-Webgl"
   },
   {
     "title": "GyroDodge",
     "links": {
-      "video": "https://www.youtube.com/embed/GdRlkHTMk9c/?modestbranding=1&showinfo=0&autohide=1&rel=0",
-      "demo": "https://anuraghazra.github.io/GyroDodge/",
-      "src": "https://github.com/anuraghazra/GyroDodge"
+      "iframe": "//www.youtube.com/embed/GdRlkHTMk9c/?modestbranding=1&showinfo=0&autohide=1&rel=0",
+      "demo": "//anuraghazra.github.io/GyroDodge/",
+      "src": "//github.com/anuraghazra/GyroDodge"
     },
     "description": "Dodge! Shoot! Win! GyroDodge is a simple gyroscopic mobile game. i used device orientation api to get the alpha, gamma, delta rotations of mobile device and then use it to control the player. also available on itch.io"
   },
   {
     "title": "Verlet Drawing",
     "links": {
-      "video": "https://www.youtube.com/embed/OCZXO8C4zTA/?modestbranding=1&showinfo=0&autohide=1&rel=0",
-      "demo": "https://anuraghazra.github.io/VerletDrawing",
-      "src": "https://github.com/anuraghazra/VerletDrawing"
+      "iframe": "//www.youtube.com/embed/OCZXO8C4zTA/?modestbranding=1&showinfo=0&autohide=1&rel=0",
+      "demo": "//anuraghazra.github.io/VerletDrawing",
+      "src": "//github.com/anuraghazra/VerletDrawing"
     },
     "description": "Verlet Drawing is a physics based drawing app. made with verlet.js as a showcase of its capabilities"
   },
   {
     "title": "Classic Logo",
     "links": {
-      "video": "https://www.youtube.com/embed/6pnLnwew68w/?modestbranding=1&showinfo=0&autohide=1&rel=0",
-      "demo": "https://anuraghazra.github.io/classicLogo",
-      "src": "https://github.com/anuraghazra/classicLogo"
+      "iframe": "//www.youtube.com/embed/6pnLnwew68w/?modestbranding=1&showinfo=0&autohide=1&rel=0",
+      "demo": "//anuraghazra.github.io/classicLogo",
+      "src": "//github.com/anuraghazra/classicLogo"
     },
     "description": "Classic Logo is a LOGO Interpreter Made With HTML5 Canvas. it Implements all of the basic LOGO commands and also repeat command. it also got mentioned in Daniel Shiffman's Youtube Channel TheCodingTrain"
   },
   {
     "title": "QuickerPoll",
     "links": {
-      "video": "https://www.youtube.com/embed/10sL4z9BHNE/?modestbranding=1&showinfo=0&autohide=1&rel=0",
-      "demo": "https://quickerpoll.herokuapp.com",
-      "src": "https://github.com/anuraghazra/QuickerPoll"
+      "iframe": "//www.youtube.com/embed/10sL4z9BHNE/?modestbranding=1&showinfo=0&autohide=1&rel=0",
+      "demo": "//quickerpoll.herokuapp.com",
+      "src": "//github.com/anuraghazra/QuickerPoll"
     },
     "description": "QuickerPoll is a crowd-sourced real-time polling app created with React and Nodejs. QuickerPoll lets you create, edit, update, delete public polls and vote on them publicly. This project is just an example of using react, nodejs and restfull apis all together"
   }

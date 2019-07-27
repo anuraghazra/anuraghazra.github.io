@@ -18,6 +18,15 @@ export const CodeCard = () => {
       <pre>5             this.age = new Date().getFullYear() - 2001;</pre>
       <pre>6         {"}"}</pre>
       <pre>7   {"}"}</pre>
+      {/* <pre>
+        1   class <b>Person</b> {'{'}<br />
+        2         constructor() {'{'}<br />
+        3             this.name = "<b>Anurag Hazra</b>";<br />
+        4             this.traits = ["<b>DESIGN</b>", "<b>DEV</b>"];<br />
+        5             this.age = new Date().getFullYear() - 2001;<br />
+        6         {"}"}<br />
+        7   {"}"}
+      </pre> */}
     </CodeCardWrapper>
   )
 }
@@ -25,11 +34,11 @@ export const CodeCard = () => {
 export const ColorPalette = withTheme(({ theme }) => {
   return (
     <ColorPaletteWrapper>
-      <ColorBox color={theme.primaryColor} />
-      <ColorBox color={theme.secondaryColor} />
-      <ColorBox color={theme.gradient} />
-      <ColorBox color={theme.primaryBlack} />
-      <ColorBox color={theme.accentColor} />
+      <ColorBox style={{background: theme.primaryColor}} />
+      <ColorBox style={{background: theme.secondaryColor}} />
+      <ColorBox style={{background: theme.gradient}} />
+      <ColorBox style={{background: theme.primaryBlack}} />
+      <ColorBox style={{background: theme.accentColor}} />
     </ColorPaletteWrapper>
   )
 })

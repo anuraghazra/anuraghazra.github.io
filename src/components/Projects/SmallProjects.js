@@ -132,7 +132,7 @@ const SmallProjects = () => {
                 <h3>{node.title}</h3>
                 <CardText>{node.description}</CardText>
                 <ProjectLinks className="smallproject__links">
-                  <Button as="a" href={node.links.demo}>Live Demo</Button>
+                  <Button target="__blank" as="a" href={node.links.demo}>Live Demo</Button>
                   <IconButton label="github" href={node.links.src} icon={["fab", "github"]} />
                 </ProjectLinks>
               </SmallProjectCard>

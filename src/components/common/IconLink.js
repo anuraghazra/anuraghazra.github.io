@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 const IconLink = (props) => {
   return (
     <a
+      target="__blank"
       aria-label={props.label}
       title={props.label}
       className={props.className}

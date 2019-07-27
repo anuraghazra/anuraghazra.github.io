@@ -22,14 +22,16 @@ const Navbar = () => {
           <span></span>
         </Burger>
 
-        <NavItems isSidebarOpen={isSidebarOpen}>
-          <NavItem><Link smooth offset={-55} hashSpy={true} to="home">home</Link></NavItem>
-          <NavItem><Link smooth offset={-100} hashSpy={true} to="about">about me</Link></NavItem>
-          <NavItem><Link smooth offset={-100} hashSpy={true} to="projects">projects</Link></NavItem>
-          <NavItem><Link smooth offset={-100} hashSpy={true} to="creative-coding">creative coding</Link></NavItem>
-          <NavItem><Link smooth offset={-100} hashSpy={true} to="concepts">concepts</Link></NavItem>
-          <NavItem><Link smooth offset={-100} hashSpy={true} to="contact">contact</Link></NavItem>
-        </NavItems>
+        <nav>
+          <NavItems isSidebarOpen={isSidebarOpen}>
+            <NavItem><Link smooth offset={-55} hashSpy={true} to="home">home</Link></NavItem>
+            <NavItem><Link smooth offset={-100} hashSpy={true} to="about">about me</Link></NavItem>
+            <NavItem><Link smooth offset={-100} hashSpy={true} to="projects">projects</Link></NavItem>
+            <NavItem><Link smooth offset={-100} hashSpy={true} to="creative-coding">creative coding</Link></NavItem>
+            <NavItem><Link smooth offset={-100} hashSpy={true} to="concepts">concepts</Link></NavItem>
+            <NavItem><Link smooth offset={-100} hashSpy={true} to="contact">contact</Link></NavItem>
+          </NavItems>
+        </nav>
 
       </NavContent>
     </NavWrapper>

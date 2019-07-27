@@ -5,12 +5,15 @@ export const HeroCardWrapper = styled.div`
 `
 
 export const CodeCardWrapper = styled.div`
-  padding: 30px 30px;
+  padding: 30px 35px;
   border-radius: 10px;
   background-color: ${props => props.theme.primaryWhite};
   box-shadow: ${props => props.theme.shadowSmall}; 
 
   pre {
+    /* white-space: pre-wrap;
+    word-wrap:break-word; */
+    /* line-height: 28px; */
     font-size: 0.8rem;
     font-family: ${props => props.theme.fontFamily};
     color: ${props => props.theme.primaryColor};
@@ -40,6 +43,5 @@ export const ColorBox = styled.div`
   width: 40px;
   height: 40px;
   margin: 3px;
-  background: ${props => props.color};
   border-radius: 5px;
 `;

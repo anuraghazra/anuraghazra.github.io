@@ -10,7 +10,7 @@ const CCProject = ({ node }) => {
 
   return (
     <CCard key={node.id}>
-      <a className="thumbnail-a" href={node.demo}>
+      <a name={node.title} aria-label={node.title} className="thumbnail-a" href={node.demo}>
         <Image alt={node.title} src={img} />
       </a>
       <CardFooter justify="space-between" align="center" nowrap>

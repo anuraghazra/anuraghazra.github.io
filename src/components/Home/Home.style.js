@@ -12,7 +12,8 @@ export const Intro = styled.div`
     color: ${props => props.theme.primaryBlack};
     z-index: 1;
 
-    button {
+    a.cta {
+      display: block;
       margin: 30px 0;
     }
     
@@ -28,7 +29,6 @@ export const Intro = styled.div`
   h1 {
     font-size: 2.5rem;
     font-weight: 900;
-    text-shadow: 0 0 2px 2px white;
   }
 
   p {
