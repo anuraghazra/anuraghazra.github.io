@@ -106,6 +106,7 @@ const SmallProjects = () => {
         allSmallprojectsJson {
           edges {
             node {
+              id
               title
               links {
                 demo
@@ -127,12 +128,12 @@ const SmallProjects = () => {
         <Slider {...settings}>
           {
             smallprojects.allSmallprojectsJson.edges.map(({ node }) => (
-              <SmallProjectCard>
+              <SmallProjectCard key={node.id}>
                 <h3>{node.title}</h3>
                 <CardText>{node.description}</CardText>
                 <ProjectLinks className="smallproject__links">
-                  <Button as="a" href="#">Live Demo</Button>
-                  <IconButton as="a" href="#" className="fab fa-github" />
+                  <Button as="a" href={node.links.demo}>Live Demo</Button>
+                  <IconButton label="github" href={node.links.src} icon={["fab", "github"]} />
                 </ProjectLinks>
               </SmallProjectCard>
             ))

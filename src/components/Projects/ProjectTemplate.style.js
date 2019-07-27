@@ -87,7 +87,7 @@ export const Tags = styled.div`
   display: flex;
   font-size: 24px;
 
-  i {
+  svg, i {
     margin-right: 25px;
   }
 `

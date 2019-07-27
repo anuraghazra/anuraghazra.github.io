@@ -9,8 +9,8 @@ export const NavWrapper = styled.nav`
   align-items: center;
 
   height: 60px;
-  width: 100%;
-  
+  width: 100vw;
+
   background-color: ${props => props.theme.primaryWhite};
   box-shadow: ${props => props.theme.shadowSmall};
   z-index: 1000;
@@ -18,6 +18,7 @@ export const NavWrapper = styled.nav`
   .logo {
     max-width: 35px;
     flex-basis: 100px;
+    cursor: pointer;
   }
 `;
 

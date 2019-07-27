@@ -6,6 +6,7 @@ const PageHeader = styled.h2`
   font-weight: 900;
   color: ${props => props.theme.primaryColor};
   text-align: center;
+  letter-spacing: 1px;
 `
 
 export default PageHeader;

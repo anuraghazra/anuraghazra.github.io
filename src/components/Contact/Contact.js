@@ -1,0 +1,41 @@
+import React from 'react';
+import PageHeader from '../common/PageHeader';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Flex from 'src/components/common/Flex';
+import Button from 'src/components/common/Button';
+
+import {
+  ContactWrapper,
+  LeftContent,
+  ContactBox,
+  ContactForm,
+} from './Contact.style'
+
+function Contact() {
+  return (
+    <ContactWrapper id="contact">
+      <PageHeader>Get In Touch</PageHeader>
+
+      <ContactBox>
+        <LeftContent>
+          <FontAwesomeIcon size={'5x'} icon="handshake" />
+          <h3>Thank You</h3>
+          <p>Do You Have Any Queries?</p>
+        </LeftContent>
+        <ContactForm action="https://formspree.io/hazru.anurag@gmail.com" method="POST" >
+          <Flex>
+            <input required name="_replyto" type="email" type="email" placeholder="Your Email" />
+            <input required name="name" type="text" placeholder="Your Name" />
+          </Flex>
+          <textarea required name="message" placeholder="Say Something!" />
+          <Button as="button" type="submit" value="send" style={{ float: 'right' }}>
+            <FontAwesomeIcon icon="paper-plane" /> Submit
+          </Button>
+        </ContactForm>
+      </ContactBox>
+
+    </ContactWrapper>
+  );
+}
+export default Contact;

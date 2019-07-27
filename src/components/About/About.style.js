@@ -14,7 +14,7 @@ export const AboutWrapper = styled.section`
   }
 `
 
-export const AboutInfo = styled.div`
+export const AboutInfo = styled.article`
   display: flex;
   justify-content: space-between;
   align-items: center;

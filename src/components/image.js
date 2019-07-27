@@ -10,14 +10,8 @@ const Image = ({ src, ...props }) => {
           node {
             relativePath
             childImageSharp {
-              fluid(
-                quality: 90,
-                traceSVG: {
-                  color: "#6D83F2",
-                  threshold: 75
-                })
-              {
-                ...GatsbyImageSharpFluid_tracedSVG
+              fluid(quality: 90, maxWidth: 2000) {
+                ...GatsbyImageSharpFluid
               }
             }
           }

@@ -1,31 +1,45 @@
-import React from "react";
+import React, { useCallback, useEffect } from "react";
 import styled from 'styled-components';
+import { useSpring, animated, interpolate } from 'react-spring'
 
 import PageHeader from 'src/components/common/PageHeader';
 import SkillPie from "src/components/Skills/SkillPie";
-import { Row, Col } from "react-grid-system";
+import { Row, Col, Hidden } from "react-grid-system";
 
 const SkillsWrapper = styled.section`
   ${props => props.theme.spacing.sectionBottom};
   position: relative;
 
-  @media ${props => props.theme.media.tablet} {
-    .skills__word-clouds {
-      display: none;
-    }
-  }
   .skills__word-clouds {
-    p { 
+    p {
       position: absolute;
       color: ${props => props.theme.accentColor};
-      z-index: -2;
+      z-index: -10;
+      left: 0;
+      right: 0;
       font-weight: 900;
     }
   }
 `
 const WordClouds = () => {
+  // const [{ y }, set] = useSpring(() => ({ y: 0 }))
+
+  // const onMove = useCallback(({ clientX: x, clientY: y }) => {
+  //   set({ x: x - window.innerWidth / 2, y: y - window.innerHeight / 2 })
+  // }, [])
+  // const onScroll = useCallback((e) => {
+  //   console.log(e.target.scrollTop)
+  //   set({ y: e.target.scrollTop / 30 })
+  // }, []);
+
+  // useEffect(() => window.addEventListener('scroll', (e) => {
+  //   set({ y: window.scrollY })
+  // }), []);
+
+  // const interpClouds = y.interpolate(o => `translate(0, ${-o / 8}px)`);
+  // style={{ transform: interpClouds }} 
   return (
-    <div class="skills__word-clouds">
+    <div aria-hidden="true" className="skills__word-clouds">
       <p style={{ top: 50, left: '100%', fontSize: 23 }}>HTML5</p>
       <p style={{ top: 0, left: 0, fontSize: 25 }}>WebGL</p>
       <p style={{ top: 200, left: -60, fontSize: 14 }}>CSS3</p>
@@ -40,6 +54,7 @@ const WordClouds = () => {
 }
 
 const Skills = () => {
+
   return (
     <SkillsWrapper>
       <PageHeader>My Skillsets</PageHeader>
@@ -59,7 +74,9 @@ const Skills = () => {
         </Col>
       </Row>
 
-      <WordClouds />
+      <Hidden xs sm>
+        <WordClouds />
+      </Hidden>
 
     </SkillsWrapper>
   )

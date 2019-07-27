@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import IconLink from 'src/components/common/IconLink';
 
 const common = css`
   background: ${props => props.theme.gradient};
@@ -26,13 +27,14 @@ const Button = styled.button`
 
 `
 
-export const IconButton = styled.i`
+export const IconButton = styled(IconLink)`
   ${common};
   display: inline-block;
-  max-width: 40px;
-  max-height: 40px;
-  font-size: 20px;
+  /* max-width: 40px;
+  max-height: 40px; */
+  font-size: 18px;
   text-align: center;
+  line-height: 0;
   padding: 10px;
   margin: 0px 0;
   border-radius: 50%;

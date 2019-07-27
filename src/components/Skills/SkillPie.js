@@ -32,7 +32,7 @@ const PieWrapper = styled.div`
       stroke-width: 7px;
     }
 
-    #bar {
+    #outer-circle {
       stroke-dasharray: 565;
       stroke: ${props => props.theme.primaryColor};
       stroke-dashoffset: calc( (${props => props.percent} / 100) * 3.14 * (90 * 2));
@@ -50,7 +50,7 @@ const SkillPie = ({ percent, name }) => {
           cy="100"
           fill="transparent" />
         <circle
-          id="bar"
+          id="outer-circle"
           r="90"
           cx="100"
           cy="100"

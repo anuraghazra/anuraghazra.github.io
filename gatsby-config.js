@@ -39,6 +39,25 @@ module.exports = {
       },
     },
 
+    // fonts
+    // https://fonts.googleapis.com/css?family=Karla:400,700|Montserrat:400,600,700,900&display=swap
+    // families: ['Karla&display=swap', 'Montserrat:400,700,900&display=swap']
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        custom: {
+          families: [
+            'Karla',
+            'Montserrat:n4,n7,n9'
+          ],
+          urls: [
+            'https://fonts.googleapis.com/css?family=Karla&display=swap',
+            'https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap'
+          ]
+        }
+      }
+    },
+
     // others
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-root-import`

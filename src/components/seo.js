@@ -69,8 +69,6 @@ function SEO({ description, lang, meta, title }) {
         },
       ].concat(meta)}
     >
-      <link href="https://fonts.googleapis.com/css?family=Karla:400,700|Montserrat:400,600,700,900&display=swap" rel="stylesheet" />
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha256-UzFD2WYH2U1dQpKDjjZK72VtPeWP50NoJjd26rnAdUI=" crossorigin="anonymous" />
     </Helmet>
   )
 }

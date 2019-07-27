@@ -85,8 +85,7 @@ const Loader = () => {
         <g id="paths" mask="url(#mask0)">
           <path opacity="0.7" d="M3.03412 220.341C-13.3618 248.782 -3.61438 285.16 24.8056 301.593V301.593L149.776 84.8118C166.172 56.3704 156.424 19.9924 128.004 3.55939V3.55939L3.03412 220.341Z" fill="url(#paint0_linear)" />
           <path opacity="0.7" d="M43.8915 277.869C27.4956 306.31 37.243 342.688 65.663 359.121V359.121L190.633 142.34C207.029 113.899 197.282 77.5205 168.862 61.0875V61.0875L43.8915 277.869Z" fill="url(#paint0_linear)" />
-          <path opacity="0.7" d="M84.749 334.041C68.3531 362.483 78.1005 398.861 106.52 415.294V415.294L231.491 198.512C247.886 170.071 238.139 133.693 209.719 117.26V117.26L84.749 334.041Z" fill="url(#paint0_linear)">
-          </path>
+          <path opacity="0.7" d="M84.749 334.041C68.3531 362.483 78.1005 398.861 106.52 415.294V415.294L231.491 198.512C247.886 170.071 238.139 133.693 209.719 117.26V117.26L84.749 334.041Z" fill="url(#paint0_linear)"></path>
         </g>
         <defs>
           <linearGradient id="paint0_linear" x1="0" y1="0" x2="203.966" y2="257.386" gradientUnits="userSpaceOnUse">
@@ -113,6 +112,7 @@ const IFrame = ({ src }) => {
   return (
     <IframeWrapper className="iframe-wrapper" ref={ref}>
       <iframe
+        title={src}
         style={{ opacity: isLoading ? '0' : '1' }}
         src={inView ? src : undefined}
         onLoad={handleLoaded}

@@ -9,10 +9,12 @@ const GlobalStyle = createGlobalStyle`
     font-size: calc(12px + 0.4vw);
     font-family: ${props => props.theme.fontFamily};
     -webkit-font-smoothing: antialiased;
+    font-display: fallback !important;
   }
   body {
     /* overflow hidden for SmallProject's 100vw width div */
     overflow-x: hidden;
+    background-color: ${props => props.theme.primaryWhite};
   }
 
   a {

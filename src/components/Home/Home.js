@@ -1,5 +1,7 @@
 import React from "react";
+import { useSpring, animated } from 'react-spring'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import svgRect from 'src/static/home_rect.svg'
 
 import { HeroCard } from './HeroCard';
@@ -15,35 +17,50 @@ import { Card, CardIcon, CardText, CardTitle } from "src/components/common/Card"
 const ThingsILove = () => (
   <Flex justify="space-between" align="center">
     <Card>
-      <CardIcon><i className="fas fa-code" /></CardIcon>
+      <CardIcon><FontAwesomeIcon icon="code" /></CardIcon>
       <CardTitle>FrontEnd</CardTitle>
       <CardText>
         i'm more front end focused and love to work with React as well as pure HTML, CSS
-        </CardText>
+      </CardText>
     </Card>
 
     <Card>
-      <CardIcon><i className="fab fa-js" /></CardIcon>
+      <CardIcon><FontAwesomeIcon icon={["fab", "js"]} /></CardIcon>
       <CardTitle>Javascirpt</CardTitle>
       <CardText>
         I just extreamly love javascirpt, i can’t even express how much i love javascirpt with just a few lines.
-        </CardText>
+      </CardText>
     </Card>
 
     <Card>
-      <CardIcon><i className="fas fa-paint-brush" /></CardIcon>
+      <CardIcon><FontAwesomeIcon icon="paint-brush" /></CardIcon>
       <CardTitle>Creative Coding</CardTitle>
       <CardText>
         I love creative coding because i do both coding & designing. making beautifull art with code is very satisfying to me
-        </CardText>
+      </CardText>
     </Card>
   </Flex>
 );
 
 const Home = () => {
+  // const slideRight = useSpring({
+  //   opacity: 1,
+  //   right: '0px',
+  //   from: {
+  //     opacity: 0,
+  //     right: '-100px',
+  //   }
+  // });
+  // const slideLeft = useSpring({
+  //   opacity: 1,
+  //   from: {
+  //     opacity: 0,
+  //   }
+  // });
+
   return (
     <HomeWrapper id="home">
-      <img className="svg-rect" src={svgRect} alt="" />
+      <img className="svg-rect" src={svgRect} alt=""></img>
 
       <Intro>
         <div className="home__text">
@@ -51,13 +68,13 @@ const Home = () => {
           <h1>ANURAG HAZRA</h1>
           <p className="adjust">CREATIVE FRONT-END WEB DEVELOPER</p>
 
-          <div class="home__CTA">
+          <div className="home__CTA">
             <Button>Download Resume</Button>
 
-            <div class="home__social">
-              <IconLink icon="fab fa-github" href="#" />
-              <IconLink icon="fab fa-dribbble" href="#" />
-              <IconLink icon="fab fa-twitter" href="#" />
+            <div className="home__social">
+              <IconLink label="github" icon={["fab", "github"]} href="#" />
+              <IconLink label="dribbble" icon={["fab", "dribbble"]} href="#" />
+              <IconLink label="twitter" icon={["fab", "twitter"]} href="#" />
             </div>
           </div>
         </div>
@@ -65,7 +82,7 @@ const Home = () => {
       </Intro>
 
       {/* Things I LOVE */}
-      <PageHeader>Things i love <i class="fas fa-heart" /></PageHeader>
+      <PageHeader>Things i love <i className="fas fa-heart" /></PageHeader>
       <ThingsILove />
 
     </HomeWrapper>

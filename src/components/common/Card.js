@@ -15,7 +15,7 @@ export const Card = styled.div`
   text-align: center;
 
   background-color: ${props => props.theme.primaryWhite};
-  box-shadow: ${props => props.theme.shadowSmall}; 
+  box-shadow: ${props => props.theme.shadowSmall};
   border-radius: 10px;
 
   @media ${props => props.theme.media.tablet} {
@@ -31,7 +31,7 @@ export const CardIcon = styled.div`
   background: ${props => props.theme.gradient};
   color: ${props => props.theme.primaryWhite};
 
-  i {
+  svg {
     height: 100px;
     line-height: 100px;
     font-size: 2.2rem;
