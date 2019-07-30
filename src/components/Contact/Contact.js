@@ -25,14 +25,14 @@ function Contact() {
         </LeftContent>
         <ContactForm action="https://formspree.io/hazru.anurag@gmail.com" method="POST" >
           <Flex>
-            <label for="email">
-              <input id="email" required name="_replyto" type="email" type="email" placeholder="Your Email" />
+            <label htmlFor="email">
+              <input id="email" required name="_replyto" type="email" placeholder="Your Email" />
             </label>
-            <label for="name">
+            <label htmlFor="name">
               <input id="name" required name="name" type="text" placeholder="Your Name" />
             </label>
           </Flex>
-          <label for="message">
+          <label htmlFor="message">
             <textarea id="message" required name="message" placeholder="Say Something!" />
           </label>
           <Button as="button" type="submit" value="send" style={{ float: 'right' }}>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import { useStaticQuery, graphql } from 'gatsby'
@@ -38,8 +38,7 @@ const ConceptCardFooter = styled(CardFooter)`
   opacity: 0;
   transition: 0.3s ease-in-out;
   padding: 10px 15px;
-  background: ${props => props.theme.primaryWhite};
-  color: ${props => props.theme.primaryBlack};
+  background: ${props => props.theme.secondaryColor};
 
   @media ${props => props.theme.media.mobile} {
     bottom: 0;

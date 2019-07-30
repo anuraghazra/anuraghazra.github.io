@@ -10,7 +10,7 @@ import { ProjectLinks } from './ProjectTemplate.style'
 import { CardText } from 'src/components/common/Card';
 import Button, { IconButton } from 'src/components/common/Button';
 
-import svg from 'src/static/skew_bg.svg'
+// import svg from 'src/static/skew_bg.svg'
 
 const settings = {
   dots: true,
@@ -58,9 +58,8 @@ const InnerContent = styled.div`
 
 const BG = styled.div`
   position: absolute;
-  background-image: url(${svg});
-  background-position: top;
-  background-size: cover;
+  background: ${p => p.theme.dark ? p.theme.secondaryColor : p.theme.gradient};
+  transform: skewY(-3deg);
   right: 0;
   left: 0;
   width: 100%;
@@ -84,13 +83,13 @@ const SmallProjectCard = styled.div`
   /* because of project links */
   position: relative;
   
-  background-color: ${props => props.theme.primaryWhite};
+  background-color: ${props => props.theme.bg};
   border-radius: 10px;
   padding: 30px;
   height: 280px;
 
   h3 {
-    color: ${props => props.theme.primaryColor};
+    /* color: ${props => props.theme.primaryColor}; */
     margin-bottom: 5px;
   }
 

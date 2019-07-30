@@ -14,7 +14,7 @@ export const ContactBox = styled.div`
   
 
   background: ${props => props.theme.gradient};
-  color: ${props => props.theme.primaryWhite};
+  
 
   padding: 20px;
   border-radius: 10px;
@@ -33,6 +33,10 @@ export const LeftContent = styled.div`
   width: fit-content;
   text-align: center;
 
+  &, p, h3 {
+    color: #f8f8f8;
+  }
+
   @media ${props => props.theme.media.fablet} {
     display: none;
   }
@@ -45,7 +49,7 @@ export const ContactForm = styled.form`
   top: -50px;
   right: -40px;
   padding: 50px 30px;
-  background: ${props => props.theme.primaryWhite};
+  background: ${props => props.theme.secondaryColor};
   border-radius: 10px;
   min-height: 400px;
 

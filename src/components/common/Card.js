@@ -14,7 +14,7 @@ export const Card = styled.div`
   flex-direction: column;
   text-align: center;
 
-  background-color: ${props => props.theme.primaryWhite};
+  background-color: ${props => props.theme.secondaryColor};
   box-shadow: ${props => props.theme.shadowSmall};
   border-radius: 10px;
 
@@ -29,7 +29,7 @@ export const CardIcon = styled.div`
   height: 100px;
   border-radius: 50%;
   background: ${props => props.theme.gradient};
-  color: ${props => props.theme.primaryWhite};
+  color: #f8f8f8;
 
   svg {
     height: 100px;
@@ -40,10 +40,9 @@ export const CardIcon = styled.div`
 
 export const CardTitle = styled.h3`
   font-weight: normal;
-  color: ${props => props.theme.primaryColor};
+  color: ${p => p.theme.dark ? p.theme.primaryText : p.theme.primaryColor};
 `
 
 export const CardText = styled.p`
   font-size: 14px;
-  color: ${props => props.theme.primaryBlack};
 `

@@ -6,10 +6,10 @@ const AvatarWrapper = styled.div`
   width: 230px;
   height: 230px;
   border-radius: 50%;
-  border: 5px solid ${props => props.theme.primaryWhite};
+  border: 5px solid #f8f8f8;
   overflow: hidden;
   margin: 0;
-  background-color: ${props => props.theme.primaryWhite};
+  background-color: #f8f8f8;
 `
 const Avatar = ({ src }) => {
   return (

@@ -7,7 +7,7 @@ export const HeroCardWrapper = styled.div`
 export const CodeCardWrapper = styled.div`
   padding: 30px 35px;
   border-radius: 10px;
-  background-color: ${props => props.theme.primaryWhite};
+  background-color: ${props => props.theme.secondaryColor};
   box-shadow: ${props => props.theme.shadowSmall}; 
 
   pre {
@@ -16,7 +16,7 @@ export const CodeCardWrapper = styled.div`
     /* line-height: 28px; */
     font-size: 0.8rem;
     font-family: ${props => props.theme.fontFamily};
-    color: ${props => props.theme.primaryColor};
+    color: ${p => p.theme.dark ? p.theme.primaryText : p.theme.primaryColor};
   }
 `;
 
@@ -27,7 +27,7 @@ export const ColorPaletteWrapper = styled.div`
 
   display: flex;
   justify-content: space-around;
-  background-color: ${props => props.theme.primaryWhite};
+  background-color: ${props => props.theme.secondaryColor};
   box-shadow: ${props => props.theme.shadowSmall}; 
   padding: 8px;
   border-radius: 5px;

@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "anurag-hazra",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Anurag Hazra Portfolio Site",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Anurag Hazra <hazru.anurag@gmail.com>",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
     "@fortawesome/free-brands-svg-icons": "^5.9.0",
@@ -20,6 +20,7 @@
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^2.1.5",
     "gatsby-transformer-json": "^2.2.2",
+    "gatsby-transformer-remark": "^2.6.9",
     "gatsby-transformer-sharp": "^2.2.4",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
@@ -41,7 +42,8 @@
     "prettier": "^1.18.2"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "portfolio"
   ],
   "license": "MIT",
   "scripts": {
@@ -49,7 +51,7 @@
     "develop": "gatsby develop --host=0.0.0.0",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
-    "serve": "gatsby serve",
+    "serve": "gatsby serve --host=0.0.0.0",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "repository": {

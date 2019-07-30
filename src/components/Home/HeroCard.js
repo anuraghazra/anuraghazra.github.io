@@ -35,7 +35,7 @@ export const ColorPalette = withTheme(({ theme }) => {
   return (
     <ColorPaletteWrapper>
       <ColorBox style={{background: theme.primaryColor}} />
-      <ColorBox style={{background: theme.secondaryColor}} />
+      <ColorBox style={{background: '#6A98F0'}} />
       <ColorBox style={{background: theme.gradient}} />
       <ColorBox style={{background: theme.primaryBlack}} />
       <ColorBox style={{background: theme.accentColor}} />

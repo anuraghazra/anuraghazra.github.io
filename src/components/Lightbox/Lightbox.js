@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 
-import { useSpring, animated } from 'react-spring';
-import { Spring } from 'react-spring/renderprops';
+import { useSpring } from 'react-spring';
 
 import styled from 'styled-components';
 

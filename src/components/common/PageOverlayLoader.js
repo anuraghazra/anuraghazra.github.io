@@ -9,7 +9,7 @@ const Overlay = styled.div`
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: ${props => props.theme.primaryWhite};
+  background-color: #f8f8f8;
   display: flex;
   pointer-events: none;
   z-index: 10000000;

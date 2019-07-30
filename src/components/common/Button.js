@@ -3,13 +3,13 @@ import IconLink from 'src/components/common/IconLink';
 
 const common = css`
   background: ${props => props.theme.gradient};
-  color: ${props => props.theme.primaryWhite};
+  color: #f8f8f8;
   border: none;
   cursor: pointer;
   transition: 0.2s;
   
   &:hover {
-    color: ${props => props.theme.primaryWhite} !important;
+    color: #f8f8f8;
     background: ${props => props.theme.gradient2};
     transform: scale(1.05);
     transition: 0.2s;
@@ -24,7 +24,6 @@ const Button = styled.button`
   margin: 0px 0;
   padding: 12px 12px;
   border-radius: ${props => props.round ? '50%' : '5px'};
-
 `
 
 export const IconButton = styled(IconLink)`

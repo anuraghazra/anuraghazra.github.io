@@ -41,7 +41,7 @@ const LightboxWrapper = styled(animated.div)`
     height: 40px;
     border: none;
     background-color: ${props => props.theme.primaryColor};
-    color: ${props => props.theme.primaryWhite};
+    color: #f8f8f8;
     top: 50%;
     outline: none;
     border-radius: 50%;

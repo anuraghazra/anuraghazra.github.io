@@ -1,6 +1,6 @@
-import React, { useCallback, useEffect } from "react";
+import React from "react";
 import styled from 'styled-components';
-import { useSpring, animated, interpolate } from 'react-spring'
+// import { useSpring, animated, interpolate } from 'react-spring'
 
 import PageHeader from 'src/components/common/PageHeader';
 import SkillPie from "src/components/Skills/SkillPie";

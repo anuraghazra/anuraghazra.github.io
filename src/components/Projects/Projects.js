@@ -1,5 +1,5 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql, Link } from 'gatsby'
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -21,16 +21,19 @@ const Projects = () => {
   const projects = useStaticQuery(
     graphql`
       query {
-        allProjectsJson {
+        allMarkdownRemark {
           edges {
             node {
               id
-              title
-              description
-              links {
-                demo,
-                src,
+              frontmatter {
+                demo
+                excerpt
                 iframe
+                src
+                title
+              }
+              fields {
+                slug
               }
             }
           }
@@ -44,21 +47,21 @@ const Projects = () => {
       <PageHeader>Side Projects</PageHeader>
 
       {
-        projects.allProjectsJson.edges.map(({ node }) => (
+        projects.allMarkdownRemark.edges.map(({ node }) => (
           <ProjectTemplate
             key={node.id}
-            title={node.title}
-            desc={node.description}
+            title={node.frontmatter.title}
+            desc={node.frontmatter.excerpt}
             links={
               <ProjectLinks>
-                <Button target="__blank" as="a" href="/">Case Study</Button>
-                <Button target="__blank" as="a" href={node.links.demo}>Live Demo</Button>
-                <IconButton label="github" icon={["fab", "github"]} href={node.links.src} />
+                <Button as={Link} to={node.fields.slug}>Case Study</Button>
+                <Button target="__blank" as="a" href={node.frontmatter.demo}>Live Demo</Button>
+                <IconButton label="github" icon={["fab", "github"]} href={node.frontmatter.src} />
               </ProjectLinks>
             }
             preview={
               <ProjectPreview>
-                <IFrame livedemo={!!node.links.iframe.match('codepen')} src={node.links.iframe} />
+                <IFrame livedemo={!!node.frontmatter.iframe.match('codepen')} src={node.frontmatter.iframe} />
                 <Tags>
                   <FontAwesomeIcon icon={["fab", "js"]} />
                   <FontAwesomeIcon icon={["fab", "html5"]} />

@@ -1,23 +1,6 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, css } from 'styled-components';
 
-const GlobalStyle = createGlobalStyle`
-  * {
-    box-sizing: border-box;
-  }
-  body, html {
-    height: 100%;
-    font-size: calc(12px + 0.4vw);
-    font-family: ${props => props.theme.fontFamily};
-    -webkit-font-smoothing: antialiased;
-    font-display: fallback !important;
-  }
-  body {
-    /* overflow hidden for SmallProject's 100vw width div */
-    overflow-x: hidden;
-    background-color: ${props => props.theme.primaryWhite};
-    color: ${props => props.theme.primaryBlack};
-  }
-
+const scrollBar = css`
   body::-webkit-scrollbar-track {
     background-color: white;
   }
@@ -28,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body::-webkit-scrollbar-thumb {
-    background-color: ${props => props.theme.primaryColor};
+    background-color: ${p => p.theme.primaryColor};
   }
 
   body::-moz-scrollbartrack-vertical {
@@ -41,49 +24,69 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body::-moz-scrollbarbutton-up {
-    background-color: ${props => props.theme.primaryColor};
+    background-color: ${p => p.theme.primaryColor};
+  }
+  input[type=checkbox]{
+    height: 0;
+    width: 0;
+    visibility: hidden;
+  }
+`
+
+const GlobalStyle = createGlobalStyle`
+  * {
+    box-sizing: border-box;
+  }
+  body, html {
+    height: 100%;
+    font-size: calc(12px + 0.4vw);
+    font-family: ${p => p.theme.fontFamily};
+    -webkit-font-smoothing: antialiased;
+    font-display: fallback !important;
+  }
+  body {
+    /* overflow hidden for SmallProject's 100vw width div */
+    overflow-x: hidden;
+    background-color: ${p => p.theme.bg};
+    color: ${p => p.theme.primaryText};
+    /* ${p => p.theme.dark ? p.theme.primaryBdlack : p.theme.primaryColor}; */
   }
 
+
   a {
-    color: ${props => props.theme.primaryColor};
+    color: ${p => p.theme.primaryColor};
     text-decoration: none;
   }
   a:hover {
-    color: ${props => props.theme.secondaryColor};
+    color: ${p => p.theme.primaryText};
   }
-
+  
   h1, h2, h3, h4, h5, h6 {
-    margin: 0px 0;
+    margin: 10px 0;
     line-height: 140%;
+    color: ${p => p.theme.primaryText};
   }
   
   p {
     font-size: 16px;
     margin: 0;
-    line-height: auto;
     line-height: 150%;
-    font-family: ${props => props.theme.secondaryFontFamily};
+    font-family: ${p => p.theme.secondaryFontFamily};
+    color: ${p => p.theme.primaryText};
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    font-size: 14px;
+    line-height: 150%;
   }
 
   .active {
-    color: ${props => props.theme.primaryBlack};
+    color: #383838;
   }
 
-  .embed-nav .code-types a {
-    padding: 5px 16px 5px 16px !important;
-    letter-spacing: 0.6px !important;
-    font-size: 12px !important;
-  }
-  .embed-nav {
-    height: 30px !important;
-    padding-bottom: 2px !important;
-  }
-  .embed-nav .logo-wrap #embed-codepen-logo {
-    width: 79px !important;
-    height: 13px !important;
-  }
-  .embed-nav .logo-wrap #embed-codepen-logo {
-      display: none !important;
-  }
+  ${scrollBar};
+
 `
 export default GlobalStyle;

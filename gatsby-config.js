@@ -13,6 +13,14 @@ module.exports = {
         path: `src/content`,
       },
     },
+    // Markdown
+    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `src/pages`,
+      },
+    },
 
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

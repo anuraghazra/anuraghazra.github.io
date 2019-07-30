@@ -13,10 +13,13 @@ const QuoteWrapper = styled.article`
   min-width: 200px;
   flex: 1;
 
-  background-color: ${props => props.theme.primaryWhite};
+  background-color: ${p => p.theme.dark ? p.theme.accentColor : p.theme.secondaryColor};
   box-shadow: ${props => props.theme.shadowSmall};
-  color: ${props => props.theme.primaryColor};
-
+  
+  &, p {
+    color: ${p => p.theme.dark ? p.theme.primaryText : p.theme.primaryColor};
+  }
+  
   i {
     position: absolute;
     bottom: 20px;

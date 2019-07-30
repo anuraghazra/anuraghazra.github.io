@@ -11,14 +11,18 @@ export const NavWrapper = styled.header`
   height: 60px;
   width: 100vw;
 
-  background-color: ${props => props.theme.primaryWhite};
+  background-color: ${props => props.theme.secondaryColor};
   box-shadow: ${props => props.theme.shadowSmall};
   z-index: 1000;
 
   .logo {
-    max-width: 35px;
-    flex-basis: 100px;
+    margin-right: auto;
     cursor: pointer;
+    
+    img {
+      flex-basis: 100px;
+      max-width: 35px;
+    }
   }
 `;
 
@@ -26,32 +30,45 @@ export const NavItems = styled.ul`
   margin: 0;
   list-style: none;
   display: flex;
-  font-size: 14px;
+  align-items: center;
   transition: 0.2s;
 
   @media ${props => props.theme.media.tablet} {
+    padding: 0 30px;
     position: fixed;
     top: 60px;
     height: 100vh;
     flex-direction: column;
+    align-items: initial;
 
-    background-color: ${props => props.theme.primaryWhite};
+    background-color: ${props => props.theme.secondaryColor};
     border-top: 2px solid ${props => props.theme.accentColor};
-    right: ${props => props.isSidebarOpen ? '0px' : '-200px'};
+    right: ${props => props.isSidebarOpen ? '0px' : '-250px'} !important;
   }
 `;
 
 export const NavItem = styled.li`
   margin-left: 30px;
   display: inline-block;
-  &:hover {
+  
+  a {
+    /* color: ${p => p.theme.swapIfDark('primaryText', 'primaryColor')}; */
+    color: ${p => p.theme.dark ? p.theme.primaryText : p.theme.primaryColor};
+  }
+
+  a:hover {
     cursor: pointer;
-    color: #6D83F2
+    color: ${p => p.theme.dark ? p.theme.primaryColor : p.theme.primaryText};
   }
 
   @media ${props => props.theme.media.tablet} {
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding: 10px;
+    }
     margin-top: 25%;
-    margin-right: 50px;
     margin-left: 0;
   }
 `;

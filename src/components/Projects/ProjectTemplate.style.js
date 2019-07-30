@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const ProjectWrapper = styled.section`
   margin: 80px 0;
@@ -13,7 +13,7 @@ export const ProjectContent = styled.div`
 
 export const ProjectDetail = styled.div`
   padding: 50px 50px;
-  background-color: ${props => props.theme.primaryWhite};
+  background-color: ${props => props.theme.secondaryColor};
   box-shadow: ${props => props.theme.shadowSmall};
   border-radius: 10px;
 
@@ -23,7 +23,6 @@ export const ProjectDetail = styled.div`
   grid-row: 1 / 1;
   
   h2 {
-    color: ${props => props.theme.primaryBlack};
     margin-bottom: 25px;
   }
 
@@ -83,7 +82,7 @@ export const Tags = styled.div`
   }
   
   margin: 10px;
-  color: ${props => props.theme.secondaryColor};
+  color: ${props => props.theme.primaryColor};
   display: flex;
   font-size: 24px;
 

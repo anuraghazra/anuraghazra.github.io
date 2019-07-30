@@ -42,7 +42,6 @@ export const CCard = styled(Card)`
   } */
 
   h4 {
-    color: ${props => props.theme.primaryBlack};
     font-weight: normal;
   }
 

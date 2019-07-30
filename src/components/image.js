@@ -20,7 +20,7 @@ const Image = ({ src, ...props }) => {
     }
   `)
 
-  const match = data.allFile.edges.find(({ node }) => node.relativePath.match(src))
+  const match = data.allFile.edges.find(({ node }) => node.relativePath.match(src));
 
   return (
     match.node.childImageSharp &&

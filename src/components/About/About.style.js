@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const AboutWrapper = styled.section`
   margin-bottom: 200px;
-  color: ${props => props.theme.primaryWhite};
 
   .quotes__wrapper {
     position: relative;
@@ -24,6 +23,9 @@ export const AboutInfo = styled.article`
     margin-right: 10%;
   }
 
+  p {
+    color: #f8f8f8;
+  }
   @media ${props => props.theme.media.tablet} {
     flex-direction: column;
     margin-top: 120px;

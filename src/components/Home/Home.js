@@ -1,5 +1,5 @@
 import React from "react";
-import { useSpring, animated } from 'react-spring'
+// import { useSpring, animated } from 'react-spring'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import svgRect from 'src/static/home_rect.svg'

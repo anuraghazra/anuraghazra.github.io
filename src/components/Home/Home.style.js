@@ -9,7 +9,6 @@ export const Intro = styled.div`
   ${props => props.theme.spacing.sectionBottom};
   
   .home__text {
-    color: ${props => props.theme.primaryBlack};
     z-index: 1;
 
     a.cta {
