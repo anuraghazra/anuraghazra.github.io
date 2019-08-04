@@ -1,6 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 
+import { useStaticQuery, graphql } from 'gatsby'
 import { useSpring } from 'react-spring';
+import Image from 'src/components/Image';
+import Img from 'gatsby-image'
 
 import styled from 'styled-components';
 
@@ -33,9 +36,9 @@ function useLightbox(totalImg) {
   return { isOpen, hide, handleImageClick, next, prev, current }
 }
 
-const Pinch = styled(PinchZoomPan)``
+// const Pinch = styled(PinchZoomPan)``
 
-function Lightbox({ isOpen, current, hide, next, prev }) {
+function Lightbox({ isOpen, currentFluid, hide, next, prev }) {
   const closer = useRef();
   const fadeIn = useSpring({
     opacity: isOpen ? 1 : 0,
@@ -56,9 +59,9 @@ function Lightbox({ isOpen, current, hide, next, prev }) {
   return (
     <LightboxWrapper style={fadeIn}>
 
-      <div className="closer" ref={closer} onClick={hide}>
+      <div className="closer" onClick={hide} ref={closer}>
         <Pinch maxScale={5} minScale={0.1} zoomButtons={false} position='center'>
-          <img src={current} alt='' />
+          <img src={currentFluid} alt='' />
         </Pinch>
       </div>
 
@@ -72,4 +75,5 @@ function Lightbox({ isOpen, current, hide, next, prev }) {
     </LightboxWrapper>
   );
 }
-export { Lightbox, useLightbox };    
+
+export { Lightbox, useLightbox };

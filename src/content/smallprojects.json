@@ -24,27 +24,19 @@
     "description": "Simple Rockets is a online multiplayer game made with NodeJS and Socket.io. all of the players can join the game with their unique name and play."
   },
   {
-    "title": "ONE",
+    "title": "ParticleBrush",
     "links": {
-      "demo": "https://creativechat.herokuapp.com",
-      "src": "https://github.com/anuraghazra/creativechat"
+      "demo": "https://anuraghazra.github.io/ParticleBrush/",
+      "src": "https://github.com/anuraghazra/ParticleBrush"
     },
-    "description": "Creative Chat is a realtime fun chatting app. where users can draw with colors in the canvas and communicate trough art"
+    "description": "Amazing Drawing App With Particles. Lots Of Colorful Particles"
   },
   {
-    "title": "TWO",
+    "title": "CanvasFun",
     "links": {
-      "demo": "https://anuraghazra.github.io/Verly.js",
-      "src": "https://github.com/anuraghazra/Verly.js"
+      "demo": "https://anuraghazra.github.io/CanvasFun",
+      "src": "https://github.com/anuraghazra/CanvasFun"
     },
-    "description": "Verly.js is a successor to my old Verlet.js Physics Engine. Very.js is more simple to use and very modular. Easy to integrate verlet physics engine."
-  },
-  {
-    "title": "THREE",
-    "links": {
-      "demo": "https://simplerockets.herokuapp.com",
-      "src": "https://github.com/anuraghazra/simplerockets"
-    },
-    "description": "Simple Rockets is a online multiplayer game made with NodeJS and Socket.io. all of the players can join the game with their unique name and play."
+    "description": "Collection of CreativeCoding projects."
   }
 ]

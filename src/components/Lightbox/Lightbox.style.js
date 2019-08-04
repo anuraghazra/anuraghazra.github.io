@@ -32,7 +32,6 @@ const LightboxWrapper = styled(animated.div)`
     width: 100%;
     height: 100%;
     z-index: -1;
-
   }
 
   button {

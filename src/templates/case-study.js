@@ -36,7 +36,7 @@ const CaseStudy = ({ data }) => {
             <div>
               <InfoTitle>Core Technologies</InfoTitle>
               <ul>
-                {study.info.tech.map(t => <li>{t}</li>)}
+                {study.info.tech.map((tech, i) => <li key={i}>{tech}</li>)}
               </ul>
             </div>
             {
@@ -44,7 +44,7 @@ const CaseStudy = ({ data }) => {
               <div>
                 <InfoTitle>Links & Resources</InfoTitle>
                 <ul>
-                  {study.info.links.map(link => <li><a href={link[1]}>{link[0]}</a></li>)}
+                  {study.info.links.map((link, i) => <li key={i}><a href={link[1]}>{link[0]}</a></li>)}
                 </ul>
               </div>
             }
@@ -54,7 +54,7 @@ const CaseStudy = ({ data }) => {
           </div>
         </section>
 
-        <article className="case__markdown-content" dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+        <article className="markdown-content" dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
       </CaseStudyWrapper>
     </Layout>
   )

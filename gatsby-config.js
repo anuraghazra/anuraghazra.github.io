@@ -14,11 +14,35 @@ module.exports = {
       },
     },
     // Markdown
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [{
+          resolve: `gatsby-remark-prismjs`,
+          options: {
+            classPrefix: "language-",
+            inlineCodeMarker: null,
+            aliases: {},
+            showLineNumbers: false,
+            noInlineHighlight: false,
+          }
+        }]
+      }
+    },
+
+    // SOURCE FILE SYSTEM
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `src/pages`,
+        name: 'case-studies',
+        path: `${__dirname}/src/pages/case-studies`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: 'blog',
+        path: `${__dirname}/src/pages/blog/`,
       },
     },
 
@@ -64,6 +88,15 @@ module.exports = {
           ]
         }
       }
+    },
+
+    // NProgress
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        color: `#6D83F2`,
+        showSpinner: false,
+      },
     },
 
     // others

@@ -63,7 +63,8 @@ const BG = styled.div`
   right: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  min-height: 630px;
+  max-height: 740px;
 `
 const SmallProjectWrapper = styled.section`
   ${props => props.theme.spacing.sectionBottom};

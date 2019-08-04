@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
-import logo from 'src/static/logo.svg';
+import logo from '../Layout/Navbar/src/static/logo.svg';
 
 const Overlay = styled.div`
   position: fixed;

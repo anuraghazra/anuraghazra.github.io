@@ -22,12 +22,14 @@ const Image = ({ src, ...props }) => {
 
   const match = data.allFile.edges.find(({ node }) => node.relativePath.match(src));
 
+  let isValid = match && match.node.childImageSharp;
   return (
-    match.node.childImageSharp &&
+    isValid ?
     <Img
       fluid={match.node.childImageSharp.fluid}
       {...props}
     />
+    : null
   )
 }
 

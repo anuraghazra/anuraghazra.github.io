@@ -5,7 +5,7 @@ export const Intro = styled.div`
   align-items: center;
   justify-content: space-between;
   
-  height: 80vh;
+  height: calc(80vh - 100px);
   ${props => props.theme.spacing.sectionBottom};
   
   .home__text {
@@ -26,6 +26,7 @@ export const Intro = styled.div`
 
   
   h1 {
+    margin: -4px 0;
     font-size: 2.5rem;
     font-weight: 900;
   }

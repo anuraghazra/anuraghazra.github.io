@@ -29,6 +29,7 @@ export const CaseStudyWrapper = styled.section`
     margin-bottom: 50px;
     h1 {
       margin: 0;
+      line-height: 70px;
     }
     .case__links {
       margin: 0;
@@ -46,13 +47,6 @@ export const CaseStudyWrapper = styled.section`
     @media ${p => p.theme.media.tablet} {
       grid-template-columns: 1fr;
     }
-  }
-
-
-  .case__markdown-content {
-    ${p => p.theme.spacing.sectionTopBottom};
-    margin-top: 50px;
-    max-width: 800px;
   }
 
   .case__iframe-container  {

@@ -7,7 +7,6 @@ import { CCard, CardFooter } from './CreativeCoding.style'
 
 const CCProject = ({ node }) => {
   let img = node.img.replace('https://anuraghazra.github.io/CanvasFun/thumbnails/', '');
-
   return (
     <CCard key={node.id}>
       <a name={node.title} aria-label={node.title} className="thumbnail-a" href={node.demo}>

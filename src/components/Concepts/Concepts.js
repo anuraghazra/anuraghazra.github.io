@@ -5,7 +5,6 @@ import { useStaticQuery, graphql } from 'gatsby'
 import Image from 'src/components/Image';
 
 import PageHeader from 'src/components/common/PageHeader';
-import { Lightbox, useLightbox } from 'src/components/LightBox/LightBox';
 import { IconButton } from 'src/components/common/Button';
 import {
   CCard as Card,
@@ -69,8 +68,8 @@ const Concepts = () => {
             node {
               relativePath
               childImageSharp {
-                fluid(quality: 90) {
-                  src
+                fluid(quality: 90, maxWidth: 600) {
+                  ...GatsbyImageSharpFluid
                 }
               }
             }
@@ -80,33 +79,17 @@ const Concepts = () => {
     `
   );
 
-  // find images by sequence
-  // let imgs = concepts.allConceptsJson.edges.map(({ node: json }) => {
-  //   let match = concepts.allFile.edges.find(({ node }) => node.relativePath.match(json.links.image))
-  //   return match.node.childImageSharp.fluid.src;
-  // });
-  // console.log(concepts.allFile.edges)
-  // let img = concepts.allFile.edges.find(({ node }) => node.relativePath.match(json.links.image))
-  let imgs = concepts.allFile.edges.map(({ node }) => node.childImageSharp.fluid.src);
-
-  const {
-    hide,
-    next,
-    prev,
-    isOpen,
-    current,
-    handleImageClick,
-  } = useLightbox(imgs.length);
-
   return (
     <ConceptsWrapper id="concepts">
       <PageHeader>Concepts</PageHeader>
       <Grid>
         {
           concepts.allConceptsJson.edges.map((nodes, index) => (
-            <ConceptCard key={nodes.node.id} onClick={() => handleImageClick(index)}>
-
-              <Image src={nodes.node.links.image} alt={nodes.node.title} />
+            <ConceptCard key={nodes.node.id}>
+              <Image
+                fluid={concepts.allFile.edges[index].node.childImageSharp.fluid}
+                alt={nodes.node.title}
+              />
               <ConceptCardFooter
                 onClick={e => e.stopPropagation()}
                 justify="space-between"
@@ -123,18 +106,10 @@ const Concepts = () => {
                   }
                 </div>
               </ConceptCardFooter>
-
             </ConceptCard>
           ))
         }
       </Grid>
-      <Lightbox
-        isOpen={isOpen}
-        current={imgs[current]}
-        hide={hide}
-        next={next}
-        prev={prev}
-      />
     </ConceptsWrapper>
   )
 }

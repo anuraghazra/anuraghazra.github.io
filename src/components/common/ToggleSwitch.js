@@ -52,10 +52,11 @@ const SwitchWrapper = styled.div`
 
   .layer {
     width: 100%;
-    background-color: #ebf7fc;
+    /* background-color: #ebf7fc; */
     transition-delay: 1s;
-    transition: 0.3s ease all;
+    transition: 0.2s ease all;
     z-index: 1;
+    background-color: ${p => p.theme.accentColor}
   }
 
   /* Button 1 */
@@ -75,7 +76,7 @@ const SwitchWrapper = styled.div`
     background-color: ${p => p.theme.primaryColor};
     border-radius: 30px;
     transition-delay: 1s;
-    transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+    transition: 0.2s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
   }
 
   #button-1 .checkbox:checked + .knobs:before {
@@ -84,24 +85,24 @@ const SwitchWrapper = styled.div`
     background-color: ${p => p.theme.primaryColor}
   }
 
-  #button-1 .checkbox:checked ~ .layer {
-    background-color: ${p => p.theme.accentColor}
-  }
+  /* #button-1 .checkbox:checked ~ .layer {
+    
+  } */
 
   #button-1 .knobs,
   #button-1 .knobs:before,
   #button-1 .layer {
     transition-delay: 1s;
-    transition: 0.3s ease all;
+    transition: 0.2s ease all;
   }
 `
 
-const ToggleSwitch = ({ onChangeInput }) => {
+const ToggleSwitch = ({ onChangeInput, inputRef }) => {
 
   return (
     <SwitchWrapper>
       <div className="button r" id="button-1">
-        <input onChange={onChangeInput} type="checkbox" className="checkbox" />
+        <input ref={inputRef} onChange={onChangeInput} type="checkbox" className="checkbox" />
         <div className="knobs"></div>
         <div className="layer"></div>
       </div>
