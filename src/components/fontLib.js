@@ -3,6 +3,8 @@ import {
   faGithub,
   faDribbble,
   faTwitter,
+  faFacebook,
+  faReddit,
   faJs,
   faHtml5,
   faCss3,
@@ -15,13 +17,17 @@ import {
   faHandshake,
   faPaperPlane,
   faChevronRight,
-  faChevronLeft
+  faChevronLeft,
+  faClock,
+  faCalendarAlt
 } from '@fortawesome/free-solid-svg-icons'
 
 library.add(
   faGithub,
   faDribbble,
   faTwitter,
+  faFacebook,
+  faReddit,
   faPaintBrush,
   faWindowMaximize,
   faCode,
@@ -32,5 +38,7 @@ library.add(
   faCss3,
   faCodepen,
   faChevronRight,
-  faChevronLeft
+  faChevronLeft,
+  faClock,
+  faCalendarAlt
 );

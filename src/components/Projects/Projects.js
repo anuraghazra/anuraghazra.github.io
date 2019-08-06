@@ -56,7 +56,7 @@ const Projects = () => {
             desc={node.frontmatter.excerpt}
             links={
               <ProjectLinks>
-                <Button as={Link} to={'/' + node.fields.slug}>Case Study</Button>
+                <Button as={Link} to={node.fields.slug}>Case Study</Button>
                 <Button target="__blank" as="a" href={node.frontmatter.demo}>Live Demo</Button>
                 <IconButton label="github" icon={["fab", "github"]} href={node.frontmatter.src} />
               </ProjectLinks>

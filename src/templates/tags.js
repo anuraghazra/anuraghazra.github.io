@@ -1,15 +1,13 @@
 import React from "react"
 import { graphql } from "gatsby";
 
-import Layout from "src/components/Layout/Layout"
+
 import SEO from "src/components/seo";
+import Layout from "src/components/Layout/Layout"
+import BlogCard from "src/components/Blog/BlogCard";
+import BlogLayout from "src/components/BlogLayout";
 
-import BlogCard from '../components/Blog/BlogCard';
-import Tags from 'src/components/Blog/Tags';
-
-import { Row, Col } from 'react-grid-system';
-
-const TagsPage = ({ pageContext, data }) => {
+const TagsPage = ({ data, pageContext }) => {
   const { tag } = pageContext;
   const { edges, totalCount } = data.allMarkdownRemark;
 
@@ -18,15 +16,19 @@ const TagsPage = ({ pageContext, data }) => {
   return (
     <Layout>
       <SEO title={tagHeader} />
-      <h1>{tagHeader}</h1>
 
-      <Row gutterWidth={100}>
-        <Col sm={12} md={8}>
-          {edges.map(({ node }) => {
+      <BlogLayout>
+        <h1>{tagHeader}</h1>
+        <br />
+        <br />
+        {
+          edges.map(({ node }) => {
             const { slug } = node.fields;
-            const { title, date } = node.frontmatter;
+            const { title, date, tags } = node.frontmatter;
             return (
               <BlogCard
+                tags={tags}
+                key={node.id}
                 slug={slug}
                 title={title}
                 date={date}
@@ -34,19 +36,9 @@ const TagsPage = ({ pageContext, data }) => {
                 excerpt={node.excerpt}
               />
             )
-          })}
-        </Col>
-        <Col sm={12} md={4}>
-          <div>
-            <h4>Random Post</h4>
-          </div>
-          <div>
-            <h4>Tags</h4>
-            <Tags />
-          </div>
-        </Col>
-      </Row>
-
+          })
+        }
+      </BlogLayout>
     </Layout>
   )
 }
@@ -62,13 +54,14 @@ export const pageQuery = graphql`
       totalCount
       edges {
         node {
+          id
           excerpt
-          html
           timeToRead
           fields {
             slug
           }
           frontmatter {
+            tags
             title
             date(formatString: "MMMM DD, YYYY", locale: "en")
           }

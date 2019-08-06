@@ -24,7 +24,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       node,
       name: 'slug',
       // value will be {blog||case-studies}/my-title
-      value: sourceInstanceName + '/' + slugFromTitle 
+      value: '/' + sourceInstanceName + '/' + slugFromTitle 
     });
 
     // adds a posttype field to extinguish between blog and case-study
@@ -99,7 +99,7 @@ exports.createPages = ({ actions, graphql }) => {
             path: `/blog/tags/${slugify(tag)}/`,
             component: tagTemplate,
             context: {
-              tag: slugify(tag)
+              tag
             }
           });
         });

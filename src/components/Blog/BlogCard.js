@@ -1,14 +1,27 @@
-import React from 'react';
-import styled from 'styled-components';
-import Link from "gatsby-link"
+import React from "react";
+import PropTypes from "prop-types"
+
+import Link from "gatsby-link";
+import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+
+import { TagBreadcrumb } from './Tags';
+import slugify from 'src/components/slugify';
 
 const PostWrapper = styled.article`
-  margin-bottom: 50px;
-  margin-top: 50px;
-  padding: 30px 20px;
-  border-top: 5px solid ${p => p.theme.primaryColor};
+  overflow: auto;
+  margin-bottom: 70px;
+  /* margin-top: 100px; */
+  padding: 30px 30px;
+  border-top: 5px solid ${p => p.theme.dark ? p.theme.accentColor : p.theme.primaryColor};
   border-radius: 10px;
   box-shadow: ${p => p.theme.shadowSmall}; 
+  background-color: ${p => p.theme.secondaryColor};
+  transition: 0.2s;
+
+  &:hover {
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  }
 
   span {
     font-size: 13px;
@@ -16,16 +29,41 @@ const PostWrapper = styled.article`
   }
 `
 
-const BlogCard = ({date, readtime, title, excerpt, slug}) => {
+export const BlogDateAndReadTime = ({ date, readtime }) => (
+  <span style={{ fontSize: 13, color: "gray" }}>
+    <FontAwesomeIcon color="gray" icon="calendar-alt" />&nbsp;&nbsp;{date}
+    &nbsp;&nbsp;&nbsp;
+    <FontAwesomeIcon color="gray" icon="clock" />&nbsp;&nbsp;{readtime}min read
+  </span>
+)
+
+const BlogCard = ({ date, readtime, title, excerpt, slug, tags }) => {
   return (
     <Link to={slug}>
       <PostWrapper>
-        <span>{date} | {readtime}min read</span>
+        <BlogDateAndReadTime date={date} readtime={readtime} />
+
         <h2>{title}</h2>
         <p>{excerpt}</p>
+
+        <div style={{ marginTop: 20 }}>
+          {
+            tags.map(tag => (
+              <TagBreadcrumb key={tag} to={`/blog/tags/${slugify(tag)}/`}>{tag}</TagBreadcrumb>
+            ))
+          }
+        </div>
       </PostWrapper>
     </Link>
+
   )
 }
 
+BlogCard.propTypes = {
+  date: PropTypes.string.isRequired,
+  readtime: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  excerpt: PropTypes.string.isRequired,
+  slug: PropTypes.string.isRequired,
+}
 export default BlogCard;

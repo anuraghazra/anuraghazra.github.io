@@ -11,34 +11,19 @@ import Footer from "./Footer";
 import GlobalStyle from "src/styles/GlobalStyle";
 
 import 'src/components/fontLib';
+import useDarkMode from 'src/hooks/useDarkMode';
 
 const Layout = ({ children }) => {
-  const toggleRef = useRef();
-  let [theme, setTheme] = useState('light');
-
-  useEffect(() => {
-    let savedTheme = localStorage.getItem('anuraghazra-site-theme');
-    if (savedTheme) {
-      setTheme(savedTheme);
-      toggleRef.current.checked = savedTheme === 'dark' ? true : false;
-    }
-  }, [])
-
-  const handleToggleTheme = (e) => {
-    let checked = e.target.checked;
-    setTheme(() => checked ? 'dark' : 'light');
-    localStorage.setItem('anuraghazra-site-theme', checked ? 'dark' : 'light');
-  }
+  const [theme, toggleTheme, toggleRef] = useDarkMode();
 
   return (
     <ThemeProvider theme={theme === 'light' ? themelight : themedark}>
       <>
         <GlobalStyle />
-        <Navbar toggleRef={toggleRef} handleDarkModeToggle={handleToggleTheme} />
+        <Navbar toggleRef={toggleRef} handleDarkModeToggle={toggleTheme} />
 
-        <button onClick={handleToggleTheme}>toggle-theme</button>
-        <Wrapper style={{ marginTop: 100, marginBottom: 50,  minHeight: 'calc(100vh - 125px)' }}>{children}</Wrapper>
-      
+        <button onClick={toggleTheme}>toggle-theme</button>
+        <Wrapper style={{ marginTop: 100, marginBottom: 50, minHeight: 'calc(100vh - 125px)' }}>{children}</Wrapper>
         <Footer />
       </>
     </ThemeProvider>

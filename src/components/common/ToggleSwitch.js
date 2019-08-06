@@ -98,11 +98,10 @@ const SwitchWrapper = styled.div`
 `
 
 const ToggleSwitch = ({ onChangeInput, inputRef }) => {
-
   return (
     <SwitchWrapper>
       <div className="button r" id="button-1">
-        <input ref={inputRef} onChange={onChangeInput} type="checkbox" className="checkbox" />
+        <input aria-label="toggle theme" ref={inputRef} onChange={onChangeInput} type="checkbox" className="checkbox" />
         <div className="knobs"></div>
         <div className="layer"></div>
       </div>

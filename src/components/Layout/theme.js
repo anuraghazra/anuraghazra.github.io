@@ -26,6 +26,8 @@ const themeCommon = {
     fablet: `(max-width: ${sizes.fablet})`,
     desktop: `(max-width: ${sizes.desktop})`,
   },
+  gradient: 'linear-gradient(134deg, #6A98F0 0%, #4961DC 99%)',
+  gradient2: 'linear-gradient(99deg, #6A98F0 0%, #4961DC 130%)',
   swapIfDark(prop1, prop2) {
     return `${this.dark ? this[prop1] : this[prop2]};`
   }
@@ -39,9 +41,18 @@ export const themelight = {
   accentColor: '#C7D0FF',
   primaryBlack: '#383838',
   primaryText: '#383838',
+  ...themeCommon
+}
 
-  gradient: 'linear-gradient(134deg, #6A98F0 0%, #4961DC 99%)',
-  gradient2: 'linear-gradient(99deg, #6A98F0 0%, #4961DC 130%)',
+export const themedarkblue = {
+  dark: true,
+  bg: '#0B0D18',
+  primaryColor: '#0B0D18',
+  secondaryColor: '#0F1221',
+  accentColor: '#15182E',
+  primaryBlack: '#F8F8F8',
+  elevation0: '#6D83F2',
+  primaryText: '#F8F8F8',
   ...themeCommon
 }
 
@@ -51,10 +62,8 @@ export const themedark = {
   primaryColor: '#6D83F2',
   secondaryColor: '#232323',
   accentColor: '#303030',
-  primaryBlack: '#f8f8f8',
+  primaryBlack: '#F8F8F8',
   elevation0: '#191919',
   primaryText: '#F8F8F8',
-  gradient: 'linear-gradient(134deg, #6A98F0 0%, #4961DC 99%)',
-  gradient2: 'linear-gradient(99deg, #6A98F0 0%, #4961DC 130%)',
   ...themeCommon
 }

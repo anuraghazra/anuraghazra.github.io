@@ -92,6 +92,17 @@ const GlobalStyle = createGlobalStyle`
     ${scrollBar};
   }
 
+  .blog__social-share {
+    a {
+      margin-right: 20px;
+    }
+  }
+  /* Other Specific Global Styles */
+  div#disqus_thread {
+    background: whitesmoke;
+    padding: 15px 25px;
+    border-radius: 10px;
+  }
 
   .markdown-content {
     ${p => p.theme.spacing.sectionTopBottom};
@@ -101,7 +112,7 @@ const GlobalStyle = createGlobalStyle`
       font-size: 18px;
     } 
     code {
-      font-size: 18px;
+      font-size: 16px
     }
     
     @media ${p => p.theme.media.tablet} {
@@ -117,6 +128,15 @@ const GlobalStyle = createGlobalStyle`
       margin: 20px 0;
       color: ${p => p.theme.primaryColor};
     }
+
+    ul {
+      font-family: ${p => p.theme.secondaryFontFamily};
+      font-size: 18px;
+      padding: 0 17px;
+      line-height: 200%;
+      text-indent: 0px;
+      list-style: disc;
+    }
   }
   /* Prismjs */
   blockquote {
@@ -124,6 +144,10 @@ const GlobalStyle = createGlobalStyle`
     padding: 15px;
     margin: 20px 0;
     border-radius: 3px;
+  }
+  .gatsby-highlight-code-line {
+    display: block;
+    background-color: rgba(255,255,225,0.1);
   }
   .language-text {
     padding: 2px 5px;
