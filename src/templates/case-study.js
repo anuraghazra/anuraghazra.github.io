@@ -5,15 +5,30 @@ import Layout from "src/components/Layout/Layout"
 
 import SEO from "src/components/seo";
 
+import Flex from "../components/common/Flex";
 import IFrame from 'src/components/common/IFrame';
 import Button, { IconButton } from 'src/components/common/Button';
 import { ProjectLinks } from 'src/components/Projects/ProjectTemplate.style';
-import Flex from "../components/common/Flex";
 
 import { InfoTitle, CaseStudyWrapper } from './case-study.style'
 
 const CaseStudy = ({ data }) => {
   const study = data.markdownRemark.frontmatter;
+
+  const infoLinks = (
+    study.info.links &&
+    <div>
+      <InfoTitle>Links & Resources</InfoTitle>
+      <ul>
+        {study.info.links.map((link, i) => (
+          <li key={i}>
+            <a href={link[1]}>{link[0]}</a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+
   return (
     <Layout>
       <SEO title={study.title} />
@@ -39,15 +54,7 @@ const CaseStudy = ({ data }) => {
                 {study.info.tech.map((tech, i) => <li key={i}>{tech}</li>)}
               </ul>
             </div>
-            {
-              study.info.links &&
-              <div>
-                <InfoTitle>Links & Resources</InfoTitle>
-                <ul>
-                  {study.info.links.map((link, i) => <li key={i}><a href={link[1]}>{link[0]}</a></li>)}
-                </ul>
-              </div>
-            }
+            {infoLinks}
           </div>
           <div className="case__iframe-container">
             <IFrame src={study.iframe} />

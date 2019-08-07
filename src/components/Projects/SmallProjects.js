@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components';
 
@@ -19,19 +19,19 @@ const settings = {
   autoplay: true,
   autoplaySpeed: 4000,
   slidesToShow: 3,
-  slidesToScroll: 3,
+  slidesToScroll: 1,
   draggable: true,
   centerMode: true,
   centerPadding: '40px',
   swipeToSlide: true,
   arrows: false,
+  accessibility: false,
   responsive: [
     {
       breakpoint: 1024,
       settings: {
         centerPadding: '15px',
         slidesToShow: 2,
-        slidesToScroll: 2,
       }
     },
     {
@@ -39,7 +39,6 @@ const settings = {
       settings: {
         speed: 500,
         slidesToShow: 1,
-        slidesToScroll: 2,
         centerPadding: '15px',
       }
     }
@@ -99,6 +98,7 @@ const SmallProjectCard = styled.div`
     bottom: 20px;
   }
 `
+
 const SmallProjects = () => {
   const smallprojects = useStaticQuery(
     graphql`
@@ -117,9 +117,7 @@ const SmallProjects = () => {
           }
         }
       }
-    `
-  );
-
+  `);
 
   return (
     <SmallProjectWrapper>

@@ -3,15 +3,16 @@ import { graphql } from "gatsby"
 
 import SEO from "src/components/seo";
 import Layout from "src/components/Layout/Layout"
+
 import BlogLayout from "src/components/BlogLayout";
 import { BlogDateAndReadTime } from "src/components/Blog/BlogCard";
+import SocialShareSection from 'src/components/Blog/SocialShareSection';
 
 import { DiscussionEmbed } from "disqus-react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const BlogPost = ({ data, pageContext }) => {
   const { title, date, id } = data.markdownRemark.frontmatter;
-  const { timeToRead, html } = data.markdownRemark;
+  const { timeToRead, html, excerpt } = data.markdownRemark;
 
   const baseUrl = "https://anuraghazra.surge.sh"
   const baseSlugUrl = baseUrl + pageContext.slug;
@@ -22,27 +23,14 @@ const BlogPost = ({ data, pageContext }) => {
     url: baseSlugUrl
   }
 
-  const fbShareLink = `https://facebook.com/sharer/sharer.php?u=${baseSlugUrl}`;
-  const twShareLink = `http://twitter.com/share?text="${title}" - &url=${baseSlugUrl}`;
-  const rdShareLink = `http://www.reddit.com/submit?url=${baseSlugUrl}&title=${title}`;
   return (
     <Layout>
-      <SEO title={title} />
+      <SEO title={title} description={excerpt} />
 
       <BlogLayout sharerSection={
         <div>
           <h4>Share on</h4>
-          <div className="blog__social-share">
-            <a aria-label="share on facebook" rel="noopener norefferer" target="__blank" href={fbShareLink}>
-              <FontAwesomeIcon style={{ fontSize: 24 }} icon={["fab", "facebook"]} />
-            </a>
-            <a aria-label="share on twitter" rel="noopener norefferer" target="__blank" href={twShareLink}>
-              <FontAwesomeIcon style={{ fontSize: 24 }} icon={["fab", "twitter"]} />
-            </a>
-            <a aria-label="share on reddit" rel="noopener norefferer" target="__blank" href={rdShareLink}>
-              <FontAwesomeIcon style={{ fontSize: 24 }} icon={["fab", "reddit"]} />
-            </a>
-          </div>
+          <SocialShareSection baseSlugUrl={baseSlugUrl} title={title} />
         </div>
       }>
         <BlogDateAndReadTime date={date} readtime={timeToRead} />
@@ -58,10 +46,10 @@ const BlogPost = ({ data, pageContext }) => {
 export const query = graphql`
   query BlogPostBySlug($slug : String!) {
     markdownRemark(fields: {slug: {eq: $slug}}) {
+      excerpt
       html
       timeToRead
       frontmatter {
-        author
         date(formatString: "MMMM DD, YYYY", locale: "en")
         title
       }

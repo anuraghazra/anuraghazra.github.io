@@ -19,11 +19,9 @@ const BlogPage = () => {
             node {
               id
               excerpt
-              html
               timeToRead
               frontmatter {
                 title
-                author
                 date(formatString: "MMMM DD, YYYY", locale: "en")
                 tags
               }
