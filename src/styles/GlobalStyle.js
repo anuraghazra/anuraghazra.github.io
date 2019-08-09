@@ -52,6 +52,11 @@ const GlobalStyle = createGlobalStyle`
     line-height: 150%;
   }
 
+  .invalid {
+    color: #ff6f8b !important;
+    box-shadow: 0 0 1px 1px #ff6f8b;
+  }
+
   .active {
     color: #383838;
   }

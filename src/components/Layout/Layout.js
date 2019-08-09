@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react"
 import PropTypes from "prop-types"
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 import "normalize.css";
 import { ThemeProvider } from 'styled-components';
@@ -23,7 +24,10 @@ const Layout = ({ children }) => {
         <Navbar toggleRef={toggleRef} handleDarkModeToggle={toggleTheme} />
 
         <button onClick={toggleTheme}>toggle-theme</button>
-        <Wrapper style={{ marginTop: 100, marginBottom: 50, minHeight: 'calc(100vh - 125px)' }}>{children}</Wrapper>
+        
+        <ParallaxProvider>
+          <Wrapper style={{ marginTop: 100, marginBottom: 50, minHeight: 'calc(100vh - 125px)' }}>{children}</Wrapper>
+        </ParallaxProvider>
         <Footer />
       </>
     </ThemeProvider>

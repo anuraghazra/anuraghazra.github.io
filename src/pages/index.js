@@ -11,6 +11,11 @@ import CreativeCoding from "src/components/CreativeCoding/CreativeCoding";
 import Concepts from "src/components/Concepts/Concepts";
 import Contact from "src/components/Contact/Contact";
 
+
+// const Projects = React.lazy(() => import('src/components/Projects/Projects'));
+// const CreativeCoding = React.lazy(() => import('src/components/CreativeCoding/CreativeCoding'));
+// const Concepts = React.lazy(() => import('src/components/Concepts/Concepts'));
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
@@ -18,7 +23,9 @@ const IndexPage = () => (
     <Home />
     <About />
     <Skills />
-    <Projects />
+    {/* <React.Suspense fallback={<p>loading</p>}> */}
+      <Projects />
+    {/* </React.Suspense> */}
     <CreativeCoding />
     <Concepts />
     <Contact />

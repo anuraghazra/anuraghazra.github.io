@@ -1,6 +1,4 @@
 import React from "react";
-// import { useSpring, animated } from 'react-spring'
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import svgRect from 'src/static/home_rect.svg'
 
@@ -13,6 +11,7 @@ import Flex from "src/components/common/Flex";
 import Button from "src/components/common/Button";
 
 import { Card, CardIcon, CardText, CardTitle } from "src/components/common/Card";
+import { Parallax } from 'react-scroll-parallax';
 
 const ThingsILove = () => (
   <Flex justify="space-between" align="center">
@@ -21,7 +20,7 @@ const ThingsILove = () => (
       <CardTitle>FrontEnd</CardTitle>
       <CardText>
         i'm more front end focused and love to work with React as well as pure HTML, CSS
-      </CardText>
+        </CardText>
     </Card>
 
     <Card>
@@ -43,27 +42,12 @@ const ThingsILove = () => (
 );
 
 const Home = () => {
-  // const slideRight = useSpring({
-  //   opacity: 1,
-  //   right: '0px',
-  //   from: {
-  //     opacity: 0,
-  //     right: '-100px',
-  //   }
-  // });
-  // const slideLeft = useSpring({
-  //   opacity: 1,
-  //   from: {
-  //     opacity: 0,
-  //   }
-  // });
-
   return (
     <HomeWrapper id="home">
       <img className="svg-rect" src={svgRect} alt=""></img>
-
+      
       <Intro>
-        <div className="home__text">
+        <Parallax y={[50, -50]} className="home__text">
           <p>Hello, i’m</p>
           <h1>ANURAG HAZRA</h1>
           <p className="adjust">CREATIVE FRONT-END WEB DEVELOPER</p>
@@ -77,7 +61,7 @@ const Home = () => {
               <IconLink label="codepen" icon={["fab", "codepen"]} href="//codepen.io/anuraghazra" />
             </div>
           </div>
-        </div>
+        </Parallax>
         <HeroCard />
       </Intro>
 

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { slideDownKeyframe } from 'src/components/css-animations.js';
 
 export const Intro = styled.div`
   display: flex;
@@ -9,18 +10,22 @@ export const Intro = styled.div`
   ${props => props.theme.spacing.sectionBottom};
   
   .home__text {
-    z-index: 1;
-
-    a.cta {
-      display: block;
-      margin: 30px 0;
-    }
+    animation: ${slideDownKeyframe} 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s forwards;
     
-    @media ${props => props.theme.media.tablet} {
-      text-align: center;
-      display: flex;
-      align-items: center;
-      flex-direction: column;
+    > div {
+      z-index: 1;
+
+      a.cta {
+        display: block;
+        margin: 30px 0;
+      }
+      
+      @media ${props => props.theme.media.tablet} {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
     }
   }
 

@@ -1,51 +1,88 @@
-import React from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { withTheme } from 'styled-components';
 
 import {
   HeroCardWrapper,
   CodeCardWrapper,
   ColorPaletteWrapper,
-  ColorBox,
+  ColorBoxWrapper,
 } from './HeroCard.style'
 
+
+function repeatString(str, count) {
+  let maxCount = str.length * count;
+  count = Math.floor(Math.log(count) / Math.log(2));
+  while (count) {
+    str += str;
+    count--;
+  }
+  str += str.substring(0, maxCount - str.length);
+  return str;
+}
+
+function copyToClipboard(str) {
+  var el = document.createElement('textarea');
+  el.value = str;
+  el.setAttribute('readonly', '');
+  el.style = { position: 'absolute', left: '-9999px' };
+  document.body.appendChild(el);
+  el.select();
+  document.execCommand('copy');
+  document.body.removeChild(el);
+}
+
 export const CodeCard = () => {
+  const [text, setText] = useState(`new Date().getFullYear() - 2001;`);
+  const age = new Date().getFullYear() - 2001;
+  // trimed down polyfill of String.repeat
+  const changeText = () => {
+    let space = repeatString(' ', 54);
+    setText(age + ';' + space)
+  }
   return (
     <CodeCardWrapper>
       <pre>1   class <b>Person</b> {'{'}</pre>
       <pre>2         constructor() {'{'}</pre>
       <pre>3             this.name = "<b>Anurag Hazra</b>";</pre>
       <pre>4             this.traits = ["<b>DESIGN</b>", "<b>DEV</b>"];</pre>
-      <pre>5             this.age = new Date().getFullYear() - 2001;</pre>
+      <pre onClick={changeText}>5             this.age = {text}</pre>
       <pre>6         {"}"}</pre>
       <pre>7   {"}"}</pre>
-      {/* <pre>
-        1   class <b>Person</b> {'{'}<br />
-        2         constructor() {'{'}<br />
-        3             this.name = "<b>Anurag Hazra</b>";<br />
-        4             this.traits = ["<b>DESIGN</b>", "<b>DEV</b>"];<br />
-        5             this.age = new Date().getFullYear() - 2001;<br />
-        6         {"}"}<br />
-        7   {"}"}
-      </pre> */}
     </CodeCardWrapper>
   )
+}
+
+
+const ColorBox = ({ color }) => {
+  const tooltipRef = useRef();
+  useEffect(() => {
+    return tooltipRef.current.addEventListener('animationend', () => {
+      tooltipRef.current.classList.remove('tooltip-animate')
+    });
+  })
+  const copy = () => {
+    copyToClipboard(color);
+    tooltipRef.current.classList.add('tooltip-animate');
+  };
+
+  return <ColorBoxWrapper ref={tooltipRef} onClick={copy} style={{ background: color }} />
 }
 
 export const ColorPalette = withTheme(({ theme }) => {
   return (
     <ColorPaletteWrapper>
-      <ColorBox style={{background: theme.primaryColor}} />
-      <ColorBox style={{background: '#6A98F0'}} />
-      <ColorBox style={{background: theme.gradient}} />
-      <ColorBox style={{background: theme.primaryBlack}} />
-      <ColorBox style={{background: theme.accentColor}} />
+      <ColorBox color={theme.primaryColor} />
+      <ColorBox color={'#6A98F0'} />
+      <ColorBox color={theme.gradient} />
+      <ColorBox color={theme.primaryBlack} />
+      <ColorBox color={theme.accentColor} />
     </ColorPaletteWrapper>
   )
 })
 
 export const HeroCard = () => {
   return (
-    <HeroCardWrapper>
+    <HeroCardWrapper y={[50, -50]}>
       <CodeCard />
       <ColorPalette />
     </HeroCardWrapper>
