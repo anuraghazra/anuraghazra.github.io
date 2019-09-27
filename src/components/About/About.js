@@ -14,9 +14,7 @@ const About = () => {
   return (
     <AboutWrapper id="about">
       <PageHeader>About Me</PageHeader>
-
       <SkewBg />
-
       <AboutInfo>
         <div>
           <Avatar src="avatar.png" />

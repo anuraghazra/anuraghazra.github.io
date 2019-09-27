@@ -26,7 +26,7 @@ const PrismJsStyles = css`
     margin: 1em 0;
     padding: 1em;
     overflow: auto;
-    border-left: 10px solid ${p => p.theme.primaryColor};
+    border-left: 5px solid ${p => p.theme.primaryColor};
 
     pre[class*="language-"] {
       background-color: transparent;

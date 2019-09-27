@@ -1,4 +1,6 @@
-import { library } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import { library, config } from '@fortawesome/fontawesome-svg-core'
+
 import {
   faGithub,
   faDribbble,
@@ -42,3 +44,5 @@ library.add(
   faClock,
   faCalendarAlt
 );
+config.autoAddCss = false;
+

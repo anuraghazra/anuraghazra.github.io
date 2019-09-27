@@ -7,8 +7,9 @@ const scrollBar = css`
 
   ::-webkit-scrollbar {
     width: 10px;
-    height: 10px;
+    height: 7px;
     background-color: white;
+    cursor: pointer;
   }
 
   ::-webkit-scrollbar-thumb {
@@ -21,8 +22,9 @@ const scrollBar = css`
 
   ::-moz-scrollbar {
     width: 10px;
-    height: 10px;
+    height: 7px;
     background-color: white;
+    cursor: pointer;
   }
 
   ::-moz-scrollbarbutton-up {

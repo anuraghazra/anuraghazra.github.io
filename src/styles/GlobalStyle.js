@@ -94,9 +94,20 @@ const GlobalStyle = createGlobalStyle`
     max-width: 800px;
     p {
       font-size: 18px;
-    } 
+      line-height: 170%;
+    }
     code {
       font-size: 16px
+    }
+
+    figure {
+      margin: 50px 0;
+    }
+    figcaption {
+      margin: 10px 0;
+      font-style: italic;
+      font-size: 12px;
+      text-align: center;
     }
     
     @media ${p => p.theme.media.tablet} {

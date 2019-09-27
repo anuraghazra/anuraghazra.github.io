@@ -1,12 +1,12 @@
 [
   {
-    "title": "Verlet.js",
+    "title": "Verly.js",
     "links": {
-      "codepen": "//codepen.io/anuraghazra/embed/zevGrm/?default-tab=result&theme-id=light",
-      "github": "//github.com/anuraghazra/verlet.js",
-      "download": "//github.com//anuraghazra/verlet.js/archive/master.zip"
+      "codepen": "//codepen.io/anuraghazra/embed/vwmLKo/?default-tab=result&theme-id=light",
+      "github": "//github.com/anuraghazra/Verly.js",
+      "download": "//github.com/anuraghazra/Verly.js/archive/master.zip"
     },
-    "description": "verlet.js is a 2D Physics Simulation Engine. verlet.js is used for creating rapid and fast verlet physics based models and structures. i was developing this engine for about 4 months and made a electron based desktop drawing application on top of it."
+    "description": "Verly.js is an easy to integrate verlet physics engine made with javascript. It is also my most popular open source project on github, so far it got over 200 stars on github and got mentioned in codepen spark"
   },
   {
     "title": "Atomic.js",

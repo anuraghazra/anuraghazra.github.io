@@ -7,7 +7,7 @@ demo: //anuraghazra.github.io/EvolutionAquerium
 src: //github.com/anuraghazra/EvolutionAquerium
 
 info:
-  idea: the basic idea of the project is to achive and simulate biological creatures in a aquerium to see how they react  different scenarios
+  idea: the basic idea of the project is to achive and simulate biological creatures in a aquerium to see how they react in different scenarios
   tech: [Javascript, HTML5 Canvas]
   links:
     - [
@@ -27,13 +27,84 @@ You can learn more about them on Daniel Shiffman's YouTube Channel [The Coding T
 
 - [Coding Challenge #69.1: Evolutionary Steering Behaviors](https://www.youtube.com/watch?v=flxOkx0yLrY&t=1223s)
 - [Coding Challenge #124: Flocking Simulation](https://www.youtube.com/watch?v=mhjuuHl6qHM&t=1978s)
-- [9. Genetic Algorithm playlist The Nature of Code](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6bJM3VgzjNV5YxVxUwzALHV)
+- [Genetic Algorithm playlist The Nature of Code](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6bJM3VgzjNV5YxVxUwzALHV)
+
+---
+
+<img alt="Evolution Aquerium Codeflow Visualized (click to enlarge)" src="./Evolution_Aquarium_codeflowchart.png" />
+
+## AgentBuilder Class
+
+I make use of builder pattern to create different variaties of creatures with different traits. and AgentBuilder class helps me do this easily see how it works.
+
+> [Learn more how builder pattern works](https://medium.com/@axelhadfeg/builder-pattern-using-javascript-and-es6-ec1539182e24)
+
+```js
+class AgentBuilder {
+  constructor(type) {
+    this.acc = new Vector(0, 0)
+    this.vel = new Vector(0, -2)
+    this.type = type
+  }
+  setPos(x, y) {
+    this.pos = new Vector(x, y)
+    return this
+  }
+  setRadius(r = 5) {
+    this.radius = r
+    return this
+  }
+  setColor(color) {
+    return (this.color = color)
+  }
+  setDNA(dna) {
+    this.dna = dna
+    return this
+  }
+
+  // ... more setFunctions
+
+  build() {
+    // returns a new BaseAgent based on the values
+    return new BaseAgent(
+      this.pos.x,
+      this.pos.y,
+      this.radius,
+      this.dna,
+      this.color,
+      this
+    )
+  }
+}
+```
+
+And now the builder pattern is ready to be used, lets see how we can build creatures with different traits
+
+```js
+// later on
+let Predator = new AgentBuilder("PREDATOR")
+  .setRadius(10)
+  .setMaxSpeed(2)
+  .setMaxForce(0.05)
+  .setHealthDecrease(0.002)
+  .setColor([255, 0, 0])
+  .setFoodMultiplier([0.5, -0.5])
+
+let Avoider = new AgentBuilder("AVOIDER")
+  .setRadius(5)
+  .setMaxRadius(8)
+  .setMaxSpeed(4)
+  .setMaxForce(0.2)
+  .setHealthDecrease(0.003)
+  .setColor([255, 165, 0])
+  .setFoodMultiplier([0.5, -0.5])
+```
 
 ## BaseAgent Class
 
-Firstly i need to create a BaseAgent so we can create more `creatures` extending that class this class includes and handles all the logical stuff. the basic idea is to give each and every `agent` some basic traits like `health`, `radius`, `maxSpeed`, `maxSpeed` etc etc.
+BaseAgent class handles all the logic for update, render and physics, it's the heart of the codebase. the basic idea is to give each and every `agent` some basic traits like `health`, `radius`, `maxSpeed`, `maxSpeed` etc etc.
 
-see the full BaseAgent class's [code at github](https://github.com/anuraghazra/EvolutionAquerium/blob/master/src/js/BaseAgent.js#L15)
+> see the full BaseAgent class's [code at github](https://github.com/anuraghazra/EvolutionAquerium/blob/master/src/js/BaseAgent.js#L15)
 
 ```js
 class BaseAgent {
@@ -95,10 +166,9 @@ let names_male = [
 // names based on gender
 this.name = (this.getGender() === 'MALE') ? this.getRandomName(names_male) : this.getRandomName(names_female);
 ...
-
 ```
 
-and now, i will be talking only about main meat of the code not any other uncessecary code.
+And now, i will be talking only about main meat of the code not any other uncessecary code.
 so in the base class we have some methods
 
 - [applyFlock()](https://github.com/anuraghazra/EvolutionAquerium/blob/master/src/js/BaseAgent.js#L235)
@@ -111,7 +181,7 @@ so in the base class we have some methods
 
 - [eat()](https://github.com/anuraghazra/EvolutionAquerium/blob/master/src/js/BaseAgent.js#L271)
 
-  randomly returns a new Agent
+  seeks the nearby food
 
 - [Behaviour()](https://github.com/anuraghazra/EvolutionAquerium/blob/master/src/js/BaseAgent.js#L215)
 
@@ -123,22 +193,50 @@ so in the base class we have some methods
 
 ## Flock Class
 
-[Flock class](https://github.com/anuraghazra/EvolutionAquerium/blob/master/src/js/Flock.js) takes an agent hand handles all the flocking behaviours like `separate`, `align`, `cohesion`, `seek`.
+[Flock class](https://github.com/anuraghazra/EvolutionAquerium/blob/master/src/js/Flock.js) takes an agent and do the calculations for flocking behaviours like `separate`, `align`, `cohesion`, `seek`.
+
+```js
+class Flock {
+  constructor(currentAgent) {
+    this.currentAgent = currentAgent
+    this.wandertheta = 0
+  }
+
+  seek(target) {}
+  _returnSteer(sum) {}
+  wander() {}
+  separate(agents) {}
+  align(agents) {}
+  cohesion(agents) {}
+}
+```
 
 ## EcoSystem Class
 
 EcoSystem class actually manages all the `agents` and `behaviors`, basically its like a state manager
 
-
 it have some methods which are
 
-- addEntities
-- registerAgents
-- initialPopulation
-- addAgent
-- addBehavior
-- batchUpdateAgents
-- update 
+- [addEntities](https://github.com/anuraghazra/EvolutionAquerium/blob/master/src/js/EcoSystem.js#L17)
+
+  adds all entities to the entities (food, poison) object
+
+- [registerAgents](https://github.com/anuraghazra/EvolutionAquerium/blob/master/src/js/EcoSystem.js#L28)
+
+  registers Agents to the state and it will also create corresponding Arrays for each of them which you can use by calling ecoSys.groups[your_given_name]
+
+- [initialPopulation](https://github.com/anuraghazra/EvolutionAquerium/blob/master/src/js/EcoSystem.js#L39)
+
+  initializes the groups of population by given amount
+
+- [addBehavior](https://github.com/anuraghazra/EvolutionAquerium/blob/master/src/js/EcoSystem.js#L98)
+
+  specifies the behavior of the agent declarativly
+
+- [batchUpdateAgents](https://github.com/anuraghazra/EvolutionAquerium/blob/master/src/js/EcoSystem.js#L150)
+
+  updates all the agents
+
 ```js
 class EcoSystem {
   constructor() {
@@ -147,5 +245,191 @@ class EcoSystem {
     this.agents = {} // agent classes
     this.behaviors = {} // calculated behaviors
   }
+
+  addEntities(names) {}
+  registerAgents(agents) {}
+  initialPopulation(init) {}
+  addBehavior(config) {}
+  batchUpdateAgents(list, foodPoison, weight, callback) {}
 }
 ```
+
+
+## Setting up everything
+
+And the last step is to assembel every part of the code to create these boids like creatures and gave each of them behaviours
+
+```js
+// Global
+let canvas = document.querySelector('#c');
+let WIDTH = canvas.width = window.innerWidth;
+let HEIGHT = canvas.height = 600;
+let ctx = canvas.getContext('2d');
+
+
+let MAX_CREATURES = 300;
+const REPRODUCTION_RATE = 0.5;
+const ENABLE_SUPER_DEBUG = false;
+
+// constants for flexibilty
+const CREATURE = 'CREATURE';
+const PREDATOR = 'PREDATOR';
+const AVOIDER = 'AVOIDER';
+const EATER = 'EATER';
+const FOOD = 'FOOD';
+const POISON = 'POISON';
+
+function load() {
+  const ecoSys = new EcoSystem();
+
+  // creates a Array which you can access with ecoSys.entities 
+  ecoSys.addEntities({
+    FOOD: [],
+    POISON: []
+  });
+
+  // register classes it will also create corresponding Arrays
+  // which you can use by calling ecoSys.groups[your_given_name]
+  ecoSys.registerAgents({
+    CREATURE: Agent,
+    PREDATOR: Predator,
+    AVOIDER: Avoider,
+    EATER: Eater,
+  });
+
+  // initialPopulation have to use the same name
+  // which you configure in registerAgents
+  ecoSys.initialPopulation({
+    CREATURE: 150,
+    PREDATOR: randomInt(5, 10),
+    AVOIDER: randomInt(10, 20),
+    EATER: randomInt(1, 4),
+  });
+
+  let add = document.getElementById('addnew');
+  canvas.addEventListener('click', function (e) {
+    ecoSys.add(add.value, e.offsetX, e.offsetY)
+  })
+
+  //  ANIMATE LOOP
+  function animate() {
+    let grd = ctx.createRadialGradient(WIDTH / 2, HEIGHT / 2, 0, WIDTH / 2, HEIGHT / 2, WIDTH);
+    grd.addColorStop(0, "rgba(25,25,25,1)");
+    grd.addColorStop(1, "rgba(0,0,25,1)");
+    // Fill with gradient
+    ctx.fillStyle = grd;
+    ctx.fillRect(0, 0, WIDTH, HEIGHT);
+
+    /**
+     * likes food dislikes poison
+     * run away form predators and eaters
+     * cloneItSelf
+     */
+    ecoSys.addBehavior({
+      name: CREATURE,
+      like: FOOD,
+      dislike: POISON,
+      fear: {
+        PREDATOR: [-4, 75],
+        EATER: [-2, 100]
+      },
+      cloneItSelf: 0.0015,
+      callback: function () {
+        if (ecoSys.groups.CREATURE.length < MAX_CREATURES
+          && random(1) < REPRODUCTION_RATE) {
+          this.reproduce(ecoSys.groups.CREATURE);
+        }
+      }
+    });
+
+    /**
+     * likes poison dislikes food
+     * seeks and eats creatures
+     * run away from eaters
+     */
+    ecoSys.addBehavior({
+      name: PREDATOR,
+      like: POISON,
+      dislike: FOOD,
+      likeDislikeWeight: [1, -1],
+      fear: {
+        EATER: [-10, 50],
+        CREATURE: [1, 200, function (agents, i) {
+          agents.splice(i, 1);
+          this.health += this.goodFoodMultiplier;
+          this.radius += this.goodFoodMultiplier;
+        }]
+      },
+    });
+
+    /**
+     * likes food dislikes poison
+     * run away form predators, eaters, creatures
+     */
+    ecoSys.addBehavior({
+      name: AVOIDER,
+      like: FOOD,
+      dislike: POISON,
+      cloneItSelf: 0.0005,
+      // likeDislikeWeight: [1, -1],
+      fear: {
+        CREATURE: [-0.9, 100],
+        EATER: [-1, 100],
+        PREDATOR: [-1, 100, function () {
+          this.health += this.badFoodMultiplier;
+        }]
+      },
+    });
+
+
+    /**
+     * likes poison
+     * emits food as waste compound
+     * seeks creatures, predators, avoiders and EATS THEM
+     */
+    ecoSys.addBehavior({
+      name: EATER,
+      like: POISON,
+      dislike: POISON,
+      likeDislikeWeight: [1, 1],
+      fear: {
+        CREATURE: [1.0, 100, function (list, i) {
+          list.splice(i, 1);
+          this.health += this.goodFoodMultiplier;
+          this.radius += this.goodFoodMultiplier;
+        }],
+        PREDATOR: [1.0, 100, function (list, i) {
+          list.splice(i, 1);
+          this.health += this.goodFoodMultiplier;
+          this.radius += this.goodFoodMultiplier;
+        }],
+        AVOIDER: [1.0, 100, function (list, i) {
+          list.splice(i, 1);
+          this.health += this.goodFoodMultiplier;
+          this.radius += this.goodFoodMultiplier;
+        }],
+      },
+      callback: function () {
+        if (random(0, 1) < 0.05) {
+          addItem(ecoSys.entities.FOOD, 1, this.pos.x, this.pos.y)
+        }
+      }
+    });
+
+    // UPDATE & RENDER
+    ecoSys.render();
+    ecoSys.update();
+    renderItem(ecoSys.entities.FOOD, 'white', 1, true);
+    renderItem(ecoSys.entities.POISON, 'crimson', 2);
+
+    requestAnimationFrame(animate);
+  }
+  animate();
+
+}
+
+window.onload = load;
+```
+
+
+And thats it, phew that was lot of work. but at the end we have beautiful flocking creatures playing around and interating with each other. have fun watching them all day. <3

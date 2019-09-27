@@ -57,7 +57,6 @@ function Contact() {
   return (
     <ContactWrapper id="contact">
       <PageHeader>Get In Touch</PageHeader>
-      {JSON.stringify(errors)}
       <ContactBox>
         <LeftContent>
           <FontAwesomeIcon size={'5x'} icon="handshake" />
@@ -69,6 +68,7 @@ function Contact() {
           for (let i in formData) {
             if (!validateForm(i, formData[i])) {
               isValid = false;
+              break;
             };
           }
           !isValid && event.preventDefault();

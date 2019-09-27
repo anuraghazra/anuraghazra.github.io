@@ -57,7 +57,7 @@ const Home = () => {
 
             <div className="home__social">
               <IconLink label="github" icon={["fab", "github"]} href="//github.com/anuraghazra" />
-              <IconLink label="twitter" icon={["fab", "twitter"]} href="//twitter.com/anuraghazra" />
+              <IconLink label="twitter" icon={["fab", "twitter"]} href="//twitter.com/anuraghazru" />
               <IconLink label="codepen" icon={["fab", "codepen"]} href="//codepen.io/anuraghazra" />
             </div>
           </div>

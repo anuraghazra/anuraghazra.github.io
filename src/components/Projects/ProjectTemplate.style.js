@@ -30,6 +30,7 @@ export const ProjectDetail = styled.div`
     width: 75%;
 
     p {
+      line-height: 170%;
       min-height: 250px;
     }
   }

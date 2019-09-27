@@ -17,16 +17,25 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        plugins: [{
-          resolve: `gatsby-remark-prismjs`,
-          options: {
-            classPrefix: "language-",
-            inlineCodeMarker: null,
-            aliases: {},
-            showLineNumbers: false,
-            noInlineHighlight: false,
+        plugins: [
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: "language-",
+              inlineCodeMarker: null,
+              aliases: {},
+              showLineNumbers: false,
+              noInlineHighlight: false,
+            }
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+              showCaptions: true
+            }
           }
-        }]
+        ]
       }
     },
 
@@ -58,18 +67,22 @@ module.exports = {
 
     // manifest & helmet
     `gatsby-plugin-react-helmet`,
+
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Anurag Hazra`,
+        short_name: `Anurag Hazra`,
         start_url: `/`,
         background_color: `#6D83F2`,
         theme_color: `#6D83F2`,
-        display: `minimal-ui`,
+        display: `standalone`,
         icon: `src/static/images/gatsby-icon.png`,
       },
     },
+    // this (optional) plugin enables Progressive Web App + Offline functionality
+    // To learn more, visit: https://gatsby.dev/offline
+    `gatsby-plugin-offline`,
 
     // fonts
     // https://fonts.googleapis.com/css?family=Karla:400,700|Montserrat:400,600,700,900&display=swap
@@ -102,9 +115,5 @@ module.exports = {
     // others
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-root-import`
-
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 }

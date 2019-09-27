@@ -32,7 +32,7 @@ const BlogLayout = ({ children, sharerSection }) => {
             <div>
               <h4>Tags</h4>
               <Tags />
-              <br/>
+              <br />
             </div>
             {sharerSection && sharerSection}
           </aside>
