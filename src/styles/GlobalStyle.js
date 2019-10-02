@@ -1,6 +1,7 @@
 import { createGlobalStyle, css } from 'styled-components';
 import PrismJsStyles from './prismjs.style';
 import scrollBar from './scrollbar.style';
+import blogstyles from './blogcss.style';
 
 
 const GlobalStyle = createGlobalStyle`
@@ -24,6 +25,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   a {
+    word-break: break-word;
     color: ${p => p.theme.primaryColor};
     text-decoration: none;
   }
@@ -70,71 +72,14 @@ const GlobalStyle = createGlobalStyle`
     ${scrollBar};
   }
 
-
-
   /*             */
   /* BLOG STYLES */
   /*             */
-
-  .blog__social-share {
-    a {
-      margin-right: 20px;
-    }
-  }
-  /* Other Specific Global Styles */
-  div#disqus_thread {
-    background: whitesmoke;
-    padding: 15px 25px;
-    border-radius: 10px;
-  }
-
-  .markdown-content {
-    ${p => p.theme.spacing.sectionTopBottom};
-    margin-top: 50px;
-    max-width: 800px;
-    p {
-      font-size: 18px;
-      line-height: 170%;
-    }
-    code {
-      font-size: 16px
-    }
-
-    figure {
-      margin: 50px 0;
-    }
-    figcaption {
-      margin: 10px 0;
-      font-style: italic;
-      font-size: 12px;
-      text-align: center;
-    }
-    
-    @media ${p => p.theme.media.tablet} {
-      pre {
-        overflow-x: scroll;
-      }
-    }
-    h1 {
-      font-size: 1.8rem;
-      margin-bottom: 50px;
-    }
-    h2, h3, h4, h5, h6 {
-      margin: 30px 0;
-      margin-top: 40px;
-      color: ${p => p.theme.primaryColor};
-    }
-
-    ul {
-      font-family: ${p => p.theme.secondaryFontFamily};
-      font-size: 18px;
-      padding: 0 17px;
-      line-height: 200%;
-      text-indent: 0px;
-      list-style: disc;
-    }
-  }
-
-  ${PrismJsStyles};
+  ${blogstyles}
+  
+  /*             */
+  /* Prismjs STYLES */
+  /*             */
+  ${PrismJsStyles}
 `
 export default GlobalStyle;

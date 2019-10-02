@@ -10,7 +10,9 @@ import {
   faJs,
   faHtml5,
   faCss3,
-  faCodepen
+  faCodepen,
+  faReact,
+  faNode
 } from '@fortawesome/free-brands-svg-icons'
 import {
   faPaintBrush,
@@ -42,7 +44,9 @@ library.add(
   faChevronRight,
   faChevronLeft,
   faClock,
-  faCalendarAlt
+  faCalendarAlt,
+  faReact,
+  faNode
 );
 config.autoAddCss = false;
 

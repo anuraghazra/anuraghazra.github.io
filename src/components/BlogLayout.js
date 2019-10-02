@@ -24,16 +24,16 @@ const BlogLayout = ({ children, sharerSection }) => {
         </Col>
         <Col sm={12} md={4}>
           <aside style={{ position: 'sticky', top: 100 }}>
-            <div>
+            <section>
               <h4>Random post</h4>
               <Link to={randomSlug}>{randomTitle}</Link>
               <br /><br />
-            </div>
-            <div>
+            </section>
+            <section>
               <h4>Tags</h4>
               <Tags />
               <br />
-            </div>
+            </section>
             {sharerSection && sharerSection}
           </aside>
         </Col>

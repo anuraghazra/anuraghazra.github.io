@@ -23,7 +23,7 @@ const PrismJsStyles = css`
   .gatsby-highlight {
     background-color: #2d2d2d;
     border-radius: 0.3em;
-    margin: 1em 0;
+    margin: 3.5em 0;
     padding: 1em;
     overflow: auto;
     border-left: 5px solid ${p => p.theme.primaryColor};

@@ -35,7 +35,7 @@ const BlogPost = ({ data, pageContext }) => {
       }>
         <BlogDateAndReadTime date={date} readtime={timeToRead} />
         <h1>{title}</h1>
-        <div className="markdown-content" dangerouslySetInnerHTML={{ __html: html }} />
+        <article className="markdown-content" dangerouslySetInnerHTML={{ __html: html }} />
         <DiscussionEmbed shortname={disqusShortName} config={disqusConfig} />
       </BlogLayout>
 

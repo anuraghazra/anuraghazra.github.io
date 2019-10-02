@@ -2,15 +2,25 @@ import React from "react";
 import styled from 'styled-components';
 
 import PageHeader from 'src/components/common/PageHeader';
-import SkillPie from "src/components/Skills/SkillPie";
-import { Row, Col, Hidden } from "react-grid-system";
+import { Hidden } from "react-grid-system";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import Flex from 'src/components/common/Flex'
 
 import { Parallax } from 'react-scroll-parallax';
 
 const SkillsWrapper = styled.section`
   ${props => props.theme.spacing.sectionBottom};
   position: relative;
+  .skill__icons {
+    padding: 30px 0;
+    @media ${props => props.theme.media.tablet} {
+      padding: 10px 0;
+    }
 
+    svg {
+      color: ${props => props.theme.primaryColor};
+    }
+  }
   .skills__word-clouds {
     p {
       position: absolute;
@@ -23,6 +33,7 @@ const SkillsWrapper = styled.section`
     z-index: -1;
   }
 `
+
 const WordClouds = () => {
   return (
     <Parallax
@@ -36,7 +47,7 @@ const WordClouds = () => {
       <p style={{ top: '30%', left: '35%', fontSize: 18 }}>figma</p>
       <p style={{ top: 40, left: '75%', fontSize: 12 }}>antd</p>
       <p style={{ top: 380, left: '85%', fontSize: 18 }}>MongoDB</p>
-      <p style={{ top: 320, left: '65%', fontSize: 18 }}>Nodejs</p>
+      <p style={{ top: 320, left: '65%', fontSize: 18 }}>Gatsby</p>
       <p style={{ top: 350, left: 150, fontSize: 20 }}>ES6</p>
       <p style={{ top: 120, left: '22%', fontSize: 12 }}>blender</p>
     </Parallax>
@@ -49,20 +60,13 @@ const Skills = () => {
     <SkillsWrapper>
       <PageHeader>My Skillsets</PageHeader>
 
-      <Row justify="between" align="center">
-        <Col sm={12} md={3}>
-          <SkillPie percent={90} name={"JavaScript"} />
-        </Col>
-        <Col sm={12} md={3}>
-          <SkillPie percent={75} name={"React"} />
-        </Col>
-        <Col sm={12} md={3}>
-          <SkillPie percent={95} name={"Canvas"} />
-        </Col>
-        <Col sm={12} md={3}>
-          <SkillPie percent={65} name={"UI/UX"} />
-        </Col>
-      </Row>
+      {/* <SkillPie percent={90} name={"JavaScript"} /> */}
+      <Flex className="skill__icons" justify="space-around" align="center">
+        <FontAwesomeIcon icon={["fab", "html5"]} size="5x" />
+        <FontAwesomeIcon icon={["fab", "js"]} size="5x" />
+        <FontAwesomeIcon icon={["fab", "react"]} size="5x" />
+        <FontAwesomeIcon icon={["fab", "node"]} size="5x" />
+      </Flex>
 
       <Hidden xs sm>
         <WordClouds />

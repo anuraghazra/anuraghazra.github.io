@@ -44,16 +44,16 @@ const CaseStudy = ({ data }) => {
 
         <section className="case__info">
           <div>
-            <div>
+            <aside>
               <InfoTitle>Idea</InfoTitle>
               <p>{study.info.idea}</p>
-            </div>
-            <div>
+            </aside>
+            <aside>
               <InfoTitle>Core Technologies</InfoTitle>
               <ul>
                 {study.info.tech.map((tech, i) => <li key={i}>{tech}</li>)}
               </ul>
-            </div>
+            </aside>
             {infoLinks}
           </div>
           <div className="case__iframe-container">

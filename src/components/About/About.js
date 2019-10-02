@@ -1,5 +1,7 @@
 import React from "react";
 
+import { withTheme } from 'styled-components';
+
 import SkewBg from 'src/components/common/SkewBg';
 import PageHeader from 'src/components/common/PageHeader';
 import Flex from "src/components/common/Flex";
@@ -20,10 +22,10 @@ const About = () => {
           <Avatar src="avatar.png" />
         </div>
         <p>
-          Hi, i'm Anurag Hazra passionate self-taught web designer from india. i tend to make use of modern web technologies to make websites which looks great, feels awesome and functions correctly. focusing on especially Reactjs and Open Source projects.
+          Hi, i'm Anurag Hazra passionate self-taught frontEnd web developer from india. i tend to make use of modern web technologies to make websites which looks great, feels awesome and functions correctly. focusing especially Reactjs.
           <br />
           <br />
-          since i'm a certified graphic designer from "Ramakrishna Mission Shilpamandira" i also do graphic and UI designing. and because i love both programming and designing i'm also interested in creating programmatic designs and creative coding projects.
+          i'm also a certified graphic designer from <a className="about__rkmscc-link" href="http://www.rkmscc.org/">"Ramakrishna Mission Shilpamandira"</a> i also do graphic and UI designing. and because i love both programming and designing i'm also interested in creating programmatic designs and creative coding projects.
         </p>
       </AboutInfo>
 

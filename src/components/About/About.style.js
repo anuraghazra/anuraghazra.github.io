@@ -26,6 +26,10 @@ export const AboutInfo = styled.article`
   p {
     color: #f8f8f8;
   }
+
+  .about__rkmscc-link {
+    color: ${p => p.theme.dark ? p.theme.primaryColor : '#111'};
+  }
   @media ${props => props.theme.media.tablet} {
     flex-direction: column;
     margin-top: 120px;

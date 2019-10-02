@@ -83,32 +83,39 @@ const Concepts = () => {
     <ConceptsWrapper id="concepts">
       <PageHeader>Concepts</PageHeader>
       <Grid>
-        {
-          concepts.allConceptsJson.edges.map((nodes, index) => (
-            <ConceptCard key={nodes.node.id}>
-              <Image
-                fluid={concepts.allFile.edges[index].node.childImageSharp.fluid}
-                alt={nodes.node.title}
-              />
-              <ConceptCardFooter
-                onClick={e => e.stopPropagation()}
-                justify="space-between"
-                align="center"
-                nowrap
-                className="ccard__footer"
-              >
-                <p>{nodes.node.title}</p>
-                <div>
-                  <IconButton label="Dribble Shot" href={nodes.node.links.dribbble} icon={["fab", "dribbble"]} />
-                  {
-                    nodes.node.links.demo &&
-                    <IconButton label="Live Demo" href={nodes.node.links.demo} icon="window-maximize" />
-                  }
-                </div>
-              </ConceptCardFooter>
-            </ConceptCard>
-          ))
-        }
+        {concepts.allConceptsJson.edges.map((nodes, index) => (
+          <ConceptCard key={nodes.node.id}>
+            <Image
+              fluid={concepts.allFile.edges[index].node.childImageSharp.fluid}
+              alt={nodes.node.title}
+            />
+            
+            <ConceptCardFooter
+              onClick={e => e.stopPropagation()}
+              justify="space-between"
+              align="center"
+              nowrap
+              className="ccard__footer"
+            >
+              <p>{nodes.node.title}</p>
+              <div>
+                <IconButton
+                  label="Dribble Shot"
+                  href={nodes.node.links.dribbble}
+                  icon={["fab", "dribbble"]}
+                />
+                {
+                  nodes.node.links.demo && <IconButton
+                    label="Live Demo"
+                    href={nodes.node.links.demo}
+                    icon="window-maximize"
+                  />
+                }
+              </div>
+            </ConceptCardFooter>
+
+          </ConceptCard>
+        ))}
       </Grid>
     </ConceptsWrapper>
   )
