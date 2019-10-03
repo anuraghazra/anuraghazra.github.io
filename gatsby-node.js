@@ -1,5 +1,4 @@
 const axios = require('axios');
-const crypto = require('crypto');
 const { createRemoteFileNode } = require(`gatsby-source-filesystem`);
 const path = require('path');
 
@@ -90,7 +89,7 @@ exports.createPages = ({ actions, graphql }) => {
         const tagSet = new Set();
         // for each tags on the frontmatter add them to the set
         node.frontmatter.tags.forEach(tag => tagSet.add(tag));
-        
+
         const tagList = Array.from(tagSet);
         // for each tags create a page with the specific `tag slug` (/blog/tags/:name)
         // pass the tag through the PageContext
@@ -118,54 +117,55 @@ exports.createPages = ({ actions, graphql }) => {
   })
 }
 
-exports.sourceNodes = async ({ actions, createNodeId, node, store, cache }) => {
-  const { createNode, createNodeField } = actions;
 
+exports.sourceNodes = ({ actions, createNodeId, createContentDigest, store, cache }) => {
+  const { createNode } = actions;
   const CC_PROJECTS_URI = 'https://anuraghazra.github.io/CanvasFun/data.json';
 
-  // GET JSON FILE
-  const createCreativeNode = async (project, i) => {
-    const projectNode = {
+
+  const createCreativeCodingNode = (project, i) => {
+    const nodeContent = JSON.stringify(project)
+
+    const node = {
+      id: createNodeId(`${i}`),
+      parent: null,
       children: [],
-      id: `${i}`,
-      parent: `__SOURCE__`,
       internal: {
         type: `CreativeCoding`,
+        content: nodeContent,
+        contentDigest: createContentDigest(project)
       },
       ...project
     }
 
-    // Get content digest of node. (Required field)
-    const contentDigest = crypto
-      .createHash(`md5`)
-      .update(JSON.stringify(projectNode))
-      .digest(`hex`);
-    projectNode.internal.contentDigest = contentDigest;
-
-    createNode(projectNode);
+    // const node = Object.assign({}, project, nodeMeta);
+    // create `allCreativeCoding` Node
+    createNode(node);
   }
 
-  // GET THE THUMBNAILS
+  // GET IMAGE THUMBNAILS
   const createRemoteImage = async (project, i) => {
     try {
+      // it will download the remote files
       await createRemoteFileNode({
         id: `${i}`,
-        url: project.img,
+        url: project.img, // the image url
         store,
         cache,
         createNode,
         createNodeId
       });
     } catch (error) {
-      console.warn('error creating node', error);
+      throw new Error('error creating remote img node - ' + error) 
     }
   }
 
-  let res = await axios.get(CC_PROJECTS_URI);
-
-  return res.data.forEach((project, i) => {
-    const nodeData = createRemoteImage(project, i);
-    createCreativeNode(project, i);
-    createNode(nodeData);
-  });
+  // promise based sourcing
+  return axios.get(CC_PROJECTS_URI)
+    .then(res => {
+      res.data.forEach((project, i) => {
+        createCreativeCodingNode(project, i);
+        createRemoteImage(project, i);
+      })
+    })
 }

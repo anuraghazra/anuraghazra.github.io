@@ -5,14 +5,12 @@ import Img from 'gatsby-image'
 const Image = ({ src, ...props }) => {
   const data = useStaticQuery(graphql`
     query {
-      allFile( filter: { internal: { mediaType: { regex: "/image/" } } } ) {
+      allImageSharp {
         edges {
           node {
-            relativePath
-            childImageSharp {
-              fluid(quality: 90, maxWidth: 2000) {
-                ...GatsbyImageSharpFluid
-              }
+            fluid(quality: 90, maxWidth: 2000) {
+              originalName
+              ...GatsbyImageSharpFluid
             }
           }
         }
@@ -20,16 +18,11 @@ const Image = ({ src, ...props }) => {
     }
   `)
 
-  const match = data.allFile.edges.find(({ node }) => node.relativePath.match(src));
+  const match = data.allImageSharp.edges.find(({ node }) => node.fluid.originalName.match(src));
+  const isValid = match && match.node.fluid;
 
-  let isValid = match && match.node.childImageSharp;
   return (
-    isValid ?
-    <Img
-      fluid={match.node.childImageSharp.fluid}
-      {...props}
-    />
-    : null
+    isValid ? <Img fluid={match.node.fluid} {...props} /> : null
   )
 }
 
