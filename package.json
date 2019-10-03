@@ -31,8 +31,8 @@
     "normalize.css": "^8.0.1",
     "prismjs": "^1.17.1",
     "prop-types": "^15.7.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "react": "^16.10.1",
+    "react-dom": "^16.10.1",
     "react-grid-system": "^4.4.10",
     "react-helmet": "^5.2.1",
     "react-intersection-observer": "^8.24.1",
@@ -42,7 +42,7 @@
     "react-slick": "^0.24.0",
     "react-spring": "^8.0.27",
     "slick-carousel": "^1.8.1",
-    "styled-components": "^4.3.2"
+    "styled-components": "^4.4.0"
   },
   "devDependencies": {
     "axios": "^0.19.0",

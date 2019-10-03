@@ -68,6 +68,9 @@ const blogstyles = css`
       line-height: 50px;
       text-indent: 0px;
     }
+    ul {
+      list-style: disc;
+    }
 
     .gatsby-remark-autolink svg {
       scale: 1.3;
