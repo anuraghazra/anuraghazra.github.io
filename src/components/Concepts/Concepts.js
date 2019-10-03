@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { useStaticQuery, graphql } from 'gatsby'
-import Image from 'src/components/Image';
+// import Image from 'src/components/Image';
+import Img from 'gatsby-image'
 
 import PageHeader from 'src/components/common/PageHeader';
 import { IconButton } from 'src/components/common/Button';
@@ -85,11 +86,11 @@ const Concepts = () => {
       <Grid>
         {concepts.allConceptsJson.edges.map((nodes, index) => (
           <ConceptCard key={nodes.node.id}>
-            <Image
+            <Img
               fluid={concepts.allFile.edges[index].node.childImageSharp.fluid}
               alt={nodes.node.title}
             />
-            
+
             <ConceptCardFooter
               onClick={e => e.stopPropagation()}
               justify="space-between"

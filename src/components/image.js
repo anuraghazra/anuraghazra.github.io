@@ -21,6 +21,7 @@ const Image = ({ src, ...props }) => {
   const match = data.allImageSharp.edges.find(({ node }) => node.fluid.originalName.match(src));
   const isValid = match && match.node.fluid;
 
+  console.log(src, match.node);
   return (
     isValid ? <Img fluid={match.node.fluid} {...props} /> : null
   )
