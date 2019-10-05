@@ -12,7 +12,7 @@ import {
   faCss3,
   faCodepen,
   faReact,
-  faNode
+  faNode,
 } from '@fortawesome/free-brands-svg-icons'
 import {
   faPaintBrush,
@@ -23,7 +23,11 @@ import {
   faChevronRight,
   faChevronLeft,
   faClock,
-  faCalendarAlt
+  faCalendarAlt,
+  faBars,
+  faTimes,
+  faMoon,
+  faSun
 } from '@fortawesome/free-solid-svg-icons'
 
 library.add(
@@ -46,7 +50,11 @@ library.add(
   faClock,
   faCalendarAlt,
   faReact,
-  faNode
+  faNode,
+  faBars,
+  faTimes,
+  faMoon,
+  faSun
 );
 config.autoAddCss = false;
 

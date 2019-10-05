@@ -11,6 +11,7 @@ const useDarkMode = () => {
   }
 
   useEffect(() => {
+    if (!toggleRef.current) return;
     const savedTheme = localStorage.getItem('anuraghazra-site-theme');
     if (savedTheme) {
       setTheme(savedTheme);

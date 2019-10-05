@@ -7,7 +7,7 @@ import Tags from 'src/components/Blog/Tags';
 import useRandomBlogPost from 'src/hooks/useRandomBlogPost';
 
 const BlogLayoutWrapper = styled.section`
-  ${p => p.theme.spacing.sectionTopBottom};
+  ${p => p.theme.spacing.sectionBottom};
 
   & article:first-of-type {
     margin-top: 15px;

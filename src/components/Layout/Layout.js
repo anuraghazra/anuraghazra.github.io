@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useRef } from "react"
+import React from "react"
+import styled from 'styled-components';
 import PropTypes from "prop-types"
 import { ParallaxProvider } from 'react-scroll-parallax';
 
@@ -14,6 +15,16 @@ import GlobalStyle from "src/styles/GlobalStyle";
 import 'src/components/fontLib';
 import useDarkMode from 'src/hooks/useDarkMode';
 
+const RootWrapper = styled(Wrapper)`
+  margin-top: 100px;
+  margin-bottom: 50px;
+  min-height: calc(100vh - 125px);
+
+  @media ${props => props.theme.media.tablet} {
+    margin-top: 50px;
+  }
+`
+
 const Layout = ({ children }) => {
   const [theme, toggleTheme, toggleRef] = useDarkMode();
 
@@ -21,12 +32,10 @@ const Layout = ({ children }) => {
     <ThemeProvider theme={theme === 'light' ? themelight : themedark}>
       <>
         <GlobalStyle />
-        <Navbar toggleRef={toggleRef} handleDarkModeToggle={toggleTheme} />
+        <Navbar toggleRef={toggleRef} handleDarkModeToggle={toggleTheme} theme={theme} />
 
-        <button onClick={toggleTheme}>toggle-theme</button>
-        
         <ParallaxProvider>
-          <Wrapper style={{ marginTop: 100, marginBottom: 50, minHeight: 'calc(100vh - 125px)' }}>{children}</Wrapper>
+          <RootWrapper>{children}</RootWrapper>
         </ParallaxProvider>
         <Footer />
       </>

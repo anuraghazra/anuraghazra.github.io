@@ -62,6 +62,7 @@ export const Intro = styled.div`
 
 export const HomeWrapper = styled.section`
   margin-bottom: 100px;
+  margin-top: 125px;
 
   .svg-rect {
     width: 40%;
@@ -72,7 +73,10 @@ export const HomeWrapper = styled.section`
   }
 
   @media ${props => props.theme.media.tablet} {
+    margin-top: 80px;
+    
     .svg-rect {
+      top: 0px;
       opacity: 0.8;
     }
   }
