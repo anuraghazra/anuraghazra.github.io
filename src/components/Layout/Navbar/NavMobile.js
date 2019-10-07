@@ -16,7 +16,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const NavItemsSmoothLinks = () => (
   <>
-    <NavItem><SLink smooth offset={-100} hashSpy={true} to="home">home</SLink></NavItem>
+    <NavItem><SLink smooth hashSpy={true} to="home">home</SLink></NavItem>
     <NavItem><SLink smooth offset={-100} hashSpy={true} to="about">about me</SLink></NavItem>
     <NavItem><SLink smooth offset={-100} hashSpy={true} to="projects">projects</SLink></NavItem>
     <NavItem><SLink smooth offset={-100} hashSpy={true} to="creative-coding">creative coding</SLink></NavItem>
@@ -49,33 +49,31 @@ const NavbarMobile = ({ handleDarkModeToggle, toggleRef, theme }) => {
   }, [])
 
   return (
-    <header>
-      <nav>
-        <MobileMenuWrapper>
-          <FloatingButton tabindex="1" onClick={handleMenuState}>
-            <FontAwesomeIcon icon={isMenuOpen ? 'times' : 'bars'} size="2x" />
-          </FloatingButton>
-          <NavItemsBottomNav isOpen={isMenuOpen}>
-            {path === '/' ? <NavItemsSmoothLinks /> : <NavItemsGatsbyLinks />}
+    <>
+      <MobileMenuWrapper>
+        <FloatingButton tabindex="1" onClick={handleMenuState}>
+          <FontAwesomeIcon icon={isMenuOpen ? 'times' : 'bars'} size="2x" />
+        </FloatingButton>
+        <NavItemsBottomNav isOpen={isMenuOpen}>
+          {path === '/' ? <NavItemsSmoothLinks /> : <NavItemsGatsbyLinks />}
 
-            <NavItem><Link to="/blog">blog</Link></NavItem>
-            <NavItem style={{ width: 'auto' }}>
-              <input
-                aria-label="toggle theme"
-                ref={toggleRef}
-                onChange={handleDarkModeToggle}
-                type="checkbox"
-                className="checkbox"
-                id="darkmode-input"
-              />
-              <label className="darkmode-toggle-btn" aria-label="Toggle Dark Mode" htmlFor="darkmode-input">
-                <FontAwesomeIcon icon={theme === 'light' ? 'moon' : 'sun'} size="2x" />
-              </label>
-            </NavItem>
-          </NavItemsBottomNav>
-        </MobileMenuWrapper>
-      </nav>
-    </header>
+          <NavItem><Link to="/blog">blog</Link></NavItem>
+          <NavItem style={{ width: 'auto' }}>
+            <input
+              aria-label="toggle theme"
+              ref={toggleRef}
+              onChange={handleDarkModeToggle}
+              type="checkbox"
+              className="checkbox"
+              id="darkmode-input"
+            />
+            <label className="darkmode-toggle-btn" aria-label="Toggle Dark Mode" htmlFor="darkmode-input">
+              <FontAwesomeIcon icon={theme === 'light' ? 'moon' : 'sun'} size="2x" />
+            </label>
+          </NavItem>
+        </NavItemsBottomNav>
+      </MobileMenuWrapper>
+    </>
   )
 }
 

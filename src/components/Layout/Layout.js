@@ -32,7 +32,11 @@ const Layout = ({ children }) => {
     <ThemeProvider theme={theme === 'light' ? themelight : themedark}>
       <>
         <GlobalStyle />
-        <Navbar toggleRef={toggleRef} handleDarkModeToggle={toggleTheme} theme={theme} />
+        
+        <Navbar
+          toggleRef={toggleRef}
+          handleDarkModeToggle={toggleTheme}
+          theme={theme} />
 
         <ParallaxProvider>
           <RootWrapper>{children}</RootWrapper>

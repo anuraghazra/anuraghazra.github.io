@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Wrapper from 'src/components/common/Wrapper';
 
-export const NavWrapper = styled.header`
+export const NavWrapper = styled.div`
   position: fixed;
   top: 0;
   
@@ -23,6 +23,10 @@ export const NavWrapper = styled.header`
       flex-basis: 100px;
       max-width: 35px;
     }
+  }
+
+  @media ${props => props.theme.media.tablet} {
+    display: none;
   }
 `;
 

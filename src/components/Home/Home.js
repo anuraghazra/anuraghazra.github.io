@@ -45,9 +45,10 @@ const Home = () => {
   return (
     <HomeWrapper id="home">
       <img className="svg-rect" src={svgRect} alt=""></img>
-      
+
       <Intro>
-        <Parallax y={[50, -50]} className="home__text">
+        {/* <Parallax y={[50, -50]} className="home__text"> */}
+        <div className="home__text">
           <p>Hello, i’m</p>
           <h1>ANURAG HAZRA</h1>
           <p className="adjust">CREATIVE FRONT-END WEB DEVELOPER</p>
@@ -61,7 +62,8 @@ const Home = () => {
               <IconLink label="codepen" icon={["fab", "codepen"]} href="//codepen.io/anuraghazra" />
             </div>
           </div>
-        </Parallax>
+        </div>
+        {/* </Parallax> */}
         <HeroCard />
       </Intro>
 

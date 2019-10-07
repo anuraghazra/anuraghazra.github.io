@@ -82,7 +82,7 @@ export const ColorPalette = withTheme(({ theme }) => {
 
 export const HeroCard = () => {
   return (
-    <HeroCardWrapper y={[50, -50]}>
+    <HeroCardWrapper>
       <CodeCard />
       <ColorPalette />
     </HeroCardWrapper>

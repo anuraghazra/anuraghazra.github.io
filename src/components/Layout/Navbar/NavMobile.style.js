@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-export const MobileMenuWrapper = styled.div`
+export const MobileMenuWrapper = styled.nav`
   position: fixed;
   bottom: 20px;
   right: 30px; 

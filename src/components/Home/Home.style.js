@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { slideDownKeyframe } from 'src/components/css-animations.js';
 
-export const Intro = styled.div`
+export const Intro = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -12,20 +12,18 @@ export const Intro = styled.div`
   .home__text {
     animation: ${slideDownKeyframe} 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s forwards;
     
-    > div {
-      z-index: 1;
+    z-index: 1;
 
-      a.cta {
-        display: block;
-        margin: 30px 0;
-      }
-      
-      @media ${props => props.theme.media.tablet} {
-        text-align: center;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-      }
+    a.cta {
+      display: block;
+      margin: 30px 0;
+    }
+    
+    @media ${props => props.theme.media.tablet} {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
     }
   }
 
@@ -55,8 +53,13 @@ export const Intro = styled.div`
 
   
   @media ${props => props.theme.media.tablet} {
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-direction: column;
+
+    h1 {
+      margin: 6px 0;
+      line-height: 100%;
+    }
   }
 `
 

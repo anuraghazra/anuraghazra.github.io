@@ -1,9 +1,8 @@
 import styled from 'styled-components';
-import { Parallax } from 'react-scroll-parallax';
 
 import { slideDownKeyframe, tooltipKeyframe } from 'src/components/css-animations.js';
 
-export const HeroCardWrapper = styled(Parallax)`
+export const HeroCardWrapper = styled.div`
   position: relative;
   animation: ${slideDownKeyframe} 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s forwards;
 `
