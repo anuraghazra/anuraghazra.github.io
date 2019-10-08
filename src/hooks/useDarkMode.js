@@ -8,7 +8,7 @@ const useDarkMode = () => {
     let checked = e.target.checked;
     setTheme(() => checked ? 'dark' : 'light');
     localStorage.setItem('anuraghazra-site-theme', checked ? 'dark' : 'light');
-  }, [theme])
+  }, [])
 
   useEffect(() => {
     if (!toggleRef.current) return;

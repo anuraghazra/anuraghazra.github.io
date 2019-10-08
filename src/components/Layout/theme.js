@@ -25,6 +25,8 @@ const themeCommon = {
     tablet: `(max-width: ${sizes.tablet})`,
     fablet: `(max-width: ${sizes.fablet})`,
     desktop: `(max-width: ${sizes.desktop})`,
+    minMobile: `(min-width: ${sizes.mobile})`,
+    minTablet: `(min-width: ${sizes.tablet})`,
   },
   gradient: 'linear-gradient(134deg, #6A98F0 0%, #4961DC 99%)',
   gradient2: 'linear-gradient(99deg, #6A98F0 0%, #4961DC 130%)',
