@@ -23,7 +23,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       node,
       name: 'slug',
       // value will be {blog||case-studies}/my-title
-      value: '/' + sourceInstanceName + '/' + slugFromTitle 
+      value: '/' + sourceInstanceName + '/' + slugFromTitle
     });
 
     // adds a posttype field to extinguish between blog and case-study
@@ -156,7 +156,7 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest, store, cach
         createNodeId
       });
     } catch (error) {
-      throw new Error('error creating remote img node - ' + error) 
+      throw new Error('error creating remote img node - ' + error)
     }
   }
 
@@ -167,5 +167,15 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest, store, cach
         createCreativeCodingNode(project, i);
         createRemoteImage(project, i);
       })
+    }).catch(err => {
+      // just create a dummy node to pass the build if faild to fetch data
+      createCreativeCodingNode({
+        id: '0',
+        demo: '',
+        img: '',
+        title: 'Error while loading Data',
+        src: '',
+      }, 0);
+      throw new Error(err);
     })
 }
