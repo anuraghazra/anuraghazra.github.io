@@ -23,9 +23,13 @@ const DarkModeButton = ({ toggleRef, handleDarkModeToggle, theme }) => (
       className="checkbox"
       id="darkmode-input"
     />
-    <label role="button" className="darkmode-toggle-btn" aria-label="Toggle Dark Mode" htmlFor="darkmode-input">
+    <FloatingButton
+      as="label"
+      role="button"
+      aria-label="Toggle Dark Mode"
+      htmlFor="darkmode-input">
       <FontAwesomeIcon icon={theme === 'light' ? 'moon' : 'sun'} size="2x" />
-    </label>
+    </FloatingButton>
   </>
 )
 

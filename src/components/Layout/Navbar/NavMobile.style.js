@@ -16,10 +16,12 @@ export const FloatingButton = styled.button`
   background: ${props => props.theme.gradient};
   border-radius: 50%;
   text-align: center;
-  padding: 20px 0;
   color: white;
   border: none;
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   &:focus {
     outline: none;
     /* border: 2px solid ${p => p.theme.accentColor} outset; */
@@ -31,6 +33,7 @@ export const NavItemMobile = styled.li`
   margin: 5px 0;
   text-align: center;
   width: 100%;
+  line-height: 130%;
 
   a {
     width: 100%;
@@ -55,6 +58,27 @@ export const NavItemMobile = styled.li`
     border: 1px solid ${props => props.theme.accentColor};
   }
 `;
+
+// export const CircleIconButtonCSS = css`
+//   border-radius: 50%;
+//   background: ${props => props.theme.gradient};
+//   color: white;
+//   display: block;
+//   width: 60px;
+//   height: 60px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   box-shadow: 1px 3px 13px 0px rgba(0,0,0,0.1);
+//   cursor: pointer;
+
+//   &:hover {
+//     color: white !important;
+//     transform: scale(1.1);
+//     transition: 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+//     border: 1px solid ${props => props.theme.accentColor};
+//   }
+// `
 
 // EXPERIMANTAL BOTTOM NAV
 export const NavItemsBottomNav = styled.ul`
@@ -81,18 +105,7 @@ export const NavItemsBottomNav = styled.ul`
   #darkmode-input {
     display: none;
   }
-  .darkmode-toggle-btn {
-    border-radius: 50%;
-    background: ${props => props.theme.gradient};
-    color: white;
-    display: block;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 1px 3px 13px 0px rgba(0,0,0,0.1);
-  }
+  
 `
 
 
