@@ -11,7 +11,6 @@ import Flex from "src/components/common/Flex";
 import Button from "src/components/common/Button";
 
 import { Card, CardIcon, CardText, CardTitle } from "src/components/common/Card";
-import { Parallax } from 'react-scroll-parallax';
 
 const ThingsILove = () => (
   <Flex justify="space-between" align="center">
