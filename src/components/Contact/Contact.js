@@ -63,6 +63,7 @@ function Contact() {
           <h3>Thank You</h3>
           <p>Do You Have Any Queries?</p>
         </LeftContent>
+
         <ContactForm noValidate onSubmit={(event) => {
           let isValid = true;
           for (let i in formData) {
@@ -76,48 +77,47 @@ function Contact() {
           action="https://formspree.io/hazru.anurag@gmail.com"
           method="POST"
         >
-          <Flex>
-            <label htmlFor="email">
-              <input
-                className={errors._replyto && 'invalid'}
-                onChange={handleInput}
-                value={formData.email}
-                id="email"
-                name="_replyto"
-                type="email"
-                required
-                placeholder="Your Email"
-              />
-            </label>
-
-            <label htmlFor="name">
-              <input
-                className={errors.name && 'invalid'}
-                onChange={handleInput}
-                value={formData.name}
-                id="name"
-                name="name"
-                type="text"
-                required
-                placeholder="Your Name"
-              />
-            </label>
-          </Flex>
-          <label htmlFor="message">
+          <label className="label__email">
+            <span>Email</span>
+            <input
+              className={errors._replyto && 'invalid'}
+              onChange={handleInput}
+              value={formData.email}
+              id="email"
+              name="_replyto"
+              required
+              placeholder="example@gmail.com"
+            />
+          </label>
+          <label className="label__name">
+            <span>Name</span>
+            <input
+              className={errors.name && 'invalid'}
+              onChange={handleInput}
+              value={formData.name}
+              name="name"
+              type="text"
+              required
+              placeholder="John Doe"
+            />
+          </label>
+          <label className="label__message">
+            <span>Message</span>
             <textarea
               className={errors.message && 'invalid'}
               onChange={handleInput}
               value={formData.message}
-              id="message"
               name="message"
               required
-              placeholder="Say Something!"
+              placeholder="Hey there!"
             />
           </label>
-          <Button as="button" type="submit" value="send" style={{ float: 'right' }}>
+
+          <Button className="submit__btn" as="button" type="submit" value="send">
             <FontAwesomeIcon icon="paper-plane" /> Submit
           </Button>
         </ContactForm>
+
       </ContactBox>
 
     </ContactWrapper>

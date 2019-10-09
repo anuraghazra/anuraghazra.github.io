@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ContactWrapper = styled.section`
-  ${props => props.theme.spacing.sectionBottom};
+  margin-bottom: 200px;
   height: 100%;
 `
 
@@ -55,17 +55,45 @@ export const ContactForm = styled.form`
 
   box-shadow: ${props => props.theme.shadowSmall};
 
-  input:first-child {
-    margin-right: 10px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+  "email name"
+  "textarea textarea"
+  ". button";
+  
+
+  .label__email {
+    grid-area: email;
   }
+  .label__name {
+    grid-area: name;
+  }
+  .label__message {
+    grid-area: textarea;
+  }
+  .submit__btn {
+    justify-self: end;
+    width: fit-content;
+    grid-area: button
+  }
+
+  @media ${props => props.theme.media.tablet} {
+    grid-template-areas: 
+    "email email"
+    "name name"
+    "textarea textarea"
+    ". button";
+  }
+  
   input, textarea {
     padding: 10px 15px;
     border-radius: 5px;
     background-color: #EAEAEA;
     border: none;
     margin: 10px 0;
-    width: auto;
-    flex: 1;
+    width: 100%;
   }
 
   textarea {
@@ -79,11 +107,9 @@ export const ContactForm = styled.form`
     input, textarea  {
       padding: 20px 15px;
     }
-    input:first-child {
-      margin-right: 0;
-    }
+
     padding: 30px 25px;
-    padding-bottom: 60px;
+    padding-bottom: 20px;
     position: unset;
     width: 100%;
     top: 0px;
