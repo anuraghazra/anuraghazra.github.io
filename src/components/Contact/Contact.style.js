@@ -62,8 +62,12 @@ export const ContactForm = styled.form`
   "email name"
   "textarea textarea"
   ". button";
-  
 
+
+  label span {
+    font-size: .85em;
+    color: #252525;
+  }
   .label__email {
     grid-area: email;
   }

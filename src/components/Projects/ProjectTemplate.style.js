@@ -12,7 +12,7 @@ export const ProjectContent = styled.div`
 `;
 
 export const ProjectDetail = styled.div`
-  padding: 50px 50px;
+  padding: 50px;
   background-color: ${props => props.theme.secondaryColor};
   box-shadow: ${props => props.theme.shadowSmall};
   border-radius: 10px;
@@ -20,7 +20,7 @@ export const ProjectDetail = styled.div`
   min-height: 350px;
 
   grid-column: 1 / 3;
-  grid-row: 1 / 1;
+  grid-row: 1;
   
   h2 {
     margin-bottom: 25px;
@@ -63,7 +63,7 @@ export const ProjectLinks = styled.div`
 
 export const ProjectPreview = styled.div`
   grid-column: 2 / 4;
-  grid-row: 1 / 1;
+  grid-row: 1;
   position: relative;
   right: -20px;
 

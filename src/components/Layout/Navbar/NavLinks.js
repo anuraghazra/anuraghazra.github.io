@@ -4,12 +4,12 @@ import { Link as SLink } from 'react-scroll';
 
 const NavItemsSmoothLinks = ({ NavItem }) => (
   <>
-    <NavItem><SLink smooth hashSpy={true} to="home">home</SLink></NavItem>
-    <NavItem><SLink smooth offset={-100} hashSpy={true} to="about">about me</SLink></NavItem>
-    <NavItem><SLink smooth offset={-100} hashSpy={true} to="projects">projects</SLink></NavItem>
-    <NavItem><SLink smooth offset={-100} hashSpy={true} to="creative-coding">creative coding</SLink></NavItem>
-    <NavItem><SLink smooth offset={-100} hashSpy={true} to="concepts">concepts</SLink></NavItem>
-    <NavItem><SLink smooth offset={-100} hashSpy={true} to="contact">contact</SLink></NavItem>
+    <NavItem><SLink smooth offset={-70} hashSpy to="home">home</SLink></NavItem>
+    <NavItem><SLink smooth offset={-100} hashSpy to="about">about me</SLink></NavItem>
+    <NavItem><SLink smooth offset={-100} hashSpy to="projects">projects</SLink></NavItem>
+    <NavItem><SLink smooth offset={-100} hashSpy to="creative-coding">creative coding</SLink></NavItem>
+    <NavItem><SLink smooth offset={-100} hashSpy to="concepts">concepts</SLink></NavItem>
+    <NavItem><SLink smooth offset={-100} hashSpy to="contact">contact</SLink></NavItem>
   </>
 )
 

@@ -18,6 +18,14 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          // {
+          //   resolve: "@weknow/gatsby-remark-codepen",
+          //   options: {
+          //     theme: "dark",
+          //     height: 500
+          //   }
+          // },
+          `gatsby-remark-embedder`,
           {
             resolve: `gatsby-remark-autolink-headers`,
             options: {
@@ -25,13 +33,6 @@ module.exports = {
               maintainCase: true,
               removeAccents: true,
             },
-          },
-          {
-            resolve: "@weknow/gatsby-remark-codepen",
-            options: {
-              theme: "dark",
-              height: 500
-            }
           },
           {
             resolve: `gatsby-remark-prismjs`,

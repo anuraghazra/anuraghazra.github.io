@@ -13,9 +13,7 @@ const ProjectTemplate = ({ title, desc, links, preview }) => {
         <ProjectDetail>
           <div className="project__detail-container">
             <h2>{title}</h2>
-            <p>
-              {desc}
-            </p>
+            <p>{desc}</p>
             {links}
           </div>
         </ProjectDetail>

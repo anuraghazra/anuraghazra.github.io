@@ -55,8 +55,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .invalid {
-    color: #ff6f8b !important;
-    box-shadow: 0 0 1px 1px #ff6f8b;
+    color: #e81b1b !important;
+    box-shadow: 0 0 0px 1px #e81b1b;
   }
 
   .active {

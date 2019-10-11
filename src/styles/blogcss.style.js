@@ -32,6 +32,12 @@ const blogstyles = css`
       font-size: 16px
     }
 
+    iframe {
+      border-radius: 5px;
+      border: none;
+      height: 500px !important;
+    }
+
     figure {
       margin: 50px 0;
     }
