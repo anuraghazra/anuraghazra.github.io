@@ -66,7 +66,7 @@ export const ContactForm = styled.form`
 
   label span {
     font-size: .85em;
-    color: #252525;
+    color: ${p => p.theme.dark ? '#fff' : '#252525'};
   }
   .label__email {
     grid-area: email;
