@@ -19,7 +19,7 @@ const ThingsILove = () => (
       <CardTitle>FrontEnd</CardTitle>
       <CardText>
         i'm more front end focused and love to work with React as well as pure HTML, CSS
-        </CardText>
+      </CardText>
     </Card>
 
     <Card>
