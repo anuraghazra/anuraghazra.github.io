@@ -45,6 +45,7 @@
     "styled-components": "^4.4.0"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^4.1.2",
     "@testing-library/react": "^9.3.0",
     "axios": "^0.19.0",
     "babel-jest": "^24.9.0",

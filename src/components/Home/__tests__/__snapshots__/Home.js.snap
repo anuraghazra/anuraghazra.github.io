@@ -1,0 +1,198 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`home renders correctly 1`] = `
+<DocumentFragment>
+  <section
+    class="sc-EHOje jxBrYE"
+    id="home"
+  >
+    <img
+      alt=""
+      class="svg-rect"
+      src="test-file-stub"
+    />
+    <section
+      class="sc-ifAKCX fwVNlr"
+    >
+      <div
+        class="home__text"
+      >
+        <p>
+          Hello, i’m
+        </p>
+        <h1>
+          ANURAG HAZRA
+        </h1>
+        <p
+          class="adjust"
+        >
+          CREATIVE FRONT-END WEB DEVELOPER
+        </p>
+        <div
+          class="home__CTA"
+        >
+          <a
+            class="sc-htoDjs iyZMqX cta"
+            href="#"
+          >
+            Download Resume
+          </a>
+          <div
+            class="home__social"
+          >
+            <a
+              aria-label="github"
+              href="//github.com/anuraghazra"
+              target="__blank"
+              title="github"
+            />
+            <a
+              aria-label="twitter"
+              href="//twitter.com/anuraghazru"
+              target="__blank"
+              title="twitter"
+            />
+            <a
+              aria-label="codepen"
+              href="//codepen.io/anuraghazra"
+              target="__blank"
+              title="codepen"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="sc-bdVaJa eOiSCq"
+      >
+        <div
+          class="sc-bwzfXH boMUdc"
+        >
+          <pre>
+            1   class 
+            <b>
+              Person
+            </b>
+             {
+          </pre>
+          <pre>
+            2         constructor() {
+          </pre>
+          <pre>
+            3             this.name = "
+            <b>
+              Anurag Hazra
+            </b>
+            ";
+          </pre>
+          <pre>
+            4             this.traits = ["
+            <b>
+              DESIGN
+            </b>
+            ", "
+            <b>
+              DEV
+            </b>
+            "];
+          </pre>
+          <pre>
+            5             this.age = new Date().getFullYear() - 2001;
+          </pre>
+          <pre>
+            6         }
+          </pre>
+          <pre>
+            7   }
+          </pre>
+        </div>
+        <div
+          class="sc-htpNat cXzmwh"
+        >
+          <div
+            class="sc-bxivhb frwLng"
+            style="background: rgb(109, 131, 242);"
+          />
+          <div
+            class="sc-bxivhb frwLng"
+            style="background: rgb(106, 152, 240);"
+          />
+          <div
+            class="sc-bxivhb frwLng"
+          />
+          <div
+            class="sc-bxivhb frwLng"
+            style="background: rgb(56, 56, 56);"
+          />
+          <div
+            class="sc-bxivhb frwLng"
+            style="background: rgb(199, 208, 255);"
+          />
+        </div>
+      </div>
+    </section>
+    <h2
+      class="sc-bZQynM gNVHZL"
+    >
+      Things i love 
+      <i
+        class="fas fa-heart"
+      />
+    </h2>
+    <div
+      class="sc-gzVnrw kAdVJI"
+    >
+      <div
+        class="sc-iwsKbI dhJcPj"
+      >
+        <div
+          class="sc-gZMcBi jgqArj"
+        />
+        <h3
+          class="sc-gqjmRU jlixfV"
+        >
+          FrontEnd
+        </h3>
+        <p
+          class="sc-VigVT hTTMiL"
+        >
+          i'm more front end focused and love to work with React as well as pure HTML, CSS
+        </p>
+      </div>
+      <div
+        class="sc-iwsKbI dhJcPj"
+      >
+        <div
+          class="sc-gZMcBi jgqArj"
+        />
+        <h3
+          class="sc-gqjmRU jlixfV"
+        >
+          Javascirpt
+        </h3>
+        <p
+          class="sc-VigVT hTTMiL"
+        >
+          I just extreamly love javascirpt, i can’t even express how much i love javascirpt with just a few lines.
+        </p>
+      </div>
+      <div
+        class="sc-iwsKbI dhJcPj"
+      >
+        <div
+          class="sc-gZMcBi jgqArj"
+        />
+        <h3
+          class="sc-gqjmRU jlixfV"
+        >
+          Creative Coding
+        </h3>
+        <p
+          class="sc-VigVT hTTMiL"
+        >
+          I love creative coding because i do both coding & designing. making beautifull art with code is very satisfying to me
+        </p>
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;
