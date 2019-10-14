@@ -17,7 +17,6 @@ const PostWrapper = styled.article`
   border-radius: 10px;
   box-shadow: ${p => p.theme.shadowSmall}; 
   background-color: ${p => p.theme.secondaryColor};
-  transition: 0.2s;
 
   &:hover {
     box-shadow: 0 5px 10px rgba(0,0,0,0.1);

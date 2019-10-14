@@ -5,7 +5,7 @@ import { graphql } from "gatsby";
 import SEO from "src/components/seo";
 import Layout from "src/components/Layout/Layout"
 import BlogCard from "src/components/Blog/BlogCard";
-import BlogLayout from "src/components/BlogLayout";
+import BlogLayout from "src/components/Blog/BlogLayout";
 
 const TagsPage = ({ data, pageContext }) => {
   const { tag } = pageContext;

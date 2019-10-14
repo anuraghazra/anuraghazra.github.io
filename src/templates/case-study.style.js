@@ -37,6 +37,7 @@ export const CaseStudyWrapper = styled.section`
   }
 
   .case__info {
+    margin-bottom: 70px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;

@@ -17,12 +17,11 @@ const blogstyles = css`
   .markdown-content {
     ${p => p.theme.spacing.sectionTopBottom};
     margin-top: 50px;
-    max-width: 800px;
+    line-height: 1.58;
     
     p {
       font-size: 18px;
-      line-height: 180%;
-      margin: 20px auto;
+      margin: 1em auto;
     }
     blockquote p {
       word-break: break-word;

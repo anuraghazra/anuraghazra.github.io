@@ -11,8 +11,11 @@ import Button, { IconButton } from 'src/components/common/Button';
 import { ProjectLinks } from 'src/components/Projects/ProjectTemplate.style';
 
 import { InfoTitle, CaseStudyWrapper } from './case-study.style'
+import SocialShareSection from 'src/components/Blog/SocialShareSection';
+import SplitLayout from "src/components/common/SplitLayout";
 
 const CaseStudy = ({ data }) => {
+  const baseSlugUrl = "https://anuraghazra.github.io" + data.markdownRemark.fields.slug;
   const study = data.markdownRemark.frontmatter;
 
   const infoLinks = (
@@ -61,7 +64,21 @@ const CaseStudy = ({ data }) => {
           </div>
         </section>
 
-        <article className="markdown-content" dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+        <SplitLayout
+          content={
+            <article
+              className="markdown-content"
+              dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
+            />
+          }
+          aside={
+            <div>
+              <h4>Share on</h4>
+              <SocialShareSection baseSlugUrl={baseSlugUrl} title={study.title} />
+            </div>
+          }
+        />
+
       </CaseStudyWrapper>
     </Layout>
   )
@@ -72,6 +89,9 @@ export const query = graphql`
     markdownRemark(fields: {slug: {eq: $slug}}) {
       id
       html
+      fields {
+        slug
+      }
       frontmatter {
         demo
         iframe

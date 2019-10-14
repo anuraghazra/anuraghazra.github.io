@@ -4,9 +4,9 @@ import { graphql } from "gatsby"
 import SEO from "src/components/seo";
 import Layout from "src/components/Layout/Layout"
 
-import BlogLayout from "src/components/BlogLayout";
-import { BlogDateAndReadTime } from "src/components/Blog/BlogCard";
+import BlogLayout from "src/components/Blog/BlogLayout";
 import SocialShareSection from 'src/components/Blog/SocialShareSection';
+import { BlogDateAndReadTime } from "src/components/Blog/BlogCard";
 
 import { DiscussionEmbed } from "disqus-react";
 
@@ -14,7 +14,7 @@ const BlogPost = ({ data, pageContext }) => {
   const { title, date, id } = data.markdownRemark.frontmatter;
   const { timeToRead, html, excerpt } = data.markdownRemark;
 
-  const baseUrl = "https://anuraghazra.surge.sh"
+  const baseUrl = "https://anuraghazra.github.io"
   const baseSlugUrl = baseUrl + pageContext.slug;
   const disqusShortName = "anuraghazra";
   const disqusConfig = {
@@ -38,7 +38,6 @@ const BlogPost = ({ data, pageContext }) => {
         <article className="markdown-content" dangerouslySetInnerHTML={{ __html: html }} />
         <DiscussionEmbed shortname={disqusShortName} config={disqusConfig} />
       </BlogLayout>
-
     </Layout>
   )
 }
