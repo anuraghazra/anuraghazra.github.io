@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { IconButton } from 'src/components/common/Button'
 import Image from 'src/components/Image';
@@ -23,5 +24,14 @@ const CCProject = ({ node }) => {
   )
 }
 
+CCProject.propTypes = {
+  node: PropTypes.exact({
+    demo: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired,
+    img: PropTypes.string.isRequired,
+    src: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+  }).isRequired,
+}
 
 export default CCProject;

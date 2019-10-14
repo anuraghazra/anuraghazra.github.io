@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from 'prop-types';
+
 import styled from 'styled-components';
 import Link from 'gatsby-link';
 import { Row, Col } from 'react-grid-system';
@@ -40,6 +42,12 @@ const BlogLayout = ({ children, sharerSection }) => {
       </Row>
     </BlogLayoutWrapper>
   )
+}
+
+
+BlogLayout.propTypes = {
+  children: PropTypes.node.isRequired,
+  sharerSection: PropTypes.node
 }
 
 export default BlogLayout

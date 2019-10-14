@@ -54,26 +54,23 @@ const WordClouds = () => {
   )
 }
 
-const Skills = () => {
+const Skills = () => (
+  <SkillsWrapper>
+    <PageHeader>My Skillsets</PageHeader>
 
-  return (
-    <SkillsWrapper>
-      <PageHeader>My Skillsets</PageHeader>
+    {/* <SkillPie percent={90} name={"JavaScript"} /> */}
+    <Flex className="skill__icons" justify="space-around" align="center">
+      <FontAwesomeIcon icon={["fab", "html5"]} size="5x" />
+      <FontAwesomeIcon icon={["fab", "js"]} size="5x" />
+      <FontAwesomeIcon icon={["fab", "react"]} size="5x" />
+      <FontAwesomeIcon icon={["fab", "node"]} size="5x" />
+    </Flex>
 
-      {/* <SkillPie percent={90} name={"JavaScript"} /> */}
-      <Flex className="skill__icons" justify="space-around" align="center">
-        <FontAwesomeIcon icon={["fab", "html5"]} size="5x" />
-        <FontAwesomeIcon icon={["fab", "js"]} size="5x" />
-        <FontAwesomeIcon icon={["fab", "react"]} size="5x" />
-        <FontAwesomeIcon icon={["fab", "node"]} size="5x" />
-      </Flex>
+    <Hidden xs sm>
+      <WordClouds />
+    </Hidden>
 
-      <Hidden xs sm>
-        <WordClouds />
-      </Hidden>
-
-    </SkillsWrapper>
-  )
-}
+  </SkillsWrapper>
+)
 
 export default Skills;

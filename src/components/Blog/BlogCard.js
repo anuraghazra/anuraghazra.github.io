@@ -59,11 +59,18 @@ const BlogCard = ({ date, readtime, title, excerpt, slug, tags }) => {
   )
 }
 
+
+BlogDateAndReadTime.propTypes = {
+  date: PropTypes.string.isRequired,
+  readtime: PropTypes.number.isRequired
+}
+
 BlogCard.propTypes = {
   date: PropTypes.string.isRequired,
   readtime: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   excerpt: PropTypes.string.isRequired,
   slug: PropTypes.string.isRequired,
+  tags: PropTypes.array.isRequired,
 }
 export default BlogCard;

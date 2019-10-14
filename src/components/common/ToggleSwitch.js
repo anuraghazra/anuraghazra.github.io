@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const SwitchWrapper = styled.div`
@@ -107,6 +108,11 @@ const ToggleSwitch = ({ onChangeInput, inputRef }) => {
       </div>
     </SwitchWrapper>
   )
+}
+
+ToggleSwitch.propTypes = {
+  onChangeInput: PropTypes.func.isRequired,
+  inputRef: PropTypes.shape({ current: PropTypes.instanceOf(HTMLInputElement) })
 }
 
 export default ToggleSwitch;

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby'
 
 import Img from 'gatsby-image';
@@ -129,6 +130,12 @@ const Concepts = () => {
       }
     </ConceptsWrapper>
   )
+}
+
+Card.propTypes = {
+  nodes: PropTypes.object.isRequired,
+  currentImg: PropTypes.object.isRequired,
+  openLightbox: PropTypes.func.isRequired
 }
 
 export default Concepts;

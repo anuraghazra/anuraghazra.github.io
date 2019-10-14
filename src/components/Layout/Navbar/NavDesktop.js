@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import logo from 'src/static/logo.svg';
 
 import Link from "gatsby-link"
@@ -35,6 +36,11 @@ const NavDesktop = ({ handleDarkModeToggle, toggleRef }) => {
       </nav>
     </>
   )
+}
+
+NavDesktop.propTypes = {
+  handleDarkModeToggle: PropTypes.func.isRequired,
+  toggleRef: PropTypes.shape({ current: PropTypes.instanceOf(HTMLInputElement) })
 }
 
 export default NavDesktop;

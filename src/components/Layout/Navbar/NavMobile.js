@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
 import Link from "gatsby-link"
 
@@ -63,6 +64,12 @@ const NavbarMobile = ({ handleDarkModeToggle, toggleRef, theme }) => {
       </MobileMenuWrapper>
     </>
   )
+}
+
+NavbarMobile.propTypes = {
+  handleDarkModeToggle: PropTypes.func.isRequired,
+  toggleRef: PropTypes.shape({ current: PropTypes.instanceOf(HTMLInputElement) }).isRequired,
+  theme: PropTypes.string.isRequired,
 }
 
 export default NavbarMobile;

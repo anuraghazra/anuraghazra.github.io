@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const SocialShareSection = ({ baseSlugUrl, title }) => {
@@ -19,6 +20,11 @@ const SocialShareSection = ({ baseSlugUrl, title }) => {
       </a>
     </div>
   )
+}
+
+SocialShareSection.propTypes = {
+  baseSlugUrl: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
 }
 
 export default SocialShareSection;

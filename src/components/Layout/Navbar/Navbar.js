@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
 import {
   NavContent,
@@ -25,5 +26,12 @@ const Navbar = (props) => {
     </header>
   )
 }
+
+Navbar.propTypes = {
+  handleDarkModeToggle: PropTypes.func.isRequired,
+  toggleRef: PropTypes.shape({ current: PropTypes.instanceOf(HTMLInputElement) }).isRequired,
+  theme: PropTypes.string.isRequired,
+}
+
 
 export default Navbar;

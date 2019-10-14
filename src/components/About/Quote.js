@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const QuoteWrapper = styled.article`
@@ -35,5 +36,9 @@ const Quote = ({ children }) => (
     <i>- anurag hazra</i>
   </QuoteWrapper>
 )
+
+Quote.propTypes = {
+  children: PropTypes.element.isRequired
+}
 
 export default Quote;

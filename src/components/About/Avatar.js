@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import styled from 'styled-components';
 import Image from "src/components/Image";
 
@@ -17,6 +19,10 @@ const Avatar = ({ src }) => {
       <Image style={{ marginTop: -30 }} src={src} />
     </AvatarWrapper>
   )
+}
+
+Avatar.propTypes = {
+  src: PropTypes.string.isRequired
 }
 
 export default Avatar;

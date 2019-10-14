@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 
 import { useInView } from 'react-intersection-observer';
@@ -129,6 +130,14 @@ const IFrame = ({ src, livedemo }) => {
       {isLoading && <Loader />}
     </IframeWrapper>
   )
+}
+
+IFrame.defaultProps = {
+  livedemo: false,
+}
+IFrame.propTypes = {
+  src: PropTypes.string.isRequired,
+  livedemo: PropTypes.bool,
 }
 
 export default IFrame;
