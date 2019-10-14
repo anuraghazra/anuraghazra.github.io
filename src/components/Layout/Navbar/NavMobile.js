@@ -48,7 +48,7 @@ const NavbarMobile = ({ handleDarkModeToggle, toggleRef, theme }) => {
         <FloatingButton tabindex="1" onClick={handleMenuState}>
           <FontAwesomeIcon icon={isMenuOpen ? 'times' : 'bars'} size="2x" />
         </FloatingButton>
-        
+
         <NavItemsBottomNav isOpen={isMenuOpen}>
           <NavLinks NavItem={NavItem} />
 
@@ -68,7 +68,10 @@ const NavbarMobile = ({ handleDarkModeToggle, toggleRef, theme }) => {
 
 NavbarMobile.propTypes = {
   handleDarkModeToggle: PropTypes.func.isRequired,
-  toggleRef: PropTypes.shape({ current: PropTypes.instanceOf(HTMLInputElement) }).isRequired,
+  toggleRef: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.shape({ current: PropTypes.any })
+  ]),
   theme: PropTypes.string.isRequired,
 }
 

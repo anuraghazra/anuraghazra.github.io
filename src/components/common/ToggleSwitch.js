@@ -112,7 +112,10 @@ const ToggleSwitch = ({ onChangeInput, inputRef }) => {
 
 ToggleSwitch.propTypes = {
   onChangeInput: PropTypes.func.isRequired,
-  inputRef: PropTypes.shape({ current: PropTypes.instanceOf(HTMLInputElement) })
+  inputRef: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.shape({ current: PropTypes.any })
+  ]),
 }
 
 export default ToggleSwitch;

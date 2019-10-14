@@ -29,7 +29,10 @@ const Navbar = (props) => {
 
 Navbar.propTypes = {
   handleDarkModeToggle: PropTypes.func.isRequired,
-  toggleRef: PropTypes.shape({ current: PropTypes.instanceOf(HTMLInputElement) }).isRequired,
+  toggleRef: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.shape({ current: PropTypes.any })
+  ]),
   theme: PropTypes.string.isRequired,
 }
 

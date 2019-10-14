@@ -40,7 +40,10 @@ const NavDesktop = ({ handleDarkModeToggle, toggleRef }) => {
 
 NavDesktop.propTypes = {
   handleDarkModeToggle: PropTypes.func.isRequired,
-  toggleRef: PropTypes.shape({ current: PropTypes.instanceOf(HTMLInputElement) })
+  toggleRef: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.shape({ current: PropTypes.any })
+  ]),
 }
 
 export default NavDesktop;
