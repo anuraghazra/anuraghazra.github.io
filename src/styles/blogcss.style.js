@@ -19,6 +19,9 @@ const blogstyles = css`
     margin-top: 50px;
     line-height: 1.58;
     
+    a {
+      word-break: break-word;
+    }
     p {
       font-size: 18px;
       margin: 1em auto;

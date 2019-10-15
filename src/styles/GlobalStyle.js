@@ -25,7 +25,6 @@ const GlobalStyle = createGlobalStyle`
   }
 
   a {
-    word-break: break-word;
     color: ${p => p.theme.primaryColor};
     text-decoration: none;
   }

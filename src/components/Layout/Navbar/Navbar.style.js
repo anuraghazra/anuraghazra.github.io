@@ -54,6 +54,7 @@ export const NavItems = styled.ul`
 export const NavItem = styled.li`
   margin-left: 30px;
   display: inline-block;
+  text-align: center;
   
   a {
     /* color: ${p => p.theme.swapIfDark('primaryText', 'primaryColor')}; */
