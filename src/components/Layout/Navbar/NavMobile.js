@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import PropTypes from 'prop-types';
 
 import Link from "gatsby-link"
@@ -13,29 +13,34 @@ import {
 import NavLinks from './NavLinks';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import ThemeToggleContext from '../ThemeToggleContext';
 
-const DarkModeButton = ({ toggleRef, handleDarkModeToggle, theme }) => (
-  <>
-    <input
-      aria-label="toggle theme"
-      ref={toggleRef}
-      onChange={handleDarkModeToggle}
-      type="checkbox"
-      className="checkbox"
-      id="darkmode-input"
-    />
-    <FloatingButton
-      as="label"
-      role="button"
-      aria-label="Toggle Dark Mode"
-      htmlFor="darkmode-input">
-      <FontAwesomeIcon icon={theme === 'light' ? 'moon' : 'sun'} size="2x" />
-    </FloatingButton>
-  </>
-)
+const DarkModeButton = () => {
+  const { toggleTheme, theme } = useContext(ThemeToggleContext);
+
+  return (
+    <>
+      <input
+        aria-label="toggle theme"
+        type="checkbox"
+        className="checkbox"
+        id="darkmode-input"
+        onChange={toggleTheme}
+        checked={theme === 'dark' ? true : false}
+      />
+      <FloatingButton
+        as="label"
+        role="button"
+        aria-label="Toggle Dark Mode"
+        htmlFor="darkmode-input">
+        <FontAwesomeIcon icon={theme === 'light' ? 'moon' : 'sun'} size="2x" />
+      </FloatingButton>
+    </>
+  )
+}
 
 
-const NavbarMobile = ({ handleDarkModeToggle, toggleRef, theme }) => {
+const NavbarMobile = () => {
   const [isMenuOpen, setMenu] = useState(false);
 
   const handleMenuState = () => {
@@ -54,25 +59,12 @@ const NavbarMobile = ({ handleDarkModeToggle, toggleRef, theme }) => {
 
           <NavItem><Link to="/blog">blog</Link></NavItem>
           <NavItem style={{ width: 'auto' }}>
-            <DarkModeButton
-              handleDarkModeToggle={handleDarkModeToggle}
-              toggleRef={toggleRef}
-              theme={theme}
-            />
+            <DarkModeButton />
           </NavItem>
         </NavItemsBottomNav>
       </MobileMenuWrapper>
     </>
   )
-}
-
-NavbarMobile.propTypes = {
-  handleDarkModeToggle: PropTypes.func.isRequired,
-  toggleRef: PropTypes.oneOfType([
-    PropTypes.func,
-    PropTypes.shape({ current: PropTypes.any })
-  ]),
-  theme: PropTypes.string.isRequired,
 }
 
 export default NavbarMobile;

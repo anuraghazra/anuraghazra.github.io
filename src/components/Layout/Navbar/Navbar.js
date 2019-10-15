@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
 
 import {
   NavContent,
@@ -11,30 +10,20 @@ import NavMobile from './NavMobile';
 
 import { Visible } from 'react-grid-system';
 
-const Navbar = (props) => {
+const Navbar = () => {
   return (
     <header>
       <NavWrapper>
         <NavContent as="div">
-          <NavDesktop {...props} />
+          <NavDesktop />
         </NavContent>
       </NavWrapper>
       {/* out of NavWrapper so i can display:none the NavWrapper */}
       <Visible xs sm>
-        <NavMobile {...props} />
+        <NavMobile />
       </Visible>
     </header>
   )
 }
-
-Navbar.propTypes = {
-  handleDarkModeToggle: PropTypes.func.isRequired,
-  toggleRef: PropTypes.oneOfType([
-    PropTypes.func,
-    PropTypes.shape({ current: PropTypes.any })
-  ]),
-  theme: PropTypes.string.isRequired,
-}
-
 
 export default Navbar;

@@ -1,25 +1,26 @@
-import { useRef, useEffect, useState, useCallback } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 
 const useDarkMode = () => {
-  const toggleRef = useRef();
   let [theme, setTheme] = useState('light');
 
-  const toggleTheme = useCallback((e) => {
-    let checked = e.target.checked;
-    setTheme(() => checked ? 'dark' : 'light');
-    localStorage.setItem('anuraghazra-site-theme', checked ? 'dark' : 'light');
-  }, [])
+  const toggleTheme = useCallback(() => {
+    if (theme === 'light') {
+      localStorage.setItem('anuraghazra-theme', 'dark')
+      setTheme('dark');
+    } else {
+      localStorage.setItem('anuraghazra-theme', 'light')
+      setTheme('light');
+    }
+  }, [theme])
 
   useEffect(() => {
-    if (!toggleRef.current) return;
-    const savedTheme = localStorage.getItem('anuraghazra-site-theme');
-    if (savedTheme) {
-      setTheme(savedTheme);
+    const localTheme = localStorage.getItem("anuraghazra-theme");
+    if (localTheme) {
+      setTheme(localTheme);
     }
-    toggleRef.current.checked = savedTheme === 'dark' ? true : false;
   }, []);
 
-  return [theme, toggleTheme, toggleRef];
+  return [theme, toggleTheme];
 }
 
 export default useDarkMode;

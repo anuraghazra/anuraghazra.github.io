@@ -14,6 +14,7 @@ import GlobalStyle from "src/styles/GlobalStyle";
 
 import 'src/components/fontLib';
 import useDarkMode from 'src/hooks/useDarkMode';
+import ThemeToggleContext from "./ThemeToggleContext";
 
 const RootWrapper = styled(Wrapper)`
   margin-top: 100px;
@@ -32,11 +33,10 @@ const Layout = ({ children }) => {
     <ThemeProvider theme={theme === 'light' ? themelight : themedark}>
       <>
         <GlobalStyle />
-        
-        <Navbar
-          toggleRef={toggleRef}
-          handleDarkModeToggle={toggleTheme}
-          theme={theme} />
+
+        <ThemeToggleContext.Provider value={{ theme, toggleTheme, toggleRef }}>
+          <Navbar />
+        </ThemeToggleContext.Provider>
 
         <ParallaxProvider>
           <RootWrapper>{children}</RootWrapper>

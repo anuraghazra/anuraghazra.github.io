@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import logo from 'src/static/logo.svg';
 
 import Link from "gatsby-link"
@@ -14,7 +13,7 @@ import NavLinks from './NavLinks';
 import ToggleSwitch from 'src/components/common/ToggleSwitch';
 
 
-const NavDesktop = ({ handleDarkModeToggle, toggleRef }) => {
+const NavDesktop = () => {
   return (
     <>
       <SLink className="logo" smooth offset={-100} hashSpy={true} to="home">
@@ -27,23 +26,12 @@ const NavDesktop = ({ handleDarkModeToggle, toggleRef }) => {
 
           <NavItem><Link to="/blog">blog</Link></NavItem>
           <NavItem>
-            <ToggleSwitch
-              inputRef={toggleRef}
-              onChangeInput={handleDarkModeToggle}
-            />
+            <ToggleSwitch />
           </NavItem>
         </NavItems>
       </nav>
     </>
   )
-}
-
-NavDesktop.propTypes = {
-  handleDarkModeToggle: PropTypes.func.isRequired,
-  toggleRef: PropTypes.oneOfType([
-    PropTypes.func,
-    PropTypes.shape({ current: PropTypes.any })
-  ]),
 }
 
 export default NavDesktop;

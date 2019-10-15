@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
+import ThemeToggleContext from '../Layout/ThemeToggleContext';
 
 const SwitchWrapper = styled.div`
   input[type=checkbox] {
@@ -98,24 +98,24 @@ const SwitchWrapper = styled.div`
   }
 `
 
-const ToggleSwitch = ({ onChangeInput, inputRef }) => {
+const ToggleSwitch = () => {
+  const { toggleTheme, theme } = useContext(ThemeToggleContext);
+  
   return (
     <SwitchWrapper>
       <div className="button r" id="button-1">
-        <input aria-label="toggle theme" ref={inputRef} onChange={onChangeInput} type="checkbox" className="checkbox" />
+        <input
+          className="checkbox"
+          aria-label="toggle theme"
+          type="checkbox"
+          onChange={toggleTheme}
+          checked={theme === 'dark' ? true : false}
+        />
         <div className="knobs"></div>
         <div className="layer"></div>
       </div>
     </SwitchWrapper>
   )
-}
-
-ToggleSwitch.propTypes = {
-  onChangeInput: PropTypes.func.isRequired,
-  inputRef: PropTypes.oneOfType([
-    PropTypes.func,
-    PropTypes.shape({ current: PropTypes.any })
-  ]),
 }
 
 export default ToggleSwitch;
