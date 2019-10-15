@@ -16,6 +16,9 @@ import 'src/components/fontLib';
 import useDarkMode from 'src/hooks/useDarkMode';
 import ThemeToggleContext from "./ThemeToggleContext";
 
+import { setConfiguration } from 'react-grid-system';
+setConfiguration({ breakpoints: [576, 769, 992, 1200] });
+
 const RootWrapper = styled(Wrapper)`
   margin-top: 100px;
   margin-bottom: 50px;
@@ -25,6 +28,7 @@ const RootWrapper = styled(Wrapper)`
     margin-top: 50px;
   }
 `
+
 
 const Layout = ({ children }) => {
   const [theme, toggleTheme, toggleRef] = useDarkMode();

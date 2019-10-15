@@ -66,7 +66,7 @@ const Skills = () => (
       <FontAwesomeIcon icon={["fab", "node"]} size="5x" />
     </Flex>
 
-    <Hidden xs sm>
+    <Hidden md xs sm>
       <WordClouds />
     </Hidden>
 

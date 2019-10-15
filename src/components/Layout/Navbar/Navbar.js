@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 import {
   NavContent,
@@ -15,7 +15,9 @@ const Navbar = () => {
     <header>
       <NavWrapper>
         <NavContent as="div">
-          <NavDesktop />
+          <Visible md lg xl>
+            <NavDesktop />
+          </Visible>
         </NavContent>
       </NavWrapper>
       {/* out of NavWrapper so i can display:none the NavWrapper */}
