@@ -57,6 +57,11 @@ export const NavItemMobile = styled.li`
     transition: 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     border: 1px solid ${props => props.theme.accentColor};
   }
+
+  /* set margin-t-b of li's to 3px for small height devices*/
+  @media screen and (max-height: 600px) {
+    margin: 3px 0;
+  }
 `;
 
 // export const CircleIconButtonCSS = css`

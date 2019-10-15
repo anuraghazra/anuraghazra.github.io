@@ -23,6 +23,9 @@ const SplitLayoutWrapper = styled.section`
   }
 
   @media ${props => props.theme.media.fablet} {
+    /* setting g-t-c to 1fr 1fr because in mobile 
+    version minmax was breaking the layout */
+    grid-template-columns: 1fr 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 30px;
     grid-template-areas: 

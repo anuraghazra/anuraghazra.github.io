@@ -55,6 +55,11 @@ export const Intro = styled.section`
   @media ${props => props.theme.media.tablet} {
     justify-content: space-between;
     flex-direction: column;
+    /* height and m-b for fixing issue
+    which was hiding the "thing i love" header */
+    height: fit-content;
+    margin-bottom: 140px;
+
 
     h1 {
       margin: 6px 0;
