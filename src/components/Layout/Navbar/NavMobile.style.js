@@ -8,6 +8,12 @@ export const MobileMenuWrapper = styled.nav`
   flex-direction: column;
   align-items: center;
   z-index: 1000;
+
+  /* tweaks for small height devices*/
+  @media screen and (max-height: 490px) {
+    bottom: 15px;
+    right: 40px; 
+  }
 `
 
 export const FloatingButton = styled.button`
@@ -58,9 +64,12 @@ export const NavItemMobile = styled.li`
     border: 1px solid ${props => props.theme.accentColor};
   }
 
-  /* set margin-t-b of li's to 3px for small height devices*/
+  /* tweaks for small height devices*/
   @media screen and (max-height: 600px) {
     margin: 3px 0;
+  }
+  @media screen and (max-height: 490px) {
+    margin: 2px 0;
   }
 `;
 
@@ -109,6 +118,12 @@ export const NavItemsBottomNav = styled.ul`
   
   #darkmode-input {
     display: none;
+  }
+
+  /* tweaks for small height devices*/
+  @media screen and (max-height: 490px) {
+    width: 100px;
+    bottom: 55px;
   }
   
 `
