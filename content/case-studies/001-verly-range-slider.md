@@ -12,7 +12,7 @@ info:
   links:
     - [ On Codepen, https://codepen.io/anuraghazra/pen/agKJEd ]
     - [ Verly.js - Physics engine that it uses, https://github.com/anuraghazra/Verly.js ]
-    - [ Article at DataGenetic | Verlet Simulation , http://datagenetics.com/blog/july22018/index.html]
+    - [ Article at DataGenetic | Verlet Simulation , https://datagenetics.com/blog/july22018/index.html]
 ---
 
 While I was building my physics engine [Verly.js](http://anuraghazra.github.io/Verly.js) I was thinking of making something that would showcase the engine's potential to do some interesting stuff, so I created this just as an experiment. 

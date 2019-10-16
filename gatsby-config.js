@@ -5,26 +5,11 @@ module.exports = {
     author: `@anuraghazra`,
   },
   plugins: [
-    // JSON
-    `gatsby-transformer-json`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `src/content`,
-      },
-    },
-    // Markdown
+    // MARKDOWN
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          // {
-          //   resolve: "@weknow/gatsby-remark-codepen",
-          //   options: {
-          //     theme: "dark",
-          //     height: 500
-          //   }
-          // },
           `gatsby-remark-embedder`,
           {
             resolve: `gatsby-remark-autolink-headers`,
@@ -55,22 +40,33 @@ module.exports = {
       }
     },
 
-    // SOURCE FILE SYSTEM
+    // SOURCE FILE SYSTEM -
+    // SOURCE JSON
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/json`,
+      },
+    },
+    // SOURCE MARKDOWN
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: 'case-studies',
-        path: `${__dirname}/src/pages/case-studies`,
+        path: `${__dirname}/content/case-studies`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: 'blog',
-        path: `${__dirname}/src/pages/blog/`,
+        path: `${__dirname}/content/blog/`,
       },
     },
 
+
+    // IMAGE TRANSFORMER
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
