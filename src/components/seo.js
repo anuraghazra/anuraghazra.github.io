@@ -15,7 +15,7 @@ import socialBanner from '../static/images/social-banner.png';
 //   url = postMeta.slug ? `${seo.canonicalUrl}${path.sep}${postMeta.slug}` : seo.canonicalUrl,
 // }
 
-function SEO({ title, description, slug, image, isBlogPost }) {
+function SEO({ title, description, slug, isBlogPost }) {
   const { site } = useStaticQuery(graphql`
     {
       site {
@@ -54,6 +54,9 @@ function SEO({ title, description, slug, image, isBlogPost }) {
   let imageWidth = defaults.siteBannerWidth;
   let imageHeight = defaults.siteBannerHeight;
 
+  if (isBlogPost) {
+    ogimage = `${defaults.siteUrl}${slug}/social-banner.jpg`;
+  }
   console.log({ url, title, description, twitter, ogimage, imageWidth, imageHeight })
   return (
     <Helmet>

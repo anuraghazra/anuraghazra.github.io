@@ -1,0 +1,15 @@
+{
+  "name": "gatsby-plugin-social-banners",
+  "version": "1.0.0",
+  "description": "automatically generates social banners for blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anurag Hazra",
+  "license": "MIT",
+  "dependencies": {
+    "dateformat": "^3.0.3",
+    "jimp": "^0.8.4"
+  }
+}

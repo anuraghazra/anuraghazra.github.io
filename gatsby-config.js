@@ -43,7 +43,8 @@ module.exports = {
               maxWidth: 590,
               showCaptions: true
             }
-          }
+          },
+          `gatsby-plugin-social-banners`
         ]
       }
     },
