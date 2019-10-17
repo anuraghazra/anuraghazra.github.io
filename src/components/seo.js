@@ -23,7 +23,6 @@ function SEO({ title, description, slug, image, isBlogPost }) {
           title
           description
           twitter
-          siteUrl
           siteLogo
           siteLogoSmall
           siteBanner
@@ -36,9 +35,9 @@ function SEO({ title, description, slug, image, isBlogPost }) {
 
   const defaults = site.siteMetadata;
 
-  // if (defaults.siteUrl === '' && typeof window !== 'undefined') {
-  //   defaults.siteUrl = window.location.origin;
-  // }
+  if (!defaults.siteUrl && typeof window !== 'undefined') {
+    defaults.siteUrl = window.location.origin;
+  }
 
   if (defaults.siteUrl === '') {
     console.error('Please set a siteUrl in your site metadata!');
@@ -54,6 +53,7 @@ function SEO({ title, description, slug, image, isBlogPost }) {
   let imageWidth = defaults.siteBannerWidth;
   let imageHeight = defaults.siteBannerHeight;
 
+  console.log(url)
   return (
     <Helmet>
 
