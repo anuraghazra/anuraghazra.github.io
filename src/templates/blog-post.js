@@ -25,7 +25,7 @@ const BlogPost = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <SEO title={title} description={excerpt} />
+      <SEO isBlogPost title={title} description={excerpt} slug={baseSlugUrl} />
 
       <BlogLayout sharerSection={
         <div>

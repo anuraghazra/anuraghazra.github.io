@@ -1,8 +1,16 @@
+const config = require('./config/website');
+
 module.exports = {
   siteMetadata: {
-    title: `Anurag Hazra | Creative Web Designer`,
-    description: `Creative Web Designer\`s Portfolio`,
-    author: `@anuraghazra`,
+    title: config.siteTitle,
+    description: config.siteDescription,
+    twitter: config.twitter,
+    siteUrl: config.siteUrl,
+    siteLogo: config.siteLogo,
+    siteLogoSmall: config.siteLogoSmall,
+    siteBanner: config.siteBanner,
+    siteBannerWidth: config.siteBannerWidth,
+    siteBannerHeight: config.siteBannerHeight,
   },
   plugins: [
     // MARKDOWN
@@ -83,11 +91,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Anurag Hazra`,
-        short_name: `Anurag Hazra`,
+        name: config.siteTitleAlt,
+        short_name: config.siteShortName,
         start_url: `/`,
-        background_color: `#6D83F2`,
-        theme_color: `#6D83F2`,
+        background_color: config.backgroundColor,
+        theme_color: config.themeColor,
         display: `standalone`,
         icon: `src/static/images/gatsby-icon.png`,
       },

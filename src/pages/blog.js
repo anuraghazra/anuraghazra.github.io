@@ -36,7 +36,7 @@ const BlogPage = () => {
   )
   return (
     <Layout>
-      <SEO title="Blog" />
+      <SEO title="Blog | Anurag Hazra" />
 
       <BlogLayout>
         {
