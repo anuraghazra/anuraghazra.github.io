@@ -57,7 +57,7 @@ function SEO({ title, description, slug, isBlogPost }) {
   if (isBlogPost) {
     ogimage = `${defaults.siteUrl}${slug}/social-banner.jpg`;
   }
-  console.log({ url, title, description, twitter, ogimage, imageWidth, imageHeight })
+  // console.log({ url, title, description, twitter, ogimage, imageWidth, imageHeight })
   return (
     <Helmet>
 
