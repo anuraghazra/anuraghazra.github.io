@@ -48,7 +48,7 @@ function SEO({ title, description, slug, image, isBlogPost }) {
   title = title || defaults.title;
   description = description || defaults.description;
 
-  let url = new URL(slug || '', defaults.siteUrl);
+  let url = `${defaults.siteUrl}${slug || ''}`;
   let twitter = defaults.twitter;
   let ogimage = `${defaults.siteUrl}${socialBanner}`;
   let imageWidth = defaults.siteBannerWidth;
