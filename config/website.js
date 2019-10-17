@@ -5,7 +5,7 @@ const meta = {
   siteDescription: 'Anurag Hazra | Passionate Web Designer. Creative and unique web designer from india who loves javascript and modern web technologies.',  
   siteTitleAlt: 'Anurag Hazra',
   siteShortName: 'Anurag Hazra',
-  siteUrl: 'http://anuraghazra-dev-build.surge.sh', // No trailing slash!
+  siteUrl: 'https://anuraghazra-gatsby-portfolio-git-adding-seo.anuraghazra1.now.sh', // No trailing slash!
 }
 
 const social = {
