@@ -62,7 +62,7 @@
   "license": "MIT",
   "scripts": {
     "prebuild": "cd plugins/gatsby-plugin-social-banners && npm install",
-    "now-build": "gatsby build",
+    "now-build": "npm run build",
     "build": "gatsby build",
     "develop": "gatsby develop --host=0.0.0.0",
     "format": "prettier --write src/**/*.{js,jsx}",
