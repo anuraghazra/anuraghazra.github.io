@@ -2,7 +2,7 @@ const meta = {
   // Metadata
   // Finds usage in gatsby-config, i18n, and SEO component
   siteTitle: 'Anurag Hazra - Creative Web Designer',
-  siteDescription: 'Anurag Hazra | Passionate Web Designer. Creative and unique web designer from india who loves javascript and modern web technologies.',  
+  siteDescription: 'Anurag Hazra - Creative frontEnd web developer who loves javascript and modern web stacks.',  
   siteTitleAlt: 'Anurag Hazra',
   siteShortName: 'Anurag Hazra',
   siteUrl: 'https://anuraghazra-gatsby-portfolio-git-adding-seo.anuraghazra1.now.sh', // No trailing slash!
