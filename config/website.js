@@ -19,11 +19,9 @@ const website = {
   ...meta,
   ...social,
   // googleAnalyticsID: 'UA-47519312-1',
-  // background_color: `#6D83F2`,
-  // theme_color: `#6D83F2`,
   // Manifest
-  themeColor: '#3498DB',
-  backgroundColor: '#2e3246',
+  themeColor: '#6D83F2',
+  backgroundColor: '#6D83F2',
 }
 
 module.exports = website
