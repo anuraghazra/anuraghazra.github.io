@@ -12,8 +12,6 @@ const social = {
   siteLogo: `${meta.siteUrl}/avatar.png`,
   siteLogoSmall: `${meta.siteUrl}/avatar_small.png`,
   siteBanner: `${meta.siteUrl}/images/social-banner.png`,
-  siteBannerWidth: '1280',
-  siteBannerHeight: '686',
   twitter: '@anuraghazru',
 }
 

@@ -9,8 +9,6 @@ module.exports = {
     siteLogo: config.siteLogo,
     siteLogoSmall: config.siteLogoSmall,
     siteBanner: config.siteBanner,
-    siteBannerWidth: config.siteBannerWidth,
-    siteBannerHeight: config.siteBannerHeight,
   },
   plugins: [
     // MARKDOWN

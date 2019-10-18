@@ -27,8 +27,6 @@ function SEO({ title, description, slug, isBlogPost }) {
           siteLogo
           siteLogoSmall
           siteBanner
-          siteBannerWidth
-          siteBannerHeight
         }
       }
     }
@@ -51,8 +49,6 @@ function SEO({ title, description, slug, isBlogPost }) {
   let url = `${defaults.siteUrl}${slug || ''}`;
   let twitter = defaults.twitter;
   let ogimage = `${defaults.siteUrl}${socialBanner}`;
-  let imageWidth = defaults.siteBannerWidth;
-  let imageHeight = defaults.siteBannerHeight;
 
   if (isBlogPost) {
     ogimage = `${defaults.siteUrl}${slug}/social-banner.jpg`;
@@ -65,7 +61,7 @@ function SEO({ title, description, slug, isBlogPost }) {
       <title>{title}</title>
       <meta name="url" content={url} />
       <meta name="description" content={description} />
-      {ogimage && <meta name="image" content={`${ogimage}`} />}
+      {ogimage && <meta name="image" content={ogimage} />}
 
       {/* OpenGraph tags */}
       <meta property="og:url" content={url} />
@@ -73,9 +69,7 @@ function SEO({ title, description, slug, isBlogPost }) {
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
 
-      {ogimage && <meta property="og:image" content={`${ogimage}`} />}
-      {ogimage && <meta name="og:image:width" content={imageWidth} />}
-      {ogimage && <meta name="og:image:height" content={imageHeight} />}
+      {ogimage && <meta property="og:image" content={ogimage} />}
 
       {/* Twitter Card tags */}
       <meta name="twitter:card" content="summary_large_image" />
@@ -83,10 +77,7 @@ function SEO({ title, description, slug, isBlogPost }) {
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
 
-      {ogimage && <meta name="twitter:image" content={`${ogimage}`} />}
-      {ogimage && <meta name="twitter:image:alt" content={description} />}
-      {ogimage && <meta name="twitter:image:width" content={imageWidth} />}
-      {ogimage && <meta name="twitter:image:height" content={imageHeight} />}
+      {ogimage && <meta name="twitter:image" content={ogimage} />}
 
     </Helmet>
   )
