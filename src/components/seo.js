@@ -65,7 +65,7 @@ function SEO({ title, description, slug, isBlogPost }) {
 
 
       {/* OpenGraph tags */}
-      <meta property="" content={url} />
+      <meta property="og:url" content={url} />
       {isBlogPost ? <meta property="og:type" content="article" /> : null}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
