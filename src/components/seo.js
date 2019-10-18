@@ -1,7 +1,7 @@
 import React from "react"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
-import socialBanner from '../static/images/social-banner.png';
+import socialBanner from '../static/images/social-banner.jpg';
 
 // {
 //   siteMetadata: seo,
@@ -63,13 +63,14 @@ function SEO({ title, description, slug, isBlogPost }) {
       <meta name="description" content={description} />
       {ogimage && <meta name="image" content={ogimage} />}
 
+
       {/* OpenGraph tags */}
-      <meta property="og:url" content={url} />
+      <meta property="" content={url} />
       {isBlogPost ? <meta property="og:type" content="article" /> : null}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-
       {ogimage && <meta property="og:image" content={ogimage} />}
+
 
       {/* Twitter Card tags */}
       <meta name="twitter:card" content="summary_large_image" />
