@@ -6,7 +6,7 @@ module.exports = ({ markdownNode }) => {
   const { frontmatter, fields } = markdownNode;
   if (fields.posttype === 'case-studies') return;
 
-  const output = path.join('./public', fields.slug, 'social-banner.jpg');
+  const output = path.join('./public', fields.slug, 'social-banner-img.jpg');
   // console.log(`markdownNode plugin:${JSON.stringify(markdownNode, null, 2)}`);
 
   return Promise.all([
@@ -15,11 +15,11 @@ module.exports = ({ markdownNode }) => {
     jimp.loadFont(path.join(__dirname, 'karla-26-regular.fnt'))
   ]).then(([image, montserrat, karla]) => {
     image
-      .resize(1280, 686)
+      .resize(1200, 630)
       .print(
         montserrat,
-        179,
-        268,
+        139,
+        231,
         {
           text: frontmatter.title,
           alignmentX: jimp.HORIZONTAL_ALIGN_CENTER,
@@ -31,13 +31,13 @@ module.exports = ({ markdownNode }) => {
       .print(
         karla,
         0,
-        471,
+        434,
         {
           text: `${dateformat(frontmatter.date, 'mmmm d, yyyy')}  |  Anurag Hazra`,
           alignmentX: jimp.HORIZONTAL_ALIGN_CENTER,
           alignmentY: jimp.VERTICAL_ALIGN_MIDDLE
         },
-        1280,
+        1200,
         44
       )
       .write(output);

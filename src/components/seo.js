@@ -51,7 +51,7 @@ function SEO({ title, description, slug, isBlogPost }) {
   let ogimage = `${defaults.siteUrl}${socialBanner}`;
 
   if (isBlogPost) {
-    ogimage = `${defaults.siteUrl}${slug}/social-banner.jpg`;
+    ogimage = `${defaults.siteUrl}${slug}/social-banner-img.jpg`;
   }
   // console.log({ url, title, description, twitter, ogimage, imageWidth, imageHeight })
   return (
