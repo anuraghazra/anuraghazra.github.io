@@ -3,17 +3,6 @@ import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 import socialBanner from '../static/images/social-banner.jpg';
 
-// {
-//   siteMetadata: seo,
-//   postData,
-//   metaImage,
-//   isBlogPost,
-//   frontmatter: postMeta = postData.childMarkdownRemark.frontmatter || {},
-//   title = postMeta.title || config.siteTitle,
-//   description = postMeta.plainTextDescription || postMeta.description || seo.description,
-//   image = `${seo.canonicalUrl}${metaImage || defaultMetaImage}`,
-//   url = postMeta.slug ? `${seo.canonicalUrl}${path.sep}${postMeta.slug}` : seo.canonicalUrl,
-// }
 
 function SEO({ title, description, slug, isBlogPost }) {
   const { site } = useStaticQuery(graphql`
@@ -25,7 +14,6 @@ function SEO({ title, description, slug, isBlogPost }) {
           twitter
           siteUrl
           siteLogo
-          siteLogoSmall
           siteBanner
         }
       }

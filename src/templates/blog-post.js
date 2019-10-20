@@ -6,8 +6,9 @@ import Layout from "src/components/Layout/Layout"
 
 import BlogLayout from "src/components/Blog/BlogLayout";
 import SocialShareSection from 'src/components/Blog/SocialShareSection';
-import { BlogDateAndReadTime } from "src/components/Blog/BlogCard";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { BlogDateAndReadTime } from "src/components/Blog/BlogCard";
 import { DiscussionEmbed } from "disqus-react";
 
 const BlogPost = ({ data, pageContext }) => {
@@ -23,6 +24,8 @@ const BlogPost = ({ data, pageContext }) => {
     url: baseSlugUrl
   }
 
+  const githubLink = `https://github.com/anuraghazra/anuraghazra.github.io/tree/develop/content${pageContext.slug}/index.md`;
+
   return (
     <Layout>
       <SEO isBlogPost title={title} description={excerpt} slug={pageContext.slug} />
@@ -31,6 +34,16 @@ const BlogPost = ({ data, pageContext }) => {
         <div>
           <h4>Share on</h4>
           <SocialShareSection baseSlugUrl={baseSlugUrl} title={title} />
+          <hr style={{ margin: '25px 0' }} />
+          <span>
+            <a
+              aria-label="Edit post on github"
+              rel="noopener norefferer"
+              target="__blank"
+              href={githubLink}>
+              <FontAwesomeIcon style={{ fontSize: 18 }} icon="edit" /> Edit post on GitHub
+            </a>
+          </span>
         </div>
       }>
         <BlogDateAndReadTime date={date} readtime={timeToRead} />

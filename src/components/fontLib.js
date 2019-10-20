@@ -27,7 +27,8 @@ import {
   faBars,
   faTimes,
   faMoon,
-  faSun
+  faSun,
+  faEdit
 } from '@fortawesome/free-solid-svg-icons'
 
 library.add(
@@ -54,7 +55,8 @@ library.add(
   faBars,
   faTimes,
   faMoon,
-  faSun
+  faSun,
+  faEdit
 );
 config.autoAddCss = false;
 

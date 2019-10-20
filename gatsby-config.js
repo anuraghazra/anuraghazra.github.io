@@ -7,7 +7,6 @@ module.exports = {
     twitter: config.twitter,
     siteUrl: config.siteUrl,
     siteLogo: config.siteLogo,
-    siteLogoSmall: config.siteLogoSmall,
     siteBanner: config.siteBanner,
   },
   plugins: [
@@ -96,7 +95,7 @@ module.exports = {
         background_color: config.backgroundColor,
         theme_color: config.themeColor,
         display: `standalone`,
-        icon: `src/static/images/gatsby-icon.png`,
+        icon: config.siteLogo,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
