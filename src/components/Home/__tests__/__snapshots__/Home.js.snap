@@ -12,7 +12,7 @@ exports[`home renders correctly 1`] = `
       src="test-file-stub"
     />
     <section
-      class="sc-ifAKCX fwVNlr"
+      class="sc-ifAKCX gJQnGm"
     >
       <div
         class="home__text"
@@ -62,7 +62,7 @@ exports[`home renders correctly 1`] = `
         </div>
       </div>
       <div
-        class="sc-bdVaJa eOiSCq"
+        class="sc-bdVaJa cCATg"
       >
         <div
           class="sc-bwzfXH boMUdc"
@@ -132,6 +132,7 @@ exports[`home renders correctly 1`] = `
     </section>
     <h2
       class="sc-bZQynM gNVHZL"
+      style="margin-bottom: 30px;"
     >
       Things i love 
       <i
