@@ -1,4 +1,4 @@
-import { createGlobalStyle, css } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 import PrismJsStyles from './prismjs.style';
 import scrollBar from './scrollbar.style';
 import blogstyles from './blogcss.style';

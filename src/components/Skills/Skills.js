@@ -22,6 +22,10 @@ const SkillsWrapper = styled.section`
     }
   }
   .skills__word-clouds {
+    @media ${props => props.theme.media.tablet} {
+      display: none;
+    }
+
     p {
       position: absolute;
       color: ${props => props.theme.accentColor};

@@ -35,15 +35,14 @@ const BlogPost = ({ data, pageContext }) => {
           <h4>Share on</h4>
           <SocialShareSection baseSlugUrl={baseSlugUrl} title={title} />
           <hr style={{ margin: '25px 0' }} />
-          <span>
-            <a
-              aria-label="Edit post on github"
-              rel="noopener norefferer"
-              target="__blank"
-              href={githubLink}>
-              <FontAwesomeIcon style={{ fontSize: 18 }} icon="edit" /> Edit post on GitHub
-            </a>
-          </span>
+          <a
+            style={{ fontSize: '16px' }}
+            aria-label="Edit post on github"
+            rel="noopener norefferer"
+            target="__blank"
+            href={githubLink}>
+            <FontAwesomeIcon style={{ fontSize: 18 }} icon="edit" /> Edit post on GitHub
+          </a>
         </div>
       }>
         <BlogDateAndReadTime date={date} readtime={timeToRead} />
