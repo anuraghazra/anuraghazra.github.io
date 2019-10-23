@@ -43,7 +43,9 @@
     "react-slick": "^0.24.0",
     "react-spring": "^8.0.27",
     "slick-carousel": "^1.8.1",
-    "styled-components": "^4.4.0"
+    "styled-components": "^4.4.0",
+    "typeface-karla": "0.0.72",
+    "typeface-montserrat": "0.0.75"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^4.1.2",
