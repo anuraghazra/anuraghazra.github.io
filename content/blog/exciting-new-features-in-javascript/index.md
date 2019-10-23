@@ -67,19 +67,19 @@ here's how it will look
 // and they can't be accessed outside the class block
 
 class Ship {
- #x;
- #y;
+  #x;
+  #y;
 
- constructor(x, y) {
- this.#x = x;
- this.#y = y;
- }
+  constructor(x, y) {
+    this.#x = x;
+    this.#y = y;
+  }
 
- // private methods are comming soon
- #boost() {
- this.#x++;
- this.#y++;
- }
+  // private methods are comming soon
+  #boost() {
+    this.#x++;
+    this.#y++;
+  }
 }
 
 const ship = new Ship(1, 1);

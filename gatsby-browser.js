@@ -1,7 +1,8 @@
 require('typeface-montserrat')
 require('typeface-karla')
 
-require('prismjs/themes/prism-tomorrow.css')
+// require('prismjs/themes/prism-tomorrow.css')
+require('./src/styles/prism-purpleking-dark.css')
 require("prismjs/plugins/line-numbers/prism-line-numbers.css")
 
 export const onClientEntry = async () => {

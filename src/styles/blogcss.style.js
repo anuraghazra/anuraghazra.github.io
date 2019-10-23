@@ -30,9 +30,9 @@ const blogstyles = css`
       word-break: break-word;
       margin: 0;
     }
-    code {
-      font-size: 16px
-    }
+    /* code {
+      font-size: 16px;
+    } */
 
     iframe {
       border-radius: 5px;
