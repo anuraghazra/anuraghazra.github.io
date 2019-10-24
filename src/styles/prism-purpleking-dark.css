@@ -1,8 +1,7 @@
 /*
-Name: Duotone Dark
+Name: Purple King
 Author: Simurai, adapted from DuoTone themes for Atom (http://simurai.com/projects/2016/01/01/duotone-themes)
 Conversion: Bram de Haan (http://atelierbram.github.io/Base2Tone-prism/output/prism/prism-base2tone-evening-dark.css)
-Generated with Base16 Builder (https://github.com/base16-builder/base16-builder)
 */
 
 code[class*="language-"],
@@ -28,9 +27,9 @@ pre[class*="language-"] {
 	color: #9dadff;
 }
 
-pre > code[class*="language-"] {
+/* pre > code[class*="language-"] { */
 	/* font-size: 1em; */
-}
+/* } */
 
 pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
 code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
@@ -50,6 +49,13 @@ pre[class*="language-"] {
 	margin: .5em 0;
 	overflow: auto;
 }
+
+/* Code Language Tag */
+pre[class*="language-css"]:before { content: 'css' }
+pre[class*="language-js"]:before { content: 'js' }
+pre[class*="language-jsx"]:before { content: 'jsx' }
+pre[class*="language-html"]:before { content: 'html' }
+pre[class*="language-md"]:before { content: 'md' }
 
 /* Inline code */
 :not(pre) > code[class*="language-"] {

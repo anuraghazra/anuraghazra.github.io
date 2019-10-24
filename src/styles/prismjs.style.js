@@ -9,39 +9,55 @@ const PrismJsStyles = css`
   }
   
   /* inline backtics */
-  .language-text {
+  p > .language-text {
     padding: 2px 5px;
     background: ${p => p.theme.accentColor} !important;
     color: ${p => p.theme.primaryText}  !important;
     word-break: break-word !important;
     white-space: normal !important;
     font-size: 16px !important;
-    /* font-family: ${props => props.theme.secondaryFontFamily} !important; */
   }
 
-
   .gatsby-highlight {
-    background-color: #25293e;
-    border-radius: 0.3em;
-    margin: 3.5em 0;
-    padding: 1em;
-    overflow: auto;
-    border-left: 5px solid ${p => p.theme.primaryColor};
+    position: relative;
 
+    /* actual code */
     code[class*="language-"] {
       background-color: transparent;
-      /* 14px */
-      font-size: 1em; 
+      font-size: 1em; /* 14px */
+      left: 15px;
     }
 
+    /* another parent wrapper */
     pre[class*="language-"] {
-      background-color: transparent;
-      margin: 0;
-      padding: 0;
-      overflow: initial;
-      float: left;
-      min-width: calc(100% - 3em);
 
+      /* language-tag */
+      &:before {
+        background: rgb(97, 218, 251);
+        color: #232129;
+        font-size: 0.75rem;
+        line-height: 1;
+        position: absolute;
+        right: 15px;
+        text-transform: uppercase;
+        top: 0px;
+        border-radius: 0px 0px 4px 4px;
+        padding: 0.25rem 0.5rem;
+      }
+
+      position: initial;
+      
+      line-height: 1.42;
+      font-size: 0.85rem;
+      border-radius: 0.3em;
+
+      margin: 2em 0;
+      padding: 1em 0;
+      
+      overflow: auto;
+      word-wrap: normal;
+      background-color: #25293e;
+      
       &.line-numbers {
         padding-left: 2em;
         padding-right: 1em;
@@ -49,9 +65,10 @@ const PrismJsStyles = css`
         font-size: 14px;
         
         .line-numbers-rows {
-          right: calc(100% - 15px);
+          right: calc(100% - 40px);
+          background-color: #25293e;
           border: none;
-          /* left: unset !important; */
+          top: 14px;
         }
 
         .gatsby-highlight-code-line {
