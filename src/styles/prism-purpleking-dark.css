@@ -8,7 +8,6 @@ code[class*="language-"],
 pre[class*="language-"] {
 	font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
 	font-size: 14px;
-	line-height: 1.375;
 	direction: ltr;
 	text-align: left;
 	white-space: pre;
@@ -168,10 +167,10 @@ pre > code.highlight {
 }
 
 /* overrides color-values for the Line Highlight plugin
-* http://prismjs.com/plugins/line-highlight/
+* http://prismjs.com/plugins/gatsby-highlight-code-line/
 */
-.line-highlight {
+/* .gatsby-highlight-code-line {
 	background: rgba(224, 145, 66, 0.2);
 	background: -webkit-linear-gradient(left, rgba(224, 145, 66, 0.2) 70%, rgba(224, 145, 66, 0));
 	background: linear-gradient(to right, rgba(224, 145, 66, 0.2) 70%, rgba(224, 145, 66, 0));
-}
+} */

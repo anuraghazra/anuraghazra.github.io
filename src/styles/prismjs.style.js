@@ -47,7 +47,6 @@ const PrismJsStyles = css`
 
       position: initial;
       
-      line-height: 1.42;
       font-size: 0.85rem;
       border-radius: 0.3em;
 
@@ -60,7 +59,8 @@ const PrismJsStyles = css`
       
       &.line-numbers {
         padding-left: 2em;
-        padding-right: 1em;
+        /* 1.1em for 1px overflow when using line-heighlight */
+        padding-right: 1.1em;
         line-height: 170%;
         font-size: 14px;
         
@@ -72,12 +72,14 @@ const PrismJsStyles = css`
         }
 
         .gatsby-highlight-code-line {
-          background-color: #323548;
           display: block;
-          margin-right: -1em;
-          margin-left: -1em;
-          padding-right: 1em;
-          padding-left: 0.75em;
+          position: relative;
+          left: -5px;
+          padding-left: 3px;
+          background: #46495a;
+          border-left: 2px solid #61dafb9e;
+          background: linear-gradient(134deg, #46495a 0%, rgba(97, 218, 251, 0) 99%);
+          z-index: 1;
         }
       }
     }

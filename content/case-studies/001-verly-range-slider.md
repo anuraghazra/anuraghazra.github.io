@@ -31,16 +31,18 @@ It works by using Verly.js's `verly.createRope(x, y, segments, gap, pin)` functi
 
 > i created a `verly instace` for every input slider present on the screen. 
 
-```js
+```js {18}
 let DOMSlider = document.getElementById(id);
 let canvas = document.createElement('canvas');
 let ctx = canvas.getContext('2d');
+
 // canvas width is equal to the slider's width 
 let width = DOMSlider.scrollWidth;
 let height = width / 2;
 canvas.width = width;
 canvas.height = height;
 canvas.style.pointerEvents = 'none';
+
 // offsetting the position so its lines up
 canvas.style.transform = 'translate(0, -15px)';
 DOMSlider.parentElement.appendChild(canvas);
@@ -54,9 +56,8 @@ const gravity = new Vector(0, 0.3);
 
 after that, i created the rope with
 
-```js
+```js {2}
 // width / 20 to adjust the segments depending on the screen size
-// highlight-next-line
 let rope = verly.createRope(0, 0, width / 20, 17, 0);
 let lastIndex = rope.points.length - 1;
 
@@ -69,10 +70,9 @@ rope.pin(lastIndex);
 now the actual part where i fix the last dot's position with the slider's thumb.
 to do this we can take the slider's `value` and normalize it so it's between 0 and 1 and then multiply the normalized value with the width to get the slider's thumb position... (yeah i did not bother to use shadowDOM because of browser compatibility and vendor issues) but my solution works kinda ok.
 
-```js
+```js {3}
 function setRopePosition() {
   // get the normalized value of the slider
-  // highlight-next-line
   let ratio = (DOMSlider.value - DOMSlider.min) / (DOMSlider.max - DOMSlider.min);
   // then just apply it to the last dot of the rope
   rope.points[rope.points.length - 1].pos.x = (ratio * width);
@@ -86,17 +86,15 @@ but i noticed something weird behavior with this.
 
 the problem was for some reason (probably floating point precision) the slider's position was offseting a bit while moving towards the edge, so i had to think some ways to prevent this. then i ended up with this solution (yeah crazy but works)
 
-```js
+```js {4-8}
 function setRopePosition() {
   let ratio = (DOMSlider.value - DOMSlider.min) / (DOMSlider.max - DOMSlider.min);
 
-  // highlight-start
   // floating point correction
   if (ratio < 0.5) ratio += 0.01;
   if (ratio < 0.3) ratio += 0.01;
   if (ratio > 0.6) ratio -= 0.01;
   if (ratio > 0.8) ratio -= 0.02;
-  // highlight-end
 
   rope.points[rope.points.length - 1].pos.x = (ratio * width);
 }
