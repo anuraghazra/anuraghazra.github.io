@@ -30,7 +30,8 @@ In simple terms, Verlet physics is just a system of connected dots.
 The dots have very simple physics applied to them.
 We have to keep track of the dots’ current and old positions to add the physics behavior to them — you'll see this when we actually implement it.
 
-```js
+```js {4-5}
+// Dot.js
 class Dot {
   constructor(x, y) {
     this.pos = new Vector(x, y)
@@ -47,7 +48,8 @@ class Dot {
 
 We have the basic setup, now let's render the dots and make them move.
 
-```js
+```js {3,12-13}
+// Dot.js
 update() {
   let vel = Vector.sub(this.pos, this.oldpos);
   vel.mult(this.friction);
@@ -75,7 +77,8 @@ Then, we update the old position by saying `this.oldpos.setXY(this.pos.x, this.p
 We also want to make them stay inside the canvas so we have to add some checks. We will also add another function: `constrain()`:
 
 ```js
- constrain() {
+// Dot.js
+constrain() {
   if (this.pos.x > CANVAS_WIDTH - this.radius) {
     this.pos.x = CANVAS_WIDTH - this.radius;
   }
@@ -94,6 +97,7 @@ We also want to make them stay inside the canvas so we have to add some checks. 
 Let’s add the render method too:
 
 ```js
+// Dot.js
 render() {
   ctx.beginPath();
   ctx.fillStyle = this.color;
@@ -105,7 +109,8 @@ render() {
 
 Setting up:
 
-```js
+```js {13,20-24}
+// index.js | setup
 let canvas = document.getElementById("c")
 let ctx = canvas.getContext("2d")
 let CANVAS_WIDTH = window.innerWidth
@@ -153,7 +158,8 @@ Sticks are the core of Verlet physics. Sticks make sure that the dots don’t ge
 
 **Stick.js** class is fairly simple. It will take two **Dots** as an argument and a length. but if the length is not defined we will calculate the length based on the dot’s position.
 
-```js
+```js {11,4-5}
+// Stick.js
 class Stick {
   constructor(p1, p2, length) {
     this.startPoint = p1
@@ -174,6 +180,7 @@ class Stick {
 Now let's add the actual core of the algorithm. This resolves and updates the dot’s position based on the stick’s distance, ultimately constraining it to a certain distance from all other dots.
 
 ```js
+// Stick.js
 update() {
   // calculate the distance between two dots
   let dx = this.endPoint.pos.x - this.startPoint.pos.x;
@@ -207,6 +214,7 @@ update() {
 Okay, I think we are good to go! Let’s add the render function:
 
 ```js
+// Stick.js
 render(ctx) {
   ctx.beginPath();
   ctx.strokeStyle = this.color;
@@ -219,7 +227,8 @@ render(ctx) {
 
 Setting up:
 
-```js
+```js {11,20-24,34-37}
+// index.js | setup
 let canvas = document.getElementById("c");
 let ctx = canvas.getContext("2d");
 let CANVAS_WIDTH = window.innerWidth;
@@ -270,13 +279,14 @@ As you can see, we have a box! Well, a box that acts like it’s made of Jello, 
 
 Adding these lines to the existing code will make the box rigid:
 
-```js
+```js {2,8}
+// index.js | setup
 const ITERATION = 100 // max physics iterations per frame
 
 function animate() {
   ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT)
 
-  // update
+  // iterate over the simulation
   for (let i = 0; i < ITERATION; i++) {
     for (let d of dots) {
       d.constrain()
@@ -311,6 +321,7 @@ Okay, now we have Dot.js and Stick.js. Both are working nicely but the problem i
 We will create an Entity Class which will easily handle the Updates and Renders of the Verlet Object. I'm going to paste the whole code here — it’s nothing special:
 
 ```js
+// Entity.js
 class Entity {
   constructor(iterations) {
     this.dots = []
@@ -370,6 +381,8 @@ class Entity {
 Using the Entity Class:
 
 ```js
+// index.js | setup
+...
 let box = new Entity(100)
 // x, y, vx, vy added random velocity in first dot to make the box rotate a little bit
 box.addDot(100, 100, (Math.random() - 0.5) * 100.0)
@@ -382,6 +395,7 @@ box.addStick(1, 2)
 box.addStick(2, 3)
 box.addStick(3, 0)
 box.addStick(3, 1)
+...
 ```
 
 Yes, this is looking pretty clean and manageable!
@@ -404,7 +418,8 @@ Verly.js is a Robust Verlet physics engine I wrote. It has many cool features:
 
 With Verly.js you can create a tearable cloth in just 15 lines of code:
 
-```js
+```js {7-8,12-13}
+// Verly.js | demo
 let canvas = document.getElementById("c")
 let ctx = canvas.getContext("2d")
 let width = (canvas.width = 800)
