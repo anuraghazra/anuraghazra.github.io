@@ -11,13 +11,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { BlogDateAndReadTime } from "src/components/Blog/BlogCard";
 import { DiscussionEmbed } from "disqus-react";
 
-const BlogPost = ({ data, pageContext }) => {
-  const { title, date, id } = data.markdownRemark.frontmatter;
-  const { timeToRead, html, excerpt } = data.markdownRemark;
+import { siteUrl, disqusShortName } from '../../config/website';
 
-  const baseUrl = "https://anuraghazra.github.io"
-  const baseSlugUrl = baseUrl + pageContext.slug;
-  const disqusShortName = "anuraghazra";
+const BlogPost = ({ data, pageContext }) => {
+  const { title, date } = data.markdownRemark.frontmatter;
+  const { timeToRead, html, excerpt, id } = data.markdownRemark;
+
+  const baseSlugUrl = siteUrl + pageContext.slug;
   const disqusConfig = {
     identifier: id,
     title: title,
@@ -60,6 +60,7 @@ export const query = graphql`
       excerpt
       html
       timeToRead
+      id
       frontmatter {
         date(formatString: "MMMM DD, YYYY", locale: "en")
         title

@@ -1,6 +1,5 @@
 const meta = {
   // Metadata
-  // Finds usage in gatsby-config, and SEO component
   siteTitle: 'Anurag Hazra - Creative Web Designer',
   siteDescription: 'Anurag Hazra - Creative frontEnd web developer who loves javascript and modern web technologies.',
   siteTitleAlt: 'Anurag Hazra',
@@ -17,6 +16,7 @@ const social = {
 const website = {
   ...meta,
   ...social,
+  disqusShortName: 'anuraghazra',
   // googleAnalyticsID: 'UA-47519312-1',
   // Manifest
   themeColor: '#6D83F2',
