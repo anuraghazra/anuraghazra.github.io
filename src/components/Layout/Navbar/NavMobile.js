@@ -1,5 +1,4 @@
 import React, { useState, useContext } from 'react';
-import PropTypes from 'prop-types';
 
 import Link from "gatsby-link"
 
@@ -14,6 +13,7 @@ import NavLinks from './NavLinks';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ThemeToggleContext from '../ThemeToggleContext';
+import Burger from './Burger';
 
 const DarkModeButton = () => {
   const { toggleTheme, theme } = useContext(ThemeToggleContext);
@@ -50,8 +50,8 @@ const NavbarMobile = () => {
   return (
     <>
       <MobileMenuWrapper>
-        <FloatingButton tabindex="1" onClick={handleMenuState}>
-          <FontAwesomeIcon icon={isMenuOpen ? 'times' : 'bars'} size="2x" />
+        <FloatingButton onClick={handleMenuState} as="button">
+          <Burger isActive={isMenuOpen} />
         </FloatingButton>
 
         <NavItemsBottomNav isOpen={isMenuOpen}>

@@ -14,6 +14,14 @@ export const MobileMenuWrapper = styled.nav`
     bottom: 15px;
     right: 40px; 
   }
+  
+  a:focus, button:focus {
+    outline: 2px solid ${props => props.theme.accentColor};
+  }
+  a:hover, button:hover {
+    outline: 2px solid ${props => props.theme.accentColor};
+  }
+
 `
 
 export const FloatingButton = styled.button`
@@ -27,11 +35,6 @@ export const FloatingButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-
-  &:focus {
-    outline: none;
-    /* border: 2px solid ${p => p.theme.accentColor} outset; */
-  }
 `
 
 export const NavItemMobile = styled.li`
@@ -51,17 +54,12 @@ export const NavItemMobile = styled.li`
     color: white;
     border-radius: 5px;
     box-shadow: 1px 3px 13px 0px rgba(0,0,0,0.1);
-    transform: scale(1.0);
     /* color: ${p => p.theme.dark ? p.theme.primaryText : p.theme.primaryColor}; */
-    transition: 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 
-  label:hover, a:hover {
+  button:hover, a:hover {
     cursor: pointer;
     color: white !important;
-    transform: scale(1.1);
-    transition: 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    border: 1px solid ${props => props.theme.accentColor};
   }
 
   /* tweaks for small height devices*/
@@ -98,14 +96,16 @@ export const NavItemMobile = styled.li`
 export const NavItemsBottomNav = styled.ul`
   opacity: 0;
   pointer-events: none;
-  transform:  translate(0, -50px);
+  transform:  translate(0, -30px);
   ${p => p.isOpen && css`
     opacity: 1;
     pointer-events: all;
     transform:  translate(0, 0px);
   `};
 
-  transition: 0.3s;
+  transition: 0.2s;
+  transition-delay: 0.1s;
+  will-change: opacity transform;
 
   flex-direction: column;
   align-items: center;
