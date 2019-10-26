@@ -17,7 +17,7 @@ const website = {
   ...meta,
   ...social,
   disqusShortName: 'anuraghazra',
-  // googleAnalyticsID: 'UA-47519312-1',
+  googleAnalyticsID: 'UA-119972196-1',
   // Manifest
   themeColor: '#6D83F2',
   backgroundColor: '#6D83F2',

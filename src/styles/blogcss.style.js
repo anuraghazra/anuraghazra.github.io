@@ -60,8 +60,7 @@ const blogstyles = css`
       margin-bottom: 50px;
     }
     h2, h3, h4, h5, h6 {
-      margin: 30px 0;
-      margin-top: 40px;
+      margin: 2.1em 0 0.5em 0;
       color: ${p => p.theme.primaryColor};
 
       &:hover .gatsby-remark-autolink svg {

@@ -129,7 +129,13 @@ module.exports = {
         showSpinner: false,
       },
     },
-
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: config.googleAnalyticsID,
+        head: true,
+      },
+    },
     // others
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-root-import`
