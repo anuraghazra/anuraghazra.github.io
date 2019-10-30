@@ -16,8 +16,8 @@ const CCProject = ({ node }) => {
       <CardFooter justify="space-between" align="center" nowrap>
         <h4>{node.title}</h4>
         <div>
-          <IconButton label="Live Demo" href={node.demo} icon="window-maximize" />
-          <IconButton label="Source Code" href={node.src} icon={["fab", "github"]} />
+          <IconButton label={`Live Demo - ${node.title}`} href={node.demo} icon="window-maximize" />
+          <IconButton label={`Source Code - ${node.title}`} href={node.src} icon={["fab", "github"]} />
         </div>
       </CardFooter>
     </CCard>
