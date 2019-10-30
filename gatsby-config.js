@@ -10,6 +10,7 @@ module.exports = {
     siteBanner: config.siteBanner,
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
     // MARKDOWN
     {
       resolve: `gatsby-transformer-remark`,

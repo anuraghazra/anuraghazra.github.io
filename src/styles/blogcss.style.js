@@ -72,7 +72,7 @@ const blogstyles = css`
       font-family: ${p => p.theme.secondaryFontFamily};
       font-size: 18px;
       padding: 0 17px;
-      line-height: 50px;
+      line-height: 170%;
       text-indent: 0px;
     }
     ul {
