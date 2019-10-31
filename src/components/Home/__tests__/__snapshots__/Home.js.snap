@@ -168,12 +168,12 @@ exports[`home renders correctly 1`] = `
         <h3
           class="sc-gqjmRU jlixfV"
         >
-          Javascirpt
+          Javascript
         </h3>
         <p
           class="sc-VigVT hTTMiL"
         >
-          I just extreamly love javascirpt, i can’t even express how much i love javascirpt with just a few lines.
+          I just extreamly love javascript, i can’t even express how much i love javascript with just a few lines.
         </p>
       </div>
       <div
@@ -190,7 +190,7 @@ exports[`home renders correctly 1`] = `
         <p
           class="sc-VigVT hTTMiL"
         >
-          I love creative coding because i do both coding & designing. making beautifull art with code is very satisfying to me
+          I love creative coding because i do both coding & designing. making beautiful art with code is very satisfying to me
         </p>
       </div>
     </div>
