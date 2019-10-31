@@ -24,9 +24,9 @@ const ThingsILove = () => (
 
     <Card>
       <CardIcon><FontAwesomeIcon icon={["fab", "js"]} /></CardIcon>
-      <CardTitle>Javascirpt</CardTitle>
+      <CardTitle>Javascript</CardTitle>
       <CardText>
-        I just extreamly love javascirpt, i can’t even express how much i love javascirpt with just a few lines.
+        I just extreamly love Javascript, i can’t even express how much i love Javascript with just a few lines.
       </CardText>
     </Card>
 
@@ -34,7 +34,7 @@ const ThingsILove = () => (
       <CardIcon><FontAwesomeIcon icon="paint-brush" /></CardIcon>
       <CardTitle>Creative Coding</CardTitle>
       <CardText>
-        I love creative coding because i do both coding & designing. making beautifull art with code is very satisfying to me
+        I love creative coding because i do both coding & designing. making beautiful art with code is very satisfying to me
       </CardText>
     </Card>
   </Flex>
