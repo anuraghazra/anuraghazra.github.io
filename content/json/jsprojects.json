@@ -6,7 +6,7 @@
       "github": "//github.com/anuraghazra/Verly.js",
       "download": "//github.com/anuraghazra/Verly.js/archive/master.zip"
     },
-    "description": "Verly.js is an easy to integrate verlet physics engine made with javascript. It is also my most popular open source project on github, so far it got over 200 stars on github and got mentioned in codepen spark"
+    "description": "Verly.js is an easy to integrate verlet physics engine made with javascript. It is also my most popular open-source project on GitHub, so far it got over 200 stars on Github and got mentioned in codepen spark"
   },
   {
     "title": "Atomic.js",
@@ -15,7 +15,7 @@
       "github": "//github.com/anuraghazra/atomic.js",
       "download": "//github.com/anuraghazra/Atomic.js/archive/master.zip"
     },
-    "description": "Atomic.js is Greatly Simple 2D Physics Engine. It is a collision detection and resolution engine. Can be used in 2d HTML5 games and 2d physics simulations. it uses SAT (Seperation Axis Theorem) Collision Detection and mass seperation collision resolution."
+    "description": "Atomic.js is a Greatly Simple 2D Physics Engine. It is collision detection and resolution engine. It can be used in 2d HTML5 games and 2d physics simulations. It uses the SAT (Separating Axis Theorem) Collision Detection and mass separation collision resolution."
   },
   {
     "title": "Candy.js",
@@ -24,6 +24,6 @@
       "github": "//github.com/anuraghazra/candy.js",
       "download": "//github.com//anuraghazra/Candy.js/archive/master.zip"
     },
-    "description": "Candy.js is CanvasAPI Rendering Toolkit Library. Candy.js is highly inspired by p5.js's methods and functions. but it is more geared towards simplicity and utility functions."
+    "description": "Candy.js is CanvasAPI Rendering Toolkit Library. P5.js's methods and functions highly inspire Candy.js. But it is more geared towards simplicity and utility functions."
   }
 ]

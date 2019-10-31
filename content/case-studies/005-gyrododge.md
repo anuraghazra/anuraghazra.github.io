@@ -1,13 +1,13 @@
 ---
 title: GyroDodge
-excerpt: Dodge! Shoot! Win! GyroDodge is a simple gyroscopic mobile game. i used device orientation api to get the alpha, gamma, delta rotations of mobile device and then use it to control the player. also available on itch.io
+excerpt: Dodge! Shoot! Win! GyroDodge is a simple gyroscopic mobile game. I used device orientation API to get the alpha, gamma, delta rotations of the mobile device and then use it to control the player. also available on itch.io
 
 iframe: //www.youtube.com/embed/GdRlkHTMk9c/?modestbranding=1&showinfo=0&autohide=1&rel=0
 demo: //anuraghazra.github.io/GyroDodge/
 src: //github.com/anuraghazra/GyroDodge
 
 info:
-  idea: Gyrododge was an experimental game for testing out the Javascript's Gyroscope API. turns out that we can do pretty much anything with it. so i made a game with it.
+  idea: Gyrododge was an experimental game for testing out the Javascript's Gyroscope API. It turns out that we can do pretty much anything with it. So i made a game with it.
   tech: [Javascript, HTML5 Canvas, GyroscopeAPI]
   links:
     - [
@@ -25,7 +25,7 @@ info:
 
 GyroDodge makes use of javascript's [Device Orientation API](https://developer.mozilla.org/en-US/docs/Web/API/Detecting_device_orientation) to move the small white dot around your mobile screen & you can shoot projectiles at the direction you are heading toward by tapping on your screen. also also used [p5js](https://p5js.org/) in gyrododge for making my life bit more easier
 
-here's the code to get the device orientation of device
+here's the code to get the device orientation of the device
 
 ```js
 // check if browser supports DeviceOrientationEvent event
@@ -40,7 +40,7 @@ if (!window.DeviceOrientationEvent) {
 }
 ```
 
-to move the player in desired location with these parameters i add them to the player's `acceleration` by using p5.js's `Vector` class
+to move the player in the desired location with these parameters, I add them to the player's `acceleration` by using p5.js's `Vector` class
 
 > [check out the code](https://github.com/anuraghazra/gyrododge/blob/master/js/Player.js#L44)
 
@@ -54,9 +54,9 @@ window.addEventListener("deviceorientation", e => {
 })
 ```
 
-## How i created those asteroids?
+## How I created those asteroids?
 
-To create those polygonal asteroids i created a `Rock.js` class which updates, renders and generate them.
+To create those polygonal asteroids, I created a `Rock.js` class, which updates, renders, and generates them.
 
 ```js
 class Rock {
@@ -82,7 +82,7 @@ class Rock {
 }
 ```
 
-In the update method i added the `velocity` to the `position` at each frame and also checked for collision with the boundaries, if the rock hits the wall then it just bounce back off them.
+In the update method, I added the `velocity` to the `position` at each frame. I also checked for collision with the boundaries. If the rock hits the wall, then it just bounces back off them.
 
 ```js
 update() {
@@ -97,7 +97,7 @@ update() {
 }
 ```
 
-In render function i just used p5js's `vertex` method to draw the polygonal shape
+In render function, I just used p5js's `vertex` method to draw the polygonal shape
 
 ```js
 render() {
@@ -111,7 +111,7 @@ render() {
 }
 ```
 
-In gyrodoge i also have a game mechanism where if you hit a asteroids it can break into multiple asteroids, here's how it works
+In gyrodoge I also have a game mechanism where if you hit an asteroid it can break into multiple asteroids, here's how it works
 
 ```js
 breakup() {
@@ -122,11 +122,11 @@ breakup() {
 }
 ```
 
-And thats basically it, for the Rock.js class.
+And that's it, for the Rock.js class.
 
 ## Particles Class
 
-I also added Particles class which emits particles in random direction, it extends the [Bullet](https://github.com/anuraghazra/GyroDodge/blob/master/js/Bullet.js) class
+I also added Particles class which emits particles in a random direction, and it extends the [Bullet](https://github.com/anuraghazra/GyroDodge/blob/master/js/Bullet.js) class
 
 ```js
 class Particle extends Bullet {
@@ -154,7 +154,7 @@ class Particle extends Bullet {
 
 > [check out the code](https://github.com/anuraghazra/GyroDodge/blob/master/js/Bullet.js)
 
-In bullet class there's not much going on just basic stuff
+In bullet class, there's not much going on just basic stuff
 
 ```js
 class Bullet {
@@ -199,7 +199,7 @@ class Bullet {
 
 > [check out the code](https://github.com/anuraghazra/GyroDodge/blob/master/js/Player.js)
 
-In Player class we have some interesting stuff, lets see the constructor first
+In Player class we have some exciting stuff, let's see the constructor first
 
 ```js
 class Player {
@@ -235,7 +235,7 @@ class Player {
   }
 ```
 
-As you can see i initialized the `deviceorientation` events and player's position and velocity stuff. the most important method of the Player class is `collidePointPoly` which detects if a point hits a polygon.
+As you can see, I initialized the `deviceorientation` events and player's position and velocity stuff. The most basic method of the Player class is `collidePointPoly` which detects if a point hits a polygon.
 
 ```js
 collidePointPoly(px, py, target, vertices) {
@@ -262,16 +262,16 @@ collidePointPoly(px, py, target, vertices) {
 }
 ```
 
-It's the important part of the class because it checks if the Player hits any Asteroids (rock) and depending on determine if the game is over or not.
+It's the vital part of the class because it checks if the Player hits any Asteroids (rock), and depending on that, it determines if the game is over or not.
 
 ## Game Class
 
 > [check out the code](https://github.com/anuraghazra/GyroDodge/blob/master/js/Game.js)
 
-Game class is just a state manager for the game which holds all the variables and state management
+Game class is just a state manager for the game, which holds all the variables and state management.
 
 we also have [AssetMan](https://github.com/anuraghazra/GyroDodge/blob/master/js/AssetMan.js) class which preloads all the assets for the game (sound effects)
 
 ## Setting Up
 
-And lastly but not least we have [index.js](https://github.com/anuraghazra/GyroDodge/blob/master/js/index.js) where i wrote all the necessary game logic and initialization.
+And lastly but not least, we have [index.js](https://github.com/anuraghazra/GyroDodge/blob/master/js/index.js) where I wrote all the necessary game logic and initialization.

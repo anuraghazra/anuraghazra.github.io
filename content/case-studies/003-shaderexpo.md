@@ -1,6 +1,6 @@
 ---
 title: ShaderExpo
-excerpt: ShaderExpo is purely dependency free shader editor made in Raw WebGL API. Experiment with basic webgl shaders on the fly. ShaderExpo Includes rich features like Inline Error Logs, AutoCompletion, Live Editing, Example Shaders etc. ShaderExpo is also mentioned in Awesome-Webgl.
+excerpt: ShaderExpo is a purely dependency-free shader editor made in Raw WebGL API. Experiment with basic WebGL shaders on the fly. ShaderExpo Includes rich features like Inline Error Logs, AutoCompletion, Live Editing, Example Shaders, etc. ShaderExpo is also mentioned in Awesome-Webgl.
 
 iframe: //www.youtube.com/embed/rtPhA041U4U/?modestbranding=1&showinfo=0&autohide=1&rel=0
 demo: //anuraghazra.github.io/ShaderExpo
@@ -31,13 +31,13 @@ WebGL Shader Playground.
 - Live Editing
 - Basic Debugging
 
-I made shader expo because i wanted to learn WebGL Shaders easily and to understand how webgl handles shaders at the runtime.
-The most important part of Webgl is setting up the boilerplate for all the code.
+I made shader expo because I wanted to learn WebGL Shaders quickly and to understand how WebGL handles shaders at the runtime.
+The most critical part of Webgl is setting up the boilerplate for all the code.
 
 ## Shader Class
 
-I created this modular shader class to handle, update, compile the Fragment and Vertex shaders.
-it holds the `WebGL Program`, fragmentShader and VertexShader source String and shaders itself, and `Errors` of each shader.
+I created this modular shader class to handle, update, compile the Fragment, and Vertex shaders.
+It holds the `WebGL Program`, fragmentShader and VertexShader source String and shaders itself, and `Errors` of each shader.
 
 ```js
 class Shader {
@@ -66,8 +66,8 @@ class Shader {
 
 > [init code on github](https://github.com/anuraghazra/ShaderExpo/blob/master/js/Shader.js#L23) 
 
-Then i added a init method which initialize the shaders from its source and creates the prgoram with `this.createProgram` method.
-if we encounter any errors then we will not create the program and terminate the function. we also have `this.createShader()` method which creates the and initalize the shader.
+Then I added a init method which initializes the shaders from its source and creates the program with `this.createProgram` method.
+If we encounter any errors, then we will not create the program and terminate the function. We also have `this.createShader()` method, which creates and initialize the shader.
 ```js
 init() {
   this.vertexShader = this.createShader(this.gl.VERTEX_SHADER, this.vShader);
@@ -83,7 +83,7 @@ init() {
 
 > [createShader code on github](https://github.com/anuraghazra/ShaderExpo/blob/master/js/Shader.js#L101) 
 
-createShader method creates the webgl shader from source, compiles it and checks for errors. and if we encounter any errors while compiling we set the `isVertexShaderError` and `isFragmentShaderError` to `true` and also sets the `vertexShaderErrors`, `fragmentShaderErrors` with the error message.
+createShader method creates the WebGL shader from the source, compiles it, and checks for errors. and if we encounter any errors while compiling we set the `isVertexShaderError` and `isFragmentShaderError` to `true` and also sets the `vertexShaderErrors`, `fragmentShaderErrors` with the error message.
 ```js
 createShader(type, source) {
   const shader = this.gl.createShader(type);
@@ -112,8 +112,8 @@ createShader(type, source) {
 ### createProgram
 > [createProgram code on github](https://github.com/anuraghazra/ShaderExpo/blob/master/js/Shader.js#L36) 
 
-The `createProgram` function create the program, attaches the sahders and links the program. and also throws errors if we encounter any Errors.
-and finally returns the program. 
+The `createProgram` function creates the program, attaches the shaders, links the program, and also throws errors if we encounter any Errors.
+And finally returns the program. 
 ```js
 createProgram() {
   this.program = this.gl.createProgram();
@@ -155,12 +155,12 @@ getShaderError(shader, shaderString) {
 ```
 
 ## Other Classes
-Basically `Shader` class was the most important for this project, we also have `Camera`, `RawModel`, `Mesh` classes which handles different part of the webgl context.
+`Shader` class was the most important for this project. We also have `Camera`, `RawModel`, `Mesh` classes, which handle different parts of the WebGL context.
 > [see all the classes on Github](https://github.com/anuraghazra/ShaderExpo/tree/master/js)
 
 
 ## Setup
-At the end i also used [Ace](https://ace.c9.io/) library to get my code editor up and running. (which was really easy)
+In the end, I also used [Ace](https://ace.c9.io/) library to get my code editor up and running. (which was easy)
 
 > [see index.js setup](https://github.com/anuraghazra/ShaderExpo/blob/master/index.js)
 

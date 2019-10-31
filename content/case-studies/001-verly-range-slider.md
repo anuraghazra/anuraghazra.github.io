@@ -1,13 +1,13 @@
 ---
 title: Verly Range Slider
-excerpt: Verly Range Slider is one of my fun projects which uses my Verly.js physics engine, it was also mentioned in CodepenSpark. verly range slider got viral on th net and got over 15K views on codepen.io. it uses Verlet physics to simulate those delighful dangly sliders.
+excerpt: Verly Range Slider is one of my fun projects which uses my Verly.js physics engine, and it also got mentioned in CodepenSpark. verly range slider got viral on the net and got over 15K views on codepen.io. It uses Verlet physics to simulate those delightful dangly sliders.
 
 iframe: //codepen.io/anuraghazra/embed/agKJEd/?default-tab=result&theme-id=light
 demo: //anuraghazra.github.io/VerlyRangeSlider
 src: //github.com/anuraghazra/VerlyRangeSlider
 
 info:
-  idea: main idea was to make some verlet simulated ropes and connect them to the rang slider's thumb and let them sway
+  idea: The main idea was to make some verlet simulated ropes and connect them to the rang slider's thumb and let them sway
   tech: [Javascript, Canvas]
   links:
     - [ On Codepen, https://codepen.io/anuraghazra/pen/agKJEd ]
@@ -15,7 +15,7 @@ info:
     - [ Article at DataGenetic | Verlet Simulation , https://datagenetics.com/blog/july22018/index.html]
 ---
 
-While I was building my physics engine [Verly.js](http://anuraghazra.github.io/Verly.js) I was thinking of making something that would showcase the engine's potential to do some interesting stuff, so I created this just as an experiment. 
+While I was building my physics engine [Verly.js](http://anuraghazra.github.io/Verly.js) I was thinking of making something that would showcase the engine's potential to do some exciting stuff, so I created this just as an experiment. 
 
 
 - so far VerlyRangeSlider got over **18K Views** on [Codepen](https://codepen.io/anuraghazra/pen/agKJEd)
@@ -25,11 +25,11 @@ While I was building my physics engine [Verly.js](http://anuraghazra.github.io/V
 
 ## How It Works?
 
-It works by using Verly.js's `verly.createRope(x, y, segments, gap, pin)` function which takes some arguments - `x` and `y` for location of the rope, `segments` which determines the dots count in the rope (more dots, more fluid rope), `gap` which specifies the distance between each dot (more gap, longer rope), and lastly `pin` which just pins the defined point.
+It works by using Verly.js's `verly.createRope(x, y, segments, gap, pin)` function which takes arguments - `x` and `y` for location of the rope, `segments` which determines the dots count in the rope (more dots, more fluid rope), `gap` which specifies the distance between each dot (more gap, longer rope), and lastly `pin` which just pins the defined point.
 
 
 
-> i created a `verly instace` for every input slider present on the screen. 
+> I created a `verly instance` for every input slider present on the screen. 
 
 ```js {18}
 let DOMSlider = document.getElementById(id);
@@ -54,7 +54,7 @@ let verly = new Verly(50, canvas, ctx);
 const gravity = new Vector(0, 0.3);
 ```
 
-after that, i created the rope with
+after that, I created the rope with
 
 ```js {2}
 // width / 20 to adjust the segments depending on the screen size
@@ -67,8 +67,11 @@ rope.pin(lastIndex);
 ```
 
 #### Getting the slider's position and applying it to the rope
-now the actual part where i fix the last dot's position with the slider's thumb.
-to do this we can take the slider's `value` and normalize it so it's between 0 and 1 and then multiply the normalized value with the width to get the slider's thumb position... (yeah i did not bother to use shadowDOM because of browser compatibility and vendor issues) but my solution works kinda ok.
+now the actual part where I fix the last dot's position with the slider's thumb.
+To do this,
+We will take the slider's `value` and normalize it, so it's between 0 and 1 then multiply the value with the width to get the slider's thumb position. 
+
+(yeah i did not bother to use shadowDOM because of browser compatibility and vendor issues) 
 
 ```js {3}
 function setRopePosition() {
@@ -81,10 +84,10 @@ function setRopePosition() {
 DOMSlider.addEventListener('input', setRopePosition);
 ```
 
-okay this works!
-but i noticed something weird behavior with this.
+Okay, this works!
+But I noticed something weird behavior with this.
 
-the problem was for some reason (probably floating point precision) the slider's position was offseting a bit while moving towards the edge, so i had to think some ways to prevent this. then i ended up with this solution (yeah crazy but works)
+The problem was, for some reason (probably floating point precision) the slider's position was offsetting a bit while moving towards the edge, so I had to think some ways to prevent this. then I ended up with this solution (yeah crazy but works)
 
 ```js {4-8}
 function setRopePosition() {
@@ -103,7 +106,7 @@ function setRopePosition() {
 
 nice!
 
-now we can just render the scene and update the physics
+now we can render the scene and update the physics.
 
 ```js
 function animate() {
@@ -121,5 +124,5 @@ animate();
 and we are done!
 
 
-> hopefully you enjoyed playing with this project, i know because i did. 
-> you can give the project a star on github if you liked it, have a nice day (or night)
+> hopefully, you enjoyed playing with this project, I know because I did. 
+> you can give the project a star on GitHub if you liked it, have a beautiful day (or night)

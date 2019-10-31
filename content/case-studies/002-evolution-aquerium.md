@@ -1,13 +1,13 @@
 ---
 title: Evolution Aquerium
-excerpt: Evolution Aquerium is based on Craig Reynold's Steering Behaviors and Flocking System. It's also implements Genetic Algorithm and mutations. Daniel Shiffman showcased this on his Youtube Channel at TheCodingTrain. And i was very happy about the humble feedback sir Daniel Shiffman gave to me. it just boosted my confidence more and more. and motivated me to make this project better.
+excerpt: Evolution Aquarium is based on Craig Reynold's Steering Behaviors and Flocking System, and It implements a Genetic Algorithm and mutations. Daniel Shiffman showcased this on his Youtube Channel at TheCodingTrain. And I was pleased about the humble feedback; sir Daniel Shiffman gave to me. It just boosted my confidence more and more, and motivated me to make this project better.
 
 iframe: //www.youtube.com/embed/GKIhVrOsQCI/?modestbranding=1&showinfo=0&autohide=1&rel=0
 demo: //anuraghazra.github.io/EvolutionAquerium
 src: //github.com/anuraghazra/EvolutionAquerium
 
 info:
-  idea: the basic idea of the project is to achive and simulate biological creatures in a aquerium to see how they react in different scenarios
+  idea: The basic idea of the project is to achieve and simulate biological creatures in an aquarium to see how they react in different scenarios
   tech: [Javascript, HTML5 Canvas]
   links:
     - [
@@ -21,7 +21,7 @@ info:
 
 These Creatures are based on [Craig Reynold's](https://www.red3d.com/cwr/index.html) Steering Behaviors and [Flocking System](https://www.red3d.com/cwr/boids/)
 
-It's also implements Genetic Algorithm and mutations.
+It also implements Genetic Algorithm and mutations.
 
 You can learn more about them on Daniel Shiffman's YouTube Channel [The Coding Train](https://www.youtube.com/user/shiffman)
 
@@ -35,7 +35,7 @@ You can learn more about them on Daniel Shiffman's YouTube Channel [The Coding T
 
 ## AgentBuilder Class
 
-I make use of builder pattern to create different variaties of creatures with different traits. and AgentBuilder class helps me do this easily see how it works.
+I make use of the "builder" pattern to create different varieties of creatures with different traits. And AgentBuilder class helps me do this easily see how it works.
 
 > [Learn more how builder pattern works](https://medium.com/@axelhadfeg/builder-pattern-using-javascript-and-es6-ec1539182e24)
 
@@ -78,7 +78,7 @@ class AgentBuilder {
 }
 ```
 
-And now the builder pattern is ready to be used, lets see how we can build creatures with different traits
+And now, the builder pattern is ready to be used. Let us see how we can build creatures with different traits.
 
 ```js
 // later on
@@ -102,7 +102,7 @@ let Avoider = new AgentBuilder("AVOIDER")
 
 ## BaseAgent Class
 
-BaseAgent class handles all the logic for update, render and physics, it's the heart of the codebase. the basic idea is to give each and every `agent` some basic traits like `health`, `radius`, `maxSpeed`, `maxSpeed` etc etc.
+BaseAgent class handles all the logic for the update, render, and physics, it's the heart of the codebase. the basic idea is to give each `agent` some essential traits like `health`, `radius`, `maxSpeed`, `maxSpeed` etc etc.
 
 > see the full BaseAgent class's [code at github](https://github.com/anuraghazra/EvolutionAquerium/blob/master/src/js/BaseAgent.js#L15)
 
@@ -147,7 +147,7 @@ class BaseAgent {
   }
 ```
 
-later on i also gave them names, haha yes
+Later on, I also gave them names, haha yes
 
 ```js
 ...
@@ -168,16 +168,16 @@ this.name = (this.getGender() === 'MALE') ? this.getRandomName(names_male) : thi
 ...
 ```
 
-And now, i will be talking only about main meat of the code not any other uncessecary code.
+And now, let's talk only about the main meat of the code, not any other unnecessary code.
 so in the base class we have some methods
 
 - [applyFlock()](https://github.com/anuraghazra/EvolutionAquerium/blob/master/src/js/BaseAgent.js#L235)
 
-  applies the flocking behaviour
+  applies the flocking behavior
 
 - [defineFear()](https://github.com/anuraghazra/EvolutionAquerium/blob/master/src/js/BaseAgent.js#L184)
 
-  main function which defines the fear behaviour and we can also use this inversly
+The primary function which defines the fear behavior and we can also use this inversely
 
 - [eat()](https://github.com/anuraghazra/EvolutionAquerium/blob/master/src/js/BaseAgent.js#L271)
 
@@ -189,11 +189,11 @@ so in the base class we have some methods
 
 - [reproduce()](https://github.com/anuraghazra/EvolutionAquerium/blob/master/src/js/BaseAgent.js#L320)
 
-  Reproduction System checks for male and female agents and if their radius is greater than 8 and they are close enough to each other, then they can reproduce with their specific DNA and creates a small Agent based on their DNA data and with some mutation.
+  Reproduction System checks for male and female agents, and if their radius is greater than 8 and they are close enough to each other, then they can reproduce with their specific DNA and creates a small Agent based on their DNA data and with some mutation.
 
 ## Flock Class
 
-[Flock class](https://github.com/anuraghazra/EvolutionAquerium/blob/master/src/js/Flock.js) takes an agent and do the calculations for flocking behaviours like `separate`, `align`, `cohesion`, `seek`.
+[Flock class](https://github.com/anuraghazra/EvolutionAquerium/blob/master/src/js/Flock.js) takes an agent and do the calculations for flocking behaviors like `separate`, `align`, `cohesion`, `seek`.
 
 ```js
 class Flock {
@@ -213,9 +213,9 @@ class Flock {
 
 ## EcoSystem Class
 
-EcoSystem class actually manages all the `agents` and `behaviors`, basically its like a state manager
+EcoSystem class manages all the `agents` and `behaviors`, basically it is like a state manager
 
-it have some methods which are
+it has some methods which are
 
 - [addEntities](https://github.com/anuraghazra/EvolutionAquerium/blob/master/src/js/EcoSystem.js#L17)
 
@@ -223,15 +223,15 @@ it have some methods which are
 
 - [registerAgents](https://github.com/anuraghazra/EvolutionAquerium/blob/master/src/js/EcoSystem.js#L28)
 
-  registers Agents to the state and it will also create corresponding Arrays for each of them which you can use by calling ecoSys.groups[your_given_name]
+  registers Agents to the state and also creates corresponding Arrays for each of them which you can use by calling ecoSys.groups[your_given_name]
 
 - [initialPopulation](https://github.com/anuraghazra/EvolutionAquerium/blob/master/src/js/EcoSystem.js#L39)
 
-  initializes the groups of population by given amount
+  initializes the groups of population by the given amount
 
 - [addBehavior](https://github.com/anuraghazra/EvolutionAquerium/blob/master/src/js/EcoSystem.js#L98)
 
-  specifies the behavior of the agent declarativly
+  specifies the behavior of the agent declaratively
 
 - [batchUpdateAgents](https://github.com/anuraghazra/EvolutionAquerium/blob/master/src/js/EcoSystem.js#L150)
 
@@ -257,7 +257,7 @@ class EcoSystem {
 
 ## Setting up everything
 
-And the last step is to assembel every part of the code to create these boids like creatures and gave each of them behaviours
+And the last step is to assemble every part of the code to create these boids like creatures and gave each of them behaviors
 
 ```js
 // Global
@@ -432,4 +432,4 @@ window.onload = load;
 ```
 
 
-And thats it, phew that was lot of work. but at the end we have beautiful flocking creatures playing around and interating with each other. have fun watching them all day. <3
+And that's it, phew, that was a lot of work. But in the end, we have beautiful flocking creatures playing around and interacting with each other. have fun watching them all day. <3

@@ -22,10 +22,10 @@ const About = () => {
           <Avatar src="avatar.png" />
         </div>
         <p>
-          Hi, i'm Anurag Hazra passionate self-taught frontEnd web developer from india. i tend to make use of modern web technologies to make websites which looks great, feels awesome and functions correctly. focusing especially Reactjs.
+          Hi, I'm Anurag Hazra passionate self-taught frontEnd web developer from India. I tend to make use of modern web technologies to build websites that looks great, feels fantastic, and functions correctly. Focusing especially on Reactjs.
           <br />
           <br />
-          i'm also a certified graphic designer from <a className="about__rkmscc-link" href="http://www.rkmscc.org/">"Ramakrishna Mission Shilpamandira"</a> i also do graphic and UI designing. and because i love both programming and designing i'm also interested in creating programmatic designs and creative coding projects.
+          I'm also a certified graphic designer from <a className="about__rkmscc-link" href="http://www.rkmscc.org/">"Ramakrishna Mission Shilpamandira"</a> I also do graphic and UI designing. And because I love both programming and designing, I'm also interested in creating programmatic designs and creative coding projects.
         </p>
       </AboutInfo>
 
@@ -34,10 +34,10 @@ const About = () => {
           <p>“Simplicity is the baddest choice to be the best “</p>
         </Quote>
         <Quote>
-          <p>“ I know i’m not successful enough but i’m passionate enough not to worry about success“</p>
+          <p>“I know I’m not successful enough, but I’m passionate enough not to worry about success“</p>
         </Quote>
         <Quote>
-          <p>“creativity is the driver of a unstoppable train called Passion”</p>
+          <p>“Creativity is the driver of an unstoppable train called Passion”</p>
         </Quote>
       </Flex>
 

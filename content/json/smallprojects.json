@@ -5,7 +5,7 @@
       "demo": "https://creativechat.herokuapp.com",
       "src": "https://github.com/anuraghazra/creativechat"
     },
-    "description": "Creative Chat is a realtime fun chatting app. where users can draw with colors in the canvas and communicate trough art"
+    "description": "Creative Chat is a realtime fun chatting app. where users can draw with colors in the canvas and communicate trough art."
   },
   {
     "title": "Verly.js",
@@ -21,7 +21,7 @@
       "demo": "https://simplerockets.herokuapp.com",
       "src": "https://github.com/anuraghazra/simplerockets"
     },
-    "description": "Simple Rockets is a online multiplayer game made with NodeJS and Socket.io. all of the players can join the game with their unique name and play."
+    "description": "Simple Rockets is an online multiplayer game made with NodeJS and Socket.io. All of the players can join the game with their unique name and play."
   },
   {
     "title": "ParticleBrush",

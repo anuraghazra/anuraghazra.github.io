@@ -8,7 +8,7 @@ tags: ["verlet", "physics", "javascript"]
 Have you ever wondered if you can make your own physics engine in JavaScript? If so, you have come to the right place. We are going to build a Physics engine from scratch in JavaScript.
 
 Before we start, I should mention that this tutorial assumes you have a good understanding of Vectors.
-Don’t worry if you do not yet have this understanding — Vectors are simple: get the Vector.js
+Don’t worry if you do not yet have this understanding — Vectors are simple: get the Vector.js.
 
 ## What Is Verlet Physics?
 
@@ -27,8 +27,8 @@ In simple terms, Verlet physics is just a system of connected dots.
 
 ## Dots
 
-The dots have very simple physics applied to them.
-We have to keep track of the dots’ current and old positions to add the physics behavior to them — you'll see this when we actually implement it.
+The dots have basic physics applied to them.
+We have to keep track of the dots’ current and old positions to add the physics behavior to them — you'll see this when we implement it.
 
 ```js {4-5}
 // Dot.js
@@ -68,13 +68,13 @@ update() {
 
 The update function will update the position and handle the physics of the dot.
 
-Basically, to do Verlet integration we have to calculate velocity based on dots old position.
+To do Verlet integration, we have to calculate velocity based on dots old position.
 
-In the first line, we are **subtracting the current position from the old position to get the desired velocity.** After calculating the velocity, we apply friction to the dots so they come to rest instead of sliding forever.
+In the first line, we are **subtracting the current position from the old position to get the desired velocity.** After calculating the velocity, we apply friction to the dots, so they come to rest instead of sliding forever.
 
-Then, we update the old position by saying `this.oldpos.setXY(this.pos.x, this.pos.y)` and add the velocity and gravity to position.
+Then, we update the old position by saying `this.oldpos.setXY(this.pos.x, this.pos.y)` and add the velocity and gravity to the position.
 
-We also want to make them stay inside the canvas so we have to add some checks. We will also add another function: `constrain()`:
+We also want to make them stay inside the canvas, so we have to add some checks. We will also add another function: `constrain()`:
 
 ```js
 // Dot.js
@@ -146,7 +146,7 @@ Let's see what that looks like:
 
 https://codepen.io/anuraghazra/pen/VOpJJR?default-tab=results
 
-Nice — it's just a start but finally we have something.
+Excellent — it's just a start, but finally, we have something.
 
 Now we are going to add the sticks!
 
@@ -156,7 +156,7 @@ Sticks are the core of Verlet physics. Sticks make sure that the dots don’t ge
 
 ![https://slsdo.github.io/blob-family/#constraint](./images/constraint_particle.png)
 
-**Stick.js** class is fairly simple. It will take two **Dots** as an argument and a length. but if the length is not defined we will calculate the length based on the dot’s position.
+**Stick.js** class is relatively simple. It will take two **Dots** as an argument and a length. But if the length is not defined, we will calculate the length based on the dot’s position.
 
 ```js {11,4-5}
 // Stick.js
@@ -167,7 +167,7 @@ class Stick {
     this.stiffness = 2
     this.color = "#f5476a"
 
-    // if the length is not given then calculate the distance based on position
+    // if the length is not given then calculate the distance based on the position
     if (!length) {
       this.length = this.startPoint.pos.dist(this.endPoint.pos)
     } else {
@@ -177,7 +177,7 @@ class Stick {
 }
 ```
 
-Now let's add the actual core of the algorithm. This resolves and updates the dot’s position based on the stick’s distance, ultimately constraining it to a certain distance from all other dots.
+Now let's add the actual core of the algorithm, This resolves and updates the dot’s position based on the stick’s distance, ultimately constraining it to a certain distance from all other dots.
 
 ```js
 // Stick.js
@@ -275,7 +275,7 @@ Let’s see the results:
 
 https://codepen.io/anuraghazra/pen/qGmWmZ?default-tab=results
 
-As you can see, we have a box! Well, a box that acts like it’s made of Jello, anyway. That’s because in a single frame, one update per stick is not enough to make the dots rest at their length. We have to iterate the simulation as many times as we can — the more the iterations, more the rigid box will be.
+As you can see, we have a box! Well, a box that acts like it’s made of Jello, That’s because, in a single frame, one update per stick is not enough to make the dots rest at their length. We have to iterate the simulation as many times as we can — the more the iterations, the more the rigid box will be.
 
 Adding these lines to the existing code will make the box rigid:
 
@@ -316,9 +316,9 @@ Looks amazing, isn’t it?
 
 ## Entity.js: managing dots and sticks in one place
 
-Okay, now we have Dot.js and Stick.js. Both are working nicely but the problem is we don't have much control over how we use them.
+Okay, now we have Dot.js and Stick.js. Both are working nicely, but the problem is we don't have much control over how we use them.
 
-We will create an Entity Class which will easily handle the Updates and Renders of the Verlet Object. I'm going to paste the whole code here — it’s nothing special:
+We will create an Entity Class that will easily handle the Updates and Renders of the Verlet Object. I'm going to paste the whole code here — it’s nothing special:
 
 ```js
 // Entity.js
@@ -443,7 +443,7 @@ Source-code: https://github.com/anuraghazra/Verly.js
 
 Examples: https://anuraghazra.github.io/Verly.js/examples
 
-Take a look at some of the examples in my Verly.js Physics Engine which I created some time ago. I added almost everything in that engine.
+Take a look at some of the examples in my Verly.js Physics Engine, which I created some time ago. I added almost everything in that engine.
 
 ![Spherical Shapes anuraghazra.github.io](./images/example1.png)
 ![Attraction Repulsion Behavior anuraghazra.github.io](./images/example2.png)
