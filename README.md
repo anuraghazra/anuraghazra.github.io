@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://anuraghazra.github.io/">
-    <img alt="Gatsby" src="./src/static/Logo2.svg" width="100" />
+    <img alt="Gatsby" src="./src/static/logo_noalpha.svg" width="100" />
     <h2 align="center">Anurag Hazra</h2>
   </a>
 </p>
