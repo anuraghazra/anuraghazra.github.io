@@ -50,15 +50,18 @@
     "typeface-montserrat": "0.0.75"
   },
   "devDependencies": {
+    "@testing-library/cypress": "^5.0.2",
     "@testing-library/jest-dom": "^4.1.2",
     "@testing-library/react": "^9.3.0",
     "axios": "^0.19.0",
     "babel-jest": "^24.9.0",
     "babel-preset-gatsby": "^0.2.18",
+    "cypress": "^3.5.0",
     "gatsby-plugin-root-import": "^2.0.5",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.9.0",
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "start-server-and-test": "^1.10.6"
   },
   "keywords": [
     "gatsby",
@@ -73,6 +76,10 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve --host=0.0.0.0",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run --config video=false",
+    "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open",
+    "test:e2e:ci": "start-server-and-test develop http://localhost:8000 cy:run",
     "test": "jest",
     "test:watch": "jest --watch"
   },

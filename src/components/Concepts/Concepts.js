@@ -118,7 +118,7 @@ const Concepts = () => {
       </Grid>
 
       {isLightboxOpen &&
-        <Lightbox onClick={closeLightBox}>
+        <Lightbox data-testid="lightbox" onClick={closeLightBox}>
           <MapInteractionCSS>
             <Img className="lightbox__gatsbyimage" fluid={selectedImg.node.childImageSharp.fluid} />
           </MapInteractionCSS>

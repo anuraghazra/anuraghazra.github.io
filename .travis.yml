@@ -2,13 +2,29 @@ language: node_js
 node_js:
   - 10.15.0
 
+# if using Ubuntu 16 need this library
+# https://github.com/cypress-io/cypress-documentation/pull/1647
+addons:
+  apt:
+    packages:
+      - libgconf-2-4
+
 cache:
+  # cache both npm modules and Cypress binary
   directories:
-    - node_modules
+    - ~/.npm
+    - ~/.cache
+  override:
+    - npm ci
+    - npm run cy:verify
+
+install:
+  - npm ci
 
 script:
   - set -e
   - npm run test
+  - npm run test:e2e:ci
   - npm run build
 
 deploy:
