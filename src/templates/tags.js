@@ -15,7 +15,7 @@ const TagsPage = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <SEO title={tagHeader} />
+      <SEO title={tagHeader + ' | Anurag Hazra'} />
 
       <BlogLayout>
         <h1>{tagHeader}</h1>
