@@ -10,7 +10,12 @@ module.exports = {
     siteBanner: config.siteBanner,
   },
   plugins: [
-    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: [`/blog/tags/*`],
+      }
+    },
     // MARKDOWN
     {
       resolve: `gatsby-transformer-remark`,
