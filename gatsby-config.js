@@ -10,12 +10,6 @@ module.exports = {
     siteBanner: config.siteBanner,
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-sitemap`,
-      options: {
-        exclude: [`/blog/tags/*`],
-      }
-    },
     // MARKDOWN
     {
       resolve: `gatsby-transformer-remark`,
@@ -143,6 +137,27 @@ module.exports = {
       },
     },
     // others
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: config.siteUrl,
+        sitemap: `${config.siteUrl}/sitemap.xml`,
+        env: {
+          development: {
+            policy: [{ userAgent: '*', disallow: ['/'] }]
+          },
+          production: {
+            policy: [{ userAgent: '*', allow: '/' }]
+          }
+        }
+      }
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: [`/blog/tags/*`],
+      }
+    },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-root-import`
   ],
