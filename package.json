@@ -70,7 +70,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "prebuild": "cd plugins/gatsby-plugin-social-banners && npm install",
+    "preinstall": "cd plugins/gatsby-plugin-social-banners && npm install",
     "now-build": "npm run build",
     "build": "gatsby build",
     "develop": "gatsby develop --host=0.0.0.0",
@@ -80,7 +80,7 @@
     "cy:open": "cypress open",
     "cy:run": "cypress run --config video=false",
     "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open",
-    "test:e2e:ci": "npm run prebuild && start-server-and-test develop http://localhost:8000 cy:run",
+    "test:e2e:ci": "start-server-and-test develop http://localhost:8000 cy:run",
     "test": "jest",
     "test:watch": "jest --watch"
   },
