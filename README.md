@@ -31,11 +31,9 @@ cd into the directory
 cd anuraghazra.github.io
 ```
 
-**prebuild** command installs the dependencies for the local plugin.
-
+install all the dependencies
 ```bash
 npm install
-npm run prebuild
 ```
 
 ### Step 3: Start Development Server
