@@ -15,7 +15,7 @@ test('HeroCard renders correctly', () => {
     </ThemeProvider>
   );
 
-  debug();
+  // debug();
 
   fireEvent.click(getByText(/new Date\(\).getFullYear\(\) - 2001;/i));
 

@@ -73,7 +73,7 @@ test('should have links and preview', () => {
   );
   mockAllIsIntersecting(true);
 
-  debug();
+  // debug();
   
   expect(getByText(/case study/i)).toHaveAttribute('to', '/case-studies/project');
   expect(getByText(/live demo/i)).toHaveAttribute('href', 'https://demo.com');
