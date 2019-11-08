@@ -31,15 +31,13 @@ export const CCard = styled(Card)`
 
   height: auto;
   max-width: 90%;
-  /*   
-  box-shadow: ${props => props.theme.shadowSmall};
-  transform: translate3d(0, 0px, 0) scale(1.0);
-  transition: transform 0.3s ease-in-out;
+
+  transform: translateY(0px);
+  transition: transform 0.2s ease;
   &:hover {
-    transition: transform 0.3s ease-in-out;
-    transform: translate3d(0, -8px, 0) scale(1.02);
-    box-shadow: 0 24px 36px rgba(0,0,0,0.11), 0 24px 46px rgba(0,0,0,0.04);
-  } */
+    transition: transform 0.2s ease;
+    transform: translateY(-5px);
+  }
 
   h4 {
     font-weight: normal;
