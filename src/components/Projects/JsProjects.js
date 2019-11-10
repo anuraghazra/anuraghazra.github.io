@@ -24,13 +24,12 @@ const JsProjects = () => {
           edges {
             node {
               description
+              title
+              id
               links {
                 github
                 codepen
-                download
               }
-              title
-              id
             }
           }
         }
@@ -50,7 +49,7 @@ const JsProjects = () => {
             desc={node.description}
             links={
               <ProjectLinks>
-                <Button target="__blank" as="a" href={node.links.download}>Download</Button>
+                <Button target="__blank" as="a" href={node.links.github + '/archive/master.zip'}>Download</Button>
                 <IconButton label="github" href={node.links.github} icon={["fab", "github"]} />
               </ProjectLinks>
             }
