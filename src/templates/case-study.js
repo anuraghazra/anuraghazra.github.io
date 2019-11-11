@@ -34,7 +34,7 @@ const CaseStudy = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title={study.title} />
+      <SEO slug={data.markdownRemark.fields.slug} title={study.title} />
       <CaseStudyWrapper>
         <Flex className="case__title" justify="space-between" align="center">
           <h1>{study.title}</h1>

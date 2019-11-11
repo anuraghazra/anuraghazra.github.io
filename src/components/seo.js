@@ -51,6 +51,7 @@ function SEO({ title, description, slug, isBlogPost }) {
       <meta name="url" content={url} />
       <meta name="description" content={description} />
       {ogimage && <meta name="image" content={ogimage} />}
+      <link rel="canonical" href={url} />
 
 
       {/* OpenGraph tags */}
