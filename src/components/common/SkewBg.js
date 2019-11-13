@@ -11,7 +11,12 @@ const SkewBg = styled.div`
   pointer-events: none;
 
   @media ${props => props.theme.media.tablet} {
-    height: 100%;
+    width: unset;
+    height: 90%;
+    top: 100px;
+    left: -16px;
+    right: -16px;
+    bottom: 0;
   }
 `
 
