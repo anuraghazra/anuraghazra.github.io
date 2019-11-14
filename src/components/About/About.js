@@ -31,13 +31,13 @@ const About = () => {
 
       <Flex justify="space-between" className="quotes__wrapper">
         <Quote>
-          <p>“Simplicity is the baddest choice to be the best “</p>
+          <p>“Simplicity is the baddest choice to be the best.“</p>
         </Quote>
         <Quote>
-          <p>“I know I’m not successful enough, but I’m passionate enough not to worry about success“</p>
+          <p>“I know I’m not successful enough, but I’m passionate enough not to worry about success.“</p>
         </Quote>
         <Quote>
-          <p>“Creativity is the driver of an unstoppable train called Passion”</p>
+          <p>“Creativity is the driver of an unstoppable train called Passion.”</p>
         </Quote>
       </Flex>
 
