@@ -8,6 +8,10 @@ const common = css`
   cursor: pointer;
   transition: 0.2s;
   
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
   &:hover {
     color: #f8f8f8;
     background: ${props => props.theme.gradient2};

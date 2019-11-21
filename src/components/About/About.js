@@ -1,7 +1,5 @@
 import React from "react";
 
-import { withTheme } from 'styled-components';
-
 import SkewBg from 'src/components/common/SkewBg';
 import PageHeader from 'src/components/common/PageHeader';
 import Flex from "src/components/common/Flex";

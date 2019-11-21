@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
-import PageHeader from '../common/PageHeader';
-
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import Button from 'src/components/common/Button';
+import PageHeader from '../common/PageHeader';
+import useForm from 'src/hooks/useForm';
 
 import {
   ContactWrapper,
@@ -13,45 +14,7 @@ import {
 
 
 function Contact() {
-  const [formData, setformData] = useState({ _replyto: '', name: '', message: '' })
-  const [errors, setErrors] = useState({ _replyto: '', name: '', message: '' });
-
-  let emailregex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
-  let nameregex = /^[a-zA-Z\s]*[^\s]$/img;
-  let messageregex = /^[\w\d][^<>/\\&]*$/img;
-
-  function check(value, field, regex, text) {
-    if (!value) {
-      setErrors({ ...errors, [field]: `Your ${text} is required` });
-      return true;
-    } else if (!regex.test(value)) {
-      setErrors({ ...errors, [field]: `Your ${text} is not valid` });
-      return true;
-    } else {
-      setErrors({ ...errors, [field]: '' });
-      return false;
-    }
-  }
-
-  const validateForm = (name, value) => {
-    switch (name) {
-      case '_replyto':
-        return !check(value, '_replyto', emailregex, 'Email');
-      case 'name':
-        return !check(value, 'name', nameregex, 'Name');
-      case 'message':
-        return !check(value, 'message', messageregex, 'Message');
-      default:
-        break;
-    }
-  }
-
-  const handleInput = (e) => {
-    e.preventDefault();
-    const { name, value } = e.target;
-    validateForm(name, value);
-    setformData({ ...formData, [name]: value });
-  }
+  const { formData, errors, handleInput, isFormValid } = useForm();
 
   return (
     <ContactWrapper id="contact">
@@ -62,17 +25,8 @@ function Contact() {
           <h3>Thank You</h3>
           <p>Do You Have Any Queries?</p>
         </LeftContent>
-
-        <ContactForm noValidate onSubmit={(event) => {
-          let isValid = true;
-          for (let i in formData) {
-            if (!validateForm(i, formData[i])) {
-              isValid = false;
-              break;
-            };
-          }
-          !isValid && event.preventDefault();
-        }}
+        <ContactForm
+          noValidate
           action="https://formspree.io/hazru.anurag@gmail.com"
           method="POST"
         >
@@ -84,6 +38,7 @@ function Contact() {
               value={formData.email}
               id="email"
               name="_replyto"
+              type="email"
               required
               placeholder="example@gmail.com"
             />
@@ -112,13 +67,18 @@ function Contact() {
             />
           </label>
 
-          <Button className="submit__btn" as="button" type="submit" value="send">
+          <Button
+            disabled={!isFormValid}
+            className="submit__btn"
+            as="button"
+            type="submit"
+            value="send"
+          >
             <FontAwesomeIcon icon="paper-plane" /> Submit
           </Button>
         </ContactForm>
 
       </ContactBox>
-
     </ContactWrapper>
   );
 }

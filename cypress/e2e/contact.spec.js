@@ -20,7 +20,7 @@ describe("Contact Section", () => {
       .type('>><<')
       .should('have.class', 'invalid')
     cy.findByText(/submit/i)
-      .click()
+      .should('have.attr', 'disabled')
       .url().should('eq', 'http://localhost:8000/#contact')
   })
   it('should submit form with valid inputs', () => {
