@@ -84,6 +84,14 @@ A quick look at the folder structure of this project.
         └───templates
 
 
+## Tools Used
+
+1. Gatsby.js (of course)
+2. Styled Components for styling
+3. Cypress for E2E Testing
+4. Jest for Unit Testing
+5. TravisCI for CI/CD
+
 ## :v: Contributing
 
 *NOTE: if you want to change the [blog content](./content) or fix any typo you can do that from github's ui without cloning the repo locally*
