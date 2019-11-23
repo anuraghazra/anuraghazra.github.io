@@ -24,18 +24,18 @@ const NavItemsGatsbyLinks = ({ NavItem }) => (
   </>
 )
 
-const NavLinks = ({ NavItem }) => {
-  const [path, setPath] = useState(null);
 
-  useEffect(() => {
-    setPath(window.location.pathname);
-  }, [])
-
+const NavLinks = React.memo(({ NavItem }) => {
+  let path = null;
+  if (typeof window !== 'undefined') {
+    path = window.location.pathname;
+  }
+  
   return (
     <>
       {path === '/' ? <NavItemsSmoothLinks NavItem={NavItem} /> : <NavItemsGatsbyLinks NavItem={NavItem} />}
     </>
   )
-}
+})
 
 export default NavLinks;
