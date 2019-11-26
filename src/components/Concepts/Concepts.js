@@ -113,7 +113,14 @@ const Concepts = () => {
       <Grid>
         {concepts.allConceptsJson.edges.map((nodes, index) => {
           let currentImg = concepts.allFile.edges[index];
-          return <Card key={nodes.node.id} nodes={nodes} currentImg={currentImg} openLightbox={openLightbox} />
+          return (
+            <Card
+              key={nodes.node.id}
+              nodes={nodes}
+              currentImg={currentImg}
+              openLightbox={openLightbox}
+            />
+          )
         })}
       </Grid>
 
