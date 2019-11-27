@@ -16,7 +16,7 @@ const AvatarWrapper = styled.div`
 const Avatar = ({ src }) => {
   return (
     <AvatarWrapper>
-      <Image style={{ marginTop: -30 }} src={src} />
+      <Image src={src} />
     </AvatarWrapper>
   )
 }

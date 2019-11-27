@@ -17,7 +17,7 @@ const About = () => {
       <SkewBg />
       <AboutInfo>
         <div>
-          <Avatar src="avatar.png" />
+          <Avatar src="hfest_avatar_2.jpg" />
         </div>
         <p>
           Hi, I'm Anurag Hazra passionate self-taught frontEnd web developer from India. I tend to make use of modern web technologies to build websites that looks great, feels fantastic, and functions correctly. Focusing especially on Reactjs.
