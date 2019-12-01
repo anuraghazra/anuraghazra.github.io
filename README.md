@@ -3,7 +3,7 @@
     <img alt="Gatsby" src="./src/static/logo_noalpha.svg" width="100" />
     <h2 align="center">Anurag Hazra</h2>
   </a>
-</p>
+</p> 
 <p align="center">Creative FrontEnd Web Developer</p>
 
 [![Build Status](https://travis-ci.org/anuraghazra/anuraghazra.github.io.svg?branch=develop)](https://travis-ci.org/anuraghazra/anuraghazra.github.io)
