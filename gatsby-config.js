@@ -147,7 +147,7 @@ module.exports = {
             policy: [{ userAgent: '*', disallow: ['/'] }]
           },
           production: {
-            policy: [{ userAgent: '*', allow: '/' }]
+            policy: [{ userAgent: '*', allow: '/', disallow: '/goodies' }]
           }
         }
       }
@@ -155,7 +155,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        exclude: [`/blog/tags/*`],
+        exclude: [`/blog/tags/*`, `/goodies`],
       }
     },
     `gatsby-plugin-styled-components`,
