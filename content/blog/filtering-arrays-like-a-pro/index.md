@@ -49,7 +49,7 @@ Note that, Number.isSafeInteger also removes `floating-point` numbers and number
 ```js
 const arr = [null, 's', {}, 0, 1, 1.5, -2, 1, Number.MAX_SAFE_INTEGER + 1];
 arr.filter(Number.isSafeInteger);
-// -> [0, 1, -2, 5]
+// -> [0, 1, -2, 1]
 ```
 
 ## Filtering NaN
