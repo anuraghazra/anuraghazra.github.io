@@ -6,7 +6,7 @@ import { Hidden } from "react-grid-system";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Flex from 'src/components/common/Flex'
 
-import { Parallax } from 'react-scroll-parallax';
+import { Parallax, ParallaxProvider } from 'react-scroll-parallax';
 
 const SkillsWrapper = styled.section`
   ${props => props.theme.spacing.sectionBottom};
@@ -60,19 +60,22 @@ const WordClouds = () => {
 
 const Skills = () => (
   <SkillsWrapper>
-    <PageHeader>My Skillsets</PageHeader>
+    <ParallaxProvider>
 
-    {/* <SkillPie percent={90} name={"JavaScript"} /> */}
-    <Flex className="skill__icons" justify="space-around" align="center">
-      <FontAwesomeIcon icon={["fab", "html5"]} size="5x" />
-      <FontAwesomeIcon icon={["fab", "js"]} size="5x" />
-      <FontAwesomeIcon icon={["fab", "react"]} size="5x" />
-      <FontAwesomeIcon icon={["fab", "node"]} size="5x" />
-    </Flex>
+      <PageHeader>My Skillsets</PageHeader>
 
-    <Hidden md xs sm>
-      <WordClouds />
-    </Hidden>
+      {/* <SkillPie percent={90} name={"JavaScript"} /> */}
+      <Flex className="skill__icons" justify="space-around" align="center">
+        <FontAwesomeIcon icon={["fab", "html5"]} size="5x" />
+        <FontAwesomeIcon icon={["fab", "js"]} size="5x" />
+        <FontAwesomeIcon icon={["fab", "react"]} size="5x" />
+        <FontAwesomeIcon icon={["fab", "node"]} size="5x" />
+      </Flex>
+
+      <Hidden md xs sm>
+        <WordClouds />
+      </Hidden>
+    </ParallaxProvider>
 
   </SkillsWrapper>
 )
