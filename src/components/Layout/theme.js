@@ -49,7 +49,7 @@ export const themelight = {
 export const themedarkblue = {
   dark: true,
   bg: '#0B0D18',
-  primaryColor: '#0B0D18',
+  primaryColor: '#6D83F2',
   secondaryColor: '#0F1221',
   accentColor: '#15182E',
   primaryBlack: '#F8F8F8',

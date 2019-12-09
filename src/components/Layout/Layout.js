@@ -5,7 +5,7 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 
 import "normalize.css";
 import { ThemeProvider } from 'styled-components';
-import { themelight, themedark } from './theme';
+import { themelight, themedark, themedarkblue } from './theme';
 
 import Wrapper from "src/components/common/Wrapper";
 import Navbar from "./Navbar/Navbar";
@@ -33,8 +33,13 @@ const RootWrapper = styled(Wrapper)`
 const Layout = ({ children }) => {
   const [theme, toggleTheme, toggleRef] = useDarkMode();
 
+  let currentTheme = theme === 'light' ? themelight : themedark;
+  if (theme === 'darkblue') {
+    currentTheme = themedarkblue;
+  }
+
   return (
-    <ThemeProvider theme={theme === 'light' ? themelight : themedark}>
+    <ThemeProvider theme={currentTheme}>
       <>
         <GlobalStyle />
 
