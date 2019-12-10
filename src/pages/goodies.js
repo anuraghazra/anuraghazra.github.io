@@ -39,6 +39,7 @@ const Goodies = () => (
 )
 
 const githubLinks = [
+  ['https://github.com/CodingTrain/website/pull/832', 'My 1st GitHub PullRequest'],
   ['https://github.com/MichaelDeBoey/gatsby-remark-embedder', 'gatsby-remark-embedder'],
   ['https://github.com/anuraghazra/gatsby-plugin-social-banners', 'gatsby-plugin-social-banners'],
   ['https://github.com/anuraghazra/gatsby-github-issues-blog', 'gatsby-github-issues-blog'],
@@ -85,6 +86,7 @@ const experimentLinks = [
   ['https://github.com/anuraghazra/NewtonsInterpolation', 'NewtonsInterpolation'],
   ['https://github.com/anuraghazra/YoutubeDownloader', 'YoutubeDownloader'],
   ['https://github.com/anuraghazra/Loader.js', 'Loader.js'],
+  ['https://ninjadash.surge.sh/', 'NinjaDash (game i made while i was learning js, not really playable)'],
 ]
 
 const links = {
