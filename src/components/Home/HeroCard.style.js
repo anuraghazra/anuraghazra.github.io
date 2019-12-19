@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { slideDownKeyframe, tooltipKeyframe } from '#components/css-animations.js';
+import { slideDownKeyframe, tooltipKeyframe } from '../css-animations';
 
 export const HeroCardWrapper = styled.div`
   position: relative;
