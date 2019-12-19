@@ -1,18 +1,18 @@
 import React from "react";
 import { graphql } from "gatsby"
 
-import Layout from "src/components/Layout/Layout"
+import Layout from "#components/Layout/Layout"
+import SEO from "#components/seo";
 
-import SEO from "src/components/seo";
+import Flex from "#common/Flex";
+import IFrame from '#common/IFrame';
+import Button, { IconButton } from '#common/Button';
 
-import Flex from "../components/common/Flex";
-import IFrame from 'src/components/common/IFrame';
-import Button, { IconButton } from 'src/components/common/Button';
-import { ProjectLinks } from 'src/components/Projects/ProjectTemplate.style';
+import { ProjectLinks } from '#components/Projects/ProjectTemplate.style';
+import SocialShareSection from '#components/Blog/SocialShareSection';
+import SplitLayout from "#components/common/SplitLayout";
 
-import { InfoTitle, CaseStudyWrapper } from './case-study.style'
-import SocialShareSection from 'src/components/Blog/SocialShareSection';
-import SplitLayout from "src/components/common/SplitLayout";
+import { InfoTitle, CaseStudyWrapper } from './case-study.style';
 
 const CaseStudy = ({ data }) => {
   const baseSlugUrl = "https://anuraghazra.github.io" + data.markdownRemark.fields.slug;

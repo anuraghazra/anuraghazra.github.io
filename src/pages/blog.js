@@ -1,11 +1,11 @@
 import React from "react";
 import { useStaticQuery, graphql } from 'gatsby';
 
-import Layout from "src/components/Layout/Layout"
-import SEO from "src/components/seo";
+import Layout from "#components/Layout/Layout"
+import SEO from "#components/seo";
 
-import BlogCard from 'src/components/Blog/BlogCard';
-import BlogLayout from 'src/components/Blog/BlogLayout';
+import BlogCard from '#components/Blog/BlogCard';
+import BlogLayout from '#components/Blog/BlogLayout';
 
 const BlogPage = () => {
   const blogposts = useStaticQuery(

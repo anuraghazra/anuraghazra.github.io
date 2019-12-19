@@ -6,7 +6,7 @@ import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import { TagBreadcrumb } from './Tags';
-import slugify from 'src/components/slugify';
+import slugify from '#components/slugify';
 
 const PostWrapper = styled.article`
   overflow: auto;

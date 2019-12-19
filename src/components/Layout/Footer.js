@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import Wrapper from 'src/components/common/Wrapper';
+import Wrapper from '#common/Wrapper';
 
-import logo from 'src/static/logo_white.svg';
+import logo from '#src/static/logo_white.svg';
 
 const FooterWrapper = styled.footer`
   width: 100vw;

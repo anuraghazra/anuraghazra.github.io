@@ -1,8 +1,8 @@
 import React from "react";
 
-import SkewBg from 'src/components/common/SkewBg';
-import PageHeader from 'src/components/common/PageHeader';
-import Flex from "src/components/common/Flex";
+import SkewBg from '#common/SkewBg';
+import PageHeader from '#common/PageHeader';
+import Flex from "#common/Flex";
 
 import Quote from './Quote';
 import Avatar from './Avatar';

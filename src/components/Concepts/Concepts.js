@@ -2,11 +2,15 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby'
 
-import Img from 'gatsby-image';
-import PageHeader from 'src/components/common/PageHeader';
-import { IconButton } from 'src/components/common/Button';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { MapInteractionCSS } from 'react-map-interaction';
 
-import { Grid } from 'src/components/CreativeCoding/CreativeCoding.style';
+import Img from 'gatsby-image';
+
+import PageHeader from '#common/PageHeader';
+import { IconButton } from '#common/Button';
+import Grid from '#common/Grid';
+
 import {
   ConceptsWrapper,
   ConceptCard,
@@ -14,10 +18,6 @@ import {
   Lightbox,
   LightBoxCloseButton
 } from './Concepts.style';
-
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { MapInteractionCSS } from 'react-map-interaction';
 
 
 const Card = React.memo(({ nodes, currentImg, openLightbox }) => (

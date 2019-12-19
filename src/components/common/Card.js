@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Flex from './Flex';
 
 export const Card = styled.div`
   margin: 10px;
@@ -10,7 +11,7 @@ export const Card = styled.div`
 
   display: flex;
   justify-content: space-evenly;
-  align-items: center; 
+  align-items: center;
   flex-direction: column;
   text-align: center;
 
@@ -45,4 +46,13 @@ export const CardTitle = styled.h3`
 
 export const CardText = styled.p`
   font-size: 14px;
+`
+
+export const CardFooter = styled(Flex)`
+  width: 100%;
+  padding: 20px;
+
+  a {
+    margin-left: 5px;
+  }
 `

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import ThemeToggleContext from '../Layout/ThemeToggleContext';
+import ThemeToggleContext from '#components/Layout/ThemeToggleContext';
 
 const SwitchWrapper = styled.div`
   input[type=checkbox] {
@@ -100,7 +100,7 @@ const SwitchWrapper = styled.div`
 
 const ToggleSwitch = () => {
   const { toggleTheme, theme } = useContext(ThemeToggleContext);
-  
+
   return (
     <SwitchWrapper>
       <div className="button r" id="button-1">

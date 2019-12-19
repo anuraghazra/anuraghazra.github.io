@@ -1,16 +1,16 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import svgRect from 'src/static/home_rect.svg'
+import svgRect from '#src/static/home_rect.svg'
 
 import { HeroCard } from './HeroCard';
 import { HomeWrapper, Intro } from './Home.style';
 
-import IconLink from 'src/components/common/IconLink';
-import PageHeader from 'src/components/common/PageHeader';
-import Flex from "src/components/common/Flex";
-import Button from "src/components/common/Button";
+import IconLink from '#common/IconLink';
+import PageHeader from '#common/PageHeader';
+import Flex from "#common/Flex";
+import Button from "#common/Button";
 
-import { Card, CardIcon, CardText, CardTitle } from "src/components/common/Card";
+import { Card, CardIcon, CardText, CardTitle } from "#common/Card";
 
 const ThingsILove = () => (
   <Flex justify="space-between" align="center">

@@ -1,10 +1,11 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby'
 
-import { CreativeCodingWrapper, Grid } from './CreativeCoding.style'
-import PageHeader from 'src/components/common/PageHeader';
+import { CreativeCodingWrapper } from './CreativeCoding.style'
 import CCProject from "./CCProject";
 
+import Grid from '#common/Grid';
+import PageHeader from '#common/PageHeader';
 
 const CreativeCoding = () => {
   const ccprojects = useStaticQuery(

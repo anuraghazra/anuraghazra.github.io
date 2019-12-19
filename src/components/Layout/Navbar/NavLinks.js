@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Link from "gatsby-link";
 import { Link as SLink } from 'react-scroll';
 

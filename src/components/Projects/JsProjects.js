@@ -2,10 +2,9 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 
-import PageHeader from 'src/components/common/PageHeader';
-
-import IFrame from 'src/components/common/IFrame';
-import Button, { IconButton } from 'src/components/common/Button';
+import PageHeader from '#common/PageHeader';
+import IFrame from '#common/IFrame';
+import Button, { IconButton } from '#common/Button';
 
 import { ProjectLinks, ProjectPreview } from './ProjectTemplate.style'
 import ProjectTemplate from './ProjectTemplate';

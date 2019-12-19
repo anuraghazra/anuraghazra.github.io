@@ -1,7 +1,7 @@
 import React from "react"
 
-import Layout from "src/components/Layout/Layout"
-import SEO from "src/components/seo";
+import Layout from "#components/Layout/Layout"
+import SEO from "#components/seo";
 
 import Link from 'gatsby-link';
 

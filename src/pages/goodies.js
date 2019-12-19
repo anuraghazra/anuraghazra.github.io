@@ -1,8 +1,8 @@
 import React from "react";
 import styled from 'styled-components'
 
-import Layout from "src/components/Layout/Layout"
-import SEO from "src/components/seo";
+import Layout from "#components/Layout/Layout"
+import SEO from "#components/seo";
 
 const UnstyledUl = styled.ul`
   list-style: initial;

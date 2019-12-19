@@ -2,7 +2,7 @@ import React from "react";
 import styled from 'styled-components';
 import { Link, graphql, useStaticQuery } from "gatsby"
 
-import slugify from 'src/components/slugify'
+import slugify from '#components/slugify'
 
 export const useTags = () => {
   const tags = useStaticQuery(graphql`

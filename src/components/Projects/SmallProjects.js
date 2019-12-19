@@ -7,8 +7,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import { ProjectLinks } from './ProjectTemplate.style'
-import { CardText } from 'src/components/common/Card';
-import Button, { IconButton } from 'src/components/common/Button';
+import { CardText } from '#common/Card';
+import Button, { IconButton } from '#common/Button';
 
 // import svg from 'src/static/skew_bg.svg'
 

@@ -6,13 +6,13 @@ import "normalize.css";
 import { ThemeProvider } from 'styled-components';
 import { themelight, themedark, themedarkblue } from './theme';
 
-import Wrapper from "src/components/common/Wrapper";
+import Wrapper from "#common/Wrapper";
 import Navbar from "./Navbar/Navbar";
 import Footer from "./Footer";
-import GlobalStyle from "src/styles/GlobalStyle";
+import GlobalStyle from "#src/styles/GlobalStyle";
 
-import 'src/components/fontLib';
-import useDarkMode from 'src/hooks/useDarkMode';
+import '#components/fontLib';
+import useDarkMode from '#src/hooks/useDarkMode';
 import ThemeToggleContext from "./ThemeToggleContext";
 
 import { setConfiguration } from 'react-grid-system';

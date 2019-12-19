@@ -3,9 +3,9 @@ import React from "react";
 import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 
-import Tags from 'src/components/Blog/Tags';
-import SplitLayout from "src/components/common/SplitLayout";
-import useRandomBlogPost from "src/hooks/useRandomBlogPost";
+import Tags from '#components/Blog/Tags';
+import SplitLayout from "#common/SplitLayout";
+import useRandomBlogPost from "#src/hooks/useRandomBlogPost";
 
 
 const BlogLayout = ({ children, sharerSection }) => {

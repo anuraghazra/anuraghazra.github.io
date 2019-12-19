@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Wrapper from 'src/components/common/Wrapper';
+import Wrapper from '#common/Wrapper';
 
 export const NavWrapper = styled.div`
   position: fixed;

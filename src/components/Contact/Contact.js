@@ -1,9 +1,9 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import Button from 'src/components/common/Button';
-import PageHeader from '../common/PageHeader';
-import useForm from 'src/hooks/useForm';
+import Button from '#common/Button';
+import PageHeader from '#common/PageHeader';
+import useForm from '#src/hooks/useForm';
 
 import {
   ContactWrapper,

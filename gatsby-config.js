@@ -159,6 +159,17 @@ module.exports = {
       }
     },
     `gatsby-plugin-styled-components`,
-    `gatsby-plugin-root-import`
+    `gatsby-plugin-root-import`,
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          "#src": "./src",
+          "#common": "./src/components/common",
+          "#components": "./src/components",
+          "#pages": "./src/pages",
+        },
+      }
+    }
   ],
 }

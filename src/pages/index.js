@@ -1,15 +1,15 @@
 import React from "react";
 
-import Layout from "src/components/Layout/Layout"
-import SEO from "src/components/seo";
+import Layout from "#components/Layout/Layout"
+import SEO from "#components/seo";
 
-import Home from "src/components/Home/Home";
-import About from "src/components/About/About";
-import Skills from 'src/components/Skills/Skills';
-import Projects from "src/components/Projects/Projects";
-import CreativeCoding from "src/components/CreativeCoding/CreativeCoding";
-import Concepts from "src/components/Concepts/Concepts";
-import Contact from "src/components/Contact/Contact";
+import Home from "#components/Home/Home";
+import About from "#components/About/About";
+import Skills from '#components/Skills/Skills';
+import Projects from "#components/Projects/Projects";
+import CreativeCoding from "#components/CreativeCoding/CreativeCoding";
+import Concepts from "#components/Concepts/Concepts";
+import Contact from "#components/Contact/Contact";
 
 const IndexPage = () => (
   <Layout>

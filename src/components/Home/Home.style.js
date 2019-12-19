@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { slideDownKeyframe } from 'src/components/css-animations';
+import { slideDownKeyframe } from '#components/css-animations';
 
 export const Intro = styled.section`
   display: flex;

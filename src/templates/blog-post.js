@@ -1,14 +1,14 @@
 import React from "react";
 import { graphql } from "gatsby"
 
-import SEO from "src/components/seo";
-import Layout from "src/components/Layout/Layout"
+import SEO from "#components/seo";
+import Layout from "#components/Layout/Layout"
 
-import BlogLayout from "src/components/Blog/BlogLayout";
-import SocialShareSection from 'src/components/Blog/SocialShareSection';
+import BlogLayout from "#components/Blog/BlogLayout";
+import SocialShareSection from '#components/Blog/SocialShareSection';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { BlogDateAndReadTime } from "src/components/Blog/BlogCard";
+import { BlogDateAndReadTime } from "#components/Blog/BlogCard";
 import { DiscussionEmbed } from "disqus-react";
 
 import { siteUrl, disqusShortName } from '../../config/website';

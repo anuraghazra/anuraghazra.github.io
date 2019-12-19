@@ -10,7 +10,7 @@ import {
 } from './Navbar.style';
 
 import NavLinks from './NavLinks';
-import ToggleSwitch from 'src/components/common/ToggleSwitch';
+import ToggleSwitch from '#common/ToggleSwitch';
 
 
 const NavDesktop = () => {

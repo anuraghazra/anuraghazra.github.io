@@ -2,10 +2,10 @@ import React from "react"
 import { graphql } from "gatsby";
 
 
-import SEO from "src/components/seo";
-import Layout from "src/components/Layout/Layout"
-import BlogCard from "src/components/Blog/BlogCard";
-import BlogLayout from "src/components/Blog/BlogLayout";
+import SEO from "#components/seo";
+import Layout from "#components/Layout/Layout"
+import BlogCard from "#components/Blog/BlogCard";
+import BlogLayout from "#components/Blog/BlogLayout";
 
 const TagsPage = ({ data, pageContext }) => {
   const { tag } = pageContext;

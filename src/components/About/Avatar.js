@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import styled from 'styled-components';
-import Image from "src/components/Image";
+import Image from "#components/Image";
 
 const AvatarWrapper = styled.div`
   width: 230px;

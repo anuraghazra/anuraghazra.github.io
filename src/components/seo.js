@@ -1,7 +1,7 @@
 import React from "react"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
-import socialBanner from '../static/images/social-banner.jpg';
+import socialBanner from '#src/static/images/social-banner.jpg';
 
 
 function SEO({ title, description, slug, isBlogPost }) {

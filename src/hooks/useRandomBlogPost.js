@@ -25,12 +25,26 @@ const useRandomBlogPost = () => {
     `
   )
 
-  const randomPost = blogposts.allMarkdownRemark.edges[
+  let randomPost = blogposts.allMarkdownRemark.edges[
     randomGenerator(
       0,
       blogposts.allMarkdownRemark.totalCount - 1
     )
   ];
+
+  // make sure we don't have redundant randomPost 
+  if (typeof window !== 'undefined') {
+    while (randomPost.node.fields.slug === window.location.pathname) {
+      randomPost = blogposts.allMarkdownRemark.edges[
+        randomGenerator(
+          0,
+          blogposts.allMarkdownRemark.totalCount - 1
+        )
+      ];
+      // don't wanna run it second time 
+      break;
+    }
+  }
 
   return { randomSlug: randomPost.node.fields.slug, randomTitle: randomPost.node.frontmatter.title };
 }

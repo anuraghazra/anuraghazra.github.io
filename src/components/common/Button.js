@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import IconLink from 'src/components/common/IconLink';
+import IconLink from './IconLink';
 
 const common = css`
   background: ${props => props.theme.gradient};

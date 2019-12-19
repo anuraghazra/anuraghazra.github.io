@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 
-import { FloatingButton } from 'src/components/Layout/Navbar/NavMobile.style';
-import {
-  CCard as Card,
-  CardFooter
-} from 'src/components/CreativeCoding/CreativeCoding.style';
+import { FloatingButton } from '#components/Layout/Navbar/NavMobile.style';
+import { CCard as Card } from '#components/CreativeCoding/CreativeCoding.style';
+
+import { CardFooter } from '#common/Card';
 
 export const ConceptsWrapper = styled.section`
   ${props => props.theme.spacing.sectionBottom};
@@ -38,8 +37,6 @@ export const ConceptCardFooter = styled(CardFooter)`
     opacity: 1;
   }
 `
-
-
 
 
 // LIGHTBOX

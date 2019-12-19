@@ -3,13 +3,12 @@ import { useStaticQuery, graphql, Link } from 'gatsby'
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import PageHeader from 'src/components/common/PageHeader';
+import PageHeader from '#common/PageHeader';
+import IFrame from '#common/IFrame';
+import Button, { IconButton } from '#common/Button';
 
 import SmallProjects from './SmallProjects';
 import JsProjects from './JsProjects';
-
-import IFrame from 'src/components/common/IFrame';
-import Button, { IconButton } from 'src/components/common/Button';
 
 import ProjectTemplate from './ProjectTemplate';
 import { ProjectLinks, ProjectPreview, Tags } from './ProjectTemplate.style';
