@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { FloatingButton } from '#components/Layout/Navbar/NavMobile.style';
-import { CCard as Card } from '#components/CreativeCoding/CreativeCoding.style';
+import { CCard } from '#components/CreativeCoding/CreativeCoding.style';
 
 import { CardFooter } from '#common/Card';
 
@@ -9,7 +9,7 @@ export const ConceptsWrapper = styled.section`
   ${props => props.theme.spacing.sectionBottom};
 `
 
-export const ConceptCard = styled(Card)`
+export const ConceptCard = styled(CCard)`
   overflow: hidden;
   height: 300px;
 

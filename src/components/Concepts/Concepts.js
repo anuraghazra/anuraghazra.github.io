@@ -8,7 +8,7 @@ import { MapInteractionCSS } from 'react-map-interaction';
 import Img from 'gatsby-image';
 
 import PageHeader from '#common/PageHeader';
-import { IconButton } from '#common/Button';
+import Button, { IconButton } from '#common/Button';
 import Grid from '#common/Grid';
 
 import {
@@ -61,7 +61,11 @@ const Card = React.memo(({ nodes, currentImg, openLightbox }) => (
 const Concepts = () => {
   const [selectedImg, setSelectedImg] = useState(null);
   const [isLightboxOpen, setLightboxOpen] = useState(false);
+  const [showAll, setShowAll] = useState(false);
 
+  const handleShowAll = () => {
+    setShowAll(true);
+  }
   const openLightbox = React.useCallback((img) => {
     setSelectedImg(img);
     setLightboxOpen(true);
@@ -110,7 +114,7 @@ const Concepts = () => {
   return (
     <ConceptsWrapper id="concepts">
       <PageHeader>Concepts</PageHeader>
-      <Grid>
+      <Grid collapseHeight="1000px" showAll={showAll}>
         {concepts.allConceptsJson.edges.map((nodes, index) => {
           let currentImg = concepts.allFile.edges[index];
           return (
@@ -122,6 +126,8 @@ const Concepts = () => {
             />
           )
         })}
+
+        {!showAll && <Button onClick={handleShowAll} className="showall__button">Show all</Button>}
       </Grid>
 
       {isLightboxOpen &&

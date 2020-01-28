@@ -67,7 +67,7 @@ const Home = () => {
       </Intro>
 
       {/* Things I LOVE */}
-      <PageHeader style={{ marginBottom: 30 }}>Things i love <i className="fas fa-heart" /></PageHeader>
+      <PageHeader style={{ marginBottom: 30 }}>Things I love <i className="fas fa-heart" /></PageHeader>
       <ThingsILove />
 
     </HomeWrapper>
