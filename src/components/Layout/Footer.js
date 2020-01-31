@@ -14,15 +14,27 @@ const FooterWrapper = styled.footer`
     line-height: 35px;
     color: white;
   }
+
+  a {
+    color: ${p => p.theme.dark ? p.theme.primaryColor : p.theme.secondaryColor};
+    &:hover {
+      color: ${p => p.theme.primaryText};
+    }
+  }
 `
 
 const Footer = () => (
   <FooterWrapper>
     <Wrapper>
-
       <img width="35px" src={logo} alt="anurag hazra" />
-
-      <p style={{ float: 'right' }}>Made With Love And Gatsby, By Me</p>
+      <p
+        style={{ float: 'right' }}
+      >
+        Made with love and
+        <a href="https:/gatsbyjs.org" target="__blank">&nbsp;gatsby&nbsp;</a>
+        by
+        <a href="https:/github.com/anuraghazra" target="__blank">&nbsp;me</a>
+      </p>
     </Wrapper>
   </FooterWrapper>
 )
