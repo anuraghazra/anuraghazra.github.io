@@ -15,6 +15,8 @@
 
 Strained eyes? There's DarkMode too :p
 
+*NOTE: If you are using this site as a template for your own portfolio site, I would be very glad if you add a link to the original site with my name in footer (just don't modify the footer :p)*
+
 ## :rocket: Quick start
 
 **Run the site locally**
@@ -96,7 +98,7 @@ A quick look at the folder structure of this project.
 
 *NOTE: if you want to change the [blog content](./content) or fix any typo you can do that from github's ui without cloning the repo locally*
 
-After cloning & setting up the local project you can push the changes to your github forke and make a pull request.
+After cloning & setting up the local project you can push the changes to your github fork and make a pull request.
 
 > You can also run the tests locally to see if everything works fine with
 
