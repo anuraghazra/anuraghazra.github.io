@@ -15,7 +15,7 @@
 
 Strained eyes? There's DarkMode too :p
 
-*NOTE: If you are using this site as a template for your own portfolio site, I would be very glad if you add a link to the original site with my name in footer (just don't modify the footer :p)*
+*NOTE: If you are using this site as a template for your own portfolio site, I would be very glad if you add a link to the original site with my name in footer*
 
 ## :rocket: Quick start
 

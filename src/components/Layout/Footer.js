@@ -31,9 +31,9 @@ const Footer = () => (
         style={{ float: 'right' }}
       >
         Made with love and
-        <a href="https:/gatsbyjs.org" target="__blank">&nbsp;gatsby&nbsp;</a>
+        <a href="https://gatsbyjs.org" target="__blank">&nbsp;gatsby&nbsp;</a>
         by
-        <a href="https:/github.com/anuraghazra" target="__blank">&nbsp;me</a>
+        <a href="https://github.com/anuraghazra" target="__blank">&nbsp;me</a>
       </p>
     </Wrapper>
   </FooterWrapper>
