@@ -1,5 +1,21 @@
 [
   {
+    "title": "DevGuard",
+    "description": "Software development company UI design",
+    "links": {
+      "image": "concept_devguard.png",
+      "dribbble": "https://dribbble.com/shots/10483133-DevGuard-Landing-Page"
+    }
+  },
+  {
+    "title": "BugVilla",
+    "description": "BugVilla, Bug Tracker app",
+    "links": {
+      "image": "concept_bugvilla.png",
+      "dribbble": "https://dribbble.com/shots/10483143-BugVilla-UI-Design"
+    }
+  },
+  {
     "title": "The Lion King UI",
     "description": "The Lion King UI design",
     "links": {
@@ -29,7 +45,7 @@
     "description": "Concept design of nepal's buddie host web hosting company",
     "links": {
       "image": "concept_buddiehost.png",
-      "dribbble": "https://dribbble.com/shots/6471582-Mother-s-Day-Special-UI-Design"
+      "dribbble": "https://dribbble.com/shots/6665796-Web-Hosting-Site-Design"
     }
   },
   {
@@ -46,14 +62,6 @@
     "links": {
       "image": "concept_motionjs.png",
       "dribbble": "https://dribbble.com/shots/6387522-Modern-Web-UI"
-    }
-  },
-  {
-    "title": "AskBuddie Web UI",
-    "description": "AskBuddie is a tech community growing in nepal. and as a member of the askbuddie i encouraged to design this landing page UI",
-    "links": {
-      "image": "concept_askbuddie.png",
-      "dribbble": "https://dribbble.com/shots/6451521-AskBuddie-Web-UI"
     }
   },
   {
@@ -111,13 +119,6 @@
       "image": "concept_harleydavidson.png",
       "dribbble": "https://dribbble.com/shots/6367654-Harley-Davidson-UI",
       "demo": "http://harleydavidson.surge.sh"
-    }
-  },
-  {
-    "title": "Web Folio",
-    "description": "My Old Portfolio Site. Its Uses SVG Animation For Those Good Looking Animations. And It Uses Highcharts To Make Skill Graphs And Drilldown Mehtod For Making Them Responsive To User",
-    "links": {
-      "image": "concept_webfolio.jpg"
     }
   }
 ]

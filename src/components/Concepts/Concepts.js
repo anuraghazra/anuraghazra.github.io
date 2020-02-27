@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby'
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { MapInteractionCSS } from 'react-map-interaction';
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Img from 'gatsby-image';
 
 import PageHeader from '#common/PageHeader';
@@ -66,7 +64,7 @@ const Concepts = () => {
   const handleShowAll = () => {
     setShowAll(true);
   }
-  const openLightbox = React.useCallback((img) => {
+  const openLightbox = useCallback((img) => {
     setSelectedImg(img);
     setLightboxOpen(true);
   }, [])
@@ -95,7 +93,7 @@ const Concepts = () => {
             }
           }
         }
-        allFile(filter: {name: {regex: "/concept_/"}}, sort: {fields: name}) {
+        allFile(filter: {name: {regex: "/^concept_/"}}, sort: {fields: name}) {
           edges {
             node {
               relativePath
