@@ -14,7 +14,7 @@ describe("Concept Section", () => {
   })
 
   it('should check the lightbox behaviour', () => {
-    cy.findByText(/AskBuddie Web UI/i, { selector: 'p' })
+    cy.findByText(/DevGuard/i, { selector: 'p' })
       .parent()
       .parent()
       .first()
