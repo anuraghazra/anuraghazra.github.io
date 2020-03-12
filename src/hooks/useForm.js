@@ -4,9 +4,9 @@ const useForm = () => {
   const [formData, setFormData] = useState({});
   const [errors, setErrors] = useState({});
 
-  const emailregex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
-  const nameregex = /^[a-zA-Z\s]*[^\s]$/img;
-  const messageregex = /^[\w\d][^<>/\\&]*$/img;
+  const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+  const nameRegex = /^[a-zA-Z\s]*[^\s]$/img;
+  const messageRegex = /^[\w\d][^<>/\\&]*$/img;
 
   function isValid(value, name, regex, text) {
     if (!value) {
@@ -24,11 +24,11 @@ const useForm = () => {
   function validateInput(name, value) {
     switch (name) {
       case '_replyto':
-        return isValid(value, name, emailregex, 'Email');
+        return isValid(value, name, emailRegex, 'Email');
       case 'name':
-        return isValid(value, name, nameregex, 'Name');
+        return isValid(value, name, nameRegex, 'Name');
       case 'message':
-        return isValid(value, name, messageregex, 'Message');
+        return isValid(value, name, messageRegex, 'Message');
       default:
         break;
     }
