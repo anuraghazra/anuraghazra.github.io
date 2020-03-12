@@ -1,7 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
 import { Link, graphql, useStaticQuery } from "gatsby"
-
 import slugify from '#components/slugify'
 
 export const useTags = () => {
@@ -40,12 +39,16 @@ const Tags = () => {
   return (
     <section style={{ overflow: 'auto' }}>
       {tags.allMarkdownRemark.group.map(tag => (
-        <TagBreadcrumb key={tag.fieldValue} to={`/blog/tags/${slugify(tag.fieldValue)}/`}>
+        <TagBreadcrumb
+          key={tag.fieldValue}
+          to={`/blog/tags/${slugify(tag.fieldValue)}/`}
+          aria-label={`${tag.totalCount} posts tagged with ${tag.fieldValue}`}
+        >
           {tag.fieldValue}, {tag.totalCount}
         </TagBreadcrumb>
       ))}
     </section>
-  )
+  );
 }
 
 export default Tags

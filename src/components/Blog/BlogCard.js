@@ -30,15 +30,17 @@ const PostWrapper = styled.article`
 
 export const BlogDateAndReadTime = ({ date, readtime }) => (
   <span style={{ fontSize: 13, color: "gray" }}>
-    <FontAwesomeIcon color="gray" icon="calendar-alt" />&nbsp;&nbsp;{date}
+    <span aria-label={`publish date ${date}`}><FontAwesomeIcon color="gray" icon="calendar-alt" />&nbsp;&nbsp;{date}</span>
     &nbsp;&nbsp;&nbsp;
-    <FontAwesomeIcon color="gray" icon="clock" />&nbsp;&nbsp;{readtime}min read
+    <span aria-label={`${readtime} minutes read`}>
+      <FontAwesomeIcon color="gray" icon="clock" />&nbsp;&nbsp;{readtime}min read
+    </span>
   </span>
 )
 
 const BlogCard = ({ date, readtime, title, excerpt, slug, tags }) => {
   return (
-    <Link to={slug}>
+    <Link to={slug} aria-label={`${title} - read time ${readtime} minutes`}>
       <PostWrapper>
         <BlogDateAndReadTime date={date} readtime={readtime} />
 
@@ -46,16 +48,15 @@ const BlogCard = ({ date, readtime, title, excerpt, slug, tags }) => {
         <p>{excerpt}</p>
 
         <div style={{ marginTop: 20 }}>
-          {
-            tags.map(tag => (
-              <TagBreadcrumb key={tag} to={`/blog/tags/${slugify(tag)}/`}>{tag}</TagBreadcrumb>
-            ))
-          }
+          {tags.map(tag => (
+            <TagBreadcrumb key={tag} aria-label={`${tag} tag`} to={`/blog/tags/${slugify(tag)}/`}>
+              {tag}
+            </TagBreadcrumb>
+          ))}
         </div>
       </PostWrapper>
     </Link>
-
-  )
+  );
 }
 
 
