@@ -5,7 +5,7 @@ author: Anurag Hazra
 tags: ['reactjs', 'javascript']
 ---
 
-Hey folks! I hope you are doing fine in this pandemic situation, Today we will be craeting a Folder Tree Component in
+Hey folks! I hope you are doing fine in this pandemic situation, Today we will be creating a Folder Tree Component in
 Reactjs from scratch.
 
 ## Designing the API
