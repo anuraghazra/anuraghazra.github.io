@@ -5,10 +5,10 @@ author: Anurag Hazra
 tags: ['javascript', 'design-patterns']
 ---
 
-Hey folks! few weeks ago i started a new challange to learn about one design pattern everyday i called it
+Hey folks! few weeks ago i started a new challenge to learn about one design pattern everyday i called it
 "[#DesignPatternsEveryday](https://twitter.com/hashtag/DesignPatternsEveryday)".
 
-Since i completed the challange i thought i should share briefly what i learned about design patterns, let's get
+Since i completed the challenge i thought i should share briefly what i learned about design patterns, let's get
 started.
 
 I will be going over most of the patterns and going to explain them in my own words, so if you find any mistakes or
