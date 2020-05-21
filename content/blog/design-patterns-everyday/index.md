@@ -14,22 +14,9 @@ started.
 I will be going over most of the patterns and going to explain them in my own words, so if you find any mistakes or
 misinformation please let me know. i'm not a design patterns expert.
 
-Now there are 3 categories of design patterns, we are going to cover them one by one.
-
-- Creational
-- Structural
-- Behavioural
-
-Also note that, One thing is really important for utilizing Design patterns in your project. Never start with the
-mindset of "okay I'm going to use {this pattern} in the codebase"
-
-Judge & analyze the code base, plan the logic and implementation first then apply design patterns to solve any
-particular problem only IF NECESSARY.
-
-> Design patterns are solution to problems, not solution finding problems.
-
 Table of Contents
 
+- [What are Design Patterns?](#What-are-Design-Patterns)
 - [Day 1 - Abstract Factory Pattern](#Day-1)
 - [Day 2 - Builder Pattern](#Day-2)
 - [Day 3 - Factory Method](#Day-3)
@@ -49,6 +36,30 @@ Table of Contents
 - [Day 17 - Strategy Design Pattern](#Day-17)
 - [Day 18 - Template Method](#Day-18)
 - [Day 19 - Visitor Pattern](#Day-19)
+
+## What are Design Patterns?
+
+"Design patterns are typical solutions to common problems in software design. Each pattern is like a blueprint that you
+can customize to solve a particular design problem in your code." - **refactoring.guru**
+
+There are 3 categories of design patterns, we are going to cover them one by one.
+
+- **Creational**  
+  Provides a way to create new objects which increases the flexibility and reusability.
+
+- **Structural**  
+  Helps to structure & assemble objects and classes while making them flexible.
+
+- **Behavioural**  
+  Helps to communicate between objects and concerned with responsiblities between objects.
+
+Also note that, One thing is really important for utilizing design patterns in your project.   
+Never start with the mindset of "okay I'm going to use {this pattern} in the codebase"
+
+Judge & analyze the code base, plan the logic and implementation first then apply design patterns to solve any
+particular problem only IF NECESSARY.
+
+> Design patterns are solution to problems, not solution finding problems.
 
 ## Day 1
 
@@ -349,15 +360,18 @@ logger.log('py', 'Hello world py');
 
 ## Day 6
 
+- **Bridge pattern**
+
 **""Decouple an abstraction from its implementation so that the two can vary independently""** what?
 
 Well, it's confusing but it's interesting to see how useful this pattern could be.
 
-Basically Bridge pattern allows us to separate the platform depended logic from platform independent logic. Especially
-this could be useful for building User Interfaces where you want to make different views depending on different
+Basically Bridge pattern allows us to separate the platform depended logic from platform independent logic.  
+
+This could be useful for building User Interfaces where you want to make different views depending on different
 resources and doing that in traditional manner will force you to implement each and every view and their resource
-implementation separately and will exponentially grow the number of complex coupled classes. but with bridge we can
-solve this issue by having a Uniform Resource Interface to talk with a abstract view class.
+implementation separately and will exponentially grow the number of complex coupled classes.  
+but with bridge we can solve this issue by having a Uniform Resource Interface to talk with an abstract view class.
 
 - Example
 
@@ -472,7 +486,7 @@ console.log(song_minimal_view.render());
 
 ## Day 7
 
-- Composite Design Pattern
+- **Composite Design Pattern**
 
 Composite patterns allows us to compose objects which have hierarchical tree structure.
 
@@ -568,7 +582,7 @@ console.log(root.ls());
 
 ## Day 8
 
-- Decorator Pattern
+- **Decorator Pattern**
 
 Decorator pattern allows us to enhance any class/object with extra behaviour without having to define any subclasses. I
 really like the flexibility and composability powers which decorators provide me.
@@ -580,8 +594,7 @@ very often. and React also make use of HigherOrder Functions (decorators), and l
 decorator patterns very cleverly.
 
 Javascript will also have native @Decorators support some point in future the @Decorator proposal is right now on 'Stage
-2' so we might see some changes, i'm excited for it. but we can use typescript/babel compile down those and use them
-right now.
+2' so we might see some changes, i'm excited for it. but we can use typescript/babel to compile down those to todays js and use them right now.
 
 - Example
 
@@ -605,7 +618,7 @@ loggerDecorator(mapper)([1, 2, 3], 10);
 
 ## Day 9
 
-- Facade Pattern
+- **Facade Pattern**
 
 Facade pattern provides a consistent and unified API for any complicated API/Subsystem, making it easier to use for the
 client.
@@ -619,7 +632,7 @@ simple interface.
 
 ## Day 10
 
-- Proxy Design Pattern
+- **Proxy Design Pattern**
 
 Proxy is an object which works as a placeholder or substitute to any other object. proxy provides a similar interface to
 original object but extends the behaviour of how the object will react to changes.
@@ -695,7 +708,7 @@ Starting Behavioural Design Pattern
 
 ## Day 11
 
-- Chain of Responsibility. (CoR)
+- **Chain of Responsibility. (CoR)**
 
 CoR is a behavioural design pattern which we know of as middlewares. CoR lets us delegate the individual logic as a
 handler and passing it onto the next handler.
@@ -802,7 +815,7 @@ route.get('/api/random', data => {
 
 ## Day 12
 
-- Command pattern
+- **Command pattern**
 
 Command pattern is a behavioural design pattern which lets us decouple the business logic from the client
 implementation.
@@ -899,7 +912,7 @@ calc.undo(); // undo last command
 
 ## Day 13
 
-- Iterator pattern
+- **Iterator pattern**
 
 Iterator pattern is a behavioural design pattern which lets us traverse any complex data structure without exposing the
 underlying implementation to the client.
@@ -962,7 +975,7 @@ while (iterator.hasMore()) {
 
 ## Day 14
 
-- Mediator Design Pattern
+- **Mediator Design Pattern**
 
 Mediator design is a behavioural design pattern which determines how set of objects will interact with each other.
 mediator pattern encourages loose coupling between components because it prevents objects from directly referencing each
@@ -1057,7 +1070,7 @@ jonathan.send('Hey hey hey hitman, nerver ever mess with Anurag', hitman);
 
 ## Day 15
 
-- Observer Design Pattern
+- **Observer Design Pattern**
 
 Observer design pattern is a behavioural design pattern which is a subscription system which notifies multiple objects
 about any changes to the object they are observing.
@@ -1172,7 +1185,7 @@ store.setState({
 
 ## Day 16
 
-- State Pattern
+- **State Pattern**
 
 State pattern is a behavioural design pattern which lets objects change its behaviour based on its internal state.
 
@@ -1248,7 +1261,7 @@ button.toggle();
 
 ## Day 17
 
-- Strategy Design Pattern
+- **Strategy Design Pattern**
 
 Strategy design pattern is behavioural design pattern which lets us define different algorithms for doing a particular
 action and interchange them as we wish. basically means you can switch between different types of behaviour and
@@ -1336,7 +1349,7 @@ auth.authenticate('johnwick', 'gunslotsofguns');
 
 ## Day 18
 
-- Template Method
+- **Template Method**
 
 Template method is a behavioural design pattern which defines skeleton of an algorithm in a step by step manner and lets
 subclasses override them.
@@ -1426,7 +1439,7 @@ new MarkupParser().parse(dataUrl);
 
 ## Day 19
 
-- Visitor Pattern
+- **Visitor Pattern**
 
 Visitor design pattern is a behavioural design pattern which lets you define new operations/behaviours without changing
 the classes.
@@ -1459,10 +1472,13 @@ CanvasCallsExporter.
 
 [Check out the example on github](https://github.com/anuraghazra/design-patterns-everyday/blob/master/behavioral/visitor-pattern.ts)
 
+
+-------
+
 ANNNDDD THATS IT! Phew! it was long.. **i know you probably did not read it but thats ok**, you can come back anytime
 when you are stuck with a specific design pattern or confused about it.
 
-Personally i feel like in web development world most useful Patterns are:
+Personally i feel like in web development world most useful patterns are:
 
 - Observer
 - Visitor
