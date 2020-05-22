@@ -198,12 +198,14 @@ class CarBuilder {
 let truck = new CarBuilder()
   .addSeats(8)
   .addEngine('v12')
-  .addFuelTank('200liters');
+  .addFuelTank('200liters')
+  .build();
 
 let sedan = new CarBuilder()
   .addSeats(4)
   .addEngine('v6')
-  .addFuelTank('100liters');
+  .addFuelTank('100liters')
+  .build();
 ```
 
 ## Day 3
