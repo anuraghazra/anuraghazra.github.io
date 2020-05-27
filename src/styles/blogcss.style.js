@@ -6,7 +6,7 @@ const blogstyles = css`
       margin-right: 20px;
     }
   }
-  
+
   /* Other Specific Global Styles */
   div#disqus_thread {
     background: whitesmoke;
@@ -18,7 +18,7 @@ const blogstyles = css`
     ${p => p.theme.spacing.sectionTopBottom};
     margin-top: 50px;
     line-height: 1.58;
-    
+
     a {
       word-break: break-word;
     }
@@ -49,7 +49,7 @@ const blogstyles = css`
       font-size: 12px;
       text-align: center;
     }
-    
+
     @media ${p => p.theme.media.tablet} {
       pre {
         overflow-x: scroll;
@@ -59,7 +59,11 @@ const blogstyles = css`
       font-size: 1.8rem;
       margin-bottom: 50px;
     }
-    h2, h3, h4, h5, h6 {
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       margin: 2.1em 0 0.5em 0;
       color: ${p => p.theme.primaryColor};
 
@@ -68,7 +72,8 @@ const blogstyles = css`
       }
     }
 
-    ul, ol {
+    ul,
+    ol {
       font-family: ${p => p.theme.secondaryFontFamily};
       font-size: 18px;
       padding: 0 17px;
@@ -88,5 +93,5 @@ const blogstyles = css`
       opacity: 0.5;
     }
   }
-`
+`;
 export default blogstyles;

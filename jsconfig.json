@@ -1,5 +1,13 @@
 {
   "compilerOptions": {
-    "module": "es6"
-  }
+    "baseUrl": ".",
+    "paths": {
+      "@src/*": ["src/*"],
+      "@common/*": ["src/components/common/*"],
+      "@components/*": ["src/components/*"],
+      "@pages/*": ["src/pages/*"]
+    }
+  },
+  "checkJs": true,
+  "exclude": ["dist", "node_modules", ".cache", "public"]
 }

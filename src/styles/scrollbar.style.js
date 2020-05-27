@@ -30,12 +30,12 @@ const scrollBar = css`
   ::-moz-scrollbarbutton-up {
     background-color: ${p => p.theme.primaryColor};
   }
-  
-  input[type=checkbox]{
+
+  input[type='checkbox'] {
     height: 0;
     width: 0;
     visibility: hidden;
   }
-`
+`;
 
 export default scrollBar;

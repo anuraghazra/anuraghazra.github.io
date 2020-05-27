@@ -1,17 +1,18 @@
-import React from "react"
-import { graphql } from "gatsby";
+import React from 'react';
+import { graphql } from 'gatsby';
 
-
-import SEO from "#components/seo";
-import Layout from "#components/Layout/Layout"
-import BlogCard from "#components/Blog/BlogCard";
-import BlogLayout from "#components/Blog/BlogLayout";
+import SEO from '@components/seo';
+import Layout from '@components/Layout/Layout';
+import BlogCard from '@components/Blog/BlogCard';
+import BlogLayout from '@components/Blog/BlogLayout';
 
 const TagsPage = ({ data, pageContext }) => {
   const { tag } = pageContext;
   const { edges, totalCount } = data.allMarkdownRemark;
 
-  const tagHeader = `${totalCount} post${totalCount === 1 ? "" : "s"} tagged with "${tag}"`
+  const tagHeader = `${totalCount} post${
+    totalCount === 1 ? '' : 's'
+  } tagged with "${tag}"`;
 
   return (
     <Layout>
@@ -21,29 +22,26 @@ const TagsPage = ({ data, pageContext }) => {
         <h1>{tagHeader}</h1>
         <br />
         <br />
-        {
-          edges.map(({ node }) => {
-            const { slug } = node.fields;
-            const { title, date, tags } = node.frontmatter;
-            return (
-              <BlogCard
-                tags={tags}
-                key={node.id}
-                slug={slug}
-                title={title}
-                date={date}
-                readtime={node.timeToRead}
-                excerpt={node.excerpt}
-              />
-            )
-          })
-        }
+        {edges.map(({ node }) => {
+          const { slug } = node.fields;
+          const { title, date, tags } = node.frontmatter;
+          return (
+            <BlogCard
+              tags={tags}
+              key={node.id}
+              slug={slug}
+              title={title}
+              date={date}
+              readtime={node.timeToRead}
+              excerpt={node.excerpt}
+            />
+          );
+        })}
       </BlogLayout>
     </Layout>
-  )
-}
+  );
+};
 export default TagsPage;
-
 
 export const pageQuery = graphql`
   query($tag: String) {
@@ -69,4 +67,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

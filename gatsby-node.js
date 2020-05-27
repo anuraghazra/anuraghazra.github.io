@@ -2,6 +2,20 @@ const axios = require('axios');
 const { createRemoteFileNode } = require(`gatsby-source-filesystem`);
 const path = require('path');
 
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      alias: {
+        src: path.join(__dirname, 'src'),
+        '@src': path.join(__dirname, 'src'),
+        '@common': path.join(__dirname, 'src/components/common'),
+        '@components': path.join(__dirname, 'src/components'),
+        '@pages': path.join(__dirname, 'src/pages'),
+      },
+    },
+  });
+};
+
 const slugify = require('./src/components/slugify.js');
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
@@ -24,7 +38,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     node,
     name: 'slug',
     // value will be {blog||case-studies}/my-title
-    value: '/' + sourceInstanceName + '/' + slugFromTitle
+    value: '/' + sourceInstanceName + '/' + slugFromTitle,
   });
 
   // adds a posttype field to extinguish between blog and case-study
@@ -32,7 +46,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     node,
     name: 'posttype',
     // value will be {blog||case-studies}
-    value: sourceInstanceName
+    value: sourceInstanceName,
   });
 
   // if sourceInstanceName is case-studies then add the fileIndex field because we need
@@ -41,16 +55,16 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     createNodeField({
       node,
       name: 'fileIndex',
-      value: fileIndex
-    })
+      value: fileIndex,
+    });
   }
-}
+};
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
   const caseStudyTemplate = path.resolve('src/templates/case-study.js');
   const blogPostTemplate = path.resolve('src/templates/blog-post.js');
-  const tagTemplate = path.resolve("src/templates/tags.js")
+  const tagTemplate = path.resolve('src/templates/tags.js');
 
   return graphql(`
     {
@@ -81,9 +95,9 @@ exports.createPages = ({ actions, graphql }) => {
           path: node.fields.slug,
           component: caseStudyTemplate,
           context: {
-            slug: node.fields.slug
-          }
-        })
+            slug: node.fields.slug,
+          },
+        });
       } else {
         const tagSet = new Set();
         // for each tags on the frontmatter add them to the set
@@ -97,8 +111,8 @@ exports.createPages = ({ actions, graphql }) => {
             path: `/blog/tags/${slugify(tag)}/`,
             component: tagTemplate,
             context: {
-              tag
-            }
+              tag,
+            },
           });
         });
 
@@ -107,20 +121,23 @@ exports.createPages = ({ actions, graphql }) => {
           path: node.fields.slug,
           component: blogPostTemplate,
           context: {
-            slug: node.fields.slug
-          }
-        })
+            slug: node.fields.slug,
+          },
+        });
       }
-    })
+    });
+  });
+};
 
-  })
-}
-
-
-exports.sourceNodes = ({ actions, createNodeId, createContentDigest, store, cache }) => {
+exports.sourceNodes = ({
+  actions,
+  createNodeId,
+  createContentDigest,
+  store,
+  cache,
+}) => {
   const { createNode } = actions;
   const CC_PROJECTS_URI = 'https://anuraghazra.github.io/CanvasFun/data.json';
-
 
   const createCreativeCodingNode = (project, i) => {
     const node = {
@@ -130,14 +147,14 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest, store, cach
       internal: {
         type: `CreativeCoding`,
         content: JSON.stringify(project),
-        contentDigest: createContentDigest(project)
+        contentDigest: createContentDigest(project),
       },
-      ...project
-    }
+      ...project,
+    };
 
     // create `allCreativeCoding` Node
     createNode(node);
-  }
+  };
 
   // GET IMAGE THUMBNAILS
   const createRemoteImage = async (project, i) => {
@@ -149,29 +166,34 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest, store, cach
         store,
         cache,
         createNode,
-        createNodeId
+        createNodeId,
       });
     } catch (error) {
-      throw new Error('error creating remote img node - ' + error)
+      throw new Error('error creating remote img node - ' + error);
     }
-  }
+  };
 
   // promise based sourcing
-  return axios.get(CC_PROJECTS_URI)
+  return axios
+    .get(CC_PROJECTS_URI)
     .then(res => {
       res.data.forEach((project, i) => {
         createCreativeCodingNode(project, i);
         createRemoteImage(project, i);
-      })
-    }).catch(err => {
-      // just create a dummy node to pass the build if faild to fetch data
-      createCreativeCodingNode({
-        id: '0',
-        demo: '',
-        img: '',
-        title: 'Error while loading Data',
-        src: '',
-      }, 0);
-      throw new Error(err);
+      });
     })
-}
+    .catch(err => {
+      // just create a dummy node to pass the build if faild to fetch data
+      createCreativeCodingNode(
+        {
+          id: '0',
+          demo: '',
+          img: '',
+          title: 'Error while loading Data',
+          src: '',
+        },
+        0
+      );
+      throw new Error(err);
+    });
+};

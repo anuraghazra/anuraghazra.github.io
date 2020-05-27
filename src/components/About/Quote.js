@@ -14,20 +14,22 @@ const QuoteWrapper = styled.article`
   min-width: 200px;
   flex: 1;
 
-  background-color: ${p => p.theme.dark ? p.theme.accentColor : p.theme.secondaryColor};
+  background-color: ${p =>
+    p.theme.dark ? p.theme.accentColor : p.theme.secondaryColor};
   box-shadow: ${props => props.theme.shadowSmall};
-  
-  &, p {
-    color: ${p => p.theme.dark ? p.theme.primaryText : p.theme.primaryColor};
+
+  &,
+  p {
+    color: ${p => (p.theme.dark ? p.theme.primaryText : p.theme.primaryColor)};
   }
-  
+
   i {
     position: absolute;
     bottom: 20px;
     right: 20px;
     float: right;
   }
-`
+`;
 
 const Quote = ({ children }) => (
   <QuoteWrapper>
@@ -35,10 +37,10 @@ const Quote = ({ children }) => (
     <br />
     <i>- anurag hazra</i>
   </QuoteWrapper>
-)
+);
 
 Quote.propTypes = {
-  children: PropTypes.element.isRequired
-}
+  children: PropTypes.element.isRequired,
+};
 
 export default Quote;

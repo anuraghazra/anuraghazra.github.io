@@ -11,20 +11,22 @@ const Grid = styled.div`
   overflow: hidden;
   position: relative;
 
-  ${p => !p.showAll && css`
-    &:before {
-      content: '';
-      width: 100%;
-      height: 300px;
-      position: absolute;
-      border-radius: 10px;
-      bottom: 0;
-      background: ${p => `linear-gradient(180deg, rgba(0,0,0,0), 40%, ${p.theme.bg})`};
-      z-index: 5;
-      transition: 0.3s;
-    }
-    `
-  }
+  ${p =>
+    !p.showAll &&
+    css`
+      &:before {
+        content: '';
+        width: 100%;
+        height: 300px;
+        position: absolute;
+        border-radius: 10px;
+        bottom: 0;
+        background: ${p =>
+          `linear-gradient(180deg, rgba(0,0,0,0), 40%, ${p.theme.bg})`};
+        z-index: 5;
+        transition: 0.3s;
+      }
+    `}
   .showall__button {
     position: absolute;
     bottom: 50px;
@@ -34,7 +36,7 @@ const Grid = styled.div`
     font-weight: bold;
     transform: translateX(-50%);
   }
-  max-height: ${ p => p.showAll ? '100%' : p.collapseHeight};
-`
+  max-height: ${p => (p.showAll ? '100%' : p.collapseHeight)};
+`;
 
 export default Grid;

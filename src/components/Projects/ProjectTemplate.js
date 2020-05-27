@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import {
   ProjectContent,
   ProjectDetail,
   ProjectWrapper,
-} from './ProjectTemplate.style'
+} from './ProjectTemplate.style';
 
 const ProjectTemplate = ({ title, desc, links, preview }) => {
   return (
@@ -22,14 +22,14 @@ const ProjectTemplate = ({ title, desc, links, preview }) => {
         {preview}
       </ProjectContent>
     </ProjectWrapper>
-  )
-}
+  );
+};
 
 ProjectTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   desc: PropTypes.string.isRequired,
   links: PropTypes.node.isRequired,
   preview: PropTypes.node.isRequired,
-}
+};
 
 export default ProjectTemplate;

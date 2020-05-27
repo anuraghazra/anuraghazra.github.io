@@ -6,8 +6,7 @@ import {
   CodeCardWrapper,
   ColorPaletteWrapper,
   ColorBoxWrapper,
-} from './HeroCard.style'
-
+} from './HeroCard.style';
 
 function repeatString(str, count) {
   let maxCount = str.length * count;
@@ -37,36 +36,47 @@ export const CodeCard = () => {
   // trimed down polyfill of String.repeat
   const changeText = () => {
     let space = repeatString(' ', 54);
-    setText(age + ';' + space)
-  }
+    setText(age + ';' + space);
+  };
   return (
     <CodeCardWrapper>
-      <pre>1   class <b>Person</b> {'{'}</pre>
-      <pre>2         constructor() {'{'}</pre>
-      <pre>3             this.name = "<b>Anurag Hazra</b>";</pre>
-      <pre>4             this.traits = ["<b>DESIGN</b>", "<b>DEV</b>"];</pre>
-      <pre onClick={changeText}>5             this.age = {text}</pre>
-      <pre>6         {"}"}</pre>
-      <pre>7   {"}"}</pre>
+      <pre>
+        1 class <b>Person</b> {'{'}
+      </pre>
+      <pre>2 constructor() {'{'}</pre>
+      <pre>
+        3 this.name = "<b>Anurag Hazra</b>";
+      </pre>
+      <pre>
+        4 this.traits = ["<b>DESIGN</b>", "<b>DEV</b>"];
+      </pre>
+      <pre onClick={changeText}>5 this.age = {text}</pre>
+      <pre>6 {'}'}</pre>
+      <pre>7 {'}'}</pre>
     </CodeCardWrapper>
-  )
-}
-
+  );
+};
 
 const ColorBox = ({ color }) => {
   const tooltipRef = useRef();
   useEffect(() => {
     return tooltipRef.current.addEventListener('animationend', () => {
-      tooltipRef.current.classList.remove('tooltip-animate')
+      tooltipRef.current.classList.remove('tooltip-animate');
     });
-  })
+  });
   const copy = () => {
     copyToClipboard(color);
     tooltipRef.current.classList.add('tooltip-animate');
   };
 
-  return <ColorBoxWrapper ref={tooltipRef} onClick={copy} style={{ background: color }} />
-}
+  return (
+    <ColorBoxWrapper
+      ref={tooltipRef}
+      onClick={copy}
+      style={{ background: color }}
+    />
+  );
+};
 
 export const ColorPalette = withTheme(({ theme }) => {
   return (
@@ -77,8 +87,8 @@ export const ColorPalette = withTheme(({ theme }) => {
       <ColorBox color={theme.primaryBlack} />
       <ColorBox color={theme.accentColor} />
     </ColorPaletteWrapper>
-  )
-})
+  );
+});
 
 export const HeroCard = () => {
   return (
@@ -86,5 +96,5 @@ export const HeroCard = () => {
       <CodeCard />
       <ColorPalette />
     </HeroCardWrapper>
-  )
-}
+  );
+};

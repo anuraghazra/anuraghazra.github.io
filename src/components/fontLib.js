@@ -1,5 +1,5 @@
 import '@fortawesome/fontawesome-svg-core/styles.css';
-import { library, config } from '@fortawesome/fontawesome-svg-core'
+import { library, config } from '@fortawesome/fontawesome-svg-core';
 
 import {
   faGithub,
@@ -13,7 +13,7 @@ import {
   faCodepen,
   faReact,
   faNode,
-} from '@fortawesome/free-brands-svg-icons'
+} from '@fortawesome/free-brands-svg-icons';
 import {
   faPaintBrush,
   faCode,
@@ -28,8 +28,8 @@ import {
   faTimes,
   faMoon,
   faSun,
-  faEdit
-} from '@fortawesome/free-solid-svg-icons'
+  faEdit,
+} from '@fortawesome/free-solid-svg-icons';
 
 library.add(
   faGithub,
@@ -59,4 +59,3 @@ library.add(
   faEdit
 );
 config.autoAddCss = false;
-

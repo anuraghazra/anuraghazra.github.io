@@ -1,3 +1,4 @@
+const path = require('path');
 const config = require('./config/website');
 
 module.exports = {
@@ -27,23 +28,23 @@ module.exports = {
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
-              classPrefix: "language-",
+              classPrefix: 'language-',
               inlineCodeMarker: null,
               aliases: {},
               showLineNumbers: true,
               noInlineHighlight: false,
-            }
+            },
           },
           {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 590,
-              showCaptions: true
-            }
+              showCaptions: true,
+            },
           },
-          `gatsby-plugin-social-banners`
-        ]
-      }
+          `gatsby-plugin-social-banners`,
+        ],
+      },
     },
 
     // SOURCE FILE SYSTEM -
@@ -70,7 +71,6 @@ module.exports = {
         path: `${__dirname}/content/blog/`,
       },
     },
-
 
     // IMAGE TRANSFORMER
     `gatsby-transformer-sharp`,
@@ -144,32 +144,20 @@ module.exports = {
         sitemap: `${config.siteUrl}/sitemap.xml`,
         env: {
           development: {
-            policy: [{ userAgent: '*', disallow: ['/'] }]
+            policy: [{ userAgent: '*', disallow: ['/'] }],
           },
           production: {
-            policy: [{ userAgent: '*', allow: '/', disallow: '/goodies' }]
-          }
-        }
-      }
+            policy: [{ userAgent: '*', allow: '/', disallow: '/goodies' }],
+          },
+        },
+      },
     },
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
         exclude: [`/blog/tags/*`, `/goodies`],
-      }
+      },
     },
     `gatsby-plugin-styled-components`,
-    `gatsby-plugin-root-import`,
-    {
-      resolve: `gatsby-plugin-alias-imports`,
-      options: {
-        alias: {
-          "#src": "./src",
-          "#common": "./src/components/common",
-          "#components": "./src/components",
-          "#pages": "./src/pages",
-        },
-      }
-    }
   ],
-}
+};

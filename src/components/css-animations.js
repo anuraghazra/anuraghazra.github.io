@@ -7,7 +7,7 @@ export const slideDownKeyframe = keyframes`
   100% {
     transform: translateY(0);
   }
-`
+`;
 
 export const tooltipKeyframe = keyframes`
   0% {
@@ -19,4 +19,4 @@ export const tooltipKeyframe = keyframes`
   100% {
     opacity: 0;
   }
-`
+`;

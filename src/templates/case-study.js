@@ -1,25 +1,25 @@
-import React from "react";
-import { graphql } from "gatsby"
+import React from 'react';
+import { graphql } from 'gatsby';
 
-import Layout from "#components/Layout/Layout"
-import SEO from "#components/seo";
+import Layout from '@components/Layout/Layout';
+import SEO from '@components/seo';
 
-import Flex from "#common/Flex";
-import IFrame from '#common/IFrame';
-import Button, { IconButton } from '#common/Button';
+import Flex from '@common/Flex';
+import IFrame from '@common/IFrame';
+import Button, { IconButton } from '@common/Button';
 
-import { ProjectLinks } from '#components/Projects/ProjectTemplate.style';
-import SocialShareSection from '#components/Blog/SocialShareSection';
-import SplitLayout from "#components/common/SplitLayout";
+import { ProjectLinks } from '@components/Projects/ProjectTemplate.style';
+import SocialShareSection from '@components/Blog/SocialShareSection';
+import SplitLayout from '@components/common/SplitLayout';
 
 import { InfoTitle, CaseStudyWrapper } from './case-study.style';
 
 const CaseStudy = ({ data }) => {
-  const baseSlugUrl = "https://anuraghazra.github.io" + data.markdownRemark.fields.slug;
+  const baseSlugUrl =
+    'https://anuraghazra.github.io' + data.markdownRemark.fields.slug;
   const study = data.markdownRemark.frontmatter;
 
-  const infoLinks = (
-    study.info.links &&
+  const infoLinks = study.info.links && (
     <div>
       <InfoTitle>Links & Resources</InfoTitle>
       <ul>
@@ -30,7 +30,7 @@ const CaseStudy = ({ data }) => {
         ))}
       </ul>
     </div>
-  )
+  );
 
   return (
     <Layout>
@@ -40,8 +40,14 @@ const CaseStudy = ({ data }) => {
           <h1>{study.title}</h1>
 
           <ProjectLinks className="case__links">
-            <Button target="__blank" as="a" href={study.demo}>Live Demo</Button>
-            <IconButton label="github" icon={["fab", "github"]} href={study.src} />
+            <Button target="__blank" as="a" href={study.demo}>
+              Live Demo
+            </Button>
+            <IconButton
+              label="github"
+              icon={['fab', 'github']}
+              href={study.src}
+            />
           </ProjectLinks>
         </Flex>
 
@@ -54,7 +60,9 @@ const CaseStudy = ({ data }) => {
             <aside>
               <InfoTitle>Core Technologies</InfoTitle>
               <ul>
-                {study.info.tech.map((tech, i) => <li key={i}>{tech}</li>)}
+                {study.info.tech.map((tech, i) => (
+                  <li key={i}>{tech}</li>
+                ))}
               </ul>
             </aside>
             {infoLinks}
@@ -74,19 +82,21 @@ const CaseStudy = ({ data }) => {
           aside={
             <div>
               <h4>Share on</h4>
-              <SocialShareSection baseSlugUrl={baseSlugUrl} title={study.title} />
+              <SocialShareSection
+                baseSlugUrl={baseSlugUrl}
+                title={study.title}
+              />
             </div>
           }
         />
-
       </CaseStudyWrapper>
     </Layout>
-  )
-}
+  );
+};
 
 export const query = graphql`
-  query caseStudyBySlug($slug : String!) {
-    markdownRemark(fields: {slug: {eq: $slug}}) {
+  query caseStudyBySlug($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       html
       fields {
@@ -105,6 +115,6 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
-export default CaseStudy
+export default CaseStudy;

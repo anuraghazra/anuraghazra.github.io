@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import Wrapper from '#common/Wrapper';
+import Wrapper from '@common/Wrapper';
 
 export const NavWrapper = styled.div`
   position: fixed;
   top: 0;
-  
+
   display: flex;
   align-items: center;
 
@@ -18,7 +18,7 @@ export const NavWrapper = styled.div`
   .logo {
     margin-right: auto;
     cursor: pointer;
-    
+
     img {
       flex-basis: 100px;
       max-width: 35px;
@@ -47,7 +47,7 @@ export const NavItems = styled.ul`
 
     background-color: ${props => props.theme.secondaryColor};
     border-top: 2px solid ${props => props.theme.accentColor};
-    right: ${props => props.isSidebarOpen ? '0px' : '-250px'} !important;
+    right: ${props => (props.isSidebarOpen ? '0px' : '-250px')} !important;
   }
 `;
 
@@ -58,12 +58,12 @@ export const NavItem = styled.li`
   
   a {
     /* color: ${p => p.theme.swapIfDark('primaryText', 'primaryColor')}; */
-    color: ${p => p.theme.dark ? p.theme.primaryText : p.theme.primaryColor};
+    color: ${p => (p.theme.dark ? p.theme.primaryText : p.theme.primaryColor)};
   }
 
   a:hover {
     cursor: pointer;
-    color: ${p => p.theme.dark ? p.theme.primaryColor : p.theme.primaryText};
+    color: ${p => (p.theme.dark ? p.theme.primaryColor : p.theme.primaryText)};
   }
 
   @media ${props => props.theme.media.tablet} {
@@ -89,11 +89,11 @@ export const Burger = styled.div`
   height: 25px;
 
   transform: rotate(0deg);
-  transition: .5s ease-in-out;
-  
+  transition: 0.5s ease-in-out;
+
   display: none;
   cursor: pointer;
-  
+
   span {
     display: block;
     position: absolute;
@@ -104,7 +104,7 @@ export const Burger = styled.div`
     background: ${props => props.theme.primaryColor};
     border-radius: 10px;
     transform: rotate(0deg);
-    transition: .25s ease-in-out;
+    transition: 0.25s ease-in-out;
     opacity: 1;
   }
 

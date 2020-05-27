@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const ProjectWrapper = styled.section`
   margin: 80px 0;
-`
+`;
 
 export const ProjectContent = styled.div`
   display: grid;
@@ -21,7 +21,7 @@ export const ProjectDetail = styled.div`
 
   grid-column: 1 / 3;
   grid-row: 1;
-  
+
   h2 {
     margin-bottom: 25px;
   }
@@ -59,7 +59,7 @@ export const ProjectLinks = styled.div`
   a {
     margin-right: 10px;
   }
-`
+`;
 
 export const ProjectPreview = styled.div`
   grid-column: 2 / 4;
@@ -76,18 +76,19 @@ export const ProjectPreview = styled.div`
   iframe {
     border-radius: 10px;
   }
-`
+`;
 export const Tags = styled.div`
   @media ${props => props.theme.media.fablet} {
     display: none;
   }
-  
+
   margin: 10px;
   color: ${props => props.theme.primaryColor};
   display: flex;
   font-size: 24px;
 
-  svg, i {
+  svg,
+  i {
     margin-right: 25px;
   }
-`
+`;

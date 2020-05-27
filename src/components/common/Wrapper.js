@@ -6,6 +6,6 @@ const Wrapper = styled.main`
   @media ${props => props.theme.media.tablet} {
     width: 90%;
   }
-`
+`;
 
 export default Wrapper;
