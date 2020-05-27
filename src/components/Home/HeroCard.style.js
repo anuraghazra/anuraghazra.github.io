@@ -4,14 +4,14 @@ import { slideDownKeyframe, tooltipKeyframe } from '../css-animations';
 
 export const HeroCardWrapper = styled.div`
   position: relative;
-  animation: ${slideDownKeyframe} 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s forwards;
-
+  animation: ${slideDownKeyframe} 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s
+    forwards;
 
   @media ${props => props.theme.media.tablet} {
     /* releated to "things i love" section bug */
     margin-top: 25px;
   }
-`
+`;
 
 export const CodeCardWrapper = styled.div`
   padding: 30px 35px;
@@ -22,7 +22,7 @@ export const CodeCardWrapper = styled.div`
   pre {
     font-size: 0.8rem;
     font-family: ${props => props.theme.fontFamily};
-    color: ${p => p.theme.dark ? p.theme.primaryText : p.theme.primaryColor};
+    color: ${p => (p.theme.dark ? p.theme.primaryText : p.theme.primaryColor)};
   }
 `;
 
@@ -34,7 +34,7 @@ export const ColorPaletteWrapper = styled.div`
   display: flex;
   justify-content: space-around;
   background-color: ${props => props.theme.secondaryColor};
-  box-shadow: ${props => props.theme.shadowSmall}; 
+  box-shadow: ${props => props.theme.shadowSmall};
   padding: 8px;
   border-radius: 5px;
 

@@ -1,26 +1,28 @@
 import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
-import { useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby';
 import { MapInteractionCSS } from 'react-map-interaction';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Img from 'gatsby-image';
 
-import PageHeader from '#common/PageHeader';
-import Button, { IconButton } from '#common/Button';
-import Grid from '#common/Grid';
+import PageHeader from '@common/PageHeader';
+import Button, { IconButton } from '@common/Button';
+import Grid from '@common/Grid';
 
 import {
   ConceptsWrapper,
   ConceptCard,
   ConceptCardFooter,
   Lightbox,
-  LightBoxCloseButton
+  LightBoxCloseButton,
 } from './Concepts.style';
-
 
 const Card = React.memo(({ nodes, currentImg, openLightbox }) => (
   <ConceptCard>
-    <div style={{ width: '100%', height: '100%' }} onClick={() => openLightbox(currentImg)}>
+    <div
+      style={{ width: '100%', height: '100%' }}
+      onClick={() => openLightbox(currentImg)}
+    >
       <Img
         fluid={currentImg.node.childImageSharp.fluid}
         alt={nodes.node.title}
@@ -39,22 +41,19 @@ const Card = React.memo(({ nodes, currentImg, openLightbox }) => (
         <IconButton
           label="Dribble Shot"
           href={nodes.node.links.dribbble}
-          icon={["fab", "dribbble"]}
+          icon={['fab', 'dribbble']}
         />
-        {
-          nodes.node.links.demo &&
+        {nodes.node.links.demo && (
           <IconButton
             label="Live Demo"
             href={nodes.node.links.demo}
             icon="window-maximize"
           />
-        }
+        )}
       </div>
     </ConceptCardFooter>
   </ConceptCard>
-))
-
-
+));
 
 const Concepts = () => {
   const [selectedImg, setSelectedImg] = useState(null);
@@ -63,11 +62,11 @@ const Concepts = () => {
 
   const handleShowAll = () => {
     setShowAll(true);
-  }
-  const openLightbox = useCallback((img) => {
+  };
+  const openLightbox = useCallback(img => {
     setSelectedImg(img);
     setLightboxOpen(true);
-  }, [])
+  }, []);
 
   function closeLightBox(e) {
     if (e.target.tagName !== 'IMG') {
@@ -79,7 +78,7 @@ const Concepts = () => {
   const concepts = useStaticQuery(
     graphql`
       query {
-        allConceptsJson(sort: {fields: links___image}) {
+        allConceptsJson(sort: { fields: links___image }) {
           edges {
             node {
               id
@@ -93,7 +92,10 @@ const Concepts = () => {
             }
           }
         }
-        allFile(filter: {name: {regex: "/^concept_/"}}, sort: {fields: name}) {
+        allFile(
+          filter: { name: { regex: "/^concept_/" } }
+          sort: { fields: name }
+        ) {
           edges {
             node {
               relativePath
@@ -122,31 +124,42 @@ const Concepts = () => {
               currentImg={currentImg}
               openLightbox={openLightbox}
             />
-          )
+          );
         })}
 
-        {!showAll && <Button onClick={handleShowAll} className="showall__button">Show all</Button>}
+        {!showAll && (
+          <Button onClick={handleShowAll} className="showall__button">
+            Show all
+          </Button>
+        )}
       </Grid>
 
-      {isLightboxOpen &&
+      {isLightboxOpen && (
         <Lightbox data-testid="lightbox" onClick={closeLightBox}>
           <MapInteractionCSS>
-            <Img className="lightbox__gatsbyimage" fluid={selectedImg.node.childImageSharp.fluid} />
+            <Img
+              className="lightbox__gatsbyimage"
+              fluid={selectedImg.node.childImageSharp.fluid}
+            />
           </MapInteractionCSS>
 
-          <LightBoxCloseButton tabindex="1" onClick={closeLightBox} aria-label="Close Lightbox">
+          <LightBoxCloseButton
+            tabindex="1"
+            onClick={closeLightBox}
+            aria-label="Close Lightbox"
+          >
             <FontAwesomeIcon icon="times" size="2x" />
           </LightBoxCloseButton>
         </Lightbox>
-      }
+      )}
     </ConceptsWrapper>
-  )
-}
+  );
+};
 
 Card.propTypes = {
   nodes: PropTypes.object.isRequired,
   currentImg: PropTypes.object.isRequired,
-  openLightbox: PropTypes.func.isRequired
-}
+  openLightbox: PropTypes.func.isRequired,
+};
 
 export default Concepts;

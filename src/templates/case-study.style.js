@@ -17,7 +17,7 @@ export const InfoTitle = styled.h4`
     margin: 0 20px 0 10px;
     flex: 1 0 20px;
   }
-`
+`;
 
 export const CaseStudyWrapper = styled.section`
   margin-top: 100px;
@@ -52,7 +52,7 @@ export const CaseStudyWrapper = styled.section`
     }
   }
 
-  .case__iframe-container  {
+  .case__iframe-container {
     width: 100%;
     margin: 10px 0;
   }
@@ -60,8 +60,12 @@ export const CaseStudyWrapper = styled.section`
     font-size: 1.8rem;
     margin-bottom: 50px;
   }
-  h2, h3, h4, h5, h6 {
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     margin: 20px 0;
     color: ${p => p.theme.primaryColor};
   }
-`
+`;

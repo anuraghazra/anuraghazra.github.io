@@ -1,9 +1,6 @@
 import React from 'react';
 
-import {
-  NavContent,
-  NavWrapper
-} from './Navbar.style'
+import { NavContent, NavWrapper } from './Navbar.style';
 
 import NavDesktop from './NavDesktop';
 import NavMobile from './NavMobile';
@@ -25,7 +22,7 @@ const Navbar = () => {
         <NavMobile />
       </Visible>
     </header>
-  )
-}
+  );
+};
 
 export default Navbar;

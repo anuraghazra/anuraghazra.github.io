@@ -5,4 +5,4 @@ const slugify = str =>
     .map(x => x.toLowerCase())
     .join('-');
 
-module.exports = slugify
+module.exports = slugify;

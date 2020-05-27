@@ -1,10 +1,10 @@
 import { css } from 'styled-components';
 
 export const sizes = {
-  mobile: "480px",
-  tablet: "768px",
-  fablet: "1000px",
-  desktop: "1200px",
+  mobile: '480px',
+  tablet: '768px',
+  fablet: '1000px',
+  desktop: '1200px',
 };
 
 const themeCommon = {
@@ -18,7 +18,7 @@ const themeCommon = {
     sectionTopBottom: css`
       margin-top: 100px;
       margin-bottom: 100px;
-    `
+    `,
   },
   media: {
     mobile: `(max-width: ${sizes.mobile})`,
@@ -31,9 +31,9 @@ const themeCommon = {
   gradient: 'linear-gradient(134deg, #6A98F0 0%, #4961DC 99%)',
   gradient2: 'linear-gradient(99deg, #6A98F0 0%, #4961DC 130%)',
   swapIfDark(prop1, prop2) {
-    return `${this.dark ? this[prop1] : this[prop2]};`
-  }
-}
+    return `${this.dark ? this[prop1] : this[prop2]};`;
+  },
+};
 
 export const themelight = {
   dark: false,
@@ -43,8 +43,8 @@ export const themelight = {
   accentColor: '#C7D0FF',
   primaryBlack: '#383838',
   primaryText: '#383838',
-  ...themeCommon
-}
+  ...themeCommon,
+};
 
 export const themedarkblue = {
   dark: true,
@@ -55,8 +55,8 @@ export const themedarkblue = {
   primaryBlack: '#F8F8F8',
   elevation0: '#6D83F2',
   primaryText: '#F8F8F8',
-  ...themeCommon
-}
+  ...themeCommon,
+};
 
 export const themedark = {
   dark: true,
@@ -67,5 +67,5 @@ export const themedark = {
   primaryBlack: '#F8F8F8',
   elevation0: '#191919',
   primaryText: '#F8F8F8',
-  ...themeCommon
-}
+  ...themeCommon,
+};

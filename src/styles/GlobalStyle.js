@@ -3,7 +3,6 @@ import PrismJsStyles from './prismjs.style';
 import scrollBar from './scrollbar.style';
 import blogstyles from './blogcss.style';
 
-
 const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
@@ -80,5 +79,5 @@ const GlobalStyle = createGlobalStyle`
   /* Prismjs STYLES */
   /*             */
   ${PrismJsStyles}
-`
+`;
 export default GlobalStyle;

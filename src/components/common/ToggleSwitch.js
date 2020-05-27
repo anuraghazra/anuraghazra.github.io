@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import ThemeToggleContext from '#components/Layout/ThemeToggleContext';
+import ThemeToggleContext from '@components/Layout/ThemeToggleContext';
 
 const SwitchWrapper = styled.div`
-  input[type=checkbox] {
+  input[type='checkbox'] {
     height: 100%;
     width: 100%;
     visibility: visible;
@@ -57,12 +57,12 @@ const SwitchWrapper = styled.div`
     transition-delay: 1s;
     transition: 0.2s ease all;
     z-index: 1;
-    background-color: ${p => p.theme.accentColor}
+    background-color: ${p => p.theme.accentColor};
   }
 
   /* Button 1 */
   #button-1 .knobs:before {
-    content: "DARK";
+    content: 'DARK';
     position: absolute;
     top: 4px;
     left: 4px;
@@ -81,9 +81,9 @@ const SwitchWrapper = styled.div`
   }
 
   #button-1 .checkbox:checked + .knobs:before {
-    content: "LIGHT";
+    content: 'LIGHT';
     left: 32px;
-    background-color: ${p => p.theme.primaryColor}
+    background-color: ${p => p.theme.primaryColor};
   }
 
   /* #button-1 .checkbox:checked ~ .layer {
@@ -96,7 +96,7 @@ const SwitchWrapper = styled.div`
     transition-delay: 1s;
     transition: 0.2s ease all;
   }
-`
+`;
 
 const ToggleSwitch = () => {
   const { toggleTheme, theme } = useContext(ThemeToggleContext);
@@ -115,7 +115,7 @@ const ToggleSwitch = () => {
         <div className="layer"></div>
       </div>
     </SwitchWrapper>
-  )
-}
+  );
+};
 
 export default ToggleSwitch;

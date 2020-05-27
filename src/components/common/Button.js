@@ -7,7 +7,7 @@ const common = css`
   border: none;
   cursor: pointer;
   transition: 0.2s;
-  
+
   &:disabled {
     cursor: not-allowed;
     opacity: 0.6;
@@ -18,17 +18,17 @@ const common = css`
     transform: scale(1.05);
     transition: 0.2s;
   }
-`
+`;
 
 const Button = styled.button`
   ${common};
-  width: ${props => props.width ? props.width : 'auto'};
-  height: ${props => props.height ? props.width : 'auto'};
+  width: ${props => (props.width ? props.width : 'auto')};
+  height: ${props => (props.height ? props.width : 'auto')};
   font-size: 12px;
   margin: 0px 0;
   padding: 12px 12px;
-  border-radius: ${props => props.round ? '50%' : '5px'};
-`
+  border-radius: ${props => (props.round ? '50%' : '5px')};
+`;
 
 export const IconButton = styled(IconLink)`
   ${common};
@@ -47,6 +47,6 @@ export const IconButton = styled(IconLink)`
     transform: scale(1.05);
     transition: 0.2s;
   }
-`
+`;
 
 export default Button;

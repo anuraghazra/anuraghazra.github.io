@@ -5,22 +5,22 @@ const useDarkMode = () => {
 
   const toggleTheme = useCallback(() => {
     if (theme === 'light') {
-      localStorage.setItem('anuraghazra-theme', 'dark')
+      localStorage.setItem('anuraghazra-theme', 'dark');
       setTheme('dark');
     } else {
-      localStorage.setItem('anuraghazra-theme', 'light')
+      localStorage.setItem('anuraghazra-theme', 'light');
       setTheme('light');
     }
-  }, [theme])
+  }, [theme]);
 
   useEffect(() => {
-    const localTheme = localStorage.getItem("anuraghazra-theme");
+    const localTheme = localStorage.getItem('anuraghazra-theme');
     if (localTheme) {
       setTheme(localTheme);
     }
   }, []);
 
   return [theme, toggleTheme];
-}
+};
 
 export default useDarkMode;

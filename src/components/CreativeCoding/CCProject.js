@@ -1,14 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { IconButton } from '#common/Button';
-import { CardFooter } from '#common/Card';
+import { IconButton } from '@common/Button';
+import { CardFooter } from '@common/Card';
 
-import Image from '#components/Image';
+import Image from '@components/Image';
 import { CCard } from './CreativeCoding.style';
 
 const CCProject = ({ node }) => {
-  let img = node.img.replace('https://anuraghazra.github.io/CanvasFun/thumbnails/', '');
+  let img = node.img.replace(
+    'https://anuraghazra.github.io/CanvasFun/thumbnails/',
+    ''
+  );
   return (
     <CCard key={node.id}>
       <a
@@ -23,13 +26,21 @@ const CCProject = ({ node }) => {
       <CardFooter justify="space-between" align="center" nowrap>
         <h4>{node.title}</h4>
         <div>
-          <IconButton label={`Live Demo - ${node.title}`} href={node.demo} icon="window-maximize" />
-          <IconButton label={`Source Code - ${node.title}`} href={node.src} icon={["fab", "github"]} />
+          <IconButton
+            label={`Live Demo - ${node.title}`}
+            href={node.demo}
+            icon="window-maximize"
+          />
+          <IconButton
+            label={`Source Code - ${node.title}`}
+            href={node.src}
+            icon={['fab', 'github']}
+          />
         </div>
       </CardFooter>
     </CCard>
-  )
-}
+  );
+};
 
 CCProject.propTypes = {
   node: PropTypes.exact({
@@ -39,6 +50,6 @@ CCProject.propTypes = {
     src: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
   }).isRequired,
-}
+};
 
 export default CCProject;

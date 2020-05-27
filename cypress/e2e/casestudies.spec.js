@@ -5,15 +5,14 @@ describe("Should check Case Studies it's and subpages", () => {
   const GITHUB_URL = '//github.com/anuraghazra/VerlyRangeSlider';
 
   beforeEach(() => {
-    cy.visit("/")
-  })
+    cy.visit('/');
+  });
 
   function assertProjectLinks() {
-    cy
-      .findByText(/Live Demo/i, { selector: 'a' })
+    cy.findByText(/Live Demo/i, { selector: 'a' })
       .should('have.attr', 'href', LIVE_DEMO_URL)
       .findByLabelText('github')
-      .should('have.attr', 'href', GITHUB_URL)
+      .should('have.attr', 'href', GITHUB_URL);
   }
 
   it('should navigate to blog', () => {
@@ -22,18 +21,17 @@ describe("Should check Case Studies it's and subpages", () => {
       .parent()
       .parent() // parent of projects
       .within(() => {
-        cy.get('iframe').should('exist')
+        cy.get('iframe').should('exist');
         assertProjectLinks();
-        cy
-          .findByText(/Case Study/i, { selector: 'a' })
-          .click()
+        cy.findByText(/Case Study/i, { selector: 'a' }).click();
       })
-      .url().should('contain', URL)
+      .url()
+      .should('contain', URL)
       .findByText(PROJECT_NAME, { selector: 'h1' })
-      .get('iframe').should('exist')
+      .get('iframe')
+      .should('exist');
 
-    // asset project links on individual case study page 
+    // asset project links on individual case study page
     assertProjectLinks();
-
-  })
-})
+  });
+});

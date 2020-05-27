@@ -1,17 +1,16 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import Button from '#common/Button';
-import PageHeader from '#common/PageHeader';
-import useForm from '#src/hooks/useForm';
+import Button from '@common/Button';
+import PageHeader from '@common/PageHeader';
+import useForm from '@src/hooks/useForm';
 
 import {
   ContactWrapper,
   LeftContent,
   ContactBox,
   ContactForm,
-} from './Contact.style'
-
+} from './Contact.style';
 
 function Contact() {
   const { formData, errors, handleInput, isFormValid } = useForm();
@@ -77,7 +76,6 @@ function Contact() {
             <FontAwesomeIcon icon="paper-plane" /> Submit
           </Button>
         </ContactForm>
-
       </ContactBox>
     </ContactWrapper>
   );

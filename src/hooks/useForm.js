@@ -5,8 +5,8 @@ const useForm = () => {
   const [errors, setErrors] = useState({});
 
   const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
-  const nameRegex = /^[a-zA-Z\s]*[^\s]$/img;
-  const messageRegex = /^[\w\d][^<>/\\&]*$/img;
+  const nameRegex = /^[a-zA-Z\s]*[^\s]$/gim;
+  const messageRegex = /^[\w\d][^<>/\\&]*$/gim;
 
   function isValid(value, name, regex, text) {
     if (!value) {
@@ -34,21 +34,20 @@ const useForm = () => {
     }
   }
 
-  const handleInput = (e) => {
+  const handleInput = e => {
     e.preventDefault();
     const { value, name } = e.target;
     // validate
     validateInput(name, value);
     setFormData({ ...formData, [name]: value });
-  }
+  };
 
   const isFormValid = () => {
     let errorArray = Object.values(errors);
-    return errorArray.length === 3 && errorArray.filter(Boolean).length === 0
-  }
+    return errorArray.length === 3 && errorArray.filter(Boolean).length === 0;
+  };
 
-  return { formData, errors, handleInput, isFormValid: isFormValid() }
-}
-
+  return { formData, errors, handleInput, isFormValid: isFormValid() };
+};
 
 export default useForm;

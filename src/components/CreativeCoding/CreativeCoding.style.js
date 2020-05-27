@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-import { Card } from '#common/Card';
+import { Card } from '@common/Card';
 
 export const CreativeCodingWrapper = styled.section`
   ${props => props.theme.spacing.sectionBottom};
-`
+`;
 
 export const CCard = styled(Card)`
   justify-self: center;
@@ -37,7 +37,7 @@ export const CCard = styled(Card)`
     left: 0;
     right: 0;
     width: 100%;
-    height:100%;
+    height: 100%;
     border-radius: 10px;
   }
 
@@ -45,4 +45,4 @@ export const CCard = styled(Card)`
     width: 100%;
     height: 100%;
   }
-`
+`;

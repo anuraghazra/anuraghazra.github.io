@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
-import { FloatingButton } from '#components/Layout/Navbar/NavMobile.style';
-import { CCard } from '#components/CreativeCoding/CreativeCoding.style';
+import { FloatingButton } from '@components/Layout/Navbar/NavMobile.style';
+import { CCard } from '@components/CreativeCoding/CreativeCoding.style';
 
-import { CardFooter } from '#common/Card';
+import { CardFooter } from '@common/Card';
 
 export const ConceptsWrapper = styled.section`
   ${props => props.theme.spacing.sectionBottom};
-`
+`;
 
 export const ConceptCard = styled(CCard)`
   overflow: hidden;
@@ -20,7 +20,7 @@ export const ConceptCard = styled(CCard)`
     opacity: 1;
     transition: 0.3s ease-in-out;
   }
-`
+`;
 
 export const ConceptCardFooter = styled(CardFooter)`
   position: absolute;
@@ -36,8 +36,7 @@ export const ConceptCardFooter = styled(CardFooter)`
     bottom: 0;
     opacity: 1;
   }
-`
-
+`;
 
 // LIGHTBOX
 export const LightBoxCloseButton = styled(FloatingButton)`
@@ -52,7 +51,7 @@ export const LightBoxCloseButton = styled(FloatingButton)`
   @media ${props => props.theme.media.minMobile} {
     display: none;
   }
-`
+`;
 
 export const Lightbox = styled.div`
   position: fixed;
@@ -62,7 +61,7 @@ export const Lightbox = styled.div`
   height: 100vh;
   display: flex;
   align-items: center;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 5000;
 
   .lightbox__gatsbyimage {
@@ -73,4 +72,4 @@ export const Lightbox = styled.div`
       transform: translateY(35vh) scale(0.9);
     }
   }
-`
+`;

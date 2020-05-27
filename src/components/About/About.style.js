@@ -14,7 +14,7 @@ export const AboutWrapper = styled.section`
       top: 40px;
     }
   }
-`
+`;
 
 export const AboutInfo = styled.article`
   display: flex;
@@ -31,15 +31,15 @@ export const AboutInfo = styled.article`
   }
 
   .about__rkmscc-link {
-    color: ${p => p.theme.dark ? p.theme.primaryColor : '#111'};
+    color: ${p => (p.theme.dark ? p.theme.primaryColor : '#111')};
   }
   @media ${props => props.theme.media.tablet} {
     flex-direction: column;
     margin-top: 120px;
-    
+
     > div:first-child {
       margin-right: 0;
       margin-bottom: 30px;
     }
   }
-`
+`;

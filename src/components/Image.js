@@ -1,6 +1,6 @@
-import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
-import Img from 'gatsby-image'
+import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
 
 const Image = ({ src, ...props }) => {
   const data = useStaticQuery(graphql`
@@ -16,14 +16,14 @@ const Image = ({ src, ...props }) => {
         }
       }
     }
-  `)
+  `);
 
-  const match = data.allImageSharp.edges.find(({ node }) => node.fluid.originalName.match(src));
+  const match = data.allImageSharp.edges.find(({ node }) =>
+    node.fluid.originalName.match(src)
+  );
   const isValid = match && match.node.fluid;
 
-  return (
-    isValid ? <Img fluid={match.node.fluid} {...props} /> : null
-  )
-}
+  return isValid ? <Img fluid={match.node.fluid} {...props} /> : null;
+};
 
-export default Image
+export default Image;

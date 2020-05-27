@@ -1,8 +1,7 @@
-import React from "react"
-import Helmet from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
-import socialBanner from '#src/static/images/social-banner.jpg';
-
+import React from 'react';
+import Helmet from 'react-helmet';
+import { useStaticQuery, graphql } from 'gatsby';
+import socialBanner from '@src/static/images/social-banner.jpg';
 
 function SEO({ title, description, slug, isBlogPost }) {
   const { site } = useStaticQuery(graphql`
@@ -39,20 +38,18 @@ function SEO({ title, description, slug, isBlogPost }) {
   let ogimage = `${defaults.siteUrl}${socialBanner}`;
 
   if (isBlogPost) {
-    title = title + ' | Anurag Hazra'
+    title = title + ' | Anurag Hazra';
     ogimage = `${defaults.siteUrl}${slug}/social-banner-img.jpg`;
   }
   // console.log({ url, title, description, twitter, ogimage, imageWidth, imageHeight })
   return (
     <Helmet>
-
       {/* General tags */}
       <title>{title}</title>
       <meta name="url" content={url} />
       <meta name="description" content={description} />
       {ogimage && <meta name="image" content={ogimage} />}
       <link rel="canonical" href={url} />
-
 
       {/* OpenGraph tags */}
       <meta property="og:url" content={url} />
@@ -61,7 +58,6 @@ function SEO({ title, description, slug, isBlogPost }) {
       <meta property="og:description" content={description} />
       {ogimage && <meta property="og:image" content={ogimage} />}
 
-
       {/* Twitter Card tags */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content={twitter} />
@@ -69,10 +65,8 @@ function SEO({ title, description, slug, isBlogPost }) {
       <meta name="twitter:description" content={description} />
 
       {ogimage && <meta name="twitter:image" content={ogimage} />}
-
     </Helmet>
-  )
+  );
 }
-
 
 export default SEO;

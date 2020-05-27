@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 import styled from 'styled-components';
-import { Link, graphql, useStaticQuery } from "gatsby"
-import slugify from '#components/slugify'
+import { Link, graphql, useStaticQuery } from 'gatsby';
+import slugify from '@components/slugify';
 
 export const useTags = () => {
   const tags = useStaticQuery(graphql`
@@ -13,14 +13,14 @@ export const useTags = () => {
         }
       }
     }
-  `)
+  `);
 
   return tags;
-}
+};
 
 export const TagBreadcrumb = styled(Link)`
   float: left;
-  border: 1px solid ${p => p.theme.dark ? p.theme.primaryColor : '#d9e0ff'};
+  border: 1px solid ${p => (p.theme.dark ? p.theme.primaryColor : '#d9e0ff')};
   border-radius: 50px;
   padding: 8px 13px;
   line-height: 10px;
@@ -28,10 +28,10 @@ export const TagBreadcrumb = styled(Link)`
   font-size: 12px;
 
   &:hover {
-    background: ${p => p.theme.dark ? p.theme.primaryColor : '#d9e0ff'};
-    color: ${p => p.theme.dark ? '#d9e0ff' : '#6D83F2'};
+    background: ${p => (p.theme.dark ? p.theme.primaryColor : '#d9e0ff')};
+    color: ${p => (p.theme.dark ? '#d9e0ff' : '#6D83F2')};
   }
-`
+`;
 
 const Tags = () => {
   const tags = useTags();
@@ -49,6 +49,6 @@ const Tags = () => {
       ))}
     </section>
   );
-}
+};
 
-export default Tags
+export default Tags;
