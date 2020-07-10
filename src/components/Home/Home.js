@@ -57,7 +57,7 @@ const Home = () => {
       <Intro>
         {/* <Parallax y={[50, -50]} className="home__text"> */}
         <div className="home__text">
-          <p>Hello, i’m</p>
+          <p>Hello, I’m</p>
           <h1>ANURAG HAZRA</h1>
           <p className="adjust">CREATIVE FRONT-END WEB DEVELOPER</p>
 
