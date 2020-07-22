@@ -41,18 +41,18 @@ export const CodeCard = () => {
   return (
     <CodeCardWrapper>
       <pre>
-        1 class <b>Person</b> {'{'}
+        1&nbsp;&nbsp;class <b>Person</b> {'{'}
       </pre>
-      <pre>2 constructor() {'{'}</pre>
+      <pre>2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; constructor() {'{'}</pre>
       <pre>
-        3 this.name = "<b>Anurag Hazra</b>";
+        3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.name = "<b>Anurag Hazra</b>";
       </pre>
       <pre>
-        4 this.traits = ["<b>DESIGN</b>", "<b>DEV</b>"];
+        4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.traits = ["<b>DESIGN</b>", "<b>DEV</b>"];
       </pre>
-      <pre onClick={changeText}>5 this.age = {text}</pre>
-      <pre>6 {'}'}</pre>
-      <pre>7 {'}'}</pre>
+      <pre onClick={changeText}>5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.age = {text}</pre>
+      <pre>6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {'}'}</pre>
+      <pre>7&nbsp;&nbsp;{'}'}</pre>
     </CodeCardWrapper>
   );
 };
