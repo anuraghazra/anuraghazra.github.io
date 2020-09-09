@@ -21,7 +21,7 @@ const About = () => {
         <p>
           Hi, I'm Anurag Hazra, a passionate self-taught frontEnd web developer
           from India. I tend to make use of modern web technologies to build
-          websites that looks great, feels fantastic, and functions correctly. I
+          websites that look great, feel fantastic, and function correctly. I
           am especially focusing on Reactjs.
           <br />
           <br />
