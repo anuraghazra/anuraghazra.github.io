@@ -30,7 +30,7 @@ export const AboutInfo = styled.article`
     color: #f8f8f8;
   }
 
-  .about__rkmscc-link {
+  .about__link {
     color: ${p => (p.theme.dark ? p.theme.primaryColor : '#111')};
   }
   @media ${props => props.theme.media.tablet} {

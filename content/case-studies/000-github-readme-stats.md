@@ -2,11 +2,12 @@
 title: Github Readme Stats
 excerpt:
   Github Readme Stats dynamically generates stats for github user's readmes,
-  After github launched it's profile readme feature I thought I whould do
+  After github launched it's profile readme feature I thought I would do
   something unique and dynamic with new readme resumes so I made
   github-readme-stats which is now used by many people and got over 1k stars on
-  github within 7 days. it has few cool features including `Github Extra Pins`
-  which allows us to pin more that 6 repos in our profile.
+  github within 7 days, and currently it has over 10k stars. it has few cool
+  features including `Github Extra Pins` which allows us to pin more that 6
+  repos in our profile.
 
 iframe: //github-readme-stats.vercel.app/api/?username=anuraghazra
 demo: //github-readme-stats.vercel.app/api/?username=anuraghazra
@@ -79,3 +80,6 @@ https://twitter.com/anuraghazru/status/1281280944641470464
 
 1K Stars Reached :-  
 https://twitter.com/anuraghazru/status/1284034370810966016
+
+10K Stars Reached :-  
+https://twitter.com/anuraghazru/status/1306609825640398853

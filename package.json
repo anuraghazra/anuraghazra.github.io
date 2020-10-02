@@ -11,15 +11,15 @@
     "@fortawesome/react-fontawesome": "^0.1.4",
     "babel-plugin-styled-components": "^1.10.7",
     "disqus-react": "^1.0.7",
-    "gatsby": "^2.19.10",
+    "gatsby": "^2.24.67",
     "gatsby-image": "^2.2.39",
     "gatsby-plugin-google-analytics": "^2.1.23",
     "gatsby-plugin-manifest": "^2.2.3",
     "gatsby-plugin-nprogress": "^2.1.2",
     "gatsby-plugin-offline": "^2.2.4",
     "gatsby-plugin-react-helmet": "^3.1.2",
-    "gatsby-plugin-robots-txt": "^1.5.0",
-    "gatsby-plugin-sharp": "^2.2.8",
+    "gatsby-plugin-robots-txt": "^1.5.3",
+    "gatsby-plugin-sharp": "^2.6.38",
     "gatsby-plugin-sitemap": "^2.2.19",
     "gatsby-plugin-styled-components": "^3.1.8",
     "gatsby-plugin-web-font-loader": "^1.0.4",
@@ -64,7 +64,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.9.0",
     "prettier": "^1.18.2",
-    "start-server-and-test": "^1.10.6"
+    "start-server-and-test": "^1.11.5"
   },
   "keywords": [
     "gatsby",
