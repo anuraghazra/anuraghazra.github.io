@@ -48,7 +48,7 @@
     "sharp": "^0.25.2",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.2.1",
-    "typeface-karla": "0.0.72",
+    "typeface-karla": "1.1.13",
     "typeface-montserrat": "1.1.13"
   },
   "devDependencies": {
