@@ -45,7 +45,7 @@
     "react-scroll-parallax": "^2.3.5",
     "react-slick": "^0.24.0",
     "react-spring": "^8.0.27",
-    "sharp": "^0.25.2",
+    "sharp": "^0.27.1",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.2.1",
     "typeface-karla": "0.0.72",
