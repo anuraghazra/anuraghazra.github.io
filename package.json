@@ -31,7 +31,7 @@
     "gatsby-transformer-json": "^2.11.0",
     "gatsby-transformer-remark": "^2.6.28",
     "gatsby-transformer-sharp": "^2.12.0",
-    "intersection-observer": "^0.7.0",
+    "intersection-observer": "^0.12.0",
     "normalize.css": "^8.0.1",
     "prismjs": "^1.23.0",
     "prop-types": "^15.7.2",
