@@ -41,7 +41,7 @@
     "react-helmet": "^5.2.1",
     "react-intersection-observer": "^8.24.1",
     "react-map-interaction": "^1.3.2",
-    "react-scroll": "^1.7.12",
+    "react-scroll": "^1.8.1",
     "react-scroll-parallax": "^2.3.5",
     "react-slick": "^0.24.0",
     "react-spring": "^8.0.27",
