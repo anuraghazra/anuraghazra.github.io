@@ -10,7 +10,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.9.0",
     "@fortawesome/react-fontawesome": "^0.1.4",
     "babel-plugin-styled-components": "^1.10.7",
-    "disqus-react": "^1.0.7",
+    "disqus-react": "^1.0.11",
     "gatsby": "^2.24.67",
     "gatsby-image": "^2.2.39",
     "gatsby-plugin-google-analytics": "^2.1.23",
