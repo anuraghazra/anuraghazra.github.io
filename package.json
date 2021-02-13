@@ -60,7 +60,7 @@
     "babel-preset-gatsby": "^0.2.18",
     "cypress": "^3.5.0",
     "gatsby-plugin-alias-imports": "^1.0.5",
-    "gatsby-plugin-root-import": "^2.0.5",
+    "gatsby-plugin-root-import": "^2.0.6",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.9.0",
     "prettier": "^1.18.2",
