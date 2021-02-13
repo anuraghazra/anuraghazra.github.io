@@ -29,7 +29,7 @@
     "gatsby-remark-prismjs": "^3.13.0",
     "gatsby-source-filesystem": "^2.1.31",
     "gatsby-transformer-json": "^2.11.0",
-    "gatsby-transformer-remark": "^2.6.28",
+    "gatsby-transformer-remark": "^2.16.0",
     "gatsby-transformer-sharp": "^2.12.0",
     "intersection-observer": "^0.7.0",
     "normalize.css": "^8.0.1",
