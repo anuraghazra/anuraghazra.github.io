@@ -47,7 +47,7 @@
     "react-spring": "^8.0.27",
     "sharp": "^0.25.2",
     "slick-carousel": "^1.8.1",
-    "styled-components": "^5.0.0",
+    "styled-components": "^5.2.1",
     "typeface-karla": "0.0.72",
     "typeface-montserrat": "0.0.75"
   },
