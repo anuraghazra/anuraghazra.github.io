@@ -49,7 +49,7 @@
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.0.0",
     "typeface-karla": "0.0.72",
-    "typeface-montserrat": "0.0.75"
+    "typeface-montserrat": "1.1.13"
   },
   "devDependencies": {
     "@testing-library/cypress": "^7.0.3",
