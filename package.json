@@ -52,7 +52,7 @@
     "typeface-montserrat": "0.0.75"
   },
   "devDependencies": {
-    "@testing-library/cypress": "^5.0.2",
+    "@testing-library/cypress": "^7.0.3",
     "@testing-library/jest-dom": "^4.1.2",
     "@testing-library/react": "^9.3.0",
     "axios": "^0.21.1",
