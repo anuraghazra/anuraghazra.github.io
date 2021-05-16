@@ -1,7 +1,7 @@
 ---
 title: Design Patterns Everyday
 date: 2020-05-20 12:28:00
-author: Anurag Hazra
+author: Darshan Sudhakar
 tags: ['javascript', 'design-patterns']
 ---
 

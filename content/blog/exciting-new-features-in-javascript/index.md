@@ -1,7 +1,7 @@
 ---
 title: Exciting New Features In Javascript
 date: 2019-08-07 14:08:00
-author: Anurag Hazra
+author: Darshan Sudhakar
 tags: ["javascript"]
 ---
 

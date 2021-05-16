@@ -16,7 +16,7 @@ const ThingsILove = () => (
   <Flex justify="space-between" align="center">
     <Card>
       <CardIcon>
-        <FontAwesomeIcon icon="code" />
+        <FontAwesomeIcon icon={['fab','windows']} />
       </CardIcon>
       <CardTitle>FrontEnd</CardTitle>
       <CardText>
@@ -27,9 +27,9 @@ const ThingsILove = () => (
 
     <Card>
       <CardIcon>
-        <FontAwesomeIcon icon={['fab', 'js']} />
+        <FontAwesomeIcon icon="hashtag" />
       </CardIcon>
-      <CardTitle>Javascript</CardTitle>
+      <CardTitle>C# and .NET</CardTitle>
       <CardText>
         I just extremely love javascript, I can’t even express how much I love
         javascript with just a few lines.
@@ -38,9 +38,9 @@ const ThingsILove = () => (
 
     <Card>
       <CardIcon>
-        <FontAwesomeIcon icon="paint-brush" />
+        <FontAwesomeIcon icon={['fas','swatchbook']}/>
       </CardIcon>
-      <CardTitle>Creative Coding</CardTitle>
+      <CardTitle>Standardized Coding</CardTitle>
       <CardText>
         I love creative coding because I do both coding & designing. making
         beautiful art with code is very satisfying to me.
@@ -58,8 +58,8 @@ const Home = () => {
         {/* <Parallax y={[50, -50]} className="home__text"> */}
         <div className="home__text">
           <p>Hello, I’m</p>
-          <h1>ANURAG HAZRA</h1>
-          <p className="adjust">CREATIVE FRONT-END WEB DEVELOPER</p>
+          <h1>Darshan Sudhakar</h1>
+          <p className="adjust">C# and .NET DEVELOPER</p>
 
           <div className="home__CTA">
             <Button className="cta" as="a" href="#">
@@ -75,12 +75,13 @@ const Home = () => {
               <IconLink
                 label="twitter"
                 icon={['fab', 'twitter']}
-                href="//twitter.com/anuraghazru"
+                href="//twitter.com/SudhakarDarshan"
               />
+              {/* TODO : Add a URL for codepen or change to new icon */}
               <IconLink
                 label="codepen"
                 icon={['fab', 'codepen']}
-                href="//codepen.io/anuraghazra"
+                href="//codepen.io/"
               />
             </div>
           </div>

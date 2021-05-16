@@ -1,7 +1,7 @@
 ---
 title: Executing Markdown Codeblocks With Github Actions
 date: 2019-11-11 11:58:00 # YYYY-MM-DD - H:M:S
-author: Anurag Hazra
+author: Darshan Sudhakar
 tags: ['github', 'dev-ops', 'CI / CD']
 ---
 

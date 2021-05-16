@@ -1,7 +1,7 @@
 ---
 title: Unknown parts of CSS - The 'all' property
 date: 2020-03-15 21:32:00
-author: Anurag Hazra
+author: Darshan Sudhakar
 tags: ["CSS", "tricks"]
 ---
 

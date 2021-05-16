@@ -13,6 +13,7 @@ import {
   faCodepen,
   faReact,
   faNode,
+  faWindows
 } from '@fortawesome/free-brands-svg-icons';
 import {
   faPaintBrush,
@@ -29,6 +30,8 @@ import {
   faMoon,
   faSun,
   faEdit,
+  faHashtag,
+  faSwatchbook
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
@@ -52,10 +55,13 @@ library.add(
   faCalendarAlt,
   faReact,
   faNode,
+  faWindows,
   faBars,
   faTimes,
   faMoon,
   faSun,
-  faEdit
+  faEdit,
+  faHashtag,
+  faSwatchbook
 );
 config.autoAddCss = false;

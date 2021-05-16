@@ -1,7 +1,7 @@
 ---
 title: Using a tool vs. knowing how a tool works internally
 date: 2020-05-27 17:42:00
-author: Anurag Hazra
+author: Darshan Sudhakar
 tags: ["react", "javascript"]
 ---
 

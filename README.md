@@ -1,17 +1,17 @@
 <p align="center">
-  <a href="https://anuraghazra.github.io/">
+  <a href="https://darshansudhakar.github.io/">
     <img alt="Gatsby" src="./src/static/logo_noalpha.svg" width="100" />
-    <h2 align="center">Anurag Hazra</h2>
+    <h2 align="center">Darshan Sudhakar</h2>
   </a>
 </p> 
-<p align="center">Creative FrontEnd Web Developer</p>
+<p align="center">Winforms and Web Developer</p>
 
 [![Build Status](https://travis-ci.org/anuraghazra/anuraghazra.github.io.svg?branch=develop)](https://travis-ci.org/anuraghazra/anuraghazra.github.io)
-![GitHub](https://img.shields.io/github/license/anuraghazra/anuraghazra.github.io)
+![GitHub](https://img.shields.io/github/license/darshansudhakar/darshansudhakar.github.io)
 ![Website](https://img.shields.io/website?down_message=offline&label=site&up_message=online&url=http%3A%2F%2Fanuraghazra.github.io)
 
 
-![Anurag Hazra Site Preview](./src/static/screenshot.png)
+![Darshan Sudhakar Site Preview](./src/static/screenshot.png)
 
 Strained eyes? There's DarkMode too :p
 

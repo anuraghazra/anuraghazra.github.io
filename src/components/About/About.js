@@ -19,36 +19,32 @@ const About = () => {
           <Avatar src="hfest_avatar_2.jpg" />
         </div>
         <p>
-          Hi, I'm Anurag Hazra, a passionate self-taught frontEnd web developer
+          Hi, I am Darshan Sudhakar, a passionate C# and .NET developer
           from India, currently working at{' '}
-          <a className="about__link" href="https://timeless.co">
-            timeless.co
+          <a className="about__link" href="https://fnfindia.co.in/">
+          fnfindia.co.in
           </a>{' '}
-          as a FrontEnd engineer. I tend to make use of modern web technologies
-          to build websites that look great, feel fantastic, and function
-          correctly. I am especially focusing on Reactjs.
+          as a Winforms developer.
           <br />
           <br />
-          I'm also a certified graphic designer from "Ramakrishna Mission
-          Shilpamandira". I also do Graphic and UI designing. Since I love both
-          programming and designing, I'm also interested in creating
-          programmatic designs and creative coding projects.
+          My core focus is on solving technical problem using .NET and C#.
+          It give me great pleasure helping college passout to understand industry best practices.
         </p>
       </AboutInfo>
 
+      {/* TODO : Add authors */}
       <Flex justify="space-between" className="quotes__wrapper">
         <Quote>
-          <p>“Simplicity is the baddest choice to be the best.“</p>
+          <p>“If you wanna master something. Teach it!“</p>
         </Quote>
         <Quote>
           <p>
-            “I know I’m not successful enough, but I’m passionate enough not to
-            worry about success.“
+            “Simplicity is the ultimate sophistication“
           </p>
         </Quote>
         <Quote>
           <p>
-            “Creativity is the driver of an unstoppable train called Passion.”
+            “Never let a good crisis go waste”
           </p>
         </Quote>
       </Flex>

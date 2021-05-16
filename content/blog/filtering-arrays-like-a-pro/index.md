@@ -1,7 +1,7 @@
 ---
 title: Filtering Arrays Like A Pro
 date: 2019-11-02 22:32:00 # YYYY-MM-DD - H:M:S
-author: Anurag Hazra
+author: Darshan Sudhakar
 tags: ['javascript', 'tricks', 'like a pro']
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Making a Verlet Physics Engine in Javascript
 date: 2019-08-04 11:38:00
-author: Anurag Hazra
+author: Darshan Sudhakar
 tags: ["verlet", "physics", "javascript"]
 ---
 

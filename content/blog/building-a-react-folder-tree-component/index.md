@@ -1,7 +1,7 @@
 ---
 title: Building A React Folder Tree Component
 date: 2020-04-29 18:39:00
-author: Anurag Hazra
+author: Darshan Sudhakar
 tags: ['reactjs', 'javascript']
 ---
 

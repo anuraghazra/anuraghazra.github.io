@@ -1,10 +1,10 @@
 const meta = {
   // Metadata
-  siteTitle: 'Anurag Hazra - Creative Web Designer',
+  siteTitle: 'Darshan Sudhakar - Creative Web Designer',
   siteDescription:
-    'Anurag Hazra - Creative frontEnd web developer who loves javascript and modern web technologies.',
-  siteTitleAlt: 'Anurag Hazra',
-  siteShortName: 'Anurag Hazra',
+    'Darshan Sudhakar - Creative frontEnd web developer who loves javascript and modern web technologies.',
+  siteTitleAlt: 'Darshan Sudhakar',
+  siteShortName: 'Darshan Sudhakar',
   siteUrl: 'https://anuraghazra.github.io', // No trailing slash!
 };
 

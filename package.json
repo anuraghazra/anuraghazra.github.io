@@ -1,9 +1,9 @@
 {
   "name": "anurag-hazra",
   "private": true,
-  "description": "Anurag Hazra Portfolio Site",
+  "description": "Darshan Sudhakar Portfolio Site",
   "version": "0.1.0",
-  "author": "Anurag Hazra <hazru.anurag@gmail.com>",
+  "author": "Darshan Sudhakar <darshanraj.shetty@gmail.com>",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
     "@fortawesome/free-brands-svg-icons": "^5.9.0",
