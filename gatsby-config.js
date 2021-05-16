@@ -43,6 +43,14 @@ module.exports = {
             },
           },
           `gatsby-plugin-social-banners`,
+          {
+            resolve: "gatsby-plugin-react-svg",
+            options: {
+              rule: {
+                include: /tech-svg/ // See below to configure properly
+              }
+            }
+          }
         ],
       },
     },
