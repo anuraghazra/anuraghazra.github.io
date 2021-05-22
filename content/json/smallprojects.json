@@ -5,7 +5,7 @@
       "demo": "https://creativechat.herokuapp.com",
       "src": "https://github.com/anuraghazra/creativechat"
     },
-    "description": "Creative Chat is a realtime fun chatting app. where users can draw with colors in the canvas and communicate trough art."
+    "description": "Creative Chat is a realtime fun chatting app. where users can draw with colors in the canvas and communicate through art."
   },
   {
     "title": "Verly.js",
@@ -29,7 +29,7 @@
       "demo": "https://anuraghazra.github.io/ParticleBrush/",
       "src": "https://github.com/anuraghazra/ParticleBrush"
     },
-    "description": "Amazing Drawing App With Particles. Lots Of Colorful Particles"
+    "description": "Amazing Drawing App With Particles. Lots Of Colorful Particles."
   },
   {
     "title": "CanvasFun",
