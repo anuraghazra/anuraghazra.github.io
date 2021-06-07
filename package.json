@@ -55,7 +55,7 @@
     "@testing-library/cypress": "^5.0.2",
     "@testing-library/jest-dom": "^4.1.2",
     "@testing-library/react": "^9.3.0",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "babel-jest": "^24.9.0",
     "babel-preset-gatsby": "^0.2.18",
     "cypress": "^3.5.0",
