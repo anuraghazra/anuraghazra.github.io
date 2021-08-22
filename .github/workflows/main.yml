@@ -1,30 +1,19 @@
-name: github pages
-
-on:
-  push:
-    branches:
-      - master
-
+name: Build and Deploy
+on: [push]
 jobs:
-  build-deploy:
-    runs-on: ubuntu-18.04
+  build-and-deploy:
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2.3.1
 
-      - name: setup node
-        uses: actions/setup-node@v1
+      - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
+        run: |
+          npm install
+          npm run build
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
-          node-version: "10.16"
-
-      - name: install
-        run: npm install
-
-      - name: build
-        run: npm run build
-
-      - name: deploy
-        uses: peaceiris/actions-gh-pages@v2.4.0
-        env:
-          PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
-          PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: ./public
+          branch: gh-pages # The branch the action should deploy to.
+          folder: build # The folder the action should deploy.
