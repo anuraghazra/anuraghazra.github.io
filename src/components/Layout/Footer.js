@@ -36,7 +36,10 @@ const Footer = () => (
         </a>
         by
         <a href="https://github.com/anuraghazra" target="__blank">
-          &nbsp;me
+          &nbsp;Anurag Hazra
+        </a>
+        <a href="https://github.com/CronixZero" target="__blank">
+          &nbsp;&nbsp&&nbspme
         </a>
       </p>
     </Wrapper>
