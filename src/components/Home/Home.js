@@ -16,23 +16,21 @@ const ThingsILove = () => (
   <Flex justify="space-between" align="center">
     <Card>
       <CardIcon>
-        <FontAwesomeIcon icon="code" />
+        <FontAwesomeIcon icon="puzzle-piece" />
       </CardIcon>
-      <CardTitle>FrontEnd</CardTitle>
+      <CardTitle>Minecraft Plugins</CardTitle>
       <CardText>
-        I'm more front end focused and love to work with Reactjs as well as pure
-        HTML, CSS.
+        Ich arbeite nun schon länger mit der Spigot / Bukkit API zusammen und erstelle auch regelmäßig Minecraft Plugins mit dieser.
       </CardText>
     </Card>
 
     <Card>
       <CardIcon>
-        <FontAwesomeIcon icon={['fab', 'js']} />
+        <FontAwesomeIcon icon={['fab', 'java']} />
       </CardIcon>
-      <CardTitle>Javascript</CardTitle>
+      <CardTitle>Java</CardTitle>
       <CardText>
-        I just extremely love javascript, I can’t even express how much I love
-        javascript with just a few lines.
+        Ich programmiere schon ~3-4 Jahre mit Java und habe damit Projekte von Discord Bots zu Anwendungen bis Minecraft Plugins entwickelt.
       </CardText>
     </Card>
 
@@ -40,10 +38,9 @@ const ThingsILove = () => (
       <CardIcon>
         <FontAwesomeIcon icon="paint-brush" />
       </CardIcon>
-      <CardTitle>Creative Coding</CardTitle>
+      <CardTitle>Bild- & Videobearbeitung</CardTitle>
       <CardText>
-        I love creative coding because I do both coding & designing. making
-        beautiful art with code is very satisfying to me.
+          Ich erstelle oft kleine Logos, Banner und andere Sachen, die mir in den Kopf kommen.
       </CardText>
     </Card>
   </Flex>
@@ -57,30 +54,26 @@ const Home = () => {
       <Intro>
         {/* <Parallax y={[50, -50]} className="home__text"> */}
         <div className="home__text">
-          <p>Hello, I’m</p>
-          <h1>ANURAG HAZRA</h1>
-          <p className="adjust">CREATIVE FRONT-END WEB DEVELOPER</p>
+          <p>Hey, ich bin</p>
+          <h1>CronixZero</h1>
+          <p className="adjust">Java Developer</p>
 
           <div className="home__CTA">
-            <Button className="cta" as="a" href="#">
-              Download Resume
-            </Button>
-
             <div className="home__social">
               <IconLink
                 label="github"
                 icon={['fab', 'github']}
-                href="//github.com/anuraghazra"
+                href="//github.com/CronixZero"
               />
               <IconLink
                 label="twitter"
                 icon={['fab', 'twitter']}
-                href="//twitter.com/anuraghazru"
+                href="//twitter.com/CronixZero"
               />
               <IconLink
-                label="codepen"
-                icon={['fab', 'codepen']}
-                href="//codepen.io/anuraghazra"
+                label="YouTube"
+                icon={['fab', 'youtube']}
+                href="//www.youtube.com/channel/UCZlhuzs8dAIT559anWA7Ekg"
               />
             </div>
           </div>
