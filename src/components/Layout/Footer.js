@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Wrapper from '@common/Wrapper';
 
-import logo from '@src/static/logo_white.svg';
+import logo from '@src/static/logo.png';
 
 const FooterWrapper = styled.footer`
   width: 100vw;
@@ -39,7 +39,7 @@ const Footer = () => (
           &nbsp;Anurag Hazra
         </a>
         <a href="https://github.com/CronixZero" target="__blank">
-          &nbsp;&nbsp&&nbspme
+          &nbsp;&nbsp;and&nbsp;me
         </a>
       </p>
     </Wrapper>
