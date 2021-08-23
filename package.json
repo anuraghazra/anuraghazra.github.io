@@ -1,9 +1,9 @@
 {
-  "name": "anurag-hazra",
+  "name": "CronixZero",
   "private": true,
-  "description": "Anurag Hazra Portfolio Site",
+  "description": "CronixZero Portfolio Site",
   "version": "0.1.0",
-  "author": "Anurag Hazra <hazru.anurag@gmail.com>",
+  "author": "CronixZero",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
     "@fortawesome/free-brands-svg-icons": "^5.9.0",
