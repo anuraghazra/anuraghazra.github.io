@@ -35,7 +35,7 @@ const Quote = ({ children }) => (
   <QuoteWrapper>
     {children}
     <br />
-    <i>- anurag hazra</i>
+    <i>- CronixZero</i>
   </QuoteWrapper>
 );
 
