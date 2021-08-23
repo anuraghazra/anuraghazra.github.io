@@ -19,39 +19,33 @@ const About = () => {
           <Avatar src="hfest_avatar_2.jpg" />
         </div>
         <p>
-          Hi, I'm Anurag Hazra, a passionate self-taught frontEnd web developer
-          from India, currently working at{' '}
-          <a className="about__link" href="https://timeless.co">
-            timeless.co
+          Hey! Ich bin CronixZero. Ich bin ein Java Developer und setze mich aktuell mit JavaScript auseinander. Aktuell bin ich Moderator auf dem{' '}
+          <a className="about__link" href="https://mypvp.me">
+            MyPvP.me Netzwerk
           </a>{' '}
-          as a FrontEnd engineer. I tend to make use of modern web technologies
-          to build websites that look great, feel fantastic, and function
-          correctly. I am especially focusing on Reactjs.
+          Ich setze mich hauptsächlich mit der Minecraft Plugin Entwicklung auseinander. 
           <br />
           <br />
-          I'm also a certified graphic designer from "Ramakrishna Mission
-          Shilpamandira". I also do Graphic and UI designing. Since I love both
-          programming and designing, I'm also interested in creating
-          programmatic designs and creative coding projects.
+          In meiner meiner Freizeit beschäftige ich mich außerdem mit Bild- & Videobearbeitung.
         </p>
       </AboutInfo>
 
-      <Flex justify="space-between" className="quotes__wrapper">
-        <Quote>
-          <p>“Simplicity is the baddest choice to be the best.“</p>
-        </Quote>
-        <Quote>
-          <p>
-            “I know I’m not successful enough, but I’m passionate enough not to
-            worry about success.“
-          </p>
-        </Quote>
-        <Quote>
-          <p>
-            “Creativity is the driver of an unstoppable train called Passion.”
-          </p>
-        </Quote>
-      </Flex>
+//      <Flex justify="space-between" className="quotes__wrapper">
+//        <Quote>
+//          <p>“Simplicity is the baddest choice to be the best.“</p>
+//        </Quote>
+//        <Quote>
+//          <p>
+//            “I know I’m not successful enough, but I’m passionate enough not to
+//            worry about success.“
+//          </p>
+//        </Quote>
+//        <Quote>
+//          <p>
+//            “Creativity is the driver of an unstoppable train called Passion.”
+//          </p>
+//        </Quote>
+//      </Flex>
     </AboutWrapper>
   );
 };
