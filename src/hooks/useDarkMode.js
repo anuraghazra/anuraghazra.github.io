@@ -5,16 +5,16 @@ const useDarkMode = () => {
 
   const toggleTheme = useCallback(() => {
     if (theme === 'light') {
-      localStorage.setItem('anuraghazra-theme', 'dark');
+      localStorage.setItem('cronixzero-theme', 'dark');
       setTheme('dark');
     } else {
-      localStorage.setItem('anuraghazra-theme', 'light');
+      localStorage.setItem('cronixzero-theme', 'light');
       setTheme('light');
     }
   }, [theme]);
 
   useEffect(() => {
-    const localTheme = localStorage.getItem('anuraghazra-theme');
+    const localTheme = localStorage.getItem('cronixzero-theme');
     if (localTheme) {
       setTheme(localTheme);
     }
