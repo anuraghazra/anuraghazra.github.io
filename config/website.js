@@ -1,24 +1,23 @@
 const meta = {
   // Metadata
-  siteTitle: 'Anurag Hazra - Creative Web Designer',
+  siteTitle: 'CronixZero - Java Developer',
   siteDescription:
-    'Anurag Hazra - Creative frontEnd web developer who loves javascript and modern web technologies.',
-  siteTitleAlt: 'Anurag Hazra',
-  siteShortName: 'Anurag Hazra',
-  siteUrl: 'https://anuraghazra.github.io', // No trailing slash!
+    'CronixZero - A Java Developer constantly trying to get better.',
+  siteTitleAlt: 'CronixZero',
+  siteShortName: 'CronixZero',
+  siteUrl: 'https://CronixZero.github.io',
 };
 
 const social = {
   siteLogo: `src/static/logo.svg`,
   siteBanner: `${meta.siteUrl}/images/social-banner.png`,
-  twitter: '@anuraghazru',
+  twitter: '@CronixZero',
 };
 
 const website = {
   ...meta,
   ...social,
-  disqusShortName: 'anuraghazra',
-  googleAnalyticsID: 'UA-119972196-1',
+  disqusShortName: 'CronixZero',
   // Manifest
   themeColor: '#6D83F2',
   backgroundColor: '#6D83F2',
