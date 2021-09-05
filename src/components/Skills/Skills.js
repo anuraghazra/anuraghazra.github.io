@@ -33,6 +33,7 @@ const SkillsWrapper = styled.section`
       left: 0;
       right: 0;
       font-weight: 900;
+      user-select: none;
     }
     z-index: -1;
   }
