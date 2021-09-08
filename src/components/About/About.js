@@ -21,8 +21,8 @@ const About = () => {
         <p>
           Hi, I'm Anurag Hazra, a passionate self-taught frontEnd web developer
           from India, currently working at{' '}
-          <a className="about__link" href="https://timeless.co">
-            timeless.co
+          <a className="about__link" href="https://razorpay.com">
+            Razorpay
           </a>{' '}
           as a FrontEnd engineer. I tend to make use of modern web technologies
           to build websites that look great, feel fantastic, and function
