@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url> <loc>https://anuraghazra.github.io/case-studies/github-readme-stats</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://anuraghazra.github.io/case-studies/bug-villa</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://anuraghazra.github.io/case-studies/verly-range-slider</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://anuraghazra.github.io/case-studies/shader-expo</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://anuraghazra.github.io/case-studies/quicker-poll</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://anuraghazra.github.io/case-studies/evolution-aquerium</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://anuraghazra.github.io/case-studies/gyro-dodge</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://anuraghazra.github.io/blog/exciting-new-features-in-javascript</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://anuraghazra.github.io/blog/filtering-arrays-like-a-pro</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://anuraghazra.github.io/blog/mapping-arrays-like-a-pro</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://anuraghazra.github.io/blog/unknown-parts-of-css-the-all-property</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://anuraghazra.github.io/blog/using-a-tool-vs-knowing-how-a-tool-works-internally</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://anuraghazra.github.io/blog/executing-markdown-codeblocks-with-github-actions</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://anuraghazra.github.io/blog/making-a-verlet-physics-engine-in-javascript</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://anuraghazra.github.io/blog/building-a-react-folder-tree-component</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://anuraghazra.github.io/blog/design-patterns-everyday</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://anuraghazra.github.io/blog/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://anuraghazra.github.io/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+</urlset>

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /goodies
+Sitemap: https://anuraghazra.github.io/sitemap.xml
+Host: https://anuraghazra.github.io
