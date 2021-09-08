@@ -19,20 +19,21 @@ const About = () => {
           <Avatar src="hfest_avatar_2.jpg" />
         </div>
         <p>
-          Hi, I'm Anurag Hazra, a passionate self-taught frontEnd web developer
-          from India, currently working at{' '}
+          Hi, I'm Anurag Hazra, a self-taught passionate FrontEnd developer from
+          India, currently working at{' '}
           <a className="about__link" href="https://razorpay.com">
             Razorpay
           </a>{' '}
-          as a FrontEnd engineer. I tend to make use of modern web technologies
-          to build websites that look great, feel fantastic, and function
-          correctly. I am especially focusing on Reactjs.
+          as a FrontEnd engineer. I've been building stuff on the web since when
+          I was in 6th standard, I've made countless side projects and I also
+          posses magical powers of using react to build delightful user
+          interfaces.
           <br />
-          <br />
-          I'm also a certified graphic designer from "Ramakrishna Mission
-          Shilpamandira". I also do Graphic and UI designing. Since I love both
-          programming and designing, I'm also interested in creating
-          programmatic designs and creative coding projects.
+          <br />I also love doing <b>open source</b> development, I actively
+          maintain various notable open source projects with over, <br />
+          <b>30k+ stars on GitHub</b> and <b>50m+ hits</b>. It gives me a
+          wonderful feeling of achievement and joy which I cannot explain in
+          words.
         </p>
       </AboutInfo>
 
