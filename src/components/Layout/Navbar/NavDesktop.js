@@ -12,8 +12,10 @@ import ToggleSwitch from '@common/ToggleSwitch';
 const NavDesktop = () => {
   return (
     <>
-      <SLink className="logo" smooth offset={-100} hashSpy={true} to="home">
-        <img src={logo} alt="Anurag Hazra" />
+      <SLink smooth offset={-100} hashSpy={true} to="home">
+        <Link className="logo" to="/">
+          <img src={logo} alt="Anurag Hazra" />
+        </Link>
       </SLink>
 
       <nav>
