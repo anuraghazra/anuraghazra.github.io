@@ -10,6 +10,6 @@
   "license": "MIT",
   "dependencies": {
     "dateformat": "^3.0.3",
-    "jimp": "^0.8.4"
+    "jimp": "^0.22.7"
   }
 }
