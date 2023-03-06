@@ -58,7 +58,7 @@
     "axios": "^0.19.0",
     "babel-jest": "^24.9.0",
     "babel-preset-gatsby": "^0.2.18",
-    "cypress": "^3.5.0",
+    "cypress": "^12.7.0",
     "gatsby-plugin-alias-imports": "^1.0.5",
     "gatsby-plugin-root-import": "^2.0.5",
     "identity-obj-proxy": "^3.0.0",
