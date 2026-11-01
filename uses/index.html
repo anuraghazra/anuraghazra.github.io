@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anurag's Workstation</title>
-    <script type="module" crossorigin src="/uses/assets/index-CMPcUrWD.js"></script>
-    <link rel="stylesheet" crossorigin href="/uses/assets/index-BIC_hx2p.css">
+    <script type="module" crossorigin src="/uses/assets/index-_uYHorPw.js"></script>
+    <link rel="stylesheet" crossorigin href="/uses/assets/index-aI7WLQB6.css">
   </head>
   <body>
     <canvas id="scene"></canvas>
@@ -19,10 +19,22 @@
         <button id="hammer" aria-pressed="false">Hammer</button>
         <button id="fire" aria-pressed="false">Fire</button>
         <button id="block" aria-pressed="false">Steel ball</button>
+        <button id="press" aria-pressed="false">Hydraulic press</button>
         <button id="repair" hidden>Repair</button>
       </div>
       <p class="hint" id="status" role="status"></p>
     </aside>
+    <section id="pressPanel" aria-label="Hydraulic press" hidden>
+      <div class="pressRow"><span>Direction</span><div class="seg" data-option="axis"><button data-value="top">Top</button><button data-value="side">Side</button></div></div>
+      <div class="pressRow"><span>Head</span><div class="seg" data-option="shape"><button data-value="plate">Plate</button><button data-value="round">Punch</button><button data-value="wedge">Wedge</button><button data-value="crosswedge">Cross</button><button data-value="dome">Dome</button></div></div>
+      <div class="pressRow"><span>Size</span><div class="seg" data-option="size"><button data-value="0.6">S</button><button data-value="1">M</button><button data-value="1.4">L</button></div></div>
+      <div class="pressRow pressActions">
+        <button id="pressAction" class="primary">Crush</button>
+        <button id="pressStop" hidden>Stop</button>
+        <button id="pressRemove" hidden>Remove</button>
+        <output id="pressReadout"></output>
+      </div>
+    </section>
     <div id="labels"></div>
     <div id="tip" hidden></div>
   </body>
