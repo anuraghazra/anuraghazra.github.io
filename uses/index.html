@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anurag's Workstation</title>
-    <script type="module" crossorigin src="/uses/assets/index-BaDbhe8c.js"></script>
-    <link rel="stylesheet" crossorigin href="/uses/assets/index-b-BTDngx.css">
+    <script type="module" crossorigin src="/uses/assets/index-CPDhjURR.js"></script>
+    <link rel="stylesheet" crossorigin href="/uses/assets/index-DTrA6q_h.css">
   </head>
   <body>
     <canvas id="scene"></canvas>
@@ -15,12 +15,14 @@
       <p class="hint">Drag to orbit, scroll to zoom, right-drag to pan. Click any part to focus it.</p>
       <div class="row" id="views"></div>
       <div class="row">
-        <button id="explodePc" aria-pressed="false">Explode PC</button>
-        <button id="hammer" aria-pressed="false">Hammer</button>
-        <button id="fire" aria-pressed="false">Fire</button>
-        <button id="block" aria-pressed="false">Steel ball</button>
-        <button id="press" aria-pressed="false">Hydraulic press</button>
-        <button id="repair" hidden>Repair</button>
+        <button id="explodePc" aria-pressed="false" title="Explode PC (E)" aria-keyshortcuts="E">Explode PC</button>
+        <button id="explodeKb" aria-pressed="false" title="Explode keyboard (K)" aria-keyshortcuts="K">Explode keyboard</button>
+        <button id="hammer" aria-pressed="false" title="Hammer (H)" aria-keyshortcuts="H">Hammer</button>
+        <button id="fire" aria-pressed="false" title="Fire (F)" aria-keyshortcuts="F">Fire</button>
+        <button id="block" aria-pressed="false" title="Steel ball (B)" aria-keyshortcuts="B">Steel ball</button>
+        <button id="press" aria-pressed="false" title="Hydraulic press (P), then P to crush or pause" aria-keyshortcuts="P">Hydraulic press</button>
+        <button id="render" aria-pressed="false" title="Render (C)" aria-keyshortcuts="C">Render</button>
+        <button id="repair" hidden title="Repair (R)" aria-keyshortcuts="R">Repair</button>
       </div>
       <p class="hint" id="status" role="status"></p>
     </aside>
@@ -34,6 +36,20 @@
         <button id="pressRemove" hidden>Remove</button>
         <output id="pressReadout"></output>
       </div>
+    </section>
+    <div id="renderFrame" hidden></div>
+    <output id="renderReadout" hidden></output>
+    <section id="renderPanel" aria-label="Render" hidden>
+      <div class="pressRow"><span>Samples</span><div class="seg" data-option="samples"><button data-value="64">64</button><button data-value="512">512</button><button data-value="2048">2048</button></div></div>
+      <div class="pressRow"><span>Size</span><div class="seg" data-option="size"><button data-value="screen">Screen</button><button data-value="1080p">1080p</button><button data-value="1440p">1440p</button><button data-value="4k">4K</button></div></div>
+      <div class="pressRow"><span>View</span><div class="viewButtons"><button id="viewSave">Save view</button><button id="viewLoad" hidden>Load view</button></div></div>
+      <div class="pressRow" id="denoiseRow"><span>Denoise</span><div class="seg" data-option="denoise"><button data-value="off">Off</button><button data-value="on">On</button></div></div>
+      <div class="pressRow pressActions">
+        <button id="renderGo" class="primary">Render</button>
+        <button id="renderSave" hidden>Save PNG</button>
+        <button id="renderBack" hidden>Back</button>
+      </div>
+      <div id="renderProgress" hidden><span></span></div>
     </section>
     <div id="labels"></div>
     <div id="tip" hidden></div>
