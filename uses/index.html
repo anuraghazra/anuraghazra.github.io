@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anurag's Workstation</title>
-    <script type="module" crossorigin src="/uses/assets/index-DsceWg6L.js"></script>
-    <link rel="stylesheet" crossorigin href="/uses/assets/index-BVg6Gxec.css">
+    <script type="module" crossorigin src="/uses/assets/index-B9se_CmR.js"></script>
+    <link rel="stylesheet" crossorigin href="/uses/assets/index-OqOrfSDx.css">
   </head>
   <body>
     <canvas id="scene"></canvas>
@@ -20,6 +20,8 @@
         <button id="hammer" aria-pressed="false" title="Hammer (H)" aria-keyshortcuts="H">Hammer</button>
         <button id="fire" aria-pressed="false" title="Fire (F)" aria-keyshortcuts="F">Fire</button>
         <button id="block" aria-pressed="false" title="Steel ball (B)" aria-keyshortcuts="B">Steel ball</button>
+        <button id="zeroG" aria-pressed="false" title="Zero gravity (Z)" aria-keyshortcuts="Z">Zero G</button>
+        <button id="slowMo" aria-pressed="false" title="Slow motion (S)" aria-keyshortcuts="S">Slow-mo</button>
         <button id="press" aria-pressed="false" title="Hydraulic press (P), then P to crush or pause" aria-keyshortcuts="P">Hydraulic press</button>
         <button id="render" aria-pressed="false" title="Render (C)" aria-keyshortcuts="C">Render</button>
       </div>
@@ -61,6 +63,7 @@
       </div>
       <div id="renderProgress" hidden><span></span></div>
     </section>
+    <div id="slowMoTint"></div>
     <div id="labels"></div>
     <div id="tip" hidden></div>
   </body>
