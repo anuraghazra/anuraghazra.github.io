@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Anurag's Workstation</title>
-    <script type="module" crossorigin src="/uses/assets/index-BeRCqlCf.js"></script>
-    <link rel="stylesheet" crossorigin href="/uses/assets/index-DTrA6q_h.css">
+    <title>Anurag's Workstation</title>
+    <script type="module" crossorigin src="/uses/assets/index-G1BmQoaL.js"></script>
+    <link rel="stylesheet" crossorigin href="/uses/assets/index-BVg6Gxec.css">
   </head>
   <body>
     <canvas id="scene"></canvas>
@@ -22,9 +22,19 @@
         <button id="block" aria-pressed="false" title="Steel ball (B)" aria-keyshortcuts="B">Steel ball</button>
         <button id="press" aria-pressed="false" title="Hydraulic press (P), then P to crush or pause" aria-keyshortcuts="P">Hydraulic press</button>
         <button id="render" aria-pressed="false" title="Render (C)" aria-keyshortcuts="C">Render</button>
-        <button id="repair" hidden title="Repair (R)" aria-keyshortcuts="R">Repair</button>
       </div>
       <p class="hint" id="status" role="status"></p>
+    </aside>
+    <aside id="bill" aria-label="Damage bill" hidden>
+      <div class="billHead">
+        <h2>Damage bill</h2>
+        <div class="seg billCurrency" role="group" aria-label="Currency">
+          <button data-currency="USD" aria-pressed="true" title="US dollars">$</button>
+          <button data-currency="INR" aria-pressed="false" title="Indian rupees">₹</button>
+        </div>
+      </div>
+      <ol></ol>
+      <p class="billTotal"><span>Total</span><button id="repair" hidden title="Repair (R)" aria-keyshortcuts="R"><span class="billVerb">Repair</span> <output aria-live="polite"></output></button></p>
     </aside>
     <section id="pressPanel" aria-label="Hydraulic press" hidden>
       <div class="pressRow"><span>Direction</span><div class="seg" data-option="axis"><button data-value="top">Top</button><button data-value="side">Side</button></div></div>
@@ -52,6 +62,6 @@
       <div id="renderProgress" hidden><span></span></div>
     </section>
     <div id="labels"></div>
-    <div id="tip" hidden></div>
+    <div id="tip" hidden></div>
   </body>
 </html>
