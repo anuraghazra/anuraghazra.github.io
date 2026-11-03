@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Anurag's Workstation</title>
-    <script type="module" crossorigin src="/uses/assets/index-B9se_CmR.js"></script>
-    <link rel="stylesheet" crossorigin href="/uses/assets/index-OqOrfSDx.css">
+    <title>Anurag's Workstation</title>
+    <script type="module" crossorigin src="/uses/assets/index-BiX0yfRu.js"></script>
+    <link rel="stylesheet" crossorigin href="/uses/assets/index-D22aFEoF.css">
   </head>
   <body>
     <canvas id="scene"></canvas>
@@ -34,8 +34,12 @@
           <button data-currency="USD" aria-pressed="true" title="US dollars">$</button>
           <button data-currency="INR" aria-pressed="false" title="Indian rupees">₹</button>
         </div>
+        <button class="billToggle" aria-expanded="true" aria-controls="billLines" title="Hide the list">
+          <svg class="billClose" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" /></svg>
+          <svg class="billOpen" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 10l4-4 4 4" /></svg>
+        </button>
       </div>
-      <ol></ol>
+      <ol id="billLines"></ol>
       <p class="billTotal"><span>Total</span><button id="repair" hidden title="Repair (R)" aria-keyshortcuts="R"><span class="billVerb">Repair</span> <output aria-live="polite"></output></button></p>
     </aside>
     <section id="pressPanel" aria-label="Hydraulic press" hidden>
@@ -65,6 +69,6 @@
     </section>
     <div id="slowMoTint"></div>
     <div id="labels"></div>
-    <div id="tip" hidden></div>
+    <div id="tip" hidden></div>
   </body>
 </html>
