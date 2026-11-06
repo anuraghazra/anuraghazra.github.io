@@ -1,0 +1,156 @@
+{
+  "name": "Gaming setup",
+  "music": "sounds/reel-music-1.mp3",
+  "file": "sequences/gaming-setup.reel.json",
+  "night": false,
+  "fov": 70,
+  "shots": [
+    {
+      "subject": "wide",
+      "angle": -20,
+      "lift": 14,
+      "fill": 2.4,
+      "tilt": [
+        -45,
+        0
+      ],
+      "walk": -0.25,
+      "exposure": [
+        0.05,
+        1
+      ],
+      "ease": "smooth",
+      "end": 3.63,
+      "track": false,
+      "fov": 43,
+      "pan": [
+        4,
+        4
+      ],
+      "orbit": [
+        0,
+        0
+      ]
+    },
+    {
+      "subject": "pc",
+      "angle": -54,
+      "lift": 16,
+      "fill": 1.15,
+      "fov": 52,
+      "aim": -0.1,
+      "walk": 0.06114983404055238,
+      "end": 5.21,
+      "track": false,
+      "orbit": [
+        0,
+        30.5
+      ],
+      "ease": "linear",
+      "speed": 0.45
+    },
+    {
+      "subject": "car",
+      "angle": -46,
+      "lift": 25,
+      "fill": 0.3,
+      "fov": 11,
+      "aim": 0.05,
+      "pan": [
+        0,
+        0
+      ],
+      "tilt": [
+        0,
+        0
+      ],
+      "end": 6.79,
+      "track": false,
+      "orbit": [
+        17,
+        0
+      ],
+      "ease": "linear"
+    },
+    {
+      "subject": "mouse",
+      "angle": -126,
+      "lift": 34,
+      "fill": 0.75,
+      "aim": -0.45,
+      "walk": 0,
+      "end": 8.369,
+      "track": false,
+      "fov": 52,
+      "ease": "linear",
+      "rise": 0,
+      "float": 0,
+      "orbit": [
+        0,
+        15.5
+      ]
+    },
+    {
+      "subject": "ps5",
+      "angle": 18,
+      "lift": 48,
+      "fill": 0.9,
+      "orbit": [
+        0,
+        -20
+      ],
+      "end": 9.95,
+      "track": false,
+      "ease": "linear",
+      "aim": -0.15,
+      "fov": 48
+    },
+    {
+      "subject": "iphone",
+      "angle": -50,
+      "lift": 37,
+      "fill": 0.75,
+      "fov": 12,
+      "aim": 0,
+      "orbit": [
+        0,
+        22
+      ],
+      "walk": 0,
+      "end": 11.53,
+      "track": false,
+      "rise": 0,
+      "ease": "linear",
+      "pan": [
+        0,
+        0
+      ],
+      "tilt": [
+        0,
+        0
+      ],
+      "roll": [
+        0,
+        0
+      ]
+    },
+    {
+      "subject": "wide",
+      "angle": -20,
+      "lift": 14,
+      "fill": 1.9,
+      "walk": -0.22,
+      "orbit": [
+        0,
+        21.5
+      ],
+      "track": false,
+      "pan": [
+        2,
+        2
+      ],
+      "fov": 35
+    }
+  ],
+  "sun": -16
+}

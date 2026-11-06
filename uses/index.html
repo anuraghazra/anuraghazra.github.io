@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anurag's Workstation</title>
-    <script type="module" crossorigin src="/uses/assets/index-DMX3gGlG.js"></script>
-    <link rel="stylesheet" crossorigin href="/uses/assets/index-_a5lpf3E.css">
+    <script type="module" crossorigin src="/uses/assets/index-uVc_7qEo.js"></script>
+    <link rel="stylesheet" crossorigin href="/uses/assets/index-C-vBxSPN.css">
   </head>
   <body>
     <canvas id="scene"></canvas>
@@ -25,7 +25,9 @@
         <button id="press" aria-pressed="false" title="Hydraulic press (P), then P to crush or pause" aria-keyshortcuts="P">Hydraulic press</button>
         <button id="walk" aria-pressed="false" title="Walk around (V): W A S D to move, mouse to look, click and drag at the crosshair, Esc to stop" aria-keyshortcuts="V">Walk</button>
         <button id="night" aria-pressed="false" title="Night mode (N)" aria-keyshortcuts="N">Night</button>
-        <button id="render" aria-pressed="false" title="Render (C)" aria-keyshortcuts="C">Render</button>
+        <!-- The path tracer's button, hidden for now: its code and the C key are left as they are. -->
+        <button id="render" aria-pressed="false" title="Render (C)" aria-keyshortcuts="C" hidden>Render</button>
+        <button id="reel" aria-pressed="false" title="Reel mode (M): a 9:16 camera cut to the music" aria-keyshortcuts="M">Reel</button>
       </div>
       <p class="hint" id="status" role="status"></p>
     </aside>
@@ -76,6 +78,7 @@
     <div id="crosshair" hidden></div>
     <div id="trial" hidden></div>
     <div id="tip" hidden></div>
+    <div id="reelBar" hidden><button id="reelPlay">Play</button><button id="reelExit">Exit</button><span id="reelInfo"></span></div>
     <div id="drivePad" hidden>
       <div class="steer"><button data-key="KeyA" aria-label="Steer left">A</button><button data-key="KeyD" aria-label="Steer right">D</button></div>
       <button class="exit" aria-label="Stop driving">Exit</button>
