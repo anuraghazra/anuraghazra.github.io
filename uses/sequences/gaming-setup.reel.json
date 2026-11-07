@@ -47,7 +47,8 @@
         30.5
       ],
       "ease": "linear",
-      "speed": 0.45
+      "speed": 0.45,
+      "lock": true
     },
     {
       "subject": "car",
@@ -70,12 +71,13 @@
         17,
         0
       ],
-      "ease": "linear"
+      "ease": "linear",
+      "lock": true
     },
     {
       "subject": "mouse",
-      "angle": -126,
-      "lift": 34,
+      "angle": -123.9,
+      "lift": 35.4,
       "fill": 0.75,
       "aim": -0.45,
       "walk": 0,
@@ -87,7 +89,14 @@
       "float": 0,
       "orbit": [
         0,
-        15.5
+        28
+      ],
+      "lock": true,
+      "distance": 0.31,
+      "target": [
+        1.105,
+        0.005,
+        0.05
       ]
     },
     {
@@ -103,7 +112,8 @@
       "track": false,
       "ease": "linear",
       "aim": -0.15,
-      "fov": 48
+      "fov": 48,
+      "lock": true
     },
     {
       "subject": "iphone",
@@ -132,7 +142,8 @@
       "roll": [
         0,
         0
-      ]
+      ],
+      "lock": true
     },
     {
       "subject": "wide",
